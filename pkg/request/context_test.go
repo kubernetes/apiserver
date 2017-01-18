@@ -37,7 +37,7 @@ func TestNamespaceContext(t *testing.T) {
 	}
 
 	ctx = genericapirequest.NewContext()
-	result, ok = genericapirequest.NamespaceFrom(ctx)
+	_, ok = genericapirequest.NamespaceFrom(ctx)
 	if ok {
 		t.Fatalf("Should not be ok because there is no namespace on the context")
 	}
