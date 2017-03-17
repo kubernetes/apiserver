@@ -376,6 +376,12 @@ func (a *APIInstaller) registerResourceHandlers(path string, storage rest.Storag
 
 	tableProvider, _ := storage.(rest.TableConvertor)
 
+	var categories []string
+	categoriesProvider, ok := storage.(rest.CategoriesProvider)
+	if ok {
+		categories = categoriesProvider.Categories()
+	}
+
 	var apiResource metav1.APIResource
 	// Get the list of actions for the given scope.
 	switch scope.Name() {
@@ -822,6 +828,7 @@ func (a *APIInstaller) registerResourceHandlers(path string, storage rest.Storag
 	}
 	sort.Strings(apiResource.Verbs)
 	apiResource.ShortNames = shortNames
+	apiResource.Categories = categories
 
 	return &apiResource, nil
 }
