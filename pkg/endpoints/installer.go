@@ -522,6 +522,7 @@ func (a *APIInstaller) registerResourceHandlers(path string, storage rest.Storag
 		Creater:         a.group.Creater,
 		Convertor:       a.group.Convertor,
 		Copier:          a.group.Copier,
+		Defaulter:       a.group.Defaulter,
 		Typer:           a.group.Typer,
 		UnsafeConvertor: a.group.UnsafeConvertor,
 
@@ -1056,6 +1057,8 @@ func typeToJSON(typeName string) string {
 	case "metav1.Time", "*metav1.Time":
 		return "string"
 	case "byte", "*byte":
+		return "string"
+	case "v1.DeletionPropagation", "*v1.DeletionPropagation":
 		return "string"
 
 	// TODO: Fix these when go-restful supports a way to specify an array query param:
