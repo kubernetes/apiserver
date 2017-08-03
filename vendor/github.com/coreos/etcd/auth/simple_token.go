@@ -37,19 +37,27 @@ var (
 )
 
 type simpleTokenTTLKeeper struct {
+	tokensMu        sync.Mutex
 	tokens          map[string]time.Time
-	donec           chan struct{}
-	stopc           chan struct{}
+	stopCh          chan chan struct{}
 	deleteTokenFunc func(string)
-	mu              *sync.Mutex
+}
+
+func NewSimpleTokenTTLKeeper(deletefunc func(string)) *simpleTokenTTLKeeper {
+	stk := &simpleTokenTTLKeeper{
+		tokens:          make(map[string]time.Time),
+		stopCh:          make(chan chan struct{}),
+		deleteTokenFunc: deletefunc,
+	}
+	go stk.run()
+	return stk
 }
 
 func (tm *simpleTokenTTLKeeper) stop() {
-	select {
-	case tm.stopc <- struct{}{}:
-	case <-tm.donec:
-	}
-	<-tm.donec
+	waitCh := make(chan struct{})
+	tm.stopCh <- waitCh
+	<-waitCh
+	close(tm.stopCh)
 }
 
 func (tm *simpleTokenTTLKeeper) addSimpleToken(token string) {
@@ -68,43 +76,25 @@ func (tm *simpleTokenTTLKeeper) deleteSimpleToken(token string) {
 
 func (tm *simpleTokenTTLKeeper) run() {
 	tokenTicker := time.NewTicker(simpleTokenTTLResolution)
-	defer func() {
-		tokenTicker.Stop()
-		close(tm.donec)
-	}()
+	defer tokenTicker.Stop()
 	for {
 		select {
 		case <-tokenTicker.C:
 			nowtime := time.Now()
-			tm.mu.Lock()
+			tm.tokensMu.Lock()
 			for t, tokenendtime := range tm.tokens {
 				if nowtime.After(tokenendtime) {
 					tm.deleteTokenFunc(t)
 					delete(tm.tokens, t)
 				}
 			}
-			tm.mu.Unlock()
-		case <-tm.stopc:
+			tm.tokensMu.Unlock()
+		case waitCh := <-tm.stopCh:
+			tm.tokens = make(map[string]time.Time)
+			waitCh <- struct{}{}
 			return
 		}
 	}
-}
-
-func (as *authStore) enable() {
-	delf := func(tk string) {
-		if username, ok := as.simpleTokens[tk]; ok {
-			plog.Infof("deleting token %s for user %s", tk, username)
-			delete(as.simpleTokens, tk)
-		}
-	}
-	as.simpleTokenKeeper = &simpleTokenTTLKeeper{
-		tokens:          make(map[string]time.Time),
-		donec:           make(chan struct{}),
-		stopc:           make(chan struct{}),
-		deleteTokenFunc: delf,
-		mu:              &as.simpleTokensMu,
-	}
-	go as.simpleTokenKeeper.run()
 }
 
 func (as *authStore) GenSimpleToken() (string, error) {
@@ -123,7 +113,9 @@ func (as *authStore) GenSimpleToken() (string, error) {
 }
 
 func (as *authStore) assignSimpleTokenToUser(username, token string) {
+	as.simpleTokenKeeper.tokensMu.Lock()
 	as.simpleTokensMu.Lock()
+
 	_, ok := as.simpleTokens[token]
 	if ok {
 		plog.Panicf("token %s is alredy used", token)
@@ -132,12 +124,14 @@ func (as *authStore) assignSimpleTokenToUser(username, token string) {
 	as.simpleTokens[token] = username
 	as.simpleTokenKeeper.addSimpleToken(token)
 	as.simpleTokensMu.Unlock()
+	as.simpleTokenKeeper.tokensMu.Unlock()
 }
 
 func (as *authStore) invalidateUser(username string) {
 	if as.simpleTokenKeeper == nil {
 		return
 	}
+	as.simpleTokenKeeper.tokensMu.Lock()
 	as.simpleTokensMu.Lock()
 	for token, name := range as.simpleTokens {
 		if strings.Compare(name, username) == 0 {
@@ -146,4 +140,5 @@ func (as *authStore) invalidateUser(username string) {
 		}
 	}
 	as.simpleTokensMu.Unlock()
+	as.simpleTokenKeeper.tokensMu.Unlock()
 }

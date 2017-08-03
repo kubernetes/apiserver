@@ -215,7 +215,8 @@ func (as *authStore) AuthEnable() error {
 	tx.UnsafePut(authBucketName, enableFlagKey, authEnabled)
 
 	as.enabled = true
-	as.enable()
+
+	as.simpleTokenKeeper = NewSimpleTokenTTLKeeper(newDeleterFunc(as))
 
 	as.rangePermCache = make(map[string]*unifiedRangePermissions)
 
@@ -243,12 +244,11 @@ func (as *authStore) AuthDisable() {
 	as.enabled = false
 
 	as.simpleTokensMu.Lock()
-	tk := as.simpleTokenKeeper
-	as.simpleTokenKeeper = nil
 	as.simpleTokens = make(map[string]string) // invalidate all tokens
 	as.simpleTokensMu.Unlock()
-	if tk != nil {
-		tk.stop()
+	if as.simpleTokenKeeper != nil {
+		as.simpleTokenKeeper.stop()
+		as.simpleTokenKeeper = nil
 	}
 
 	plog.Noticef("Authentication disabled")
@@ -647,12 +647,14 @@ func (as *authStore) RoleAdd(r *pb.AuthRoleAddRequest) (*pb.AuthRoleAddResponse,
 
 func (as *authStore) AuthInfoFromToken(token string) (*AuthInfo, bool) {
 	// same as '(t *tokenSimple) info' in v3.2+
+	as.simpleTokenKeeper.tokensMu.Lock()
 	as.simpleTokensMu.Lock()
 	username, ok := as.simpleTokens[token]
-	if ok && as.simpleTokenKeeper != nil {
+	if ok {
 		as.simpleTokenKeeper.resetSimpleToken(token)
 	}
 	as.simpleTokensMu.Unlock()
+	as.simpleTokenKeeper.tokensMu.Unlock()
 	return &AuthInfo{Username: username, Revision: as.revision}, ok
 }
 
@@ -912,7 +914,7 @@ func NewAuthStore(be backend.Backend, indexWaiter func(uint64) <-chan struct{}) 
 	}
 
 	if enabled {
-		as.enable()
+		as.simpleTokenKeeper = NewSimpleTokenTTLKeeper(newDeleterFunc(as))
 	}
 
 	if as.revision == 0 {
