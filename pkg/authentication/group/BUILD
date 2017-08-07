@@ -8,7 +8,10 @@ load(
 
 go_test(
     name = "go_default_test",
-    srcs = ["group_adder_test.go"],
+    srcs = [
+        "group_adder_test.go",
+        "token_group_adder_test.go",
+    ],
     library = ":go_default_library",
     deps = [
         "//vendor/k8s.io/apiserver/pkg/authentication/authenticator:go_default_library",
@@ -21,6 +24,7 @@ go_library(
     srcs = [
         "authenticated_group_adder.go",
         "group_adder.go",
+        "token_group_adder.go",
     ],
     deps = [
         "//vendor/k8s.io/apiserver/pkg/authentication/authenticator:go_default_library",
