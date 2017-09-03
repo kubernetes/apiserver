@@ -1563,6 +1563,10 @@
       "Rev": "84661730675d60e1fedf2379c1bfd910b377ce0a"
     },
     {
+      "ImportPath": "k8s.io/client-go/tools/pager",
+      "Rev": "84661730675d60e1fedf2379c1bfd910b377ce0a"
+    },
+    {
       "ImportPath": "k8s.io/client-go/tools/reference",
       "Rev": "84661730675d60e1fedf2379c1bfd910b377ce0a"
     },
