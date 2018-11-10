@@ -1899,6 +1899,10 @@
 			"Rev": "b1c1d2e7ca769cde6c9ce3c4aac53fde6ca5c5d9"
 		},
 		{
+			"ImportPath": "k8s.io/client-go/tools/record",
+			"Rev": "b1c1d2e7ca769cde6c9ce3c4aac53fde6ca5c5d9"
+		},
+		{
 			"ImportPath": "k8s.io/client-go/tools/reference",
 			"Rev": "b1c1d2e7ca769cde6c9ce3c4aac53fde6ca5c5d9"
 		},
