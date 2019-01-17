@@ -1983,6 +1983,10 @@
 			"Rev": "32801e2d7c449af3373a7728b1b3f9b9c19c1bdb"
 		},
 		{
+			"ImportPath": "k8s.io/component-base/logs",
+			"Rev": "7b44618cd0055577ef46bce14870b1bee6656ed9"
+		},
+		{
 			"ImportPath": "k8s.io/klog",
 			"Rev": "8139d8cb77af419532b33dfa7dd09fbc5f1d344f"
 		},
