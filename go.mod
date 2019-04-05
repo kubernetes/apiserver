@@ -68,7 +68,7 @@ require (
 	gotest.tools v2.2.0+incompatible // indirect
 	k8s.io/api v0.0.0-20190404065945-709cf190c7b7
 	k8s.io/apimachinery v0.0.0-20190404065847-4a4abcd45006
-	k8s.io/client-go v0.0.0-20190404070124-2a3e58aa7026
+	k8s.io/client-go v0.0.0-20190404172613-2e1a3ed22ac5
 	k8s.io/component-base v0.0.0-20190404070505-d7891e8054ca
 	k8s.io/klog v0.0.0-20190306015804-8e90cee79f82
 	k8s.io/kube-openapi v0.0.0-20190228160746-b3a7cee44a30
@@ -332,7 +332,7 @@ replace (
 	gotest.tools => gotest.tools v2.2.0+incompatible
 	k8s.io/api => k8s.io/api v0.0.0-20190404065945-709cf190c7b7
 	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20190404065847-4a4abcd45006
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20190404070124-2a3e58aa7026
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20190404172613-2e1a3ed22ac5
 	k8s.io/component-base => k8s.io/component-base v0.0.0-20190404070505-d7891e8054ca
 	k8s.io/gengo => k8s.io/gengo v0.0.0-20181106084056-51747d6e00da
 	k8s.io/heapster => k8s.io/heapster v1.2.0-beta.1
