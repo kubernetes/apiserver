@@ -64,10 +64,10 @@ require (
 	gopkg.in/yaml.v1 v1.0.0-20140924161607-9f9df34309c0 // indirect
 	gopkg.in/yaml.v2 v2.2.1
 	gotest.tools v2.2.0+incompatible // indirect
-	k8s.io/api v0.0.0-20190408172450-b1350b9e3bc2
-	k8s.io/apimachinery v0.0.0-20190408172355-3115ef20f323
-	k8s.io/client-go v0.0.0-20190408172623-b7e8408f656e
-	k8s.io/component-base v0.0.0-20190408172944-383e7fa4e530
+	k8s.io/api v0.0.0
+	k8s.io/apimachinery v0.0.0
+	k8s.io/client-go v0.0.0
+	k8s.io/component-base v0.0.0
 	k8s.io/klog v0.0.0-20190306015804-8e90cee79f82
 	k8s.io/kube-openapi v0.0.0-20190228160746-b3a7cee44a30
 	k8s.io/utils v0.0.0-20190221042446-c2654d5206da
@@ -81,7 +81,7 @@ replace (
 	github.com/Azure/go-autorest => github.com/Azure/go-autorest v11.1.0+incompatible
 	github.com/BurntSushi/toml => github.com/BurntSushi/toml v0.3.0
 	github.com/NYTimes/gziphandler => github.com/NYTimes/gziphandler v0.0.0-20170623195520-56545f4a5d46
-	github.com/PuerkitoBio/purell => github.com/PuerkitoBio/purell v1.0.0
+	github.com/PuerkitoBio/purell => github.com/PuerkitoBio/purell v1.1.0
 	github.com/PuerkitoBio/urlesc => github.com/PuerkitoBio/urlesc v0.0.0-20160726150825-5bd2802263f2
 	github.com/alecthomas/template => github.com/alecthomas/template v0.0.0-20160405071501-a0175ee3bccc
 	github.com/alecthomas/units => github.com/alecthomas/units v0.0.0-20151022065526-2efee857e7cf
@@ -185,12 +185,30 @@ replace (
 	gopkg.in/yaml.v1 => gopkg.in/yaml.v1 v1.0.0-20140924161607-9f9df34309c0
 	gopkg.in/yaml.v2 => gopkg.in/yaml.v2 v2.2.1
 	gotest.tools => gotest.tools v2.2.0+incompatible
-	k8s.io/api => k8s.io/api v0.0.0-20190408172450-b1350b9e3bc2
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20190408172355-3115ef20f323
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20190408172623-b7e8408f656e
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20190408172944-383e7fa4e530
+	k8s.io/api => ../api
+	k8s.io/apiextensions-apiserver => ../apiextensions-apiserver
+	k8s.io/apimachinery => ../apimachinery
+	k8s.io/apiserver => ../apiserver
+	k8s.io/cli-runtime => ../cli-runtime
+	k8s.io/client-go => ../client-go
+	k8s.io/cloud-provider => ../cloud-provider
+	k8s.io/cluster-bootstrap => ../cluster-bootstrap
+	k8s.io/code-generator => ../code-generator
+	k8s.io/component-base => ../component-base
+	k8s.io/cri-api => ../cri-api
+	k8s.io/csi-translation-lib => ../csi-translation-lib
 	k8s.io/klog => k8s.io/klog v0.0.0-20190306015804-8e90cee79f82
+	k8s.io/kube-aggregator => ../kube-aggregator
+	k8s.io/kube-controller-manager => ../kube-controller-manager
 	k8s.io/kube-openapi => k8s.io/kube-openapi v0.0.0-20190228160746-b3a7cee44a30
+	k8s.io/kube-proxy => ../kube-proxy
+	k8s.io/kube-scheduler => ../kube-scheduler
+	k8s.io/kubelet => ../kubelet
+	k8s.io/metrics => ../metrics
+	k8s.io/node-api => ../node-api
+	k8s.io/sample-apiserver => ../sample-apiserver
+	k8s.io/sample-cli-plugin => ../sample-cli-plugin
+	k8s.io/sample-controller => ../sample-controller
 	k8s.io/utils => k8s.io/utils v0.0.0-20190221042446-c2654d5206da
 	sigs.k8s.io/structured-merge-diff => sigs.k8s.io/structured-merge-diff v0.0.0-20190302045857-e85c7b244fd2
 	sigs.k8s.io/yaml => sigs.k8s.io/yaml v1.1.0
