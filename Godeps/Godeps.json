@@ -80,7 +80,7 @@
 		},
 		{
 			"ImportPath": "github.com/docker/docker",
-			"Rev": "a9fbbdc8dd87"
+			"Rev": "be7ac8be2ae0"
 		},
 		{
 			"ImportPath": "github.com/docker/spdystream",
@@ -177,10 +177,6 @@
 		{
 			"ImportPath": "github.com/gorilla/websocket",
 			"Rev": "4201258b820c"
-		},
-		{
-			"ImportPath": "github.com/gotestyourself/gotestyourself",
-			"Rev": "v2.2.0"
 		},
 		{
 			"ImportPath": "github.com/gregjones/httpcache",
