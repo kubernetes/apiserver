@@ -35,14 +35,6 @@
 			"Rev": "de5bf2ad4578"
 		},
 		{
-			"ImportPath": "github.com/alecthomas/template",
-			"Rev": "a0175ee3bccc"
-		},
-		{
-			"ImportPath": "github.com/alecthomas/units",
-			"Rev": "2efee857e7cf"
-		},
-		{
 			"ImportPath": "github.com/beorn7/perks",
 			"Rev": "3a771d992973"
 		},
@@ -107,14 +99,6 @@
 			"Rev": "c7ce16629ff4"
 		},
 		{
-			"ImportPath": "github.com/go-kit/kit",
-			"Rev": "v0.8.0"
-		},
-		{
-			"ImportPath": "github.com/go-logfmt/logfmt",
-			"Rev": "v0.3.0"
-		},
-		{
 			"ImportPath": "github.com/go-openapi/jsonpointer",
 			"Rev": "v0.19.0"
 		},
@@ -131,10 +115,6 @@
 			"Rev": "v0.17.2"
 		},
 		{
-			"ImportPath": "github.com/go-stack/stack",
-			"Rev": "v1.8.0"
-		},
-		{
 			"ImportPath": "github.com/gogo/protobuf",
 			"Rev": "342cbe0a0415"
 		},
@@ -148,7 +128,7 @@
 		},
 		{
 			"ImportPath": "github.com/golang/protobuf",
-			"Rev": "v1.1.0"
+			"Rev": "v1.2.0"
 		},
 		{
 			"ImportPath": "github.com/google/btree",
@@ -215,16 +195,8 @@
 			"Rev": "ab8a2e0c74be"
 		},
 		{
-			"ImportPath": "github.com/julienschmidt/httprouter",
-			"Rev": "v1.2.0"
-		},
-		{
 			"ImportPath": "github.com/konsorten/go-windows-terminal-sequences",
 			"Rev": "v1.0.1"
-		},
-		{
-			"ImportPath": "github.com/kr/logfmt",
-			"Rev": "b84e30acd515"
 		},
 		{
 			"ImportPath": "github.com/mailru/easyjson",
@@ -245,10 +217,6 @@
 		{
 			"ImportPath": "github.com/munnerz/goautoneg",
 			"Rev": "a547fc61f48d"
-		},
-		{
-			"ImportPath": "github.com/mwitkow/go-conntrack",
-			"Rev": "cc309e4a2223"
 		},
 		{
 			"ImportPath": "github.com/mxk/go-flowrate",
@@ -300,15 +268,15 @@
 		},
 		{
 			"ImportPath": "github.com/prometheus/client_model",
-			"Rev": "fa8ad6fec335"
+			"Rev": "5c3871d89910"
 		},
 		{
 			"ImportPath": "github.com/prometheus/common",
-			"Rev": "v0.2.0"
+			"Rev": "4724e9255275"
 		},
 		{
 			"ImportPath": "github.com/prometheus/procfs",
-			"Rev": "65c1f6f8f0fc"
+			"Rev": "1dc9a6cbc91a"
 		},
 		{
 			"ImportPath": "github.com/sirupsen/logrus",
@@ -403,10 +371,6 @@
 			"Rev": "v1.13.0"
 		},
 		{
-			"ImportPath": "gopkg.in/alecthomas/kingpin.v2",
-			"Rev": "v2.2.6"
-		},
-		{
 			"ImportPath": "gopkg.in/check.v1",
 			"Rev": "20d25e280405"
 		},
@@ -444,19 +408,19 @@
 		},
 		{
 			"ImportPath": "k8s.io/api",
-			"Rev": "3cc1b3fb6d0f"
+			"Rev": "c2f1300cac21"
 		},
 		{
 			"ImportPath": "k8s.io/apimachinery",
-			"Rev": "40a3f73b0fa2"
+			"Rev": "07d458fe0356"
 		},
 		{
 			"ImportPath": "k8s.io/client-go",
-			"Rev": "108c485f896e"
+			"Rev": "0df29606e0e8"
 		},
 		{
 			"ImportPath": "k8s.io/component-base",
-			"Rev": "a7e0d79a8811"
+			"Rev": "fd5d14dd6d20"
 		},
 		{
 			"ImportPath": "k8s.io/klog",
