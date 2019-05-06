@@ -36,7 +36,7 @@
 		},
 		{
 			"ImportPath": "github.com/beorn7/perks",
-			"Rev": "3a771d992973"
+			"Rev": "3ac7bf7a47d1"
 		},
 		{
 			"ImportPath": "github.com/coreos/bbolt",
