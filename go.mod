@@ -24,7 +24,6 @@ require (
 	github.com/go-openapi/swag v0.17.2 // indirect
 	github.com/gogo/protobuf v0.0.0-20171007142547-342cbe0a0415
 	github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b // indirect
-	github.com/google/go-cmp v0.2.0 // indirect
 	github.com/google/gofuzz v0.0.0-20170612174753-24818f796faf
 	github.com/googleapis/gnostic v0.0.0-20170729233727-0c5108395e2d
 	github.com/gorilla/websocket v0.0.0-20170926233335-4201258b820c // indirect
@@ -58,10 +57,10 @@ require (
 	gopkg.in/yaml.v1 v1.0.0-20140924161607-9f9df34309c0 // indirect
 	gopkg.in/yaml.v2 v2.2.1
 	gotest.tools v2.2.0+incompatible // indirect
-	k8s.io/api v0.0.0-20190514183756-d976e824acbd
-	k8s.io/apimachinery v0.0.0-20190513141300-e403c24f3a75
-	k8s.io/client-go v0.0.0-20190514184034-dd7f3ad83f18
-	k8s.io/component-base v0.0.0-20190514184434-549f1afd0bc9
+	k8s.io/api v0.0.0-20190516033424-c7696f7b6340
+	k8s.io/apimachinery v0.0.0-20190528154420-3f1c30e3430c
+	k8s.io/client-go v0.0.0-20190516033424-c42884485225
+	k8s.io/component-base v0.0.0-20190528155600-c2eda234c182
 	k8s.io/klog v0.3.0
 	k8s.io/kube-openapi v0.0.0-20190228160746-b3a7cee44a30
 	k8s.io/utils v0.0.0-20190221042446-c2654d5206da
@@ -73,8 +72,8 @@ replace (
 	golang.org/x/sync => golang.org/x/sync v0.0.0-20181108010431-42b317875d0f
 	golang.org/x/sys => golang.org/x/sys v0.0.0-20190209173611-3b5209105503
 	golang.org/x/tools => golang.org/x/tools v0.0.0-20190313210603-aa82965741a9
-	k8s.io/api => k8s.io/api v0.0.0-20190514183756-d976e824acbd
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20190513141300-e403c24f3a75
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20190514184034-dd7f3ad83f18
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20190514184434-549f1afd0bc9
+	k8s.io/api => k8s.io/api v0.0.0-20190516033424-c7696f7b6340
+	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20190528154420-3f1c30e3430c
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20190516033424-c42884485225
+	k8s.io/component-base => k8s.io/component-base v0.0.0-20190528155600-c2eda234c182
 )
