@@ -140,7 +140,7 @@
 		},
 		{
 			"ImportPath": "github.com/google/go-cmp",
-			"Rev": "v0.2.0"
+			"Rev": "v0.3.0"
 		},
 		{
 			"ImportPath": "github.com/google/gofuzz",
@@ -396,19 +396,19 @@
 		},
 		{
 			"ImportPath": "k8s.io/api",
-			"Rev": "ef1c7e5f75cb"
+			"Rev": "db5a9d1c40eb"
 		},
 		{
 			"ImportPath": "k8s.io/apimachinery",
-			"Rev": "1f207b29b441"
+			"Rev": "b74e4c97951f"
 		},
 		{
 			"ImportPath": "k8s.io/client-go",
-			"Rev": "36e0c54762a5"
+			"Rev": "78e94f51a042"
 		},
 		{
 			"ImportPath": "k8s.io/component-base",
-			"Rev": "a08481ff1d14"
+			"Rev": "2354f2393ad4"
 		},
 		{
 			"ImportPath": "k8s.io/klog",
