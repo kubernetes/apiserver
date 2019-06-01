@@ -195,7 +195,7 @@ gotest.tools v2.2.0+incompatible/go.mod h1:DsYFclhRJ6vuDpmuTbkuFWG+y2sxOXAzmJt81
 k8s.io/api v0.0.0-20190602125758-0b6636a6b587/go.mod h1:6v+AckiDRrvZFUHXmDOahi8suThDPhjRhq47xjNtGtM=
 k8s.io/apimachinery v0.0.0-20190602125621-c0632ccbde11/go.mod h1:u/2VL7tgEMV0FFTV9q0JO+7cnTsV44LP8Pmx41R4AQ4=
 k8s.io/client-go v0.0.0-20190531132439-88ff0afc48bb/go.mod h1:oBWDlQWEpK7nPTuJljTF4w6W/zjopIHAPOJu70zfOHE=
-k8s.io/component-base v0.0.0-20190531133342-103ccccb7a11/go.mod h1:frt5HHKRohojf4/1IKHxe/Zjd0eYBrP9LRsKkfWt9Fc=
+k8s.io/component-base v0.0.0-20190602130718-4ec519775454/go.mod h1:bS4Et9rV53C0WG/JRa+efnzveAUGHN+6XuIC9ZgGDkc=
 k8s.io/klog v0.3.2 h1:qvP/U6CcZ6qyi/qSHlJKdlAboCzo3mT0DAm0XAarpz4=
 k8s.io/klog v0.3.2/go.mod h1:Gq+BEi5rUBO/HRz0bTSXDUcqjScdoY3a9IHpCEIOOfk=
 k8s.io/kube-openapi v0.0.0-20190228160746-b3a7cee44a30 h1:TRb4wNWoBVrH9plmkp2q86FIDppkbrEXdXlxU3a3BMI=
