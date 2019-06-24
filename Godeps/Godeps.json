@@ -20,7 +20,7 @@
 		},
 		{
 			"ImportPath": "github.com/BurntSushi/toml",
-			"Rev": "v0.3.0"
+			"Rev": "v0.3.1"
 		},
 		{
 			"ImportPath": "github.com/NYTimes/gziphandler",
@@ -148,7 +148,7 @@
 		},
 		{
 			"ImportPath": "github.com/google/uuid",
-			"Rev": "v1.0.0"
+			"Rev": "v1.1.1"
 		},
 		{
 			"ImportPath": "github.com/googleapis/gnostic",
@@ -160,7 +160,7 @@
 		},
 		{
 			"ImportPath": "github.com/gorilla/websocket",
-			"Rev": "4201258b820c"
+			"Rev": "v1.4.0"
 		},
 		{
 			"ImportPath": "github.com/gregjones/httpcache",
@@ -225,10 +225,6 @@
 		{
 			"ImportPath": "github.com/mxk/go-flowrate",
 			"Rev": "cca7078d478f"
-		},
-		{
-			"ImportPath": "github.com/natefinch/lumberjack",
-			"Rev": "v2.0.0"
 		},
 		{
 			"ImportPath": "github.com/onsi/ginkgo",
@@ -372,7 +368,7 @@
 		},
 		{
 			"ImportPath": "gopkg.in/natefinch/lumberjack.v2",
-			"Rev": "20b71e5b60d7"
+			"Rev": "v2.0.0"
 		},
 		{
 			"ImportPath": "gopkg.in/square/go-jose.v2",
@@ -381,10 +377,6 @@
 		{
 			"ImportPath": "gopkg.in/tomb.v1",
 			"Rev": "dd632973f1e7"
-		},
-		{
-			"ImportPath": "gopkg.in/yaml.v1",
-			"Rev": "9f9df34309c0"
 		},
 		{
 			"ImportPath": "gopkg.in/yaml.v2",
@@ -396,19 +388,19 @@
 		},
 		{
 			"ImportPath": "k8s.io/api",
-			"Rev": "dcce3486da33"
+			"Rev": "95846d7ef82a"
 		},
 		{
 			"ImportPath": "k8s.io/apimachinery",
-			"Rev": "d16981aedf33"
+			"Rev": "961b39a1baa0"
 		},
 		{
 			"ImportPath": "k8s.io/client-go",
-			"Rev": "585a16d2e773"
+			"Rev": "2c6e35a5b9cf"
 		},
 		{
 			"ImportPath": "k8s.io/component-base",
-			"Rev": "e5083e713460"
+			"Rev": "dd74dcc4bb91"
 		},
 		{
 			"ImportPath": "k8s.io/klog",
