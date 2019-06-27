@@ -28,7 +28,7 @@
 		},
 		{
 			"ImportPath": "github.com/PuerkitoBio/purell",
-			"Rev": "v1.1.0"
+			"Rev": "v1.1.1"
 		},
 		{
 			"ImportPath": "github.com/PuerkitoBio/urlesc",
@@ -104,19 +104,19 @@
 		},
 		{
 			"ImportPath": "github.com/go-openapi/jsonpointer",
-			"Rev": "v0.19.0"
+			"Rev": "v0.19.2"
 		},
 		{
 			"ImportPath": "github.com/go-openapi/jsonreference",
-			"Rev": "v0.19.0"
+			"Rev": "v0.19.2"
 		},
 		{
 			"ImportPath": "github.com/go-openapi/spec",
-			"Rev": "v0.17.2"
+			"Rev": "v0.19.2"
 		},
 		{
 			"ImportPath": "github.com/go-openapi/swag",
-			"Rev": "v0.17.2"
+			"Rev": "v0.19.2"
 		},
 		{
 			"ImportPath": "github.com/gogo/protobuf",
@@ -203,8 +203,20 @@
 			"Rev": "v1.0.1"
 		},
 		{
+			"ImportPath": "github.com/kr/pretty",
+			"Rev": "v0.1.0"
+		},
+		{
+			"ImportPath": "github.com/kr/pty",
+			"Rev": "v1.1.5"
+		},
+		{
+			"ImportPath": "github.com/kr/text",
+			"Rev": "v0.1.0"
+		},
+		{
 			"ImportPath": "github.com/mailru/easyjson",
-			"Rev": "60711f1a8329"
+			"Rev": "94de47d64c63"
 		},
 		{
 			"ImportPath": "github.com/matttproud/golang_protobuf_extensions",
@@ -284,7 +296,7 @@
 		},
 		{
 			"ImportPath": "github.com/stretchr/objx",
-			"Rev": "v0.1.1"
+			"Rev": "v0.2.0"
 		},
 		{
 			"ImportPath": "github.com/stretchr/testify",
@@ -356,7 +368,7 @@
 		},
 		{
 			"ImportPath": "gopkg.in/check.v1",
-			"Rev": "20d25e280405"
+			"Rev": "788fd7840127"
 		},
 		{
 			"ImportPath": "gopkg.in/fsnotify.v1",
@@ -388,19 +400,19 @@
 		},
 		{
 			"ImportPath": "k8s.io/api",
-			"Rev": "95846d7ef82a"
+			"Rev": "acea843d18eb"
 		},
 		{
 			"ImportPath": "k8s.io/apimachinery",
-			"Rev": "961b39a1baa0"
+			"Rev": "bc5732d141a8"
 		},
 		{
 			"ImportPath": "k8s.io/client-go",
-			"Rev": "2c6e35a5b9cf"
+			"Rev": "11059204e07c"
 		},
 		{
 			"ImportPath": "k8s.io/component-base",
-			"Rev": "dd74dcc4bb91"
+			"Rev": "327675bd8ec3"
 		},
 		{
 			"ImportPath": "k8s.io/klog",
