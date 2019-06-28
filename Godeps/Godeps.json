@@ -284,7 +284,7 @@
 		},
 		{
 			"ImportPath": "github.com/sirupsen/logrus",
-			"Rev": "v1.2.0"
+			"Rev": "v1.4.2"
 		},
 		{
 			"ImportPath": "github.com/soheilhy/cmux",
