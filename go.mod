@@ -19,7 +19,7 @@ require (
 	github.com/evanphx/json-patch v4.2.0+incompatible
 	github.com/ghodss/yaml v0.0.0-20180820084758-c7ce16629ff4 // indirect
 	github.com/go-openapi/spec v0.19.2
-	github.com/gogo/protobuf v0.0.0-20171007142547-342cbe0a0415
+	github.com/gogo/protobuf v1.0.0
 	github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b // indirect
 	github.com/google/gofuzz v1.0.0
 	github.com/googleapis/gnostic v0.0.0-20170729233727-0c5108395e2d
@@ -52,10 +52,10 @@ require (
 	gopkg.in/square/go-jose.v2 v2.2.2
 	gopkg.in/yaml.v2 v2.2.2
 	gotest.tools v2.2.0+incompatible // indirect
-	k8s.io/api v0.0.0-20190703165250-25c1e1427dc7
-	k8s.io/apimachinery v0.0.0-20190703161233-99a332dfcf06
-	k8s.io/client-go v0.0.0-20190703165502-ac1a9799d0d2
-	k8s.io/component-base v0.0.0-20190703045856-e0653b7050bb
+	k8s.io/api v0.0.0-20190703205437-39734b2a72fe
+	k8s.io/apimachinery v0.0.0-20190703205208-4cfb76a8bf76
+	k8s.io/client-go v0.0.0-20190703205746-5aceab658876
+	k8s.io/component-base v0.0.0-20190703210340-65d72cfeb85d
 	k8s.io/klog v0.3.1
 	k8s.io/kube-openapi v0.0.0-20190228160746-b3a7cee44a30
 	k8s.io/utils v0.0.0-20190607212802-c55fbcfc754a
@@ -70,8 +70,8 @@ replace (
 	golang.org/x/sys => golang.org/x/sys v0.0.0-20190209173611-3b5209105503
 	golang.org/x/text => golang.org/x/text v0.3.1-0.20181227161524-e6919f6577db
 	golang.org/x/tools => golang.org/x/tools v0.0.0-20190313210603-aa82965741a9
-	k8s.io/api => k8s.io/api v0.0.0-20190703165250-25c1e1427dc7
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20190703161233-99a332dfcf06
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20190703165502-ac1a9799d0d2
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20190703045856-e0653b7050bb
+	k8s.io/api => k8s.io/api v0.0.0-20190703205437-39734b2a72fe
+	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20190703205208-4cfb76a8bf76
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20190703205746-5aceab658876
+	k8s.io/component-base => k8s.io/component-base v0.0.0-20190703210340-65d72cfeb85d
 )
