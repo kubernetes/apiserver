@@ -404,19 +404,23 @@
 		},
 		{
 			"ImportPath": "k8s.io/api",
-			"Rev": "31fe033ae6f9"
+			"Rev": "653c86b0609b"
 		},
 		{
 			"ImportPath": "k8s.io/apimachinery",
-			"Rev": "6171873045ff"
+			"Rev": "0bb8574e0887"
 		},
 		{
 			"ImportPath": "k8s.io/client-go",
-			"Rev": "611184f7c43a"
+			"Rev": "0c47f9da0001"
 		},
 		{
 			"ImportPath": "k8s.io/component-base",
-			"Rev": "4ad84870f76c"
+			"Rev": "b4f50308a616"
+		},
+		{
+			"ImportPath": "k8s.io/gengo",
+			"Rev": "0689ccc1d7d6"
 		},
 		{
 			"ImportPath": "k8s.io/klog",
@@ -424,7 +428,7 @@
 		},
 		{
 			"ImportPath": "k8s.io/kube-openapi",
-			"Rev": "b3a7cee44a30"
+			"Rev": "33be087ad058"
 		},
 		{
 			"ImportPath": "k8s.io/utils",
@@ -432,7 +436,7 @@
 		},
 		{
 			"ImportPath": "sigs.k8s.io/structured-merge-diff",
-			"Rev": "e85c7b244fd2"
+			"Rev": "15d366b2352e"
 		},
 		{
 			"ImportPath": "sigs.k8s.io/yaml",
