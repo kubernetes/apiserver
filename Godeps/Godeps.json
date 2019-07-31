@@ -120,7 +120,7 @@
 		},
 		{
 			"ImportPath": "github.com/gogo/protobuf",
-			"Rev": "v0.0.0-20190410021324-65acae22fc9"
+			"Rev": "65acae22fc9d"
 		},
 		{
 			"ImportPath": "github.com/golang/glog",
@@ -412,19 +412,19 @@
 		},
 		{
 			"ImportPath": "k8s.io/api",
-			"Rev": "69e1bce1dad5"
+			"Rev": "739c7f7721ed"
 		},
 		{
 			"ImportPath": "k8s.io/apimachinery",
-			"Rev": "1f8faeb81191"
+			"Rev": "035e418f1ad9"
 		},
 		{
 			"ImportPath": "k8s.io/client-go",
-			"Rev": "f725dd354080"
+			"Rev": "de47f833b8db"
 		},
 		{
 			"ImportPath": "k8s.io/component-base",
-			"Rev": "042c00bc1f9e"
+			"Rev": "8d609ba1a28a"
 		},
 		{
 			"ImportPath": "k8s.io/gengo",
