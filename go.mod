@@ -71,7 +71,7 @@ replace (
 	golang.org/x/text => golang.org/x/text v0.3.1-0.20181227161524-e6919f6577db
 	golang.org/x/tools => golang.org/x/tools v0.0.0-20190313210603-aa82965741a9
 	k8s.io/api => k8s.io/api v0.0.0-20190808180749-077ce48e77da
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20190808180622-ac5d3b819fc6
+	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20190808170332-b75e3078ce2a
 	k8s.io/client-go => k8s.io/client-go v0.0.0-20190808180953-396a06da3bd7
 	k8s.io/component-base => k8s.io/component-base v0.0.0-20190808181427-fceb63aacf50
 )
