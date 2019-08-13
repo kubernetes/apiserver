@@ -45,18 +45,18 @@ require (
 	go.uber.org/multierr v0.0.0-20180122172545-ddea229ff1df // indirect
 	go.uber.org/zap v0.0.0-20180814183419-67bc79d13d15 // indirect
 	golang.org/x/crypto v0.0.0-20190611184440-5c40567a22f8
-	golang.org/x/net v0.0.0-20190613194153-d28f0bde5980
+	golang.org/x/net v0.0.0-20190812203447-cdfb69ac37fc
 	google.golang.org/genproto v0.0.0-20170731182057-09f6ed296fc6 // indirect
 	google.golang.org/grpc v1.13.0
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
 	gopkg.in/yaml.v2 v2.2.2
 	gotest.tools v2.2.0+incompatible // indirect
-	k8s.io/api v0.0.0-20190808180749-077ce48e77da
-	k8s.io/apimachinery v0.0.0-20190808180622-ac5d3b819fc6
-	k8s.io/client-go v0.0.0-20190808180953-396a06da3bd7
-	k8s.io/component-base v0.0.0-20190808181427-fceb63aacf50
-	k8s.io/klog v0.3.1
+	k8s.io/api v0.0.0-20190816101143-8eee47dbc9ed
+	k8s.io/apimachinery v0.0.0-20190816100904-d4a3b9129e40
+	k8s.io/client-go v0.0.0-20190816101647-a240a565b073
+	k8s.io/component-base v0.0.0-20190816061618-276f0f49dbc8
+	k8s.io/klog v0.4.0
 	k8s.io/kube-openapi v0.0.0-20190709113604-33be087ad058
 	k8s.io/utils v0.0.0-20190801114015-581e00157fb1
 	sigs.k8s.io/structured-merge-diff v0.0.0-20190724202554-0c1d754dd648
@@ -70,8 +70,8 @@ replace (
 	golang.org/x/sys => golang.org/x/sys v0.0.0-20190209173611-3b5209105503
 	golang.org/x/text => golang.org/x/text v0.3.1-0.20181227161524-e6919f6577db
 	golang.org/x/tools => golang.org/x/tools v0.0.0-20190313210603-aa82965741a9
-	k8s.io/api => k8s.io/api v0.0.0-20190808180749-077ce48e77da
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20190808170332-b75e3078ce2a
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20190808180953-396a06da3bd7
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20190808181427-fceb63aacf50
+	k8s.io/api => k8s.io/api v0.0.0-20190816101143-8eee47dbc9ed
+	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20190816100904-d4a3b9129e40
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20190816101647-a240a565b073
+	k8s.io/component-base => k8s.io/component-base v0.0.0-20190816061618-276f0f49dbc8
 )
