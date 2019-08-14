@@ -196,7 +196,7 @@
 		},
 		{
 			"ImportPath": "github.com/grpc-ecosystem/go-grpc-prometheus",
-			"Rev": "2500245aa611"
+			"Rev": "v1.2.0"
 		},
 		{
 			"ImportPath": "github.com/grpc-ecosystem/grpc-gateway",
@@ -364,7 +364,7 @@
 		},
 		{
 			"ImportPath": "golang.org/x/net",
-			"Rev": "65e2d4e15006"
+			"Rev": "cdfb69ac37fc"
 		},
 		{
 			"ImportPath": "golang.org/x/oauth2",
