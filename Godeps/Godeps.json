@@ -176,7 +176,7 @@
 		},
 		{
 			"ImportPath": "github.com/grpc-ecosystem/go-grpc-prometheus",
-			"Rev": "2500245aa611"
+			"Rev": "v1.2.0"
 		},
 		{
 			"ImportPath": "github.com/grpc-ecosystem/grpc-gateway",
