@@ -63,12 +63,16 @@
 			"Rev": "v3.5.0"
 		},
 		{
+			"ImportPath": "github.com/client9/misspell",
+			"Rev": "v0.3.4"
+		},
+		{
 			"ImportPath": "github.com/coreos/bbolt",
 			"Rev": "v1.3.1-coreos.6"
 		},
 		{
 			"ImportPath": "github.com/coreos/etcd",
-			"Rev": "v3.3.13"
+			"Rev": "v3.3.15"
 		},
 		{
 			"ImportPath": "github.com/coreos/go-oidc",
@@ -120,7 +124,7 @@
 		},
 		{
 			"ImportPath": "github.com/ghodss/yaml",
-			"Rev": "c7ce16629ff4"
+			"Rev": "73d445a93680"
 		},
 		{
 			"ImportPath": "github.com/go-logr/logr",
@@ -153,6 +157,10 @@
 		{
 			"ImportPath": "github.com/golang/groupcache",
 			"Rev": "02826c3e7903"
+		},
+		{
+			"ImportPath": "github.com/golang/mock",
+			"Rev": "v1.1.1"
 		},
 		{
 			"ImportPath": "github.com/golang/protobuf",
@@ -363,6 +371,10 @@
 			"Rev": "e84da0312774"
 		},
 		{
+			"ImportPath": "golang.org/x/lint",
+			"Rev": "8f45f776aaf1"
+		},
+		{
 			"ImportPath": "golang.org/x/net",
 			"Rev": "cdfb69ac37fc"
 		},
@@ -396,11 +408,11 @@
 		},
 		{
 			"ImportPath": "google.golang.org/genproto",
-			"Rev": "09f6ed296fc6"
+			"Rev": "c66870c02cf8"
 		},
 		{
 			"ImportPath": "google.golang.org/grpc",
-			"Rev": "v1.13.0"
+			"Rev": "v1.23.0"
 		},
 		{
 			"ImportPath": "gopkg.in/check.v1",
@@ -433,6 +445,10 @@
 		{
 			"ImportPath": "gotest.tools",
 			"Rev": "v2.2.0"
+		},
+		{
+			"ImportPath": "honnef.co/go/tools",
+			"Rev": "ea95bdfd59fc"
 		},
 		{
 			"ImportPath": "k8s.io/api",
