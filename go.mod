@@ -48,8 +48,8 @@ require (
 	gopkg.in/square/go-jose.v2 v2.2.2
 	gopkg.in/yaml.v2 v2.2.2
 	gotest.tools v2.2.0+incompatible // indirect
-	k8s.io/api v0.0.0-20190826194732-9f642ccb7a30
-	k8s.io/apimachinery v0.0.0-20190828074610-103e7d66058c
+	k8s.io/api v0.0.0-20190828114744-01690931d7e8
+	k8s.io/apimachinery v0.0.0-20190828114619-0b92ed95b061
 	k8s.io/client-go v0.0.0-20190827114928-15739c3f8076
 	k8s.io/component-base v0.0.0-20190823013255-e3d4ac5c99fb
 	k8s.io/klog v0.4.0
@@ -65,8 +65,8 @@ replace (
 	golang.org/x/sync => golang.org/x/sync v0.0.0-20181108010431-42b317875d0f
 	golang.org/x/sys => golang.org/x/sys v0.0.0-20190209173611-3b5209105503
 	golang.org/x/text => golang.org/x/text v0.3.1-0.20181227161524-e6919f6577db
-	k8s.io/api => k8s.io/api v0.0.0-20190826194732-9f642ccb7a30
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20190828074610-103e7d66058c
+	k8s.io/api => k8s.io/api v0.0.0-20190828114744-01690931d7e8
+	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20190828114619-0b92ed95b061
 	k8s.io/client-go => k8s.io/client-go v0.0.0-20190827114928-15739c3f8076
 	k8s.io/component-base => k8s.io/component-base v0.0.0-20190823013255-e3d4ac5c99fb
 )
