@@ -24,7 +24,7 @@ require (
 	github.com/grpc-ecosystem/go-grpc-middleware v0.0.0-20190222133341-cfaf5686ec79 // indirect
 	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0
 	github.com/grpc-ecosystem/grpc-gateway v1.3.0 // indirect
-	github.com/hashicorp/golang-lru v0.5.0
+	github.com/hashicorp/golang-lru v0.5.1
 	github.com/jonboulle/clockwork v0.1.0 // indirect
 	github.com/munnerz/goautoneg v0.0.0-20120707110453-a547fc61f48d
 	github.com/pborman/uuid v1.2.0
@@ -43,15 +43,16 @@ require (
 	go.uber.org/zap v0.0.0-20180814183419-67bc79d13d15 // indirect
 	golang.org/x/crypto v0.0.0-20190611184440-5c40567a22f8
 	golang.org/x/net v0.0.0-20190812203447-cdfb69ac37fc
+	google.golang.org/genproto v0.0.0-20190502173448-54afdca5d873 // indirect
 	google.golang.org/grpc v1.23.0
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
 	gopkg.in/yaml.v2 v2.2.2
 	gotest.tools v2.2.0+incompatible // indirect
-	k8s.io/api v0.0.0-20190828114744-01690931d7e8
-	k8s.io/apimachinery v0.0.0-20190828114619-0b92ed95b061
-	k8s.io/client-go v0.0.0-20190827114928-15739c3f8076
-	k8s.io/component-base v0.0.0-20190823013255-e3d4ac5c99fb
+	k8s.io/api v0.0.0-20190828114745-198695d0603e
+	k8s.io/apimachinery v0.0.0-20190828114620-4147c925140e
+	k8s.io/client-go v0.0.0-20190828114957-b4d94f01600c
+	k8s.io/component-base v0.0.0-20190828115425-a6cd50bc5c5b
 	k8s.io/klog v0.4.0
 	k8s.io/kube-openapi v0.0.0-20190709113604-33be087ad058
 	k8s.io/utils v0.0.0-20190801114015-581e00157fb1
@@ -62,11 +63,13 @@ require (
 replace (
 	golang.org/x/crypto => golang.org/x/crypto v0.0.0-20181025213731-e84da0312774
 	golang.org/x/lint => golang.org/x/lint v0.0.0-20181217174547-8f45f776aaf1
+	golang.org/x/oauth2 => golang.org/x/oauth2 v0.0.0-20190402181905-9f3314589c9a
 	golang.org/x/sync => golang.org/x/sync v0.0.0-20181108010431-42b317875d0f
 	golang.org/x/sys => golang.org/x/sys v0.0.0-20190209173611-3b5209105503
 	golang.org/x/text => golang.org/x/text v0.3.1-0.20181227161524-e6919f6577db
-	k8s.io/api => k8s.io/api v0.0.0-20190828114744-01690931d7e8
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20190828114619-0b92ed95b061
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20190827114928-15739c3f8076
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20190823013255-e3d4ac5c99fb
+	golang.org/x/time => golang.org/x/time v0.0.0-20161028155119-f51c12702a4d
+	k8s.io/api => k8s.io/api v0.0.0-20190828114745-198695d0603e
+	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20190828114620-4147c925140e
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20190828114957-b4d94f01600c
+	k8s.io/component-base => k8s.io/component-base v0.0.0-20190828115425-a6cd50bc5c5b
 )
