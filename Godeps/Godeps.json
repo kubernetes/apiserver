@@ -404,7 +404,7 @@
 		},
 		{
 			"ImportPath": "golang.org/x/oauth2",
-			"Rev": "0f29369cfe45"
+			"Rev": "9f3314589c9a"
 		},
 		{
 			"ImportPath": "golang.org/x/sync",
@@ -420,7 +420,7 @@
 		},
 		{
 			"ImportPath": "golang.org/x/time",
-			"Rev": "85acf8d2951c"
+			"Rev": "f51c12702a4d"
 		},
 		{
 			"ImportPath": "golang.org/x/tools",
@@ -436,7 +436,7 @@
 		},
 		{
 			"ImportPath": "google.golang.org/genproto",
-			"Rev": "e7d98fc518a7"
+			"Rev": "54afdca5d873"
 		},
 		{
 			"ImportPath": "google.golang.org/grpc",
