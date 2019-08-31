@@ -76,7 +76,7 @@
 		},
 		{
 			"ImportPath": "github.com/coreos/go-oidc",
-			"Rev": "065b426bd416"
+			"Rev": "v2.1.0"
 		},
 		{
 			"ImportPath": "github.com/coreos/go-semver",
