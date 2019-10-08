@@ -10,7 +10,7 @@ require (
 	github.com/coreos/etcd v3.3.15+incompatible
 	github.com/coreos/go-oidc v2.1.0+incompatible
 	github.com/coreos/go-semver v0.3.0 // indirect
-	github.com/coreos/go-systemd v0.0.0-20180511133405-39ca1b05acc7
+	github.com/coreos/go-systemd v0.0.0-20190321100706-95778dfbb74e
 	github.com/coreos/pkg v0.0.0-20180108230652-97fdf19511ea
 	github.com/docker/docker v0.7.3-0.20190327010347-be7ac8be2ae0
 	github.com/emicklei/go-restful v2.9.5+incompatible
@@ -50,8 +50,8 @@ require (
 	gotest.tools v2.2.0+incompatible // indirect
 	k8s.io/api v0.0.0-20191005115622-2e41325d9e4b
 	k8s.io/apimachinery v0.0.0-20191006235458-f9f2f3f8ab02
-	k8s.io/client-go v0.0.0-20191007155814-911ef75fbcbf
-	k8s.io/component-base v0.0.0-20191005120246-f5216b94ab44
+	k8s.io/client-go v0.0.0-20191008115822-1210218b4a26
+	k8s.io/component-base v0.0.0-20191008075918-86c6082c6a20
 	k8s.io/klog v1.0.0
 	k8s.io/kube-openapi v0.0.0-20190816220812-743ec37842bf
 	k8s.io/utils v0.0.0-20190920012459-5008bf6f8cd6
@@ -69,6 +69,6 @@ replace (
 	golang.org/x/time => golang.org/x/time v0.0.0-20161028155119-f51c12702a4d
 	k8s.io/api => k8s.io/api v0.0.0-20191005115622-2e41325d9e4b
 	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20191006235458-f9f2f3f8ab02
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20191007155814-911ef75fbcbf
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20191005120246-f5216b94ab44
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20191008115822-1210218b4a26
+	k8s.io/component-base => k8s.io/component-base v0.0.0-20191008075918-86c6082c6a20
 )

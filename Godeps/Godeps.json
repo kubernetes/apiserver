@@ -92,7 +92,7 @@
 		},
 		{
 			"ImportPath": "github.com/coreos/go-systemd",
-			"Rev": "39ca1b05acc7"
+			"Rev": "95778dfbb74e"
 		},
 		{
 			"ImportPath": "github.com/coreos/pkg",
@@ -524,11 +524,11 @@
 		},
 		{
 			"ImportPath": "k8s.io/client-go",
-			"Rev": "911ef75fbcbf"
+			"Rev": "1210218b4a26"
 		},
 		{
 			"ImportPath": "k8s.io/component-base",
-			"Rev": "f5216b94ab44"
+			"Rev": "86c6082c6a20"
 		},
 		{
 			"ImportPath": "k8s.io/gengo",
