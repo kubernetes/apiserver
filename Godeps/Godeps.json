@@ -316,7 +316,7 @@
 		},
 		{
 			"ImportPath": "github.com/munnerz/goautoneg",
-			"Rev": "a547fc61f48d"
+			"Rev": "a7dc8b61c822"
 		},
 		{
 			"ImportPath": "github.com/mwitkow/go-conntrack",
@@ -516,7 +516,7 @@
 		},
 		{
 			"ImportPath": "k8s.io/api",
-			"Rev": "910e671eb668"
+			"Rev": "fbf594f18f80"
 		},
 		{
 			"ImportPath": "k8s.io/apimachinery",
@@ -524,7 +524,7 @@
 		},
 		{
 			"ImportPath": "k8s.io/client-go",
-			"Rev": "e318746e79ea"
+			"Rev": "172b42569cca"
 		},
 		{
 			"ImportPath": "k8s.io/component-base",
