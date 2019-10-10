@@ -7,7 +7,7 @@ go 1.12
 require (
 	github.com/Azure/go-ansiterm v0.0.0-20170929234023-d6e3b3328b78 // indirect
 	github.com/coreos/bbolt v1.3.1-coreos.6 // indirect
-	github.com/coreos/etcd v3.3.15+incompatible
+	github.com/coreos/etcd v3.3.16+incompatible
 	github.com/coreos/go-oidc v2.1.0+incompatible
 	github.com/coreos/go-semver v0.3.0 // indirect
 	github.com/coreos/go-systemd v0.0.0-20190321100706-95778dfbb74e
@@ -51,7 +51,7 @@ require (
 	k8s.io/api v0.0.0-20191010143144-fbf594f18f80
 	k8s.io/apimachinery v0.0.0-20191006235458-f9f2f3f8ab02
 	k8s.io/client-go v0.0.0-20191010200049-172b42569cca
-	k8s.io/component-base v0.0.0-20191010035941-20c2ac7c8c1b
+	k8s.io/component-base v0.0.0-20191010200626-477c6b8d6aae
 	k8s.io/klog v1.0.0
 	k8s.io/kube-openapi v0.0.0-20190816220812-743ec37842bf
 	k8s.io/utils v0.0.0-20190920012459-5008bf6f8cd6
@@ -70,5 +70,5 @@ replace (
 	k8s.io/api => k8s.io/api v0.0.0-20191010143144-fbf594f18f80
 	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20191006235458-f9f2f3f8ab02
 	k8s.io/client-go => k8s.io/client-go v0.0.0-20191010200049-172b42569cca
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20191010035941-20c2ac7c8c1b
+	k8s.io/component-base => k8s.io/component-base v0.0.0-20191010200626-477c6b8d6aae
 )
