@@ -80,7 +80,7 @@
 		},
 		{
 			"ImportPath": "github.com/coreos/etcd",
-			"Rev": "v3.3.16"
+			"Rev": "v3.3.15"
 		},
 		{
 			"ImportPath": "github.com/coreos/go-oidc",
@@ -524,7 +524,7 @@
 		},
 		{
 			"ImportPath": "k8s.io/client-go",
-			"Rev": "172b42569cca"
+			"Rev": "c51c673cf873"
 		},
 		{
 			"ImportPath": "k8s.io/component-base",
