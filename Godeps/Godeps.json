@@ -76,7 +76,7 @@
 		},
 		{
 			"ImportPath": "github.com/coreos/bbolt",
-			"Rev": "v1.3.1-coreos.6"
+			"Rev": "v1.3.3"
 		},
 		{
 			"ImportPath": "github.com/coreos/etcd",
@@ -403,6 +403,10 @@
 			"Rev": "07dd2e8dfe18"
 		},
 		{
+			"ImportPath": "go.etcd.io/bbolt",
+			"Rev": "v1.3.3"
+		},
+		{
 			"ImportPath": "go.opencensus.io",
 			"Rev": "v0.21.0"
 		},
@@ -520,15 +524,15 @@
 		},
 		{
 			"ImportPath": "k8s.io/apimachinery",
-			"Rev": "fb3eea214746"
+			"Rev": "b1267f8c42b4"
 		},
 		{
 			"ImportPath": "k8s.io/client-go",
-			"Rev": "bd505ee787b2"
+			"Rev": "14c42cd304d9"
 		},
 		{
 			"ImportPath": "k8s.io/component-base",
-			"Rev": "ca590c444ad5"
+			"Rev": "d338b9159fb6"
 		},
 		{
 			"ImportPath": "k8s.io/gengo",
