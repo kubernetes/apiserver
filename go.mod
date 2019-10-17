@@ -48,7 +48,7 @@ require (
 	gopkg.in/square/go-jose.v2 v2.2.2
 	gopkg.in/yaml.v2 v2.2.4
 	gotest.tools v2.2.0+incompatible // indirect
-	k8s.io/api v0.0.0-20191010143144-fbf594f18f80
+	k8s.io/api v0.0.0-20191016225839-816a9b7df678
 	k8s.io/apimachinery v0.0.0-20191016225534-b1267f8c42b4
 	k8s.io/client-go v0.0.0-20191016230210-14c42cd304d9
 	k8s.io/component-base v0.0.0-20191016230640-d338b9159fb6
@@ -67,7 +67,7 @@ replace (
 	golang.org/x/sys => golang.org/x/sys v0.0.0-20190209173611-3b5209105503
 	golang.org/x/text => golang.org/x/text v0.3.1-0.20181227161524-e6919f6577db
 	golang.org/x/time => golang.org/x/time v0.0.0-20161028155119-f51c12702a4d
-	k8s.io/api => k8s.io/api v0.0.0-20191010143144-fbf594f18f80
+	k8s.io/api => k8s.io/api v0.0.0-20191016225839-816a9b7df678
 	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20191016225534-b1267f8c42b4
 	k8s.io/client-go => k8s.io/client-go v0.0.0-20191016230210-14c42cd304d9
 	k8s.io/component-base => k8s.io/component-base v0.0.0-20191016230640-d338b9159fb6
