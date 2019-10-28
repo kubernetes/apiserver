@@ -68,11 +68,11 @@
 		},
 		{
 			"ImportPath": "github.com/coreos/bbolt",
-			"Rev": "v1.3.1-coreos.6"
+			"Rev": "v1.3.3"
 		},
 		{
 			"ImportPath": "github.com/coreos/etcd",
-			"Rev": "v3.3.15"
+			"Rev": "v3.3.17"
 		},
 		{
 			"ImportPath": "github.com/coreos/go-oidc",
@@ -369,6 +369,10 @@
 		{
 			"ImportPath": "github.com/xiang90/probing",
 			"Rev": "07dd2e8dfe18"
+		},
+		{
+			"ImportPath": "go.etcd.io/bbolt",
+			"Rev": "v1.3.3"
 		},
 		{
 			"ImportPath": "go.opencensus.io",
