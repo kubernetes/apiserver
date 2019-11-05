@@ -19,6 +19,7 @@ require (
 	github.com/gogo/protobuf v1.2.2-0.20190723190241-65acae22fc9d
 	github.com/google/go-cmp v0.3.0
 	github.com/google/gofuzz v1.0.0
+	github.com/google/uuid v1.1.1
 	github.com/googleapis/gnostic v0.0.0-20170729233727-0c5108395e2d
 	github.com/gorilla/websocket v1.4.0 // indirect
 	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0
@@ -40,10 +41,10 @@ require (
 	gopkg.in/square/go-jose.v2 v2.2.2
 	gopkg.in/yaml.v2 v2.2.4
 	gotest.tools v2.2.0+incompatible // indirect
-	k8s.io/api v0.0.0-20191105135202-f26842a96636
-	k8s.io/apimachinery v0.0.0-20191105135202-8b539fc8459d
-	k8s.io/client-go v0.0.0-20191105135202-b132d4e8c200
-	k8s.io/component-base v0.0.0-20191105135202-5ba71dd09dcd
+	k8s.io/api v0.0.0
+	k8s.io/apimachinery v0.0.0
+	k8s.io/client-go v0.0.0
+	k8s.io/component-base v0.0.0
 	k8s.io/klog v1.0.0
 	k8s.io/kube-openapi v0.0.0-20190816220812-743ec37842bf
 	k8s.io/utils v0.0.0-20191030222137-2b95a09bc58d
@@ -60,8 +61,9 @@ replace (
 	golang.org/x/sys => golang.org/x/sys v0.0.0-20190209173611-3b5209105503
 	golang.org/x/text => golang.org/x/text v0.3.1-0.20181227161524-e6919f6577db
 	golang.org/x/time => golang.org/x/time v0.0.0-20161028155119-f51c12702a4d
-	k8s.io/api => k8s.io/api v0.0.0-20191105135202-f26842a96636
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20191105135202-8b539fc8459d
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20191105135202-b132d4e8c200
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20191105135202-5ba71dd09dcd
+	k8s.io/api => ../api
+	k8s.io/apimachinery => ../apimachinery
+	k8s.io/apiserver => ../apiserver
+	k8s.io/client-go => ../client-go
+	k8s.io/component-base => ../component-base
 )
