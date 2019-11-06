@@ -367,10 +367,6 @@
 			"Rev": "v1.7.0"
 		},
 		{
-			"ImportPath": "github.com/pborman/uuid",
-			"Rev": "v1.2.0"
-		},
-		{
 			"ImportPath": "github.com/peterbourgon/diskv",
 			"Rev": "v2.0.1"
 		},
@@ -576,19 +572,19 @@
 		},
 		{
 			"ImportPath": "k8s.io/api",
-			"Rev": "f26842a96636"
+			"Rev": "ccca0f5a3d9c"
 		},
 		{
 			"ImportPath": "k8s.io/apimachinery",
-			"Rev": "8b539fc8459d"
+			"Rev": "e1faffd14b0f"
 		},
 		{
 			"ImportPath": "k8s.io/client-go",
-			"Rev": "b132d4e8c200"
+			"Rev": "5fc7a9e1ae72"
 		},
 		{
 			"ImportPath": "k8s.io/component-base",
-			"Rev": "5ba71dd09dcd"
+			"Rev": "5d1e7ba2b923"
 		},
 		{
 			"ImportPath": "k8s.io/gengo",
