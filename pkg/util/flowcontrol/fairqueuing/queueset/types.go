@@ -14,56 +14,70 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-package fairqueuing
+package queueset
 
 import (
 	"time"
+
+	"k8s.io/apiserver/pkg/util/promise"
 )
 
-// Request is a temporary container for "requests" with additional tracking fields
+// request is a temporary container for "requests" with additional tracking fields
 // required for the functionality FQScheduler
-type Request struct {
-	//TODO(aaron-prindle) seq is only used for testing, this was abstracted
-	// via an interface before, keeping this for now
-	QueueIdx int
+type request struct {
+	Queue *queue
 
-	Queue           *Queue
-	StartTime       time.Time
-	DequeueChannel  chan bool
-	RealEnqueueTime time.Time
-	Enqueued        bool
+	// StartTime is the clock time when the request began executing
+	StartTime time.Time
+
+	// Decision gets set to the decision about what to do with this request
+	Decision promise.LockingMutable
+
+	// ArrivalTime is when the request entered this system
+	ArrivalTime time.Time
+
+	// IsWaiting indicates whether the request is presently waiting in a queue
+	IsWaiting bool
+
+	// descr1 and descr2 are not used in any logic but they appear in
+	// log messages
+	descr1, descr2 interface{}
 }
 
-// Queue is an array of requests with additional metadata required for
+// queue is an array of requests with additional metadata required for
 // the FQScheduler
-type Queue struct {
-	Requests          []*Request
-	VirtualStart      float64
+type queue struct {
+	Requests []*request
+
+	// VirtualStart is the virtual time when the oldest request in the
+	// queue (if there is any) started virtually executing
+	VirtualStart float64
+
 	RequestsExecuting int
 	Index             int
 }
 
 // Enqueue enqueues a request into the queue
-func (q *Queue) Enqueue(request *Request) {
-	request.Enqueued = true
+func (q *queue) Enqueue(request *request) {
+	request.IsWaiting = true
 	q.Requests = append(q.Requests, request)
 }
 
 // Dequeue dequeues a request from the queue
-func (q *Queue) Dequeue() (*Request, bool) {
+func (q *queue) Dequeue() (*request, bool) {
 	if len(q.Requests) == 0 {
 		return nil, false
 	}
 	request := q.Requests[0]
 	q.Requests = q.Requests[1:]
 
-	request.Enqueued = false
+	request.IsWaiting = false
 	return request, true
 }
 
 // GetVirtualFinish returns the expected virtual finish time of the request at
 // index J in the queue with estimated finish time G
-func (q *Queue) GetVirtualFinish(J int, G float64) float64 {
+func (q *queue) GetVirtualFinish(J int, G float64) float64 {
 	// The virtual finish time of request number J in the queue
 	// (counting from J=1 for the head) is J * G + (virtual start time).
 
