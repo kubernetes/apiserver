@@ -346,7 +346,7 @@ gotest.tools v2.2.0+incompatible/go.mod h1:DsYFclhRJ6vuDpmuTbkuFWG+y2sxOXAzmJt81
 honnef.co/go/tools v0.0.0-20190102054323-c2f93a96b099/go.mod h1:rf3lG4BRIbNafJWhAfAdb/ePZxsR/4RtNHQocxwk9r4=
 honnef.co/go/tools v0.0.0-20190106161140-3f1c8253044a/go.mod h1:rf3lG4BRIbNafJWhAfAdb/ePZxsR/4RtNHQocxwk9r4=
 honnef.co/go/tools v0.0.0-20190523083050-ea95bdfd59fc/go.mod h1:rf3lG4BRIbNafJWhAfAdb/ePZxsR/4RtNHQocxwk9r4=
-k8s.io/api v0.0.0-20191115015536-da2cf76beda8/go.mod h1:TnwOuwwOmtUq5BythlhmbJs+lwQGEsSJ6N4S4ODl2m8=
+k8s.io/api v0.0.0-20191115095533-47f6de673b26/go.mod h1:iA/8arsvelvo4IDqIhX4IbjTEKBGgvsf2OraTuRtLFU=
 k8s.io/apimachinery v0.0.0-20191115015347-3c7067801da2/go.mod h1:dXFS2zaQR8fyzuvRdJDHw2Aerij/yVGJSre0bZQSVJA=
 k8s.io/client-go v0.0.0-20191114220110-6f03b71b98e6/go.mod h1:Hykx8A+UlxwDre3qJcqZPgCAZGjl9vNp6yc7SmfMQ1k=
 k8s.io/component-base v0.0.0-20191115015918-50dd3c3ffc6e/go.mod h1:mGvZw6rGJi0lRK5Qn3KrpKMsz2SmgmRw9oQoA3xkE7U=
