@@ -164,11 +164,11 @@
 		},
 		{
 			"ImportPath": "github.com/go-openapi/jsonreference",
-			"Rev": "v0.19.2"
+			"Rev": "v0.19.3"
 		},
 		{
 			"ImportPath": "github.com/go-openapi/spec",
-			"Rev": "v0.19.2"
+			"Rev": "v0.19.3"
 		},
 		{
 			"ImportPath": "github.com/go-openapi/swag",
@@ -316,7 +316,7 @@
 		},
 		{
 			"ImportPath": "github.com/mailru/easyjson",
-			"Rev": "b2ccc519800e"
+			"Rev": "v0.7.0"
 		},
 		{
 			"ImportPath": "github.com/mattn/go-colorable",
@@ -428,7 +428,7 @@
 		},
 		{
 			"ImportPath": "github.com/stretchr/testify",
-			"Rev": "v1.3.0"
+			"Rev": "v1.4.0"
 		},
 		{
 			"ImportPath": "github.com/tmc/grpc-websocket-proxy",
@@ -576,19 +576,19 @@
 		},
 		{
 			"ImportPath": "k8s.io/api",
-			"Rev": "bbc9463b57e5"
+			"Rev": "11707872ac1c"
 		},
 		{
 			"ImportPath": "k8s.io/apimachinery",
-			"Rev": "08e4eafd6d11"
+			"Rev": "41065c7a8c2a"
 		},
 		{
 			"ImportPath": "k8s.io/client-go",
-			"Rev": "0a8a1d7b7fae"
+			"Rev": "571c0ef67034"
 		},
 		{
 			"ImportPath": "k8s.io/component-base",
-			"Rev": "ea09a2678486"
+			"Rev": "771114ba3383"
 		},
 		{
 			"ImportPath": "k8s.io/gengo",
