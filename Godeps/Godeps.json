@@ -2036,11 +2036,11 @@
 		},
 		{
 			"ImportPath": "k8s.io/component-base/cli/flag",
-			"Rev": "f3799749b6b739bf4bb6ef1c79e63081bf109f15"
+			"Rev": "fac394c14c46cf2b021afb66405f62117c5f1282"
 		},
 		{
 			"ImportPath": "k8s.io/component-base/logs",
-			"Rev": "f3799749b6b739bf4bb6ef1c79e63081bf109f15"
+			"Rev": "fac394c14c46cf2b021afb66405f62117c5f1282"
 		},
 		{
 			"ImportPath": "k8s.io/klog",
