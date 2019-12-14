@@ -2,7 +2,7 @@
 
 module k8s.io/apiserver
 
-go 1.12
+go 1.13
 
 require (
 	github.com/Azure/go-ansiterm v0.0.0-20170929234023-d6e3b3328b78 // indirect
@@ -45,10 +45,10 @@ require (
 	gopkg.in/square/go-jose.v2 v2.2.2
 	gopkg.in/yaml.v2 v2.2.4
 	gotest.tools v2.2.0+incompatible // indirect
-	k8s.io/api v0.0.0-20191214025823-b3a21e931dfd
-	k8s.io/apimachinery v0.0.0-20191213205550-43dfa306b0f3
-	k8s.io/client-go v0.0.0-20191212070425-16bcffe0e4b7
-	k8s.io/component-base v0.0.0-20191213190206-d93270a35822
+	k8s.io/api v0.0.0
+	k8s.io/apimachinery v0.0.0
+	k8s.io/client-go v0.0.0
+	k8s.io/component-base v0.0.0
 	k8s.io/klog v1.0.0
 	k8s.io/kube-openapi v0.0.0-20191107075043-30be4d16710a
 	k8s.io/utils v0.0.0-20191114184206-e782cd3c129f
@@ -59,8 +59,9 @@ require (
 replace (
 	golang.org/x/sys => golang.org/x/sys v0.0.0-20190813064441-fde4db37ae7a // pinned to release-branch.go1.13
 	golang.org/x/tools => golang.org/x/tools v0.0.0-20190821162956-65e3620a7ae7 // pinned to release-branch.go1.13
-	k8s.io/api => k8s.io/api v0.0.0-20191214025823-b3a21e931dfd
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20191213205550-43dfa306b0f3
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20191212070425-16bcffe0e4b7
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20191213190206-d93270a35822
+	k8s.io/api => ../api
+	k8s.io/apimachinery => ../apimachinery
+	k8s.io/apiserver => ../apiserver
+	k8s.io/client-go => ../client-go
+	k8s.io/component-base => ../component-base
 )
