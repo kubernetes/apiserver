@@ -75,6 +75,10 @@
 			"Rev": "v3.5.0"
 		},
 		{
+			"ImportPath": "github.com/census-instrumentation/opencensus-proto",
+			"Rev": "v0.2.1"
+		},
+		{
 			"ImportPath": "github.com/client9/misspell",
 			"Rev": "v0.3.4"
 		},
@@ -131,6 +135,14 @@
 			"Rev": "v2.9.5"
 		},
 		{
+			"ImportPath": "github.com/envoyproxy/go-control-plane",
+			"Rev": "5f8ba28d4473"
+		},
+		{
+			"ImportPath": "github.com/envoyproxy/protoc-gen-validate",
+			"Rev": "v0.1.0"
+		},
+		{
 			"ImportPath": "github.com/evanphx/json-patch",
 			"Rev": "v4.2.0"
 		},
@@ -180,7 +192,7 @@
 		},
 		{
 			"ImportPath": "github.com/gogo/protobuf",
-			"Rev": "65acae22fc9d"
+			"Rev": "v1.3.1"
 		},
 		{
 			"ImportPath": "github.com/golang/glog",
@@ -388,7 +400,7 @@
 		},
 		{
 			"ImportPath": "github.com/prometheus/client_model",
-			"Rev": "v0.1.0"
+			"Rev": "14fe0d1b01d4"
 		},
 		{
 			"ImportPath": "github.com/prometheus/common",
@@ -520,11 +532,11 @@
 		},
 		{
 			"ImportPath": "google.golang.org/genproto",
-			"Rev": "54afdca5d873"
+			"Rev": "24fa4b261c55"
 		},
 		{
 			"ImportPath": "google.golang.org/grpc",
-			"Rev": "v1.23.1"
+			"Rev": "v1.26.0"
 		},
 		{
 			"ImportPath": "gopkg.in/alecthomas/kingpin.v2",
@@ -576,19 +588,19 @@
 		},
 		{
 			"ImportPath": "k8s.io/api",
-			"Rev": "e6e0b1f3ff7f"
+			"Rev": "7aecbd569fd4"
 		},
 		{
 			"ImportPath": "k8s.io/apimachinery",
-			"Rev": "fb4ce0f53438"
+			"Rev": "b615468efe04"
 		},
 		{
 			"ImportPath": "k8s.io/client-go",
-			"Rev": "1aa326d7304e"
+			"Rev": "a432bd9ba7da"
 		},
 		{
 			"ImportPath": "k8s.io/component-base",
-			"Rev": "5acc2cc4b5e6"
+			"Rev": "5735a1699056"
 		},
 		{
 			"ImportPath": "k8s.io/gengo",
