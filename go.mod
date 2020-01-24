@@ -19,7 +19,7 @@ require (
 	github.com/go-openapi/spec v0.19.3
 	github.com/gogo/protobuf v1.3.1
 	github.com/google/go-cmp v0.3.0
-	github.com/google/gofuzz v1.1.0
+	github.com/google/gofuzz v1.0.0
 	github.com/google/uuid v1.1.1
 	github.com/googleapis/gnostic v0.1.0
 	github.com/gorilla/websocket v1.4.0 // indirect
@@ -30,7 +30,7 @@ require (
 	github.com/pkg/errors v0.8.1
 	github.com/pquerna/cachecontrol v0.0.0-20171018203845-0dec1b30a021 // indirect
 	github.com/prometheus/client_golang v1.0.0
-	github.com/prometheus/client_model v0.0.0-20190812154241-14fe0d1b01d4
+	github.com/prometheus/client_model v0.2.0
 	github.com/sirupsen/logrus v1.4.2 // indirect
 	github.com/spf13/pflag v1.0.5
 	github.com/stretchr/testify v1.4.0
@@ -44,10 +44,10 @@ require (
 	gopkg.in/square/go-jose.v2 v2.2.2
 	gopkg.in/yaml.v2 v2.2.8
 	gotest.tools v2.2.0+incompatible // indirect
-	k8s.io/api v0.0.0-20200130072251-812149543c99
-	k8s.io/apimachinery v0.0.0-20200130072111-eb4ad4570127
-	k8s.io/client-go v0.0.0-20200130072523-1ae532aad6ad
-	k8s.io/component-base v0.0.0-20200130073007-c1abf0189091
+	k8s.io/api v0.0.0
+	k8s.io/apimachinery v0.0.0
+	k8s.io/client-go v0.0.0
+	k8s.io/component-base v0.0.0
 	k8s.io/klog v1.0.0
 	k8s.io/kube-openapi v0.0.0-20200121204235-bf4fb3bd569c
 	k8s.io/utils v0.0.0-20191217005138-9e5e9d854fcc
@@ -58,8 +58,9 @@ require (
 replace (
 	golang.org/x/sys => golang.org/x/sys v0.0.0-20190813064441-fde4db37ae7a // pinned to release-branch.go1.13
 	golang.org/x/tools => golang.org/x/tools v0.0.0-20190821162956-65e3620a7ae7 // pinned to release-branch.go1.13
-	k8s.io/api => k8s.io/api v0.0.0-20200130072251-812149543c99
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20200130072111-eb4ad4570127
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20200130072523-1ae532aad6ad
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20200130073007-c1abf0189091
+	k8s.io/api => ../api
+	k8s.io/apimachinery => ../apimachinery
+	k8s.io/apiserver => ../apiserver
+	k8s.io/client-go => ../client-go
+	k8s.io/component-base => ../component-base
 )
