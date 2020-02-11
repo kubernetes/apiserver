@@ -304,10 +304,10 @@ gotest.tools v2.2.0+incompatible/go.mod h1:DsYFclhRJ6vuDpmuTbkuFWG+y2sxOXAzmJt81
 honnef.co/go/tools v0.0.0-20190102054323-c2f93a96b099/go.mod h1:rf3lG4BRIbNafJWhAfAdb/ePZxsR/4RtNHQocxwk9r4=
 honnef.co/go/tools v0.0.0-20190106161140-3f1c8253044a/go.mod h1:rf3lG4BRIbNafJWhAfAdb/ePZxsR/4RtNHQocxwk9r4=
 honnef.co/go/tools v0.0.0-20190523083050-ea95bdfd59fc/go.mod h1:rf3lG4BRIbNafJWhAfAdb/ePZxsR/4RtNHQocxwk9r4=
-k8s.io/api v0.0.0-20200131112707-d64dbec685a4/go.mod h1:SGkmWEIoDg63In+t6yMJLEXQSkK5XxTNDcVydoy58dc=
-k8s.io/apimachinery v0.0.0-20200131112342-0c9ec93240c9/go.mod h1:Xk2vD2TRRpuWYLQNM6lT9R7DSFZUYG03SarNkbGrnKE=
-k8s.io/client-go v0.0.0-20200131113135-537443fada71/go.mod h1:u2dO5+oOGXUU6N5RS0nbrk8uLjpRqzLX8n+Te7tppS0=
-k8s.io/component-base v0.0.0-20200131113804-409d4deb41dd/go.mod h1:55xG5ozAlA2bbjfmFYC2LPf4cQqp4nOJT5e4+cXUDnY=
+k8s.io/api v0.16.7/go.mod h1:oUAiGRgo4t+5yqcxjOu5LoHT3wJ8JSbgczkaFYS5L7I=
+k8s.io/apimachinery v0.16.7/go.mod h1:Xk2vD2TRRpuWYLQNM6lT9R7DSFZUYG03SarNkbGrnKE=
+k8s.io/client-go v0.16.7/go.mod h1:9kEMEeuy2LdsHHXoU2Skqh+SDso+Yhkxd/0tltvswDE=
+k8s.io/component-base v0.16.7/go.mod h1:ikdyfezOFMu5O0qJjy/Y9eXwj+fV3pVwdmt0ulVcIR0=
 k8s.io/gengo v0.0.0-20190128074634-0689ccc1d7d6/go.mod h1:ezvh/TsK7cY6rbqRK0oQQ8IAqLxYwwyPxAX1Pzy0ii0=
 k8s.io/klog v0.0.0-20181102134211-b9b56d5dfc92/go.mod h1:Gq+BEi5rUBO/HRz0bTSXDUcqjScdoY3a9IHpCEIOOfk=
 k8s.io/klog v0.3.0/go.mod h1:Gq+BEi5rUBO/HRz0bTSXDUcqjScdoY3a9IHpCEIOOfk=
