@@ -36,7 +36,7 @@ require (
 	github.com/stretchr/testify v1.4.0
 	go.etcd.io/etcd v0.0.0-20191023171146-3cf2f69b5738
 	go.uber.org/zap v1.10.0
-	golang.org/x/crypto v0.0.0-20200220183623-bac4c82f6975
+	golang.org/x/crypto v0.0.0-20190820162420-60c769a6c586
 	golang.org/x/net v0.0.0-20191004110552-13f9640d40b9
 	golang.org/x/sync v0.0.0-20190911185100-cd5d95a43a6e
 	google.golang.org/grpc v1.26.0
@@ -44,13 +44,14 @@ require (
 	gopkg.in/square/go-jose.v2 v2.2.2
 	gopkg.in/yaml.v2 v2.2.8
 	gotest.tools v2.2.0+incompatible // indirect
-	k8s.io/api v0.0.0-20200214081624-026463abc787
-	k8s.io/apimachinery v0.0.0-20200214081019-2373d029717c
-	k8s.io/client-go v0.0.0-20200221163115-5e1786105b6f
-	k8s.io/component-base v0.0.0-20200221165142-d6212a66f6f6
+	k8s.io/api v0.0.0
+	k8s.io/apimachinery v0.0.0
+	k8s.io/client-go v0.0.0
+	k8s.io/component-base v0.0.0
 	k8s.io/klog v1.0.0
 	k8s.io/kube-openapi v0.0.0-20200121204235-bf4fb3bd569c
 	k8s.io/utils v0.0.0-20200117235808-5f6fbceb4c31
+	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.0.5
 	sigs.k8s.io/structured-merge-diff/v3 v3.0.0-20200207200219-5e70324e7c1c
 	sigs.k8s.io/yaml v1.2.0
 )
@@ -58,8 +59,9 @@ require (
 replace (
 	golang.org/x/sys => golang.org/x/sys v0.0.0-20190813064441-fde4db37ae7a // pinned to release-branch.go1.13
 	golang.org/x/tools => golang.org/x/tools v0.0.0-20190821162956-65e3620a7ae7 // pinned to release-branch.go1.13
-	k8s.io/api => k8s.io/api v0.0.0-20200214081624-026463abc787
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20200214081019-2373d029717c
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20200221163115-5e1786105b6f
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20200221165142-d6212a66f6f6
+	k8s.io/api => ../api
+	k8s.io/apimachinery => ../apimachinery
+	k8s.io/apiserver => ../apiserver
+	k8s.io/client-go => ../client-go
+	k8s.io/component-base => ../component-base
 )
