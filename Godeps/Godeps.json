@@ -619,6 +619,10 @@
 			"Rev": "5f6fbceb4c31"
 		},
 		{
+			"ImportPath": "sigs.k8s.io/apiserver-network-proxy/konnectivity-client",
+			"Rev": "v0.0.5"
+		},
+		{
 			"ImportPath": "sigs.k8s.io/structured-merge-diff/v3",
 			"Rev": "5e70324e7c1c"
 		},
