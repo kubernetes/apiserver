@@ -29,7 +29,6 @@ require (
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822
 	github.com/pkg/errors v0.8.1
 	github.com/pquerna/cachecontrol v0.0.0-20171018203845-0dec1b30a021 // indirect
-	github.com/prometheus/client_golang v1.0.0
 	github.com/prometheus/client_model v0.2.0
 	github.com/sirupsen/logrus v1.4.2 // indirect
 	github.com/spf13/pflag v1.0.5
@@ -47,7 +46,7 @@ require (
 	k8s.io/api v0.0.0-20200302082247-8f54d34188b0
 	k8s.io/apimachinery v0.0.0-20200302045842-b9f0d37e94c6
 	k8s.io/client-go v0.0.0-20200302082525-ca7edf3d8a93
-	k8s.io/component-base v0.0.0-20200227163006-6f93f319a354
+	k8s.io/component-base v0.0.0-20200302162701-77f056ceea66
 	k8s.io/klog v1.0.0
 	k8s.io/kube-openapi v0.0.0-20200121204235-bf4fb3bd569c
 	k8s.io/utils v0.0.0-20200117235808-5f6fbceb4c31
@@ -62,5 +61,5 @@ replace (
 	k8s.io/api => k8s.io/api v0.0.0-20200302082247-8f54d34188b0
 	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20200302045842-b9f0d37e94c6
 	k8s.io/client-go => k8s.io/client-go v0.0.0-20200302082525-ca7edf3d8a93
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20200227163006-6f93f319a354
+	k8s.io/component-base => k8s.io/component-base v0.0.0-20200302162701-77f056ceea66
 )
