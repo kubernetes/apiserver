@@ -352,10 +352,6 @@ gotest.tools v2.2.0+incompatible/go.mod h1:DsYFclhRJ6vuDpmuTbkuFWG+y2sxOXAzmJt81
 honnef.co/go/tools v0.0.0-20190102054323-c2f93a96b099/go.mod h1:rf3lG4BRIbNafJWhAfAdb/ePZxsR/4RtNHQocxwk9r4=
 honnef.co/go/tools v0.0.0-20190106161140-3f1c8253044a/go.mod h1:rf3lG4BRIbNafJWhAfAdb/ePZxsR/4RtNHQocxwk9r4=
 honnef.co/go/tools v0.0.0-20190523083050-ea95bdfd59fc/go.mod h1:rf3lG4BRIbNafJWhAfAdb/ePZxsR/4RtNHQocxwk9r4=
-k8s.io/api v0.0.0-20200131193051-d9adff57e763/go.mod h1:cAXok2H0KIzuH1pNDM7ILEuVowKuvJuRkbYH6v0rg2s=
-k8s.io/apimachinery v0.0.0-20200131192631-731dcecc2054/go.mod h1:gxLnyZcGNdZTCLnq3fgzyg2A5BVCHTNDFrw8AmuJ+0g=
-k8s.io/client-go v0.0.0-20200228082956-2a689211e542/go.mod h1:FNi/6m1bffmmFyPGQpWjHt5vYBTjCqdum2D+yzUr93s=
-k8s.io/component-base v0.0.0-20200228083515-c873a96afd82/go.mod h1:Kf+YAVebFA6gqYT8xsgkh0oYfqRFtQWL4C6o7M43ahA=
 k8s.io/gengo v0.0.0-20190128074634-0689ccc1d7d6/go.mod h1:ezvh/TsK7cY6rbqRK0oQQ8IAqLxYwwyPxAX1Pzy0ii0=
 k8s.io/klog v0.0.0-20181102134211-b9b56d5dfc92/go.mod h1:Gq+BEi5rUBO/HRz0bTSXDUcqjScdoY3a9IHpCEIOOfk=
 k8s.io/klog v0.3.0/go.mod h1:Gq+BEi5rUBO/HRz0bTSXDUcqjScdoY3a9IHpCEIOOfk=
@@ -369,5 +365,7 @@ sigs.k8s.io/structured-merge-diff v0.0.0-20190525122527-15d366b2352e h1:4Z09Hglb
 sigs.k8s.io/structured-merge-diff v0.0.0-20190525122527-15d366b2352e/go.mod h1:wWxsB5ozmmv/SG7nM11ayaAW51xMvak/t1r0CSlcokI=
 sigs.k8s.io/structured-merge-diff v1.0.1-0.20191108220359-b1b620dd3f06 h1:zD2IemQ4LmOcAumeiyDWXKUI2SO0NYDe3H6QGvPOVgU=
 sigs.k8s.io/structured-merge-diff v1.0.1-0.20191108220359-b1b620dd3f06/go.mod h1:/ULNhyfzRopfcjskuui0cTITekDduZ7ycKN3oUT9R18=
+sigs.k8s.io/structured-merge-diff/v2 v2.0.1 h1:I0h4buiCqDtPztO3NOiyoNMtqSIfld49D4Wj3UBXYZA=
+sigs.k8s.io/structured-merge-diff/v2 v2.0.1/go.mod h1:Wb7vfKAodbKgf6tn1Kl0VvGj7mRH6DGaRcixXEJXTsE=
 sigs.k8s.io/yaml v1.1.0 h1:4A07+ZFc2wgJwo8YNlQpr1rVlgUDlxXHhPJciaPY5gs=
 sigs.k8s.io/yaml v1.1.0/go.mod h1:UJmg0vDUVViEyp3mgSv9WPwZCDxu4rQW1olrI1uml+o=
