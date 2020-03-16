@@ -33,21 +33,20 @@ require (
 	github.com/sirupsen/logrus v1.4.2 // indirect
 	github.com/spf13/pflag v1.0.5
 	github.com/stretchr/testify v1.4.0
-	go.etcd.io/etcd v0.0.0-20191023171146-3cf2f69b5738
+	go.etcd.io/etcd v0.5.0-alpha.5.0.20200224211402-c65a9e2dd1fd
 	go.uber.org/zap v1.10.0
 	golang.org/x/crypto v0.0.0-20200220183623-bac4c82f6975
 	golang.org/x/net v0.0.0-20191004110552-13f9640d40b9
 	golang.org/x/sync v0.0.0-20190911185100-cd5d95a43a6e
-	golang.org/x/sys v0.0.0-20191022100944-742c48ecaeb7
 	google.golang.org/grpc v1.26.0
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
 	gopkg.in/yaml.v2 v2.2.8
 	gotest.tools v2.2.0+incompatible // indirect
-	k8s.io/api v0.0.0-20200318082330-c322e7106b58
-	k8s.io/apimachinery v0.0.0-20200318002310-1a505bc60c6d
-	k8s.io/client-go v0.0.0-20200319082614-364a20b9b1d7
-	k8s.io/component-base v0.0.0-20200319082901-6639e587ba98
+	k8s.io/api v0.0.0
+	k8s.io/apimachinery v0.0.0
+	k8s.io/client-go v0.0.0
+	k8s.io/component-base v0.0.0
 	k8s.io/klog v1.0.0
 	k8s.io/kube-openapi v0.0.0-20200121204235-bf4fb3bd569c
 	k8s.io/utils v0.0.0-20200229041039-0a110f9eb7ab
@@ -59,8 +58,9 @@ require (
 replace (
 	golang.org/x/sys => golang.org/x/sys v0.0.0-20190813064441-fde4db37ae7a // pinned to release-branch.go1.13
 	golang.org/x/tools => golang.org/x/tools v0.0.0-20190821162956-65e3620a7ae7 // pinned to release-branch.go1.13
-	k8s.io/api => k8s.io/api v0.0.0-20200318082330-c322e7106b58
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20200318002310-1a505bc60c6d
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20200319082614-364a20b9b1d7
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20200319082901-6639e587ba98
+	k8s.io/api => ../api
+	k8s.io/apimachinery => ../apimachinery
+	k8s.io/apiserver => ../apiserver
+	k8s.io/client-go => ../client-go
+	k8s.io/component-base => ../component-base
 )
