@@ -243,10 +243,6 @@
 			"Rev": "v0.1.0"
 		},
 		{
-			"ImportPath": "github.com/gophercloud/gophercloud",
-			"Rev": "v0.1.0"
-		},
-		{
 			"ImportPath": "github.com/gorilla/websocket",
 			"Rev": "v1.4.0"
 		},
@@ -588,7 +584,7 @@
 		},
 		{
 			"ImportPath": "k8s.io/api",
-			"Rev": "9768e51d191a"
+			"Rev": "c322e7106b58"
 		},
 		{
 			"ImportPath": "k8s.io/apimachinery",
@@ -596,11 +592,11 @@
 		},
 		{
 			"ImportPath": "k8s.io/client-go",
-			"Rev": "da706024f356"
+			"Rev": "6251a13f71aa"
 		},
 		{
 			"ImportPath": "k8s.io/component-base",
-			"Rev": "dae26a37dccb"
+			"Rev": "39d55b0f0fdc"
 		},
 		{
 			"ImportPath": "k8s.io/gengo",
