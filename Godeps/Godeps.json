@@ -596,11 +596,11 @@
 		},
 		{
 			"ImportPath": "k8s.io/client-go",
-			"Rev": "b111a6213597"
+			"Rev": "b8fba595e8fa"
 		},
 		{
 			"ImportPath": "k8s.io/component-base",
-			"Rev": "dfc3f1250855"
+			"Rev": "79b64fca65df"
 		},
 		{
 			"ImportPath": "k8s.io/gengo",
@@ -616,7 +616,7 @@
 		},
 		{
 			"ImportPath": "k8s.io/utils",
-			"Rev": "0a110f9eb7ab"
+			"Rev": "4a6ff033650d"
 		},
 		{
 			"ImportPath": "sigs.k8s.io/apiserver-network-proxy/konnectivity-client",
