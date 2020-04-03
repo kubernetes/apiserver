@@ -19,7 +19,7 @@ require (
 	github.com/google/go-cmp v0.4.0
 	github.com/google/gofuzz v1.1.0
 	github.com/google/uuid v1.1.1
-	github.com/googleapis/gnostic v0.1.0
+	github.com/googleapis/gnostic v0.4.1
 	github.com/gorilla/websocket v1.4.0 // indirect
 	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0
 	github.com/hashicorp/golang-lru v0.5.1
@@ -33,20 +33,20 @@ require (
 	go.etcd.io/etcd v0.5.0-alpha.5.0.20200224211402-c65a9e2dd1fd
 	go.uber.org/zap v1.10.0
 	golang.org/x/crypto v0.0.0-20200220183623-bac4c82f6975
-	golang.org/x/net v0.0.0-20200202094626-16171245cfb2
+	golang.org/x/net v0.0.0-20200324143707-d3edc9973b7e
 	golang.org/x/sync v0.0.0-20190911185100-cd5d95a43a6e
-	golang.org/x/sys v0.0.0-20200302150141-5c8b2ff67527
+	golang.org/x/sys v0.0.0-20200323222414-85ca7c5b95cd
 	google.golang.org/genproto v0.0.0-20191230161307-f3c370f40bfb // indirect
 	google.golang.org/grpc v1.26.0
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
 	gopkg.in/yaml.v2 v2.2.8
-	k8s.io/api v0.0.0-20200326015715-b5bd82427fa8
-	k8s.io/apimachinery v0.0.0-20200331220056-7e441e0f246a
-	k8s.io/client-go v0.0.0-20200402060539-5934c03f9a0b
-	k8s.io/component-base v0.0.0-20200402061055-be09e7a8fe3f
+	k8s.io/api v0.0.0-20200403220253-fa879b399cd0
+	k8s.io/apimachinery v0.0.0-20200403220105-fa0d5bf06730
+	k8s.io/client-go v0.0.0-20200403220520-7039b495eb3e
+	k8s.io/component-base v0.0.0-20200403221034-26edb4fa15c5
 	k8s.io/klog v1.0.0
-	k8s.io/kube-openapi v0.0.0-20200121204235-bf4fb3bd569c
+	k8s.io/kube-openapi v0.0.0-20200401025727-01dfbe2eec3d
 	k8s.io/utils v0.0.0-20200324210504-a9aa75ae1b89
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.0.7
 	sigs.k8s.io/structured-merge-diff/v3 v3.0.0
@@ -56,8 +56,8 @@ require (
 replace (
 	golang.org/x/sys => golang.org/x/sys v0.0.0-20190813064441-fde4db37ae7a // pinned to release-branch.go1.13
 	golang.org/x/tools => golang.org/x/tools v0.0.0-20190821162956-65e3620a7ae7 // pinned to release-branch.go1.13
-	k8s.io/api => k8s.io/api v0.0.0-20200326015715-b5bd82427fa8
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20200331220056-7e441e0f246a
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20200402060539-5934c03f9a0b
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20200402061055-be09e7a8fe3f
+	k8s.io/api => k8s.io/api v0.0.0-20200403220253-fa879b399cd0
+	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20200403220105-fa0d5bf06730
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20200403220520-7039b495eb3e
+	k8s.io/component-base => k8s.io/component-base v0.0.0-20200403221034-26edb4fa15c5
 )
