@@ -460,7 +460,7 @@
 		},
 		{
 			"ImportPath": "go.etcd.io/etcd",
-			"Rev": "c65a9e2dd1fd"
+			"Rev": "e694b7bb0875"
 		},
 		{
 			"ImportPath": "go.opencensus.io",
@@ -600,7 +600,7 @@
 		},
 		{
 			"ImportPath": "k8s.io/client-go",
-			"Rev": "7039b495eb3e"
+			"Rev": "fe32aa3b9449"
 		},
 		{
 			"ImportPath": "k8s.io/component-base",

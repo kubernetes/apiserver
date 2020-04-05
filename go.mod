@@ -30,7 +30,7 @@ require (
 	github.com/prometheus/client_model v0.2.0
 	github.com/spf13/pflag v1.0.5
 	github.com/stretchr/testify v1.4.0
-	go.etcd.io/etcd v0.5.0-alpha.5.0.20200224211402-c65a9e2dd1fd
+	go.etcd.io/etcd v0.5.0-alpha.5.0.20200401174654-e694b7bb0875
 	go.uber.org/zap v1.10.0
 	golang.org/x/crypto v0.0.0-20200220183623-bac4c82f6975
 	golang.org/x/net v0.0.0-20200324143707-d3edc9973b7e
@@ -43,7 +43,7 @@ require (
 	gopkg.in/yaml.v2 v2.2.8
 	k8s.io/api v0.0.0-20200403220253-fa879b399cd0
 	k8s.io/apimachinery v0.0.0-20200403220105-fa0d5bf06730
-	k8s.io/client-go v0.0.0-20200403220520-7039b495eb3e
+	k8s.io/client-go v0.0.0-20200404181738-fe32aa3b9449
 	k8s.io/component-base v0.0.0-20200403221034-26edb4fa15c5
 	k8s.io/klog v1.0.0
 	k8s.io/kube-openapi v0.0.0-20200401025727-01dfbe2eec3d
@@ -58,6 +58,6 @@ replace (
 	golang.org/x/tools => golang.org/x/tools v0.0.0-20190821162956-65e3620a7ae7 // pinned to release-branch.go1.13
 	k8s.io/api => k8s.io/api v0.0.0-20200403220253-fa879b399cd0
 	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20200403220105-fa0d5bf06730
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20200403220520-7039b495eb3e
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20200404181738-fe32aa3b9449
 	k8s.io/component-base => k8s.io/component-base v0.0.0-20200403221034-26edb4fa15c5
 )

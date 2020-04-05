@@ -253,8 +253,8 @@ github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2 h1:eY9dn8+vbi4tKz5
 github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2/go.mod h1:UETIi67q53MR2AWcXfiuqkDkRtnGDLqkBTpCHuJHxtU=
 go.etcd.io/bbolt v1.3.3 h1:MUGmc65QhB3pIlaQ5bB4LwqSj6GIonVJXpZiaKNyaKk=
 go.etcd.io/bbolt v1.3.3/go.mod h1:IbVyRI1SCnLcuJnV2u8VeU0CEYM7e686BmAb1XKL+uU=
-go.etcd.io/etcd v0.5.0-alpha.5.0.20200224211402-c65a9e2dd1fd h1:JwlSZ9TSTcRHDGbIr5QG3MEmKyMK99BbNLMJtwnJ0rY=
-go.etcd.io/etcd v0.5.0-alpha.5.0.20200224211402-c65a9e2dd1fd/go.mod h1:dnLIgRNXwCJa5e+c6mIZCrds/GIG4ncV9HhK5PX7jPg=
+go.etcd.io/etcd v0.5.0-alpha.5.0.20200401174654-e694b7bb0875 h1:C7kWARE8r64ppRadl40yfNo6pag+G6ocvGU2xZ6yNes=
+go.etcd.io/etcd v0.5.0-alpha.5.0.20200401174654-e694b7bb0875/go.mod h1:dnLIgRNXwCJa5e+c6mIZCrds/GIG4ncV9HhK5PX7jPg=
 go.opencensus.io v0.21.0/go.mod h1:mSImk1erAIZhrmZN+AvHh14ztQfjbGwt4TtuofqLduU=
 go.uber.org/atomic v1.3.2 h1:2Oa65PReHzfn29GpvgsYwloV9AVFHPDk8tYxt2c2tr4=
 go.uber.org/atomic v1.3.2/go.mod h1:gD2HeocX3+yG+ygLZcrzQJaqmWj9AIm7n08wl/qW/PE=
@@ -362,7 +362,7 @@ honnef.co/go/tools v0.0.0-20190106161140-3f1c8253044a/go.mod h1:rf3lG4BRIbNafJWh
 honnef.co/go/tools v0.0.0-20190523083050-ea95bdfd59fc/go.mod h1:rf3lG4BRIbNafJWhAfAdb/ePZxsR/4RtNHQocxwk9r4=
 k8s.io/api v0.0.0-20200403220253-fa879b399cd0/go.mod h1:IHUHI0RKOjAF2/LmT+5g7hlTufmlzdZqccff7saac3A=
 k8s.io/apimachinery v0.0.0-20200403220105-fa0d5bf06730/go.mod h1:plsINh5MKcZh761kXB2H+kXnD8vwFIAy7bitct1VPNU=
-k8s.io/client-go v0.0.0-20200403220520-7039b495eb3e/go.mod h1:me/DKkwsyrZeE+/lxC0UBfbVo4uAqKZvrryCJAYjoPM=
+k8s.io/client-go v0.0.0-20200404181738-fe32aa3b9449/go.mod h1:me/DKkwsyrZeE+/lxC0UBfbVo4uAqKZvrryCJAYjoPM=
 k8s.io/component-base v0.0.0-20200403221034-26edb4fa15c5/go.mod h1:kW8X2KkBReb/lnPvB1ez/Ub0d8xaucj5oxCcG+pgZkE=
 k8s.io/gengo v0.0.0-20190128074634-0689ccc1d7d6/go.mod h1:ezvh/TsK7cY6rbqRK0oQQ8IAqLxYwwyPxAX1Pzy0ii0=
 k8s.io/klog v0.0.0-20181102134211-b9b56d5dfc92/go.mod h1:Gq+BEi5rUBO/HRz0bTSXDUcqjScdoY3a9IHpCEIOOfk=
