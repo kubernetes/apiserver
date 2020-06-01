@@ -31,7 +31,6 @@ require (
 	github.com/stretchr/testify v1.4.0
 	github.com/tmc/grpc-websocket-proxy v0.0.0-20190109142713-0ad062ec5ee5 // indirect
 	go.etcd.io/etcd v0.5.0-alpha.5.0.20200520232829-54ba9589114f
-	go.uber.org/atomic v1.4.0 // indirect
 	go.uber.org/zap v1.10.0
 	golang.org/x/crypto v0.0.0-20200220183623-bac4c82f6975
 	golang.org/x/net v0.0.0-20200324143707-d3edc9973b7e
@@ -42,10 +41,10 @@ require (
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
 	gopkg.in/yaml.v2 v2.2.8
-	k8s.io/api v0.0.0-20200616091053-96dd8b8608bc
-	k8s.io/apimachinery v0.0.0-20200616090325-1a0ee4aea6d1
-	k8s.io/client-go v0.0.0-20200616091903-31e286ee1926
-	k8s.io/component-base v0.0.0-20200616093421-8d48f868cdb4
+	k8s.io/api v0.0.0
+	k8s.io/apimachinery v0.0.0
+	k8s.io/client-go v0.0.0
+	k8s.io/component-base v0.0.0
 	k8s.io/klog/v2 v2.1.0
 	k8s.io/kube-openapi v0.0.0-20200427153329-656914f816f9
 	k8s.io/utils v0.0.0-20200414100711-2df71ebbae66
@@ -57,8 +56,9 @@ require (
 replace (
 	golang.org/x/sys => golang.org/x/sys v0.0.0-20190813064441-fde4db37ae7a // pinned to release-branch.go1.13
 	golang.org/x/tools => golang.org/x/tools v0.0.0-20190821162956-65e3620a7ae7 // pinned to release-branch.go1.13
-	k8s.io/api => k8s.io/api v0.0.0-20200616091053-96dd8b8608bc
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20200613000956-d8530e6c952f
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20200616091903-31e286ee1926
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20200616093421-8d48f868cdb4
+	k8s.io/api => ../api
+	k8s.io/apimachinery => ../apimachinery
+	k8s.io/apiserver => ../apiserver
+	k8s.io/client-go => ../client-go
+	k8s.io/component-base => ../component-base
 )
