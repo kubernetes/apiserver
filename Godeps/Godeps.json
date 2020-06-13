@@ -516,7 +516,7 @@
 		},
 		{
 			"ImportPath": "go.etcd.io/etcd",
-			"Rev": "e694b7bb0875"
+			"Rev": "54ba9589114f"
 		},
 		{
 			"ImportPath": "go.opencensus.io",
