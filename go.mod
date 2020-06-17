@@ -12,7 +12,7 @@ require (
 	github.com/davecgh/go-spew v1.1.1
 	github.com/dustin/go-humanize v1.0.0 // indirect
 	github.com/emicklei/go-restful v2.9.5+incompatible
-	github.com/evanphx/json-patch v4.2.0+incompatible
+	github.com/evanphx/json-patch v0.0.0-20190815234213-e83c0a1c26c8
 	github.com/go-openapi/jsonreference v0.19.3 // indirect
 	github.com/go-openapi/spec v0.19.3
 	github.com/gogo/protobuf v1.3.1
@@ -41,10 +41,10 @@ require (
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
 	gopkg.in/yaml.v2 v2.2.8
-	k8s.io/api v0.0.0-20200616091054-54aa84730ddd
-	k8s.io/apimachinery v0.0.0-20200616090325-1a0ee4aea6d1
-	k8s.io/client-go v0.0.0-20200616091903-31e286ee1926
-	k8s.io/component-base v0.0.0-20200616093425-c948a8160666
+	k8s.io/api v0.0.0-20200617050422-8dc28b782f8e
+	k8s.io/apimachinery v0.0.0-20200617050244-c1bd2c2a276f
+	k8s.io/client-go v0.0.0-20200617050643-3c831c893e8a
+	k8s.io/component-base v0.0.0-20200617051220-6c60a4d2ed11
 	k8s.io/klog/v2 v2.1.0
 	k8s.io/kube-openapi v0.0.0-20200427153329-656914f816f9
 	k8s.io/utils v0.0.0-20200414100711-2df71ebbae66
@@ -56,8 +56,8 @@ require (
 replace (
 	golang.org/x/sys => golang.org/x/sys v0.0.0-20190813064441-fde4db37ae7a // pinned to release-branch.go1.13
 	golang.org/x/tools => golang.org/x/tools v0.0.0-20190821162956-65e3620a7ae7 // pinned to release-branch.go1.13
-	k8s.io/api => k8s.io/api v0.0.0-20200616091054-54aa84730ddd
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20200613000956-d8530e6c952f
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20200616091903-31e286ee1926
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20200616093425-c948a8160666
+	k8s.io/api => k8s.io/api v0.0.0-20200617050422-8dc28b782f8e
+	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20200617050244-c1bd2c2a276f
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20200617050643-3c831c893e8a
+	k8s.io/component-base => k8s.io/component-base v0.0.0-20200617051220-6c60a4d2ed11
 )
