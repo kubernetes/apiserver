@@ -512,7 +512,7 @@
 		},
 		{
 			"ImportPath": "go.etcd.io/bbolt",
-			"Rev": "v1.3.3"
+			"Rev": "v1.3.5"
 		},
 		{
 			"ImportPath": "go.etcd.io/etcd",
