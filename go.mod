@@ -2,7 +2,7 @@
 
 module k8s.io/apiserver
 
-go 1.13
+go 1.15
 
 require (
 	github.com/coreos/go-oidc v2.1.0+incompatible
@@ -33,18 +33,18 @@ require (
 	go.etcd.io/bbolt v1.3.5 // indirect
 	go.etcd.io/etcd v0.5.0-alpha.5.0.20200716221620-18dfb9cca345
 	go.uber.org/zap v1.10.0
-	golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9
-	golang.org/x/net v0.0.0-20200707034311-ab3426394381
+	golang.org/x/crypto v0.0.0-20200220183623-bac4c82f6975
+	golang.org/x/net v0.0.0-20200324143707-d3edc9973b7e
 	golang.org/x/sync v0.0.0-20190911185100-cd5d95a43a6e
 	golang.org/x/sys v0.0.0-20200622214017-ed371f2e16b4
 	google.golang.org/grpc v1.27.0
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
 	gopkg.in/yaml.v2 v2.2.8
-	k8s.io/api v0.0.0-20200727091507-83df1b82c014
-	k8s.io/apimachinery v0.0.0-20200727091313-7efdc26a675c
-	k8s.io/client-go v0.0.0-20200727091751-7f42acdcbb14
-	k8s.io/component-base v0.0.0-20200727092343-83dc39ae1fb7
+	k8s.io/api v0.0.0
+	k8s.io/apimachinery v0.0.0
+	k8s.io/client-go v0.0.0
+	k8s.io/component-base v0.0.0
 	k8s.io/klog/v2 v2.2.0
 	k8s.io/kube-openapi v0.0.0-20200427153329-656914f816f9
 	k8s.io/utils v0.0.0-20200720150651-0bdb4ca86cbc
@@ -54,8 +54,9 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20200727091507-83df1b82c014
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20200727091313-7efdc26a675c
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20200727091751-7f42acdcbb14
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20200727092343-83dc39ae1fb7
+	k8s.io/api => ../api
+	k8s.io/apimachinery => ../apimachinery
+	k8s.io/apiserver => ../apiserver
+	k8s.io/client-go => ../client-go
+	k8s.io/component-base => ../component-base
 )
