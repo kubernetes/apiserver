@@ -12,7 +12,7 @@ require (
 	github.com/davecgh/go-spew v1.1.1
 	github.com/dustin/go-humanize v1.0.0 // indirect
 	github.com/emicklei/go-restful v2.9.5+incompatible
-	github.com/evanphx/json-patch v0.0.0-20200808040245-162e5629780b
+	github.com/evanphx/json-patch v4.9.0+incompatible
 	github.com/go-openapi/jsonreference v0.19.3 // indirect
 	github.com/go-openapi/spec v0.19.3
 	github.com/gogo/protobuf v1.3.1
@@ -41,10 +41,10 @@ require (
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
 	gopkg.in/yaml.v2 v2.2.8
-	k8s.io/api v0.0.0-20200813011650-4934d0c67eba
-	k8s.io/apimachinery v0.0.0-20200813011404-2c6e837afb20
-	k8s.io/client-go v0.0.0-20200813012017-e7a1d9ada0d5
-	k8s.io/component-base v0.0.0-20200813012721-976a05f23b53
+	k8s.io/api v0.0.0
+	k8s.io/apimachinery v0.0.0
+	k8s.io/client-go v0.0.0
+	k8s.io/component-base v0.0.0
 	k8s.io/klog/v2 v2.2.0
 	k8s.io/kube-openapi v0.0.0-20200805222855-6aeccd4b50c6
 	k8s.io/utils v0.0.0-20200729134348-d5654de09c73
@@ -54,8 +54,9 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20200813011650-4934d0c67eba
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20200813011404-2c6e837afb20
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20200813012017-e7a1d9ada0d5
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20200813012721-976a05f23b53
+	k8s.io/api => ../api
+	k8s.io/apimachinery => ../apimachinery
+	k8s.io/apiserver => ../apiserver
+	k8s.io/client-go => ../client-go
+	k8s.io/component-base => ../component-base
 )
