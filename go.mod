@@ -31,7 +31,7 @@ require (
 	github.com/stretchr/testify v1.4.0
 	github.com/tmc/grpc-websocket-proxy v0.0.0-20190109142713-0ad062ec5ee5 // indirect
 	go.etcd.io/bbolt v1.3.5 // indirect
-	go.etcd.io/etcd v0.5.0-alpha.5.0.20200819165624-17cef6e3e9d5
+	go.etcd.io/etcd v0.5.0-alpha.5.0.20200824191128-ae9734ed278b
 	go.uber.org/zap v1.10.0
 	golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9
 	golang.org/x/net v0.0.0-20200707034311-ab3426394381
@@ -43,7 +43,7 @@ require (
 	gopkg.in/yaml.v2 v2.2.8
 	k8s.io/api v0.0.0-20200828051551-f7be94ed4426
 	k8s.io/apimachinery v0.0.0-20200828171410-c43a9f02c641
-	k8s.io/client-go v0.0.0-20200828051815-67e1ce8f656f
+	k8s.io/client-go v0.0.0-20200828171813-e4aeb38be13a
 	k8s.io/component-base v0.0.0-20200828052305-e83f66bbf913
 	k8s.io/klog/v2 v2.2.0
 	k8s.io/kube-openapi v0.0.0-20200805222855-6aeccd4b50c6
@@ -56,6 +56,6 @@ require (
 replace (
 	k8s.io/api => k8s.io/api v0.0.0-20200828051551-f7be94ed4426
 	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20200828171410-c43a9f02c641
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20200828051815-67e1ce8f656f
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20200828171813-e4aeb38be13a
 	k8s.io/component-base => k8s.io/component-base v0.0.0-20200828052305-e83f66bbf913
 )
