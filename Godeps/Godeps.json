@@ -116,7 +116,7 @@
 		},
 		{
 			"ImportPath": "github.com/evanphx/json-patch",
-			"Rev": "162e5629780b"
+			"Rev": "v4.9.0"
 		},
 		{
 			"ImportPath": "github.com/fsnotify/fsnotify",
@@ -233,10 +233,6 @@
 		{
 			"ImportPath": "github.com/imdario/mergo",
 			"Rev": "v0.3.5"
-		},
-		{
-			"ImportPath": "github.com/jessevdk/go-flags",
-			"Rev": "v1.4.0"
 		},
 		{
 			"ImportPath": "github.com/jonboulle/clockwork",
@@ -492,19 +488,19 @@
 		},
 		{
 			"ImportPath": "k8s.io/api",
-			"Rev": "0f665c80805a"
+			"Rev": "f197499901bd"
 		},
 		{
 			"ImportPath": "k8s.io/apimachinery",
-			"Rev": "79e0efc2a654"
+			"Rev": "f7929272bda3"
 		},
 		{
 			"ImportPath": "k8s.io/client-go",
-			"Rev": "e1f134a72784"
+			"Rev": "78b06b51d5b4"
 		},
 		{
 			"ImportPath": "k8s.io/component-base",
-			"Rev": "ae0dd9a55a47"
+			"Rev": "231482d3fb08"
 		},
 		{
 			"ImportPath": "k8s.io/gengo",
