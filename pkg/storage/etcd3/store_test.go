@@ -2083,7 +2083,6 @@ func TestConsistentList(t *testing.T) {
 	if !reflect.DeepEqual(result3, result4) {
 		t.Errorf("inconsistent lists: %#v, %#v", result3, result4)
 	}
-
 }
 
 func TestCount(t *testing.T) {
