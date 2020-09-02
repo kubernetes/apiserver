@@ -507,7 +507,7 @@ honnef.co/go/tools v0.0.0-20190106161140-3f1c8253044a/go.mod h1:rf3lG4BRIbNafJWh
 honnef.co/go/tools v0.0.0-20190418001031-e561f6794a2a/go.mod h1:rf3lG4BRIbNafJWhAfAdb/ePZxsR/4RtNHQocxwk9r4=
 honnef.co/go/tools v0.0.0-20190523083050-ea95bdfd59fc/go.mod h1:rf3lG4BRIbNafJWhAfAdb/ePZxsR/4RtNHQocxwk9r4=
 honnef.co/go/tools v0.0.1-2019.2.3/go.mod h1:a3bituU0lyd329TUQxRnasdCoJDkEUEAqEt0JzvZhAg=
-k8s.io/api v0.0.0-20200831211624-9a1561067c54/go.mod h1:qMn0Ckwm7+s/YbS3iDBlHErlW/SeOXttpV83LV5iO5M=
+k8s.io/api v0.0.0-20200902051604-73d7eb3bb026/go.mod h1:qMn0Ckwm7+s/YbS3iDBlHErlW/SeOXttpV83LV5iO5M=
 k8s.io/apimachinery v0.0.0-20200830011411-94222d04a590/go.mod h1:DnPGDnARWFvYa3pMHgSxtbZb7gpzzAZ1pTfaUNDVlmA=
 k8s.io/client-go v0.0.0-20200902051830-aeb5f1a7757b/go.mod h1:nlzxA8HNRwxNEbk4tOITg7LLVhjbthrQ69vw+2jhfYc=
 k8s.io/component-base v0.0.0-20200828052305-e83f66bbf913/go.mod h1:uWiI7f7Tvt3aVPEoe7YmG+5By+6mhbkGnX16+GxpDYg=
