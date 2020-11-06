@@ -13,7 +13,6 @@ require (
 	github.com/dustin/go-humanize v1.0.0 // indirect
 	github.com/emicklei/go-restful v2.9.5+incompatible
 	github.com/evanphx/json-patch v4.9.0+incompatible
-	github.com/go-openapi/jsonreference v0.19.3 // indirect
 	github.com/go-openapi/spec v0.19.3
 	github.com/gogo/protobuf v1.3.1
 	github.com/google/go-cmp v0.4.0
@@ -41,21 +40,22 @@ require (
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
 	gopkg.in/yaml.v2 v2.2.8
-	k8s.io/api v0.0.0-20201106042650-3e589e9d21e6
-	k8s.io/apimachinery v0.0.0-20201105042036-d67967d70958
-	k8s.io/client-go v0.0.0-20201107122455-a2cda5636dc9
-	k8s.io/component-base v0.0.0-20201107122711-6bedbf41e43b
+	k8s.io/api v0.0.0
+	k8s.io/apimachinery v0.0.0
+	k8s.io/client-go v0.0.0
+	k8s.io/component-base v0.0.0
 	k8s.io/klog/v2 v2.4.0
-	k8s.io/kube-openapi v0.0.0-20200923155610-8b5066479488
+	k8s.io/kube-openapi v0.0.0-20201107163737-74b467f3a622
 	k8s.io/utils v0.0.0-20201104234853-8146046b121e
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.0.12
-	sigs.k8s.io/structured-merge-diff/v4 v4.0.2-0.20201001033253-b3cf1e8ff931
+	sigs.k8s.io/structured-merge-diff/v4 v4.0.2
 	sigs.k8s.io/yaml v1.2.0
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20201106042650-3e589e9d21e6
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20201105042036-d67967d70958
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20201107122455-a2cda5636dc9
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20201107122711-6bedbf41e43b
+	k8s.io/api => ../api
+	k8s.io/apimachinery => ../apimachinery
+	k8s.io/apiserver => ../apiserver
+	k8s.io/client-go => ../client-go
+	k8s.io/component-base => ../component-base
 )
