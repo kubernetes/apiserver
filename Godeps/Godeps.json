@@ -91,6 +91,10 @@
 			"Rev": "c3de453c63f4"
 		},
 		{
+			"ImportPath": "github.com/asaskevich/govalidator",
+			"Rev": "f61b66f89f4a"
+		},
+		{
 			"ImportPath": "github.com/beorn7/perks",
 			"Rev": "v1.0.1"
 		},
@@ -403,6 +407,10 @@
 			"Rev": "c182affec369"
 		},
 		{
+			"ImportPath": "github.com/mitchellh/mapstructure",
+			"Rev": "v1.1.2"
+		},
+		{
 			"ImportPath": "github.com/moby/term",
 			"Rev": "672ec06f55cd"
 		},
@@ -676,19 +684,19 @@
 		},
 		{
 			"ImportPath": "k8s.io/api",
-			"Rev": "3e589e9d21e6"
+			"Rev": "8519c5ea4619"
 		},
 		{
 			"ImportPath": "k8s.io/apimachinery",
-			"Rev": "d67967d70958"
+			"Rev": "a787aaf5a782"
 		},
 		{
 			"ImportPath": "k8s.io/client-go",
-			"Rev": "a2cda5636dc9"
+			"Rev": "bef66adadf9a"
 		},
 		{
 			"ImportPath": "k8s.io/component-base",
-			"Rev": "6bedbf41e43b"
+			"Rev": "bf24d3ab5150"
 		},
 		{
 			"ImportPath": "k8s.io/gengo",
@@ -700,7 +708,7 @@
 		},
 		{
 			"ImportPath": "k8s.io/kube-openapi",
-			"Rev": "8b5066479488"
+			"Rev": "74b467f3a622"
 		},
 		{
 			"ImportPath": "k8s.io/utils",
@@ -716,7 +724,7 @@
 		},
 		{
 			"ImportPath": "sigs.k8s.io/structured-merge-diff/v4",
-			"Rev": "b3cf1e8ff931"
+			"Rev": "v4.0.2"
 		},
 		{
 			"ImportPath": "sigs.k8s.io/yaml",
