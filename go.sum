@@ -509,10 +509,6 @@ honnef.co/go/tools v0.0.0-20190106161140-3f1c8253044a/go.mod h1:rf3lG4BRIbNafJWh
 honnef.co/go/tools v0.0.0-20190418001031-e561f6794a2a/go.mod h1:rf3lG4BRIbNafJWhAfAdb/ePZxsR/4RtNHQocxwk9r4=
 honnef.co/go/tools v0.0.0-20190523083050-ea95bdfd59fc/go.mod h1:rf3lG4BRIbNafJWhAfAdb/ePZxsR/4RtNHQocxwk9r4=
 honnef.co/go/tools v0.0.1-2019.2.3/go.mod h1:a3bituU0lyd329TUQxRnasdCoJDkEUEAqEt0JzvZhAg=
-k8s.io/api v0.0.0-20201109162247-8519c5ea4619/go.mod h1:AiM5F9qdfCDp1n0rr9MoS0bqFKMZzQIlbuUQUK5WcU4=
-k8s.io/apimachinery v0.0.0-20201109202106-2afe1df57c03/go.mod h1:C4HVOTZCaKwcNDaxwQoXe3Zk6BLT5jNivqfdcniEtuY=
-k8s.io/client-go v0.0.0-20201109162515-bef66adadf9a/go.mod h1:9VsPQPe2J8dbpOmXX5TunLm7OmOxj+v+YY3F0EHC2yw=
-k8s.io/component-base v0.0.0-20201110162559-92d83a5bfee5/go.mod h1:tt1vbPuUzK9xrCBhF3WvXUnJR9dWo1n/LKtbrNDDxVk=
 k8s.io/gengo v0.0.0-20200413195148-3a45101e95ac/go.mod h1:ezvh/TsK7cY6rbqRK0oQQ8IAqLxYwwyPxAX1Pzy0ii0=
 k8s.io/klog/v2 v2.0.0/go.mod h1:PBfzABfn139FHAV07az/IF9Wp1bkk3vpT2XSJ76fSDE=
 k8s.io/klog/v2 v2.4.0 h1:7+X0fUguPyrKEC4WjH8iGDg3laWgMo5tMnRTIGTTxGQ=
@@ -522,8 +518,8 @@ k8s.io/kube-openapi v0.0.0-20201107163737-74b467f3a622/go.mod h1:WOJ3KddDSol4tAG
 k8s.io/utils v0.0.0-20201104234853-8146046b121e h1:dUhh0zO/94tOe9DB05HFGE69ofectI1PBCmIxO612MI=
 k8s.io/utils v0.0.0-20201104234853-8146046b121e/go.mod h1:jPW/WVKK9YHAvNhRxK0md/EJ228hCsBRufyofKtW8HA=
 rsc.io/binaryregexp v0.2.0/go.mod h1:qTv7/COck+e2FymRvadv62gMdZztPaShugOCi3I+8D8=
-sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.0.12 h1:2XkvsmLI1ZEaTcRt0rwWChxsqgXkZahuf2EV9WUFejc=
-sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.0.12/go.mod h1:LEScyzhFmoF5pso/YSeBstl57mOzx9xlU9n85RGrDQg=
+sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.0.14 h1:TihvEz9MPj2u0KWds6E2OBUXfwaL4qRJ33c7HGiJpqk=
+sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.0.14/go.mod h1:LEScyzhFmoF5pso/YSeBstl57mOzx9xlU9n85RGrDQg=
 sigs.k8s.io/structured-merge-diff/v4 v4.0.2 h1:YHQV7Dajm86OuqnIR6zAelnDWBRjo+YhYV9PmGrh1s8=
 sigs.k8s.io/structured-merge-diff/v4 v4.0.2/go.mod h1:bJZC9H9iH24zzfZ/41RGcq60oK1F7G282QMXDPYydCw=
 sigs.k8s.io/yaml v1.1.0/go.mod h1:UJmg0vDUVViEyp3mgSv9WPwZCDxu4rQW1olrI1uml+o=
