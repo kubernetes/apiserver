@@ -41,9 +41,9 @@ require (
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
 	gopkg.in/yaml.v2 v2.2.8
-	k8s.io/api v0.0.0-20201114005542-ccdf63aa6ee8
+	k8s.io/api v0.0.0-20201114045528-ec60fd7207de
 	k8s.io/apimachinery v0.0.0-20201114005404-65a627a281ee
-	k8s.io/client-go v0.0.0-20201114005807-4ab8fb4585a5
+	k8s.io/client-go v0.0.0-20201114045747-76f48268c78c
 	k8s.io/component-base v0.0.0-20201114010252-9894bfc661fe
 	k8s.io/klog/v2 v2.4.0
 	k8s.io/kube-openapi v0.0.0-20201107163737-74b467f3a622
@@ -54,8 +54,8 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20201114005542-ccdf63aa6ee8
+	k8s.io/api => k8s.io/api v0.0.0-20201114045528-ec60fd7207de
 	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20201114005404-65a627a281ee
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20201114005807-4ab8fb4585a5
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20201114045747-76f48268c78c
 	k8s.io/component-base => k8s.io/component-base v0.0.0-20201114010252-9894bfc661fe
 )
