@@ -692,7 +692,7 @@
 		},
 		{
 			"ImportPath": "k8s.io/api",
-			"Rev": "4e9f5db10201"
+			"Rev": "1198ffc40d00"
 		},
 		{
 			"ImportPath": "k8s.io/apimachinery",
@@ -700,7 +700,7 @@
 		},
 		{
 			"ImportPath": "k8s.io/client-go",
-			"Rev": "9761a13537eb"
+			"Rev": "623741e9c1d5"
 		},
 		{
 			"ImportPath": "k8s.io/component-base",
