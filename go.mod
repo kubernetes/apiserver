@@ -43,7 +43,7 @@ require (
 	gopkg.in/yaml.v2 v2.2.8
 	k8s.io/api v0.0.0-20210127121017-9b864a59b88a
 	k8s.io/apimachinery v0.0.0-20210127114339-87c8a9682ad2
-	k8s.io/client-go v0.0.0-20210121071529-b72204b2445d
+	k8s.io/client-go v0.0.0-20210128081211-632943201323
 	k8s.io/component-base v0.0.0-20210127201335-402335550d6b
 	k8s.io/klog/v2 v2.4.0
 	k8s.io/kube-openapi v0.0.0-20201113171705-d219536bb9fd
@@ -56,6 +56,6 @@ require (
 replace (
 	k8s.io/api => k8s.io/api v0.0.0-20210127121017-9b864a59b88a
 	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20210127114339-87c8a9682ad2
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20210121071529-b72204b2445d
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20210128081211-632943201323
 	k8s.io/component-base => k8s.io/component-base v0.0.0-20210127201335-402335550d6b
 )
