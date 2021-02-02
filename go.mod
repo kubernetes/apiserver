@@ -14,7 +14,7 @@ require (
 	github.com/emicklei/go-restful v2.9.5+incompatible
 	github.com/evanphx/json-patch v4.9.0+incompatible
 	github.com/go-openapi/spec v0.19.3
-	github.com/gogo/protobuf v1.3.1
+	github.com/gogo/protobuf v1.3.2
 	github.com/google/go-cmp v0.5.2
 	github.com/google/gofuzz v1.1.0
 	github.com/google/uuid v1.1.2
@@ -33,17 +33,17 @@ require (
 	go.uber.org/zap v1.10.0
 	golang.org/x/crypto v0.0.0-20201002170205-7f63de1d35b0
 	golang.org/x/net v0.0.0-20201110031124-69a78807bb2b
-	golang.org/x/sync v0.0.0-20190911185100-cd5d95a43a6e
+	golang.org/x/sync v0.0.0-20201020160332-67f06af15bc9
 	golang.org/x/sys v0.0.0-20201112073958-5cba982894dd
 	google.golang.org/genproto v0.0.0-20201110150050-8816d57aaa9a // indirect
 	google.golang.org/grpc v1.27.1
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
 	gopkg.in/yaml.v2 v2.2.8
-	k8s.io/api v0.0.0-20210202041015-ac3757b0931f
-	k8s.io/apimachinery v0.0.0-20210202015035-f0392a05a37d
-	k8s.io/client-go v0.0.0-20210130041207-ab82d40f6e85
-	k8s.io/component-base v0.0.0-20210202081330-dcb008742582
+	k8s.io/api v0.0.0-20210202201024-9f65ac4826aa
+	k8s.io/apimachinery v0.0.0-20210202200849-9e39a13d2cab
+	k8s.io/client-go v0.0.0-20210202201239-3147a30d7bb5
+	k8s.io/component-base v0.0.0-20210202201701-81d9ea233619
 	k8s.io/klog/v2 v2.5.0
 	k8s.io/kube-openapi v0.0.0-20201113171705-d219536bb9fd
 	k8s.io/utils v0.0.0-20201110183641-67b214c5f920
@@ -53,8 +53,8 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20210202041015-ac3757b0931f
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20210202015035-f0392a05a37d
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20210130041207-ab82d40f6e85
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20210202081330-dcb008742582
+	k8s.io/api => k8s.io/api v0.0.0-20210202201024-9f65ac4826aa
+	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20210202200849-9e39a13d2cab
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20210202201239-3147a30d7bb5
+	k8s.io/component-base => k8s.io/component-base v0.0.0-20210202201701-81d9ea233619
 )
