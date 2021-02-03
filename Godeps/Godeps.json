@@ -72,7 +72,7 @@
 		},
 		{
 			"ImportPath": "github.com/NYTimes/gziphandler",
-			"Rev": "56545f4a5d46"
+			"Rev": "v1.1.1"
 		},
 		{
 			"ImportPath": "github.com/PuerkitoBio/purell",
@@ -704,7 +704,7 @@
 		},
 		{
 			"ImportPath": "k8s.io/client-go",
-			"Rev": "3147a30d7bb5"
+			"Rev": "93ce9718ffcd"
 		},
 		{
 			"ImportPath": "k8s.io/component-base",
