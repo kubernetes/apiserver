@@ -708,11 +708,11 @@
 		},
 		{
 			"ImportPath": "k8s.io/client-go",
-			"Rev": "1cfb136f9050"
+			"Rev": "9409f5796d38"
 		},
 		{
 			"ImportPath": "k8s.io/component-base",
-			"Rev": "a7be188c8339"
+			"Rev": "b6d06acb8460"
 		},
 		{
 			"ImportPath": "k8s.io/gengo",
