@@ -26,6 +26,7 @@ require (
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822
 	github.com/pkg/errors v0.9.1
 	github.com/pquerna/cachecontrol v0.0.0-20171018203845-0dec1b30a021 // indirect
+	github.com/sirupsen/logrus v1.7.0 // indirect
 	github.com/spf13/pflag v1.0.5
 	github.com/stretchr/testify v1.6.1
 	github.com/tmc/grpc-websocket-proxy v0.0.0-20190109142713-0ad062ec5ee5 // indirect
@@ -41,10 +42,10 @@ require (
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
 	gopkg.in/yaml.v2 v2.4.0
-	k8s.io/api v0.0.0-20210309224354-f1e2e30ecadb
-	k8s.io/apimachinery v0.0.0-20210309143504-98d3ae9509fd
-	k8s.io/client-go v0.0.0-20210309224750-6085ad09f2ca
-	k8s.io/component-base v0.0.0-20210309144516-39b19c884a91
+	k8s.io/api v0.0.0
+	k8s.io/apimachinery v0.0.0
+	k8s.io/client-go v0.0.0
+	k8s.io/component-base v0.0.0
 	k8s.io/klog/v2 v2.5.0
 	k8s.io/kube-openapi v0.0.0-20210305001622-591a79e4bda7
 	k8s.io/utils v0.0.0-20201110183641-67b214c5f920
@@ -54,8 +55,9 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20210309224354-f1e2e30ecadb
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20210309143504-98d3ae9509fd
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20210309224750-6085ad09f2ca
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20210309144516-39b19c884a91
+	k8s.io/api => ../api
+	k8s.io/apimachinery => ../apimachinery
+	k8s.io/apiserver => ../apiserver
+	k8s.io/client-go => ../client-go
+	k8s.io/component-base => ../component-base
 )
