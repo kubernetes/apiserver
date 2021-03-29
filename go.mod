@@ -15,7 +15,7 @@ require (
 	github.com/evanphx/json-patch v4.9.0+incompatible
 	github.com/go-openapi/jsonreference v0.19.3 // indirect
 	github.com/go-openapi/spec v0.19.3
-	github.com/gogo/protobuf v1.3.1
+	github.com/gogo/protobuf v1.3.2
 	github.com/google/go-cmp v0.4.0
 	github.com/google/gofuzz v1.1.0
 	github.com/google/uuid v1.1.1
@@ -35,16 +35,16 @@ require (
 	go.uber.org/zap v1.10.0
 	golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9
 	golang.org/x/net v0.0.0-20201110031124-69a78807bb2b
-	golang.org/x/sync v0.0.0-20190911185100-cd5d95a43a6e
+	golang.org/x/sync v0.0.0-20201020160332-67f06af15bc9
 	golang.org/x/sys v0.0.0-20201112073958-5cba982894dd
 	google.golang.org/grpc v1.27.0
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
 	gopkg.in/yaml.v2 v2.2.8
-	k8s.io/api v0.0.0-20210325111313-83a267c7608c
-	k8s.io/apimachinery v0.0.0-20210325110524-6d69a3e60ee7
-	k8s.io/client-go v0.0.0-20210325113035-53d96299a20a
-	k8s.io/component-base v0.0.0-20210325114608-ddffa36eac61
+	k8s.io/api v0.0.0-20210329192645-60680b5087d3
+	k8s.io/apimachinery v0.0.0-20210329192041-0c7db653e2b6
+	k8s.io/client-go v0.0.0-20210329193902-8b9f5901612d
+	k8s.io/component-base v0.0.0-20210329195226-dc8214616049
 	k8s.io/klog/v2 v2.2.0
 	k8s.io/kube-openapi v0.0.0-20200805222855-6aeccd4b50c6
 	k8s.io/utils v0.0.0-20200729134348-d5654de09c73
@@ -54,8 +54,8 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20210325111313-83a267c7608c
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20210325110524-6d69a3e60ee7
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20210325113035-53d96299a20a
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20210325114608-ddffa36eac61
+	k8s.io/api => k8s.io/api v0.0.0-20210329192645-60680b5087d3
+	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20210329192041-0c7db653e2b6
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20210329193902-8b9f5901612d
+	k8s.io/component-base => k8s.io/component-base v0.0.0-20210329195226-dc8214616049
 )

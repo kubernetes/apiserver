@@ -236,7 +236,7 @@
 		},
 		{
 			"ImportPath": "github.com/gogo/protobuf",
-			"Rev": "v1.3.1"
+			"Rev": "v1.3.2"
 		},
 		{
 			"ImportPath": "github.com/golang/glog",
@@ -348,7 +348,7 @@
 		},
 		{
 			"ImportPath": "github.com/kisielk/errcheck",
-			"Rev": "v1.2.0"
+			"Rev": "v1.5.0"
 		},
 		{
 			"ImportPath": "github.com/kisielk/gotool",
@@ -511,6 +511,10 @@
 			"Rev": "43a291ad63a2"
 		},
 		{
+			"ImportPath": "github.com/yuin/goldmark",
+			"Rev": "v1.2.1"
+		},
+		{
 			"ImportPath": "go.etcd.io/bbolt",
 			"Rev": "v1.3.5"
 		},
@@ -556,7 +560,7 @@
 		},
 		{
 			"ImportPath": "golang.org/x/mod",
-			"Rev": "c90efee705ee"
+			"Rev": "v0.3.0"
 		},
 		{
 			"ImportPath": "golang.org/x/net",
@@ -568,7 +572,7 @@
 		},
 		{
 			"ImportPath": "golang.org/x/sync",
-			"Rev": "cd5d95a43a6e"
+			"Rev": "67f06af15bc9"
 		},
 		{
 			"ImportPath": "golang.org/x/sys",
@@ -584,11 +588,11 @@
 		},
 		{
 			"ImportPath": "golang.org/x/tools",
-			"Rev": "7b8e75db28f4"
+			"Rev": "113979e3529a"
 		},
 		{
 			"ImportPath": "golang.org/x/xerrors",
-			"Rev": "9bdfabe68543"
+			"Rev": "5ec99f83aff1"
 		},
 		{
 			"ImportPath": "google.golang.org/api",
@@ -668,19 +672,19 @@
 		},
 		{
 			"ImportPath": "k8s.io/api",
-			"Rev": "83a267c7608c"
+			"Rev": "60680b5087d3"
 		},
 		{
 			"ImportPath": "k8s.io/apimachinery",
-			"Rev": "6d69a3e60ee7"
+			"Rev": "0c7db653e2b6"
 		},
 		{
 			"ImportPath": "k8s.io/client-go",
-			"Rev": "53d96299a20a"
+			"Rev": "8b9f5901612d"
 		},
 		{
 			"ImportPath": "k8s.io/component-base",
-			"Rev": "ddffa36eac61"
+			"Rev": "dc8214616049"
 		},
 		{
 			"ImportPath": "k8s.io/gengo",
