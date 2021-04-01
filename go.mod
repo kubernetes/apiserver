@@ -32,7 +32,7 @@ require (
 	github.com/tmc/grpc-websocket-proxy v0.0.0-20190109142713-0ad062ec5ee5 // indirect
 	go.etcd.io/bbolt v1.3.5 // indirect
 	go.etcd.io/etcd v0.5.0-alpha.5.0.20200910180754-dd1b699fc489
-	go.uber.org/zap v1.10.0
+	go.uber.org/zap v1.16.0
 	golang.org/x/crypto v0.0.0-20210220033148-5ea612d1eb83
 	golang.org/x/net v0.0.0-20210224082022-3d97a244fca7
 	golang.org/x/sync v0.0.0-20201020160332-67f06af15bc9
@@ -42,21 +42,22 @@ require (
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
 	gopkg.in/yaml.v2 v2.4.0
-	k8s.io/api v0.0.0-20210411031832-6eed676bc189
-	k8s.io/apimachinery v0.0.0-20210411031630-d8cdd62f18c3
-	k8s.io/client-go v0.0.0-20210411032117-0bb6464b1348
-	k8s.io/component-base v0.0.0-20210411032642-18d65a503ea1
+	k8s.io/api v0.0.0
+	k8s.io/apimachinery v0.0.0
+	k8s.io/client-go v0.0.0
+	k8s.io/component-base v0.0.0
 	k8s.io/klog/v2 v2.8.0
 	k8s.io/kube-openapi v0.0.0-20210305001622-591a79e4bda7
 	k8s.io/utils v0.0.0-20201110183641-67b214c5f920
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.0.15
-	sigs.k8s.io/structured-merge-diff/v4 v4.1.1
+	sigs.k8s.io/structured-merge-diff/v4 v4.1.0
 	sigs.k8s.io/yaml v1.2.0
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20210411031832-6eed676bc189
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20210411031630-d8cdd62f18c3
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20210411032117-0bb6464b1348
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20210411032642-18d65a503ea1
+	k8s.io/api => ../api
+	k8s.io/apimachinery => ../apimachinery
+	k8s.io/apiserver => ../apiserver
+	k8s.io/client-go => ../client-go
+	k8s.io/component-base => ../component-base
 )
