@@ -552,15 +552,19 @@
 		},
 		{
 			"ImportPath": "go.uber.org/atomic",
-			"Rev": "v1.4.0"
+			"Rev": "v1.6.0"
 		},
 		{
 			"ImportPath": "go.uber.org/multierr",
-			"Rev": "v1.1.0"
+			"Rev": "v1.5.0"
+		},
+		{
+			"ImportPath": "go.uber.org/tools",
+			"Rev": "2cfd321de3ee"
 		},
 		{
 			"ImportPath": "go.uber.org/zap",
-			"Rev": "v1.10.0"
+			"Rev": "v1.16.0"
 		},
 		{
 			"ImportPath": "golang.org/x/crypto",
@@ -584,7 +588,7 @@
 		},
 		{
 			"ImportPath": "golang.org/x/mod",
-			"Rev": "v0.3.0"
+			"Rev": "ce943fd02449"
 		},
 		{
 			"ImportPath": "golang.org/x/net",
@@ -616,7 +620,7 @@
 		},
 		{
 			"ImportPath": "golang.org/x/tools",
-			"Rev": "113979e3529a"
+			"Rev": "v0.1.0"
 		},
 		{
 			"ImportPath": "golang.org/x/xerrors",
@@ -704,15 +708,15 @@
 		},
 		{
 			"ImportPath": "k8s.io/apimachinery",
-			"Rev": "d8cdd62f18c3"
+			"Rev": "d23dd757f6df"
 		},
 		{
 			"ImportPath": "k8s.io/client-go",
-			"Rev": "0bb6464b1348"
+			"Rev": "0cfeb7fda9de"
 		},
 		{
 			"ImportPath": "k8s.io/component-base",
-			"Rev": "18d65a503ea1"
+			"Rev": "a57cc3fac704"
 		},
 		{
 			"ImportPath": "k8s.io/gengo",
