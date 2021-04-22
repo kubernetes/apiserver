@@ -7,7 +7,6 @@ go 1.16
 require (
 	github.com/NYTimes/gziphandler v1.1.1 // indirect
 	github.com/coreos/go-oidc v2.1.0+incompatible
-	github.com/coreos/go-semver v0.3.0 // indirect
 	github.com/coreos/go-systemd v0.0.0-20190321100706-95778dfbb74e
 	github.com/coreos/pkg v0.0.0-20180928190104-399ea9e2e55f
 	github.com/davecgh/go-spew v1.1.1
@@ -28,7 +27,6 @@ require (
 	github.com/sirupsen/logrus v1.7.0 // indirect
 	github.com/spf13/pflag v1.0.5
 	github.com/stretchr/testify v1.6.1
-	github.com/tmc/grpc-websocket-proxy v0.0.0-20190109142713-0ad062ec5ee5 // indirect
 	go.etcd.io/bbolt v1.3.5 // indirect
 	go.etcd.io/etcd v0.5.0-alpha.5.0.20200910180754-dd1b699fc489
 	go.uber.org/zap v1.16.0
@@ -40,10 +38,10 @@ require (
 	google.golang.org/grpc v1.27.1
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
-	k8s.io/api v0.0.0-20210518101555-b64c6b5ea77c
-	k8s.io/apimachinery v0.0.0-20210518100450-f3a344a9640c
-	k8s.io/client-go v0.0.0-20210518102856-d696ff0aadf6
-	k8s.io/component-base v0.0.0-20210518111224-873d5fac2edc
+	k8s.io/api v0.0.0
+	k8s.io/apimachinery v0.0.0
+	k8s.io/client-go v0.0.0
+	k8s.io/component-base v0.0.0
 	k8s.io/klog/v2 v2.8.0
 	k8s.io/kube-openapi v0.0.0-20210421082810-95288971da7e
 	k8s.io/utils v0.0.0-20201110183641-67b214c5f920
@@ -53,8 +51,9 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20210518101555-b64c6b5ea77c
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20210518100450-ba18a62c2bc2
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20210518102856-d696ff0aadf6
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20210518111224-873d5fac2edc
+	k8s.io/api => ../api
+	k8s.io/apimachinery => ../apimachinery
+	k8s.io/apiserver => ../apiserver
+	k8s.io/client-go => ../client-go
+	k8s.io/component-base => ../component-base
 )
