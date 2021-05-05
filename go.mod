@@ -51,7 +51,7 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20210518101607-13f29098a509
+	k8s.io/api => k8s.io/api v0.0.0-20210505141115-0097618c6e4c
 	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20210518100456-fda713515979
 	k8s.io/client-go => k8s.io/client-go v0.0.0-20210518102924-2ed8b3081056
 	k8s.io/component-base => k8s.io/component-base v0.0.0-20210518111232-44faecbf614e
