@@ -38,7 +38,7 @@ require (
 	google.golang.org/grpc v1.27.1
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
-	k8s.io/api v0.0.0-20210506172159-8c6483ecf45e
+	k8s.io/api v0.0.0-20210518101611-b8e414eeb31d
 	k8s.io/apimachinery v0.0.0-20210518100457-96c076bf1d97
 	k8s.io/client-go v0.0.0-20210518102928-9a82c6a51a32
 	k8s.io/component-base v0.0.0-20210518111232-44faecbf614e
@@ -51,7 +51,7 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20210506172159-8c6483ecf45e
+	k8s.io/api => k8s.io/api v0.0.0-20210518101611-b8e414eeb31d
 	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20210518100457-96c076bf1d97
 	k8s.io/client-go => k8s.io/client-go v0.0.0-20210518102928-9a82c6a51a32
 	k8s.io/component-base => k8s.io/component-base v0.0.0-20210518111232-44faecbf614e
