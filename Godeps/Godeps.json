@@ -244,7 +244,7 @@
 		},
 		{
 			"ImportPath": "github.com/fsnotify/fsnotify",
-			"Rev": "v1.4.7"
+			"Rev": "v1.4.9"
 		},
 		{
 			"ImportPath": "github.com/ghodss/yaml",
@@ -587,6 +587,10 @@
 			"Rev": "a10e7caefd8e"
 		},
 		{
+			"ImportPath": "github.com/nxadm/tail",
+			"Rev": "v1.4.4"
+		},
+		{
 			"ImportPath": "github.com/oklog/ulid",
 			"Rev": "v1.3.1"
 		},
@@ -596,11 +600,11 @@
 		},
 		{
 			"ImportPath": "github.com/onsi/ginkgo",
-			"Rev": "v1.11.0"
+			"Rev": "v1.14.0"
 		},
 		{
 			"ImportPath": "github.com/onsi/gomega",
-			"Rev": "v1.7.0"
+			"Rev": "v1.10.1"
 		},
 		{
 			"ImportPath": "github.com/pascaldekloe/goe",
@@ -728,7 +732,7 @@
 		},
 		{
 			"ImportPath": "github.com/stretchr/testify",
-			"Rev": "v1.6.1"
+			"Rev": "v1.7.0"
 		},
 		{
 			"ImportPath": "github.com/subosito/gotenv",
@@ -920,19 +924,19 @@
 		},
 		{
 			"ImportPath": "k8s.io/api",
-			"Rev": "c2d30ef34ee7"
+			"Rev": "d5fda5562a2e"
 		},
 		{
 			"ImportPath": "k8s.io/apimachinery",
-			"Rev": "2540c63454fb"
+			"Rev": "c7322e849168"
 		},
 		{
 			"ImportPath": "k8s.io/client-go",
-			"Rev": "03f765c56af0"
+			"Rev": "b0c8a7cef141"
 		},
 		{
 			"ImportPath": "k8s.io/component-base",
-			"Rev": "84c0c6f957d1"
+			"Rev": "8b08f85f6db5"
 		},
 		{
 			"ImportPath": "k8s.io/gengo",
