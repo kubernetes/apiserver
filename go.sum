@@ -581,14 +581,6 @@ honnef.co/go/tools v0.0.0-20190418001031-e561f6794a2a/go.mod h1:rf3lG4BRIbNafJWh
 honnef.co/go/tools v0.0.0-20190523083050-ea95bdfd59fc/go.mod h1:rf3lG4BRIbNafJWhAfAdb/ePZxsR/4RtNHQocxwk9r4=
 honnef.co/go/tools v0.0.1-2019.2.3/go.mod h1:a3bituU0lyd329TUQxRnasdCoJDkEUEAqEt0JzvZhAg=
 honnef.co/go/tools v0.0.1-2020.1.3/go.mod h1:X/FiERA/W4tHapMX5mGpAtMSVEeEUOyHaw9vFzvIQ3k=
-k8s.io/api v0.0.0-20210408104456-f223af846001 h1:z7zzwcnLO3xF6MWfhWuy9fiLC3E8quPHy5GGkNive6o=
-k8s.io/api v0.0.0-20210408104456-f223af846001/go.mod h1:cgILOv2D1tPmboo8I/DGUMNkV0C3JtN5aAEYvcTyKQc=
-k8s.io/apimachinery v0.0.0-20210518101034-c278689d1bc1 h1:VxG2x5Wzg4GT/ghqOscTlJx6CFBMNHR7bC6/IaFiZB4=
-k8s.io/apimachinery v0.0.0-20210518101034-c278689d1bc1/go.mod h1:ejZXtW1Ra6V1O5H8xPBGz+T3+4gfkTCeExAHKU57MAc=
-k8s.io/client-go v0.0.0-20210518105731-357b3cd7a205 h1:gyXdQDmv59ROePcZWH2GHQjpxwrfwlD4jdUdV7OUpUE=
-k8s.io/client-go v0.0.0-20210518105731-357b3cd7a205/go.mod h1:mSmAJ79BSUh0CSAcpIL9rcjU+X5/M1ab9qG+fs5LOFU=
-k8s.io/component-base v0.0.0-20210518111616-6a77b1e67dff h1:b8URpRCEA//QnWRLvahMuc1JmFgoYQ3IBj4fsPs1f9k=
-k8s.io/component-base v0.0.0-20210518111616-6a77b1e67dff/go.mod h1:RynlTb2pw5JlB9Zl3TgMlOkfOz5XON3G8ffU61vncJ4=
 k8s.io/gengo v0.0.0-20200413195148-3a45101e95ac/go.mod h1:ezvh/TsK7cY6rbqRK0oQQ8IAqLxYwwyPxAX1Pzy0ii0=
 k8s.io/klog/v2 v2.0.0/go.mod h1:PBfzABfn139FHAV07az/IF9Wp1bkk3vpT2XSJ76fSDE=
 k8s.io/klog/v2 v2.4.0 h1:7+X0fUguPyrKEC4WjH8iGDg3laWgMo5tMnRTIGTTxGQ=
@@ -600,8 +592,8 @@ k8s.io/utils v0.0.0-20201110183641-67b214c5f920/go.mod h1:jPW/WVKK9YHAvNhRxK0md/
 rsc.io/binaryregexp v0.2.0/go.mod h1:qTv7/COck+e2FymRvadv62gMdZztPaShugOCi3I+8D8=
 rsc.io/quote/v3 v3.1.0/go.mod h1:yEA65RcK8LyAZtP9Kv3t0HmxON59tX3rD+tICJqUlj0=
 rsc.io/sampler v1.3.0/go.mod h1:T1hPZKmBbMNahiBKFy5HrXp6adAjACjK9JXDnKaTXpA=
-sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.0.15 h1:4uqm9Mv+w2MmBYD+F4qf/v6tDFUdPOk29C095RbU5mY=
-sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.0.15/go.mod h1:LEScyzhFmoF5pso/YSeBstl57mOzx9xlU9n85RGrDQg=
+sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.0.19 h1:0jaDAAxtqIrrqas4vtTqxct4xS5kHfRNycTRLTyJmVM=
+sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.0.19/go.mod h1:LEScyzhFmoF5pso/YSeBstl57mOzx9xlU9n85RGrDQg=
 sigs.k8s.io/structured-merge-diff/v4 v4.0.2/go.mod h1:bJZC9H9iH24zzfZ/41RGcq60oK1F7G282QMXDPYydCw=
 sigs.k8s.io/structured-merge-diff/v4 v4.0.3 h1:4oyYo8NREp49LBBhKxEqCulFjg26rawYKrnCmg+Sr6c=
 sigs.k8s.io/structured-merge-diff/v4 v4.0.3/go.mod h1:bJZC9H9iH24zzfZ/41RGcq60oK1F7G282QMXDPYydCw=
