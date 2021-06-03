@@ -96,7 +96,7 @@
 		},
 		{
 			"ImportPath": "github.com/alecthomas/units",
-			"Rev": "c3de453c63f4"
+			"Rev": "f65c72e2690d"
 		},
 		{
 			"ImportPath": "github.com/armon/circbuf",
@@ -263,8 +263,12 @@
 			"Rev": "v0.9.0"
 		},
 		{
+			"ImportPath": "github.com/go-kit/log",
+			"Rev": "v0.1.0"
+		},
+		{
 			"ImportPath": "github.com/go-logfmt/logfmt",
-			"Rev": "v0.4.0"
+			"Rev": "v0.5.0"
 		},
 		{
 			"ImportPath": "github.com/go-logr/logr",
@@ -459,6 +463,10 @@
 			"Rev": "v0.1.0"
 		},
 		{
+			"ImportPath": "github.com/jpillora/backoff",
+			"Rev": "v1.0.0"
+		},
+		{
 			"ImportPath": "github.com/json-iterator/go",
 			"Rev": "v1.1.10"
 		},
@@ -472,7 +480,7 @@
 		},
 		{
 			"ImportPath": "github.com/julienschmidt/httprouter",
-			"Rev": "v1.2.0"
+			"Rev": "v1.3.0"
 		},
 		{
 			"ImportPath": "github.com/kisielk/errcheck",
@@ -484,7 +492,7 @@
 		},
 		{
 			"ImportPath": "github.com/konsorten/go-windows-terminal-sequences",
-			"Rev": "v1.0.1"
+			"Rev": "v1.0.3"
 		},
 		{
 			"ImportPath": "github.com/kr/logfmt",
@@ -576,7 +584,7 @@
 		},
 		{
 			"ImportPath": "github.com/mwitkow/go-conntrack",
-			"Rev": "cc309e4a2223"
+			"Rev": "2f068394615f"
 		},
 		{
 			"ImportPath": "github.com/mxk/go-flowrate",
@@ -644,7 +652,7 @@
 		},
 		{
 			"ImportPath": "github.com/prometheus/common",
-			"Rev": "v0.10.0"
+			"Rev": "v0.26.0"
 		},
 		{
 			"ImportPath": "github.com/prometheus/procfs",
@@ -936,7 +944,7 @@
 		},
 		{
 			"ImportPath": "k8s.io/component-base",
-			"Rev": "4ceecfef9988"
+			"Rev": "a099a26853cb"
 		},
 		{
 			"ImportPath": "k8s.io/gengo",
