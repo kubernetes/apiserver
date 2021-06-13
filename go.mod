@@ -18,7 +18,7 @@ require (
 	github.com/google/go-cmp v0.5.5
 	github.com/google/gofuzz v1.1.0
 	github.com/google/uuid v1.1.2
-	github.com/googleapis/gnostic v0.5.1
+	github.com/googleapis/gnostic v0.5.5
 	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0
 	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0
 	github.com/hashicorp/golang-lru v0.5.1
@@ -38,10 +38,10 @@ require (
 	google.golang.org/grpc v1.38.0
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
-	k8s.io/api v0.0.0-20210616055848-508b64175e92
-	k8s.io/apimachinery v0.0.0-20210618191504-8146dedb8110
-	k8s.io/client-go v0.0.0-20210618113604-0634aae8699c
-	k8s.io/component-base v0.0.0-20210617020714-66c6b926cbd4
+	k8s.io/api v0.0.0
+	k8s.io/apimachinery v0.0.0
+	k8s.io/client-go v0.0.0
+	k8s.io/component-base v0.0.0
 	k8s.io/klog/v2 v2.9.0
 	k8s.io/kube-openapi v0.0.0-20210421082810-95288971da7e
 	k8s.io/utils v0.0.0-20210521133846-da695404a2bc
@@ -51,8 +51,9 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20210616055848-508b64175e92
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20210618191504-8146dedb8110
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20210618113604-0634aae8699c
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20210617020714-66c6b926cbd4
+	k8s.io/api => ../api
+	k8s.io/apimachinery => ../apimachinery
+	k8s.io/apiserver => ../apiserver
+	k8s.io/client-go => ../client-go
+	k8s.io/component-base => ../component-base
 )
