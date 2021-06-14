@@ -80,56 +80,56 @@ type Event struct {
 	metav1.TypeMeta
 
 	// AuditLevel at which event was generated
-	Level Level
+	Level Level `json:"level,omitempty"`
 
 	// Unique audit ID, generated for each request.
-	AuditID types.UID
+	AuditID types.UID `json:"auditID,omitempty"`
 	// Stage of the request handling when this event instance was generated.
-	Stage Stage
+	Stage Stage `json:"stage,omitempty"`
 
 	// RequestURI is the request URI as sent by the client to a server.
-	RequestURI string
+	RequestURI string `json:"requestURI,omitempty"`
 	// Verb is the kubernetes verb associated with the request.
 	// For non-resource requests, this is the lower-cased HTTP method.
-	Verb string
+	Verb string `json:"verb,omitempty"`
 	// Authenticated user information.
-	User authnv1.UserInfo
+	User authnv1.UserInfo `json:"user,omitempty"`
 	// Impersonated user information.
 	// +optional
-	ImpersonatedUser *authnv1.UserInfo
+	ImpersonatedUser *authnv1.UserInfo `json:"impersonatedUser,omitempty"`
 	// Source IPs, from where the request originated and intermediate proxies.
 	// +optional
-	SourceIPs []string
+	SourceIPs []string `json:"sourceIPs,omitempty"`
 	// UserAgent records the user agent string reported by the client.
 	// Note that the UserAgent is provided by the client, and must not be trusted.
 	// +optional
-	UserAgent string
+	UserAgent string `json:"userAgent,omitempty"`
 	// Object reference this request is targeted at.
 	// Does not apply for List-type requests, or non-resource requests.
 	// +optional
-	ObjectRef *ObjectReference
+	ObjectRef *ObjectReference `json:"objectRef,omitempty"`
 	// The response status, populated even when the ResponseObject is not a Status type.
 	// For successful responses, this will only include the Code. For non-status type
 	// error responses, this will be auto-populated with the error Message.
 	// +optional
-	ResponseStatus *metav1.Status
+	ResponseStatus *metav1.Status `json:"responseStatus,omitempty"`
 
 	// API object from the request, in JSON format. The RequestObject is recorded as-is in the request
 	// (possibly re-encoded as JSON), prior to version conversion, defaulting, admission or
 	// merging. It is an external versioned object type, and may not be a valid object on its own.
 	// Omitted for non-resource requests.  Only logged at Request Level and higher.
 	// +optional
-	RequestObject *runtime.Unknown
+	RequestObject *runtime.Unknown `json:"requestObject,omitempty"`
 	// API object returned in the response, in JSON. The ResponseObject is recorded after conversion
 	// to the external type, and serialized as JSON. Omitted for non-resource requests.  Only logged
 	// at Response Level.
 	// +optional
-	ResponseObject *runtime.Unknown
+	ResponseObject *runtime.Unknown `json:"responseObject,omitempty"`
 
 	// Time the request reached the apiserver.
-	RequestReceivedTimestamp metav1.MicroTime
+	RequestReceivedTimestamp metav1.MicroTime `json:"requestReceivedTimestamp,omitempty"`
 	// Time the request reached current audit stage.
-	StageTimestamp metav1.MicroTime
+	StageTimestamp metav1.MicroTime `json:"stageTimestamp,omitempty"`
 
 	// Annotations is an unstructured key value map stored with an audit event that may be set by
 	// plugins invoked in the request serving chain, including authentication, authorization and
@@ -138,7 +138,7 @@ type Event struct {
 	// component to avoid name collisions (e.g. podsecuritypolicy.admission.k8s.io/policy). Values
 	// should be short. Annotations are included in the Metadata level.
 	// +optional
-	Annotations map[string]string
+	Annotations map[string]string `json:"annotations,omitempty"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
@@ -149,7 +149,7 @@ type EventList struct {
 	// +optional
 	metav1.ListMeta
 
-	Items []Event
+	Items []Event `json:"items,omitempty"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
@@ -166,12 +166,12 @@ type Policy struct {
 	// A request may match multiple rules, in which case the FIRST matching rule is used.
 	// The default audit level is None, but can be overridden by a catch-all rule at the end of the list.
 	// PolicyRules are strictly ordered.
-	Rules []PolicyRule
+	Rules []PolicyRule `json:"rules,omitempty"`
 
 	// OmitStages is a list of stages for which no events are created. Note that this can also
 	// be specified per rule in which case the union of both are omitted.
 	// +optional
-	OmitStages []Stage
+	OmitStages []Stage `json:"omitStages,omitempty"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
@@ -182,29 +182,29 @@ type PolicyList struct {
 	// +optional
 	metav1.ListMeta
 
-	Items []Policy
+	Items []Policy `json:"items,omitempty"`
 }
 
 // PolicyRule maps requests based off metadata to an audit Level.
 // Requests must match the rules of every field (an intersection of rules).
 type PolicyRule struct {
 	// The Level that requests matching this rule are recorded at.
-	Level Level
+	Level Level `json:"level,omitempty"`
 
 	// The users (by authenticated user name) this rule applies to.
 	// An empty list implies every user.
 	// +optional
-	Users []string
+	Users []string `json:"users,omitempty"`
 	// The user groups this rule applies to. A user is considered matching
 	// if it is a member of any of the UserGroups.
 	// An empty list implies every user group.
 	// +optional
-	UserGroups []string
+	UserGroups []string `json:"userGroups,omitempty"`
 
 	// The verbs that match this rule.
 	// An empty list implies every verb.
 	// +optional
-	Verbs []string
+	Verbs []string `json:"verbs,omitempty"`
 
 	// Rules can apply to API resources (such as "pods" or "secrets"),
 	// non-resource URL paths (such as "/api"), or neither, but not both.
@@ -212,12 +212,12 @@ type PolicyRule struct {
 
 	// Resources that this rule matches. An empty list implies all kinds in all API groups.
 	// +optional
-	Resources []GroupResources
+	Resources []GroupResources `json:"resources,omitempty"`
 	// Namespaces that this rule matches.
 	// The empty string "" matches non-namespaced resources.
 	// An empty list implies every namespace.
 	// +optional
-	Namespaces []string
+	Namespaces []string `json:"namespaces,omitempty"`
 
 	// NonResourceURLs is a set of URL paths that should be audited.
 	// *s are allowed, but only as the full, final step in the path.
@@ -225,13 +225,13 @@ type PolicyRule struct {
 	//  "/metrics" - Log requests for apiserver metrics
 	//  "/healthz*" - Log all health checks
 	// +optional
-	NonResourceURLs []string
+	NonResourceURLs []string `json:"nonResourceURLs,omitempty"`
 
 	// OmitStages is a list of stages for which no events are created. Note that this can also
 	// be specified policy wide in which case the union of both are omitted.
 	// An empty list means no restrictions will apply.
 	// +optional
-	OmitStages []Stage
+	OmitStages []Stage `json:"omitStages,omitempty"`
 }
 
 // GroupResources represents resource kinds in an API group.
@@ -239,7 +239,7 @@ type GroupResources struct {
 	// Group is the name of the API group that contains the resources.
 	// The empty string represents the core API group.
 	// +optional
-	Group string
+	Group string `json:"group,omitempty"`
 	// Resources is a list of resources this rule applies to.
 	//
 	// For example:
@@ -254,33 +254,33 @@ type GroupResources struct {
 	//
 	// An empty list implies all resources and subresources in this API groups apply.
 	// +optional
-	Resources []string
+	Resources []string `json:"resources,omitempty"`
 	// ResourceNames is a list of resource instance names that the policy matches.
 	// Using this field requires Resources to be specified.
 	// An empty list implies that every instance of the resource is matched.
 	// +optional
-	ResourceNames []string
+	ResourceNames []string `json:"resourceNames,omitempty"`
 }
 
 // ObjectReference contains enough information to let you inspect or modify the referred object.
 type ObjectReference struct {
 	// +optional
-	Resource string
+	Resource string `json:"resource,omitempty"`
 	// +optional
-	Namespace string
+	Namespace string `json:"namespace,omitempty"`
 	// +optional
-	Name string
+	Name string `json:"name,omitempty"`
 	// +optional
-	UID types.UID
+	UID types.UID `json:"uid,omitempty"`
 	// APIGroup is the name of the API group that contains the referred object.
 	// The empty string represents the core API group.
 	// +optional
-	APIGroup string
+	APIGroup string `json:"apiGroup,omitempty"`
 	// APIVersion is the version of the API group that contains the referred object.
 	// +optional
-	APIVersion string
+	APIVersion string `json:"apiVersion,omitempty"`
 	// +optional
-	ResourceVersion string
+	ResourceVersion string `json:"resourceVersion,omitempty"`
 	// +optional
-	Subresource string
+	Subresource string `json:"subresource,omitempty"`
 }
