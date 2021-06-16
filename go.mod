@@ -25,21 +25,21 @@ require (
 	github.com/pquerna/cachecontrol v0.0.0-20171018203845-0dec1b30a021 // indirect
 	github.com/spf13/pflag v1.0.5
 	github.com/stretchr/testify v1.7.0
-	go.etcd.io/etcd/api/v3 v3.5.0-rc.0
-	go.etcd.io/etcd/client/pkg/v3 v3.5.0-rc.0
-	go.etcd.io/etcd/client/v3 v3.5.0-rc.0
-	go.etcd.io/etcd/tests/v3 v3.5.0-rc.0
+	go.etcd.io/etcd/api/v3 v3.5.0
+	go.etcd.io/etcd/client/pkg/v3 v3.5.0
+	go.etcd.io/etcd/client/v3 v3.5.0
+	go.etcd.io/etcd/tests/v3 v3.5.0
 	golang.org/x/crypto v0.0.0-20210220033148-5ea612d1eb83
 	golang.org/x/net v0.0.0-20210405180319-a5a99cb37ef4
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
-	golang.org/x/sys v0.0.0-20210510120138-977fb7262007
+	golang.org/x/sys v0.0.0-20210603081109-ebe580a85c40
 	google.golang.org/grpc v1.38.0
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
-	k8s.io/api v0.0.0-20210615215837-b5b150aa86e0
-	k8s.io/apimachinery v0.0.0-20210615215655-b2555c63f8f2
-	k8s.io/client-go v0.0.0-20210615220106-80617fc032e5
-	k8s.io/component-base v0.0.0-20210615220649-750957c01fc9
+	k8s.io/api v0.0.0-20210616055848-508b64175e92
+	k8s.io/apimachinery v0.0.0-20210616055704-0dc8a6790746
+	k8s.io/client-go v0.0.0-20210616060116-ef2d8844e4a7
+	k8s.io/component-base v0.0.0-20210616060642-d4f86f3ef572
 	k8s.io/klog/v2 v2.9.0
 	k8s.io/kube-openapi v0.0.0-20210421082810-95288971da7e
 	k8s.io/utils v0.0.0-20210521133846-da695404a2bc
@@ -49,8 +49,8 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20210615215837-b5b150aa86e0
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20210615215655-b2555c63f8f2
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20210615220106-80617fc032e5
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20210615220649-750957c01fc9
+	k8s.io/api => k8s.io/api v0.0.0-20210616055848-508b64175e92
+	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20210616055704-0dc8a6790746
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20210616060116-ef2d8844e4a7
+	k8s.io/component-base => k8s.io/component-base v0.0.0-20210616060642-d4f86f3ef572
 )
