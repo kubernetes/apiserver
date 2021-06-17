@@ -41,10 +41,10 @@ require (
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
 	gopkg.in/yaml.v2 v2.2.8
-	k8s.io/api v0.0.0-20210408104456-f223af846001
-	k8s.io/apimachinery v0.0.0-20210518101034-c278689d1bc1
-	k8s.io/client-go v0.0.0-20210518105731-357b3cd7a205
-	k8s.io/component-base v0.0.0-20210518111616-6a77b1e67dff
+	k8s.io/api v0.20.9-rc.0
+	k8s.io/apimachinery v0.20.9-rc.0
+	k8s.io/client-go v0.20.9-rc.0
+	k8s.io/component-base v0.20.9-rc.0
 	k8s.io/klog/v2 v2.4.0
 	k8s.io/kube-openapi v0.0.0-20201113171705-d219536bb9fd
 	k8s.io/utils v0.0.0-20201110183641-67b214c5f920
@@ -54,8 +54,8 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20210408104456-f223af846001
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20210518101034-c278689d1bc1
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20210518105731-357b3cd7a205
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20210518111616-6a77b1e67dff
+	k8s.io/api => k8s.io/api v0.20.9-rc.0
+	k8s.io/apimachinery => k8s.io/apimachinery v0.20.9-rc.0
+	k8s.io/client-go => k8s.io/client-go v0.20.9-rc.0
+	k8s.io/component-base => k8s.io/component-base v0.20.9-rc.0
 )
