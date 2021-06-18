@@ -19,17 +19,18 @@ require (
 	github.com/google/gofuzz v1.1.0
 	github.com/google/uuid v1.1.2
 	github.com/googleapis/gnostic v0.5.5
-	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0
 	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0
 	github.com/hashicorp/golang-lru v0.5.1
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822
+	github.com/pkg/errors v0.9.1
 	github.com/pquerna/cachecontrol v0.0.0-20171018203845-0dec1b30a021 // indirect
 	github.com/spf13/pflag v1.0.5
 	github.com/stretchr/testify v1.7.0
 	go.etcd.io/etcd/api/v3 v3.5.0
 	go.etcd.io/etcd/client/pkg/v3 v3.5.0
 	go.etcd.io/etcd/client/v3 v3.5.0
-	go.etcd.io/etcd/tests/v3 v3.5.0
+	go.etcd.io/etcd/server/v3 v3.5.0
+	go.uber.org/zap v1.17.0
 	golang.org/x/crypto v0.0.0-20210220033148-5ea612d1eb83
 	golang.org/x/net v0.0.0-20210405180319-a5a99cb37ef4
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
@@ -37,10 +38,10 @@ require (
 	google.golang.org/grpc v1.38.0
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
-	k8s.io/api v0.0.0-20210623031714-d4897f24d38d
-	k8s.io/apimachinery v0.0.0-20210619071501-4713ab59dd88
-	k8s.io/client-go v0.0.0-20210619071903-3fae6f05ac95
-	k8s.io/component-base v0.0.0-20210622112647-573397b706f6
+	k8s.io/api v0.0.0
+	k8s.io/apimachinery v0.0.0
+	k8s.io/client-go v0.0.0
+	k8s.io/component-base v0.0.0
 	k8s.io/klog/v2 v2.9.0
 	k8s.io/kube-openapi v0.0.0-20210421082810-95288971da7e
 	k8s.io/utils v0.0.0-20210521133846-da695404a2bc
@@ -50,8 +51,9 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20210623031714-d4897f24d38d
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20210619071501-4713ab59dd88
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20210619071903-3fae6f05ac95
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20210622112647-573397b706f6
+	k8s.io/api => ../api
+	k8s.io/apimachinery => ../apimachinery
+	k8s.io/apiserver => ../apiserver
+	k8s.io/client-go => ../client-go
+	k8s.io/component-base => ../component-base
 )
