@@ -23,7 +23,6 @@ require (
 	github.com/hashicorp/golang-lru v0.5.1
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822
 	github.com/pquerna/cachecontrol v0.0.0-20171018203845-0dec1b30a021 // indirect
-	github.com/sirupsen/logrus v1.8.1 // indirect
 	github.com/spf13/pflag v1.0.5
 	github.com/stretchr/testify v1.7.0
 	go.etcd.io/etcd/api/v3 v3.5.0
@@ -45,7 +44,7 @@ require (
 	gopkg.in/square/go-jose.v2 v2.2.2
 	k8s.io/api v0.0.0-20210705094346-9f69feafab6a
 	k8s.io/apimachinery v0.0.0-20210701054147-830375057167
-	k8s.io/client-go v0.0.0-20210702094607-ca3a47f0b44a
+	k8s.io/client-go v0.0.0-20210706214629-68cb2ddef93f
 	k8s.io/component-base v0.0.0-20210702054709-fddd92849e34
 	k8s.io/klog/v2 v2.9.0
 	k8s.io/kube-openapi v0.0.0-20210421082810-95288971da7e
@@ -58,6 +57,6 @@ require (
 replace (
 	k8s.io/api => k8s.io/api v0.0.0-20210705094346-9f69feafab6a
 	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20210701054147-830375057167
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20210702094607-ca3a47f0b44a
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20210706214629-68cb2ddef93f
 	k8s.io/component-base => k8s.io/component-base v0.0.0-20210702054709-fddd92849e34
 )
