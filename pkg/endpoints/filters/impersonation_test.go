@@ -513,9 +513,8 @@ func TestImpersonationFilter(t *testing.T) {
 			if !exists {
 				actualUser = nil
 				return
-			} else {
-				actualUser = user
 			}
+			actualUser = user
 
 			delegate.ServeHTTP(w, req)
 		})
