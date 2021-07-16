@@ -16,7 +16,7 @@ require (
 	github.com/evanphx/json-patch v4.9.0+incompatible
 	github.com/go-openapi/spec v0.19.5
 	github.com/gogo/protobuf v1.3.2
-	github.com/google/go-cmp v0.5.4
+	github.com/google/go-cmp v0.5.5
 	github.com/google/gofuzz v1.1.0
 	github.com/google/uuid v1.1.2
 	github.com/googleapis/gnostic v0.4.1
@@ -26,7 +26,7 @@ require (
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822
 	github.com/pkg/errors v0.9.1
 	github.com/pquerna/cachecontrol v0.0.0-20171018203845-0dec1b30a021 // indirect
-	github.com/sirupsen/logrus v1.7.0 // indirect
+	github.com/sirupsen/logrus v1.8.1 // indirect
 	github.com/spf13/pflag v1.0.5
 	github.com/stretchr/testify v1.6.1
 	github.com/tmc/grpc-websocket-proxy v0.0.0-20190109142713-0ad062ec5ee5 // indirect
@@ -42,10 +42,10 @@ require (
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
 	gopkg.in/yaml.v2 v2.4.0
-	k8s.io/api v0.0.0-20210712061851-e7183502f6db
-	k8s.io/apimachinery v0.0.0-20210712061153-f916759cb6b8
-	k8s.io/client-go v0.0.0-20210729063734-ccdebc23f744
-	k8s.io/component-base v0.0.0-20210712064623-3889627966a2
+	k8s.io/api v0.0.0
+	k8s.io/apimachinery v0.0.0
+	k8s.io/client-go v0.0.0
+	k8s.io/component-base v0.0.0
 	k8s.io/klog/v2 v2.8.0
 	k8s.io/kube-openapi v0.0.0-20210305001622-591a79e4bda7
 	k8s.io/utils v0.0.0-20201110183641-67b214c5f920
@@ -55,8 +55,9 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20210712061851-e7183502f6db
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20210712061153-f916759cb6b8
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20210729063734-ccdebc23f744
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20210712064623-3889627966a2
+	k8s.io/api => ../api
+	k8s.io/apimachinery => ../apimachinery
+	k8s.io/apiserver => ../apiserver
+	k8s.io/client-go => ../client-go
+	k8s.io/component-base => ../component-base
 )
