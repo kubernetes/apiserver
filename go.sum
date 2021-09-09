@@ -943,8 +943,8 @@ k8s.io/api v0.0.0-20210908033022-d21f9c983267 h1:vq/GfYuNAtReYwup5R1uEGEIvwHtZIV
 k8s.io/api v0.0.0-20210908033022-d21f9c983267/go.mod h1:c9QgRUT16khyA/63Nk32bm7l2r3/kd5zvB45ofzM0N0=
 k8s.io/apimachinery v0.0.0-20210908032828-9fff050305a4 h1:m0WqN0kyu1lmvNxu0J3NwNoCBPBsIxFfpSM4QtJH2eA=
 k8s.io/apimachinery v0.0.0-20210908032828-9fff050305a4/go.mod h1:YwXrbrp8hgDAA01lpP9HPMC6PS55tjfs3EAatyMMfeM=
-k8s.io/client-go v0.0.0-20210901080746-a31b18a6ac98 h1:1LPKIcr86ISGq5rqn83aw+Mjj/U4beT7FeXS6phRKbA=
-k8s.io/client-go v0.0.0-20210901080746-a31b18a6ac98/go.mod h1:LoKqAR7bihkfO2dEj4ExEfomATALXYAb4dj5K9ZVaT8=
+k8s.io/client-go v0.0.0-20210909033324-84f9a96f0692 h1:N+TDzFe9yy8Bzcu+J94HQlatyXH6d2a5E1hc8k+hGoI=
+k8s.io/client-go v0.0.0-20210909033324-84f9a96f0692/go.mod h1:gKL6iSLRLlXHp066tvf0uHU8bHcEjMPz/voCRzh+bmQ=
 k8s.io/component-base v0.0.0-20210901040900-bed685b9e6f5 h1:qdnAC/+ttUxQ4Xhsk+zTX7UAdmCB2NZThIenpzu3lgU=
 k8s.io/component-base v0.0.0-20210901040900-bed685b9e6f5/go.mod h1:qzazD/5P6Dbqm3mFJ5CzzrxN4Bi8hHMC/hGVlq+Y+6k=
 k8s.io/gengo v0.0.0-20200413195148-3a45101e95ac/go.mod h1:ezvh/TsK7cY6rbqRK0oQQ8IAqLxYwwyPxAX1Pzy0ii0=
