@@ -10,7 +10,7 @@ require (
 	github.com/coreos/go-systemd/v22 v22.3.2
 	github.com/davecgh/go-spew v1.1.1
 	github.com/emicklei/go-restful v2.9.5+incompatible
-	github.com/evanphx/json-patch v4.11.0+incompatible
+	github.com/evanphx/json-patch v4.12.0+incompatible
 	github.com/fsnotify/fsnotify v1.4.9
 	github.com/go-openapi/jsonpointer v0.19.5 // indirect
 	github.com/go-openapi/jsonreference v0.19.5 // indirect
@@ -44,10 +44,10 @@ require (
 	google.golang.org/grpc v1.38.0
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
-	k8s.io/api v0.0.0-20211022203536-7d47955f01bd
-	k8s.io/apimachinery v0.0.0-20211022203306-153f11a7f300
-	k8s.io/client-go v0.0.0-20211022203833-56656ba0e04f
-	k8s.io/component-base v0.0.0-20211022204341-77b90367040a
+	k8s.io/api v0.0.0-20211027003525-5604a481de2c
+	k8s.io/apimachinery v0.0.0-20211027003259-a39cb4b7e43a
+	k8s.io/client-go v0.0.0-20211027003826-651ddcb5a2b9
+	k8s.io/component-base v0.0.0-20211027004438-bd08cb7812c3
 	k8s.io/klog/v2 v2.30.0
 	k8s.io/kube-openapi v0.0.0-20210817084001-7fbd8d59e5b8
 	k8s.io/utils v0.0.0-20210930125809-cb0fa318a74b
@@ -57,8 +57,8 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20211022203536-7d47955f01bd
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20211022203306-153f11a7f300
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20211022203833-56656ba0e04f
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20211022204341-77b90367040a
+	k8s.io/api => k8s.io/api v0.0.0-20211027003525-5604a481de2c
+	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20211027003259-a39cb4b7e43a
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20211027003826-651ddcb5a2b9
+	k8s.io/component-base => k8s.io/component-base v0.0.0-20211027004438-bd08cb7812c3
 )
