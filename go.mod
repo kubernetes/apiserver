@@ -43,10 +43,10 @@ require (
 	google.golang.org/grpc v1.40.0
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
-	k8s.io/api v0.0.0-20220110170724-0bfaff8d3672
+	k8s.io/api v0.0.0-20220111174649-6b8e940d2f29
 	k8s.io/apimachinery v0.0.0-20220106211624-e9b426bb59b7
 	k8s.io/client-go v0.0.0-20220110092052-b025abaeaaa9
-	k8s.io/component-base v0.0.0-20220104212607-e7b8df8cf100
+	k8s.io/component-base v0.0.0-20220111212314-9a2f37afc369
 	k8s.io/klog/v2 v2.40.1
 	k8s.io/kube-openapi v0.0.0-20211115234752-e816edb12b65
 	k8s.io/utils v0.0.0-20211208161948-7d6a63dca704
@@ -57,8 +57,8 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20220110170724-0bfaff8d3672
+	k8s.io/api => k8s.io/api v0.0.0-20220111174649-6b8e940d2f29
 	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20220106211624-e9b426bb59b7
 	k8s.io/client-go => k8s.io/client-go v0.0.0-20220110092052-b025abaeaaa9
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20220104212607-e7b8df8cf100
+	k8s.io/component-base => k8s.io/component-base v0.0.0-20220111212314-9a2f37afc369
 )
