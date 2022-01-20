@@ -39,14 +39,14 @@ require (
 	golang.org/x/crypto v0.0.0-20210817164053-32db794688a5
 	golang.org/x/net v0.0.0-20211209124913-491a49abca63
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
-	golang.org/x/sys v0.0.0-20211019181941-9d821ace8654
+	golang.org/x/sys v0.0.0-20220114195835-da31bd327af9
 	google.golang.org/grpc v1.40.0
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
-	k8s.io/api v0.0.0-20220118151121-94676c7a1e94
-	k8s.io/apimachinery v0.0.0-20220118200222-162a22fc9219
-	k8s.io/client-go v0.0.0-20220120012148-909a4591e80d
-	k8s.io/component-base v0.0.0-20220119052256-63fb0432656c
+	k8s.io/api v0.0.0-20220121011925-35d41aaac2bf
+	k8s.io/apimachinery v0.0.0-20220121011720-73cb56485259
+	k8s.io/client-go v0.0.0-20220121012216-b70ee0aa9aa1
+	k8s.io/component-base v0.0.0-20220121012730-519780c968a8
 	k8s.io/klog/v2 v2.40.1
 	k8s.io/kube-openapi v0.0.0-20211115234752-e816edb12b65
 	k8s.io/utils v0.0.0-20211208161948-7d6a63dca704
@@ -57,8 +57,8 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20220118151121-94676c7a1e94
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20220118200222-162a22fc9219
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20220120012148-909a4591e80d
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20220119052256-63fb0432656c
+	k8s.io/api => k8s.io/api v0.0.0-20220121011925-35d41aaac2bf
+	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20220121011720-73cb56485259
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20220121012216-b70ee0aa9aa1
+	k8s.io/component-base => k8s.io/component-base v0.0.0-20220121012730-519780c968a8
 )
