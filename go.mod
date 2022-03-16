@@ -15,10 +15,10 @@ require (
 	github.com/go-openapi/jsonreference v0.19.5 // indirect
 	github.com/go-openapi/swag v0.19.14 // indirect
 	github.com/gogo/protobuf v1.3.2
+	github.com/google/gnostic v0.5.7-v3refs
 	github.com/google/go-cmp v0.5.5
 	github.com/google/gofuzz v1.1.0
 	github.com/google/uuid v1.1.2
-	github.com/googleapis/gnostic v0.5.5
 	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822
 	github.com/pquerna/cachecontrol v0.0.0-20171018203845-0dec1b30a021 // indirect
@@ -44,12 +44,12 @@ require (
 	google.golang.org/grpc v1.40.0
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
-	k8s.io/api v0.0.0-20220316024948-17c9f736bb4e
-	k8s.io/apimachinery v0.0.0-20220316140749-eeb7a8dc1f4a
-	k8s.io/client-go v0.0.0-20220314181218-ab732f5dd632
-	k8s.io/component-base v0.0.0-20220311061329-c90e8e65f8c4
+	k8s.io/api v0.0.0-20220317021646-b9830ac37b46
+	k8s.io/apimachinery v0.0.0-20220317021027-c68a4df61d4d
+	k8s.io/client-go v0.0.0-20220317022426-6889a6b513d4
+	k8s.io/component-base v0.0.0-20220317023659-c5dae0cde26e
 	k8s.io/klog/v2 v2.40.1
-	k8s.io/kube-openapi v0.0.0-20211115234752-e816edb12b65
+	k8s.io/kube-openapi v0.0.0-20220316025549-ddc66922ab18
 	k8s.io/utils v0.0.0-20220210201930-3a6ce19ff2f9
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.0.30
 	sigs.k8s.io/json v0.0.0-20211208200746-9f7c6b3444d2
@@ -58,8 +58,8 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20220316024948-17c9f736bb4e
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20220316140749-eeb7a8dc1f4a
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20220314181218-ab732f5dd632
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20220311061329-c90e8e65f8c4
+	k8s.io/api => k8s.io/api v0.0.0-20220317021646-b9830ac37b46
+	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20220317021027-c68a4df61d4d
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20220317022426-6889a6b513d4
+	k8s.io/component-base => k8s.io/component-base v0.0.0-20220317023659-c5dae0cde26e
 )
