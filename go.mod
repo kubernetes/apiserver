@@ -38,10 +38,10 @@ require (
 	google.golang.org/grpc v1.44.0
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
-	k8s.io/api v0.0.0-20220507182958-548c53c6e4e7
-	k8s.io/apimachinery v0.0.0-20220507150116-b85d88926e14
-	k8s.io/client-go v0.0.0-20220507183325-7c5b74295ff7
-	k8s.io/component-base v0.0.0-20220505103914-99e6e4beb802
+	k8s.io/api v0.0.0-20220509182417-9b88471ea2b1
+	k8s.io/apimachinery v0.0.0-20220509181918-47789511e916
+	k8s.io/client-go v0.0.0-20220509183031-24209264f769
+	k8s.io/component-base v0.0.0-20220509184231-9da133a032bf
 	k8s.io/klog/v2 v2.60.1
 	k8s.io/kube-openapi v0.0.0-20220328201542-3ee0da9b0b42
 	k8s.io/utils v0.0.0-20220210201930-3a6ce19ff2f9
@@ -62,7 +62,7 @@ require (
 	github.com/dustin/go-humanize v1.0.0 // indirect
 	github.com/felixge/httpsnoop v1.0.1 // indirect
 	github.com/form3tech-oss/jwt-go v3.2.3+incompatible // indirect
-	github.com/go-logr/logr v1.2.0 // indirect
+	github.com/go-logr/logr v1.2.3 // indirect
 	github.com/go-openapi/jsonpointer v0.19.5 // indirect
 	github.com/go-openapi/jsonreference v0.19.5 // indirect
 	github.com/go-openapi/swag v0.19.14 // indirect
@@ -118,8 +118,8 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20220507182958-548c53c6e4e7
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20220507150116-b85d88926e14
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20220507183325-7c5b74295ff7
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20220505103914-99e6e4beb802
+	k8s.io/api => k8s.io/api v0.0.0-20220509182417-9b88471ea2b1
+	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20220509181918-47789511e916
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20220509183031-24209264f769
+	k8s.io/component-base => k8s.io/component-base v0.0.0-20220509184231-9da133a032bf
 )
