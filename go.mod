@@ -38,21 +38,21 @@ require (
 	google.golang.org/grpc v1.47.0
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
-	k8s.io/api v0.0.0-20220623035010-b98f264fe39f
-	k8s.io/apimachinery v0.0.0-20220623034752-e74e8a902ca4
-	k8s.io/client-go v0.0.0-20220623035328-8dfe88aeffaa
-	k8s.io/component-base v0.0.0-20220623035952-b6b539be163f
-	k8s.io/klog/v2 v2.70.0
+	k8s.io/api v0.0.0
+	k8s.io/apimachinery v0.0.0
+	k8s.io/client-go v0.0.0
+	k8s.io/component-base v0.0.0
+	k8s.io/klog/v2 v2.60.1
 	k8s.io/kube-openapi v0.0.0-20220603121420-31174f50af60
 	k8s.io/utils v0.0.0-20220210201930-3a6ce19ff2f9
-	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.0.32
+	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.0.30
 	sigs.k8s.io/json v0.0.0-20211208200746-9f7c6b3444d2
 	sigs.k8s.io/structured-merge-diff/v4 v4.2.1
 	sigs.k8s.io/yaml v1.2.0
 )
 
 require (
-	cloud.google.com/go v0.81.0 // indirect
+	cloud.google.com/go v0.97.0 // indirect
 	github.com/NYTimes/gziphandler v1.1.1 // indirect
 	github.com/PuerkitoBio/purell v1.1.1 // indirect
 	github.com/PuerkitoBio/urlesc v0.0.0-20170810143723-de5bf2ad4578 // indirect
@@ -119,8 +119,9 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20220623035010-b98f264fe39f
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20220623034752-e74e8a902ca4
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20220623035328-8dfe88aeffaa
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20220623035952-b6b539be163f
+	k8s.io/api => ../api
+	k8s.io/apimachinery => ../apimachinery
+	k8s.io/apiserver => ../apiserver
+	k8s.io/client-go => ../client-go
+	k8s.io/component-base => ../component-base
 )
