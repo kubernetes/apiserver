@@ -849,8 +849,8 @@ k8s.io/apimachinery v0.0.0-20220511125320-f3b1305f4010 h1:UDqeN/6SuN6isZIYNS8S4p
 k8s.io/apimachinery v0.0.0-20220511125320-f3b1305f4010/go.mod h1:1oBVxgNUfLl978lJAlywA+H45m2ctSuqJU2stpbcjT4=
 k8s.io/client-go v0.0.0-20220511125810-77f63643f951 h1:CI8FWQypSXMEVUrNTuCxHPyG/19SX0AB6ihaqrZGpGg=
 k8s.io/client-go v0.0.0-20220511125810-77f63643f951/go.mod h1:awH00PAhyUA+Xv39TCA9oXHusorGYZNpVRvC0pcRcAE=
-k8s.io/component-base v0.0.0-20220510143133-ee36a6a1367e h1:vkKEhffaC9iR/Ql71tIJz7IqPlSG2nLxDA2IdFgjtZc=
-k8s.io/component-base v0.0.0-20220510143133-ee36a6a1367e/go.mod h1:rgm2aW3vatuxl3Drh0QYdQbmlSaOsj9RdFa+GeDIZyg=
+k8s.io/component-base v0.0.0-20220512234209-c37f6817941c h1:mXjI7vadkvEb5V3Jpsfx2/DA+bmFF7khwhVrp8F8fHI=
+k8s.io/component-base v0.0.0-20220512234209-c37f6817941c/go.mod h1:NjTZfHd0dH/TjoaGOrLmvEbCzyIvRL8u2qtbyd7zItk=
 k8s.io/gengo v0.0.0-20210813121822-485abfe95c7c/go.mod h1:FiNAH4ZV3gBg2Kwh89tzAEV2be7d5xI0vBa/VySYy3E=
 k8s.io/klog/v2 v2.0.0/go.mod h1:PBfzABfn139FHAV07az/IF9Wp1bkk3vpT2XSJ76fSDE=
 k8s.io/klog/v2 v2.2.0/go.mod h1:Od+F08eJP+W3HUb4pSrPpgp9DGU4GzlpG/TmITuYh/Y=
