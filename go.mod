@@ -38,10 +38,10 @@ require (
 	google.golang.org/grpc v1.44.0
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
-	k8s.io/api v0.0.0-20220609195407-d50b1bc97ca6
-	k8s.io/apimachinery v0.0.0-20220610234641-d407afb45eb7
-	k8s.io/client-go v0.0.0-20220610235149-87a5b7b3b7a4
-	k8s.io/component-base v0.0.0-20220610235728-dbe7e0383ddc
+	k8s.io/api v0.0.0
+	k8s.io/apimachinery v0.0.0
+	k8s.io/client-go v0.0.0
+	k8s.io/component-base v0.0.0
 	k8s.io/klog/v2 v2.60.1
 	k8s.io/kube-openapi v0.0.0-20220603121420-31174f50af60
 	k8s.io/utils v0.0.0-20220210201930-3a6ce19ff2f9
@@ -84,7 +84,7 @@ require (
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	github.com/pquerna/cachecontrol v0.0.0-20171018203845-0dec1b30a021 // indirect
+	github.com/pquerna/cachecontrol v0.1.0 // indirect
 	github.com/prometheus/client_golang v1.12.1 // indirect
 	github.com/prometheus/client_model v0.2.0 // indirect
 	github.com/prometheus/common v0.32.1 // indirect
@@ -119,8 +119,9 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20220609195407-d50b1bc97ca6
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20220610234641-d407afb45eb7
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20220610235149-87a5b7b3b7a4
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20220610235728-dbe7e0383ddc
+	k8s.io/api => ../api
+	k8s.io/apimachinery => ../apimachinery
+	k8s.io/apiserver => ../apiserver
+	k8s.io/client-go => ../client-go
+	k8s.io/component-base => ../component-base
 )
