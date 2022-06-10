@@ -59,8 +59,6 @@ github.com/armon/circbuf v0.0.0-20150827004946-bbbad097214e/go.mod h1:3U/XgcO3hC
 github.com/armon/go-metrics v0.0.0-20180917152333-f0300d1749da/go.mod h1:Q73ZrmVTwzkszR9V5SSuryQ31EELlFMUz1kKyl939pY=
 github.com/armon/go-radix v0.0.0-20180808171621-7fddfc383310/go.mod h1:ufUuZ+zHj4x4TnLV4JWEpy2hxWSpsRywHrMgIH9cCH8=
 github.com/asaskevich/govalidator v0.0.0-20190424111038-f61b66f89f4a/go.mod h1:lB+ZfQJz7igIIfQNfa7Ml4HSf2uFQQRzpGGRXenZAgY=
-github.com/asaskevich/govalidator v0.0.0-20190424111038-f61b66f89f4a/go.mod h1:lB+ZfQJz7igIIfQNfa7Ml4HSf2uFQQRzpGGRXenZAgY=
-github.com/asaskevich/govalidator v0.0.0-20190424111038-f61b66f89f4a/go.mod h1:lB+ZfQJz7igIIfQNfa7Ml4HSf2uFQQRzpGGRXenZAgY=
 github.com/benbjohnson/clock v1.0.3/go.mod h1:bGMdMPoPVvcYyt1gHDf4J2KE153Yf9BuiUKYMaxlTDM=
 github.com/benbjohnson/clock v1.1.0 h1:Q92kusRqC1XV2MjkWETPvjJVqKetz1OzxZB7mHJLju8=
 github.com/benbjohnson/clock v1.1.0/go.mod h1:J11/hYXuz8f4ySSvYwY0FKfm+ezbsZBKZxNJlLklBHA=
@@ -912,6 +910,14 @@ honnef.co/go/tools v0.0.0-20190523083050-ea95bdfd59fc/go.mod h1:rf3lG4BRIbNafJWh
 honnef.co/go/tools v0.0.1-2019.2.3/go.mod h1:a3bituU0lyd329TUQxRnasdCoJDkEUEAqEt0JzvZhAg=
 honnef.co/go/tools v0.0.1-2020.1.3/go.mod h1:X/FiERA/W4tHapMX5mGpAtMSVEeEUOyHaw9vFzvIQ3k=
 honnef.co/go/tools v0.0.1-2020.1.4/go.mod h1:X/FiERA/W4tHapMX5mGpAtMSVEeEUOyHaw9vFzvIQ3k=
+k8s.io/api v0.0.0-20220609195407-d50b1bc97ca6 h1:uOOdFdZm5qts9UkKboDz3FFtYMoIzzT9XsB+KCYFSj4=
+k8s.io/api v0.0.0-20220609195407-d50b1bc97ca6/go.mod h1:HcGtQRVUegP+lMiLiFI6ZTH8Gh2YLabQpXOnknalcVI=
+k8s.io/apimachinery v0.0.0-20220610234641-d407afb45eb7 h1:PoY8rGV8YLKCzqstclHd7BzGaVaw7n+8FBwS3vRCgpw=
+k8s.io/apimachinery v0.0.0-20220610234641-d407afb45eb7/go.mod h1:qyMQfav+UX0vRJ83FN5znvEGmDe1MLnnVdGgzuea+P4=
+k8s.io/client-go v0.0.0-20220610235149-87a5b7b3b7a4 h1:6V1l181ko0q3SFCLATH/C+05LHlsdH6PVtK0LJCstTs=
+k8s.io/client-go v0.0.0-20220610235149-87a5b7b3b7a4/go.mod h1:Wn67vRK5c329REg5gWEBgQgSfSE0WbkzpqnzC5DFqGs=
+k8s.io/component-base v0.0.0-20220610235728-dbe7e0383ddc h1:AMWXQ7Je21+m2/G3/+zYh9ovAbD52XStaXQkAzf27cg=
+k8s.io/component-base v0.0.0-20220610235728-dbe7e0383ddc/go.mod h1:wsp0LZdD6Ch27KWsmANo9q7nPtWs9erFmKr9tBuSTe4=
 k8s.io/gengo v0.0.0-20210813121822-485abfe95c7c/go.mod h1:FiNAH4ZV3gBg2Kwh89tzAEV2be7d5xI0vBa/VySYy3E=
 k8s.io/klog/v2 v2.0.0/go.mod h1:PBfzABfn139FHAV07az/IF9Wp1bkk3vpT2XSJ76fSDE=
 k8s.io/klog/v2 v2.2.0/go.mod h1:Od+F08eJP+W3HUb4pSrPpgp9DGU4GzlpG/TmITuYh/Y=
