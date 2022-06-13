@@ -8,7 +8,7 @@ require (
 	github.com/coreos/go-oidc v2.1.0+incompatible
 	github.com/coreos/go-systemd/v22 v22.3.2
 	github.com/davecgh/go-spew v1.1.1
-	github.com/emicklei/go-restful/v3 v3.7.5-0.20220308211933-7c971ca4d0fd
+	github.com/emicklei/go-restful/v3 v3.8.0
 	github.com/evanphx/json-patch v4.12.0+incompatible
 	github.com/fsnotify/fsnotify v1.4.9
 	github.com/gogo/protobuf v1.3.2
@@ -40,8 +40,8 @@ require (
 	gopkg.in/square/go-jose.v2 v2.2.2
 	k8s.io/api v0.0.0-20220613074849-6b0201da8019
 	k8s.io/apimachinery v0.0.0-20220613074648-b90ea24d2fd6
-	k8s.io/client-go v0.0.0-20220613075149-d4fc9af2dfad
-	k8s.io/component-base v0.0.0-20220613075733-a8a2668bd522
+	k8s.io/client-go v0.0.0-20220613195210-2a9f95519059
+	k8s.io/component-base v0.0.0-20220613195522-9227fb076997
 	k8s.io/klog/v2 v2.60.1
 	k8s.io/kube-openapi v0.0.0-20220603121420-31174f50af60
 	k8s.io/utils v0.0.0-20220210201930-3a6ce19ff2f9
@@ -121,6 +121,6 @@ require (
 replace (
 	k8s.io/api => k8s.io/api v0.0.0-20220613074849-6b0201da8019
 	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20220613074648-b90ea24d2fd6
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20220613075149-d4fc9af2dfad
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20220613075733-a8a2668bd522
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20220613195210-2a9f95519059
+	k8s.io/component-base => k8s.io/component-base v0.0.0-20220613195522-9227fb076997
 )
