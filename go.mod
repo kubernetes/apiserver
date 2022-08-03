@@ -38,9 +38,9 @@ require (
 	google.golang.org/grpc v1.47.0
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
-	k8s.io/api v0.0.0-20220802201338-d351ecda57ef
+	k8s.io/api v0.0.0-20220803001323-7488a8ce4dc3
 	k8s.io/apimachinery v0.0.0-20220802201132-b5410464b8fe
-	k8s.io/client-go v0.0.0-20220802201639-68639ba114e2
+	k8s.io/client-go v0.0.0-20220803041546-bebf21907c26
 	k8s.io/component-base v0.0.0-20220802202220-e13ba0c426f7
 	k8s.io/klog/v2 v2.70.1
 	k8s.io/kube-openapi v0.0.0-20220627174259-011e075b9cb8
@@ -73,7 +73,7 @@ require (
 	github.com/gorilla/websocket v1.4.2 // indirect
 	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0 // indirect
 	github.com/grpc-ecosystem/grpc-gateway v1.16.0 // indirect
-	github.com/imdario/mergo v0.3.5 // indirect
+	github.com/imdario/mergo v0.3.6 // indirect
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
 	github.com/jonboulle/clockwork v0.2.2 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
@@ -119,8 +119,8 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20220802201338-d351ecda57ef
+	k8s.io/api => k8s.io/api v0.0.0-20220803001323-7488a8ce4dc3
 	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20220802201132-b5410464b8fe
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20220802201639-68639ba114e2
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20220803041546-bebf21907c26
 	k8s.io/component-base => k8s.io/component-base v0.0.0-20220802202220-e13ba0c426f7
 )
