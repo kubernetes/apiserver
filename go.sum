@@ -344,8 +344,8 @@ github.com/prometheus/client_golang v1.0.0/go.mod h1:db9x61etRT2tGnBNRi70OPL5Fsn
 github.com/prometheus/client_golang v1.7.1/go.mod h1:PY5Wy2awLA44sXw4AOSfFBetzPP4j5+D6mVACh+pe2M=
 github.com/prometheus/client_golang v1.11.0/go.mod h1:Z6t4BnS23TR94PD6BsDNk8yVqroYurpAkEiz0P2BEV0=
 github.com/prometheus/client_golang v1.11.1/go.mod h1:Z6t4BnS23TR94PD6BsDNk8yVqroYurpAkEiz0P2BEV0=
-github.com/prometheus/client_golang v1.12.1 h1:ZiaPsmm9uiBeaSMRznKsCDNtPCS0T3JVDGF+06gjBzk=
-github.com/prometheus/client_golang v1.12.1/go.mod h1:3Z9XVyYiZYEO+YQWt3RD2R3jrbd179Rt297l4aS6nDY=
+github.com/prometheus/client_golang v1.12.2 h1:51L9cDoUHVrXx4zWYlcLQIZ+d+VXHgqnYKkIuq4g/34=
+github.com/prometheus/client_golang v1.12.2/go.mod h1:3Z9XVyYiZYEO+YQWt3RD2R3jrbd179Rt297l4aS6nDY=
 github.com/prometheus/client_model v0.0.0-20180712105110-5c3871d89910/go.mod h1:MbSGuTsp3dbXC40dX6PRTWyKYBIrTGTE9sqQNg2J8bo=
 github.com/prometheus/client_model v0.0.0-20190129233127-fd36f4220a90/go.mod h1:xMI15A0UPsDsEKsMN9yxemIoYk6Tm2C1GtYGdfGttqA=
 github.com/prometheus/client_model v0.0.0-20190812154241-14fe0d1b01d4/go.mod h1:xMI15A0UPsDsEKsMN9yxemIoYk6Tm2C1GtYGdfGttqA=
@@ -840,8 +840,8 @@ k8s.io/apimachinery v0.0.0-20220824020058-2b9fe2c31fe2 h1:n2/BHGLZY5SbYHgcr94lvW
 k8s.io/apimachinery v0.0.0-20220824020058-2b9fe2c31fe2/go.mod h1:qMx9eAk0sZQGsXGu86fab8tZdffHbwUfsvzqKn4mfB0=
 k8s.io/client-go v0.0.0-20220824023532-d5e58631fd5b h1:E3zw7b8nynPUa5umyQixSqsq2XeIusllncmzYXwD1xE=
 k8s.io/client-go v0.0.0-20220824023532-d5e58631fd5b/go.mod h1:g/NYL15K7s+CdNnWuFAbZvlVKCrToqESWFAhB6hi1bE=
-k8s.io/component-base v0.0.0-20220824024108-c8a569109819 h1:xEnzoWLGobtFh8466hZxb0hNfZub/k358zPA42fEXRA=
-k8s.io/component-base v0.0.0-20220824024108-c8a569109819/go.mod h1:6prOiUALpxkh5RITVRiypirwGNsoyVsse6sRmsE0sTk=
+k8s.io/component-base v0.0.0-20220824063641-aebd2342be3e h1:y4pHR87IyoTEPGCAkF1mLr6rGIyRBdB2HSqztxOmzKA=
+k8s.io/component-base v0.0.0-20220824063641-aebd2342be3e/go.mod h1:u6Qkh62unDKneyJ5q8NS97nkAbqMpqGUn+83lrSyakw=
 k8s.io/klog/v2 v2.0.0/go.mod h1:PBfzABfn139FHAV07az/IF9Wp1bkk3vpT2XSJ76fSDE=
 k8s.io/klog/v2 v2.70.1 h1:7aaoSdahviPmR+XkS7FyxlkkXs6tHISSG03RxleQAVQ=
 k8s.io/klog/v2 v2.70.1/go.mod h1:y1WjHnz7Dj687irZUWR/WLkLc5N1YHtjLdmgWjndZn0=
