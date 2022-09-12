@@ -35,12 +35,13 @@ require (
 	golang.org/x/net v0.0.0-20220722155237-a158d28d115b
 	golang.org/x/sync v0.0.0-20220722155255-886fb9371eb4
 	golang.org/x/sys v0.0.0-20220722155257-8c9f86f7a55f
+	golang.org/x/time v0.0.0-20220210224613-90d013bbcef8
 	google.golang.org/grpc v1.47.0
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
 	k8s.io/api v0.0.0-20220909223647-30ff9916664f
 	k8s.io/apimachinery v0.0.0-20220909223208-6d854d747c21
-	k8s.io/client-go v0.0.0-20220909224245-ab826d2728f3
+	k8s.io/client-go v0.0.0-20220912183627-9dae6917fba0
 	k8s.io/component-base v0.0.0-20220909225306-3f8aa5a81d31
 	k8s.io/klog/v2 v2.80.1
 	k8s.io/kube-openapi v0.0.0-20220803162953-67bda5d908f1
@@ -109,7 +110,6 @@ require (
 	golang.org/x/oauth2 v0.0.0-20220223155221-ee480838109b // indirect
 	golang.org/x/term v0.0.0-20210927222741-03fcf44c2211 // indirect
 	golang.org/x/text v0.3.7 // indirect
-	golang.org/x/time v0.0.0-20220210224613-90d013bbcef8 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/genproto v0.0.0-20220502173005-c8bf987b8c21 // indirect
 	google.golang.org/protobuf v1.28.1 // indirect
@@ -121,6 +121,6 @@ require (
 replace (
 	k8s.io/api => k8s.io/api v0.0.0-20220909223647-30ff9916664f
 	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20220909223208-6d854d747c21
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20220909224245-ab826d2728f3
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20220912183627-9dae6917fba0
 	k8s.io/component-base => k8s.io/component-base v0.0.0-20220909225306-3f8aa5a81d31
 )
