@@ -42,12 +42,12 @@ require (
 	google.golang.org/protobuf v1.28.1
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
-	k8s.io/api v0.0.0-20221012115127-0184bd884c5e
-	k8s.io/apimachinery v0.0.0-20221012034848-78d003cc9419
-	k8s.io/client-go v0.0.0-20221012035333-e6d958c7a853
-	k8s.io/component-base v0.0.0-20221012235520-6ecca3322b4e
+	k8s.io/api v0.0.0
+	k8s.io/apimachinery v0.0.0
+	k8s.io/client-go v0.0.0
+	k8s.io/component-base v0.0.0
 	k8s.io/klog/v2 v2.80.1
-	k8s.io/kms v0.0.0-20221012040222-bf322548c086
+	k8s.io/kms v0.0.0
 	k8s.io/kube-openapi v0.0.0-20220803162953-67bda5d908f1
 	k8s.io/utils v0.0.0-20220922133306-665eaaec4324
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.0.33
@@ -81,7 +81,7 @@ require (
 	github.com/grpc-ecosystem/grpc-gateway v1.16.0 // indirect
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.7.0 // indirect
 	github.com/imdario/mergo v0.3.6 // indirect
-	github.com/inconshreveable/mousetrap v1.0.0 // indirect
+	github.com/inconshreveable/mousetrap v1.0.1 // indirect
 	github.com/jonboulle/clockwork v0.2.2 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
@@ -98,7 +98,7 @@ require (
 	github.com/prometheus/procfs v0.8.0 // indirect
 	github.com/sirupsen/logrus v1.8.1 // indirect
 	github.com/soheilhy/cmux v0.1.5 // indirect
-	github.com/spf13/cobra v1.5.0 // indirect
+	github.com/spf13/cobra v1.6.0 // indirect
 	github.com/stoewer/go-strcase v1.2.0 // indirect
 	github.com/tmc/grpc-websocket-proxy v0.0.0-20201229170055-e5319fda7802 // indirect
 	github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2 // indirect
@@ -122,9 +122,10 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20221012115127-0184bd884c5e
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20221012034848-78d003cc9419
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20221012035333-e6d958c7a853
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20221012235520-6ecca3322b4e
-	k8s.io/kms => k8s.io/kms v0.0.0-20221012040222-bf322548c086
+	k8s.io/api => ../api
+	k8s.io/apimachinery => ../apimachinery
+	k8s.io/apiserver => ../apiserver
+	k8s.io/client-go => ../client-go
+	k8s.io/component-base => ../component-base
+	k8s.io/kms => ../kms
 )
