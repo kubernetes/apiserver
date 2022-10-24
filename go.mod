@@ -32,7 +32,7 @@ require (
 	go.opentelemetry.io/otel/sdk v1.10.0
 	go.opentelemetry.io/otel/trace v1.10.0
 	go.uber.org/zap v1.19.0
-	golang.org/x/crypto v0.0.0-20220411220226-7b82a4e95df4
+	golang.org/x/crypto v0.1.0
 	golang.org/x/net v0.1.1-0.20221027164007-c63010009c80
 	golang.org/x/sync v0.0.0-20220722155255-886fb9371eb4
 	golang.org/x/sys v0.1.0
@@ -42,12 +42,12 @@ require (
 	google.golang.org/protobuf v1.28.1
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
-	k8s.io/api v0.0.0-20221028075226-689257039cfb
-	k8s.io/apimachinery v0.0.0-20221028075009-0524d6c61445
-	k8s.io/client-go v0.0.0-20221028075543-f87d0472f2aa
-	k8s.io/component-base v0.0.0-20221028080536-8a0b021ace32
+	k8s.io/api v0.0.0
+	k8s.io/apimachinery v0.0.0
+	k8s.io/client-go v0.0.0
+	k8s.io/component-base v0.0.0
 	k8s.io/klog/v2 v2.80.1
-	k8s.io/kms v0.0.0-20221028080743-a9ba1c11c0c6
+	k8s.io/kms v0.0.0
 	k8s.io/kube-openapi v0.0.0-20221012153701-172d655c2280
 	k8s.io/utils v0.0.0-20220922133306-665eaaec4324
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.0.33
@@ -122,9 +122,10 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20221028075226-689257039cfb
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20221028075009-0524d6c61445
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20221028075543-f87d0472f2aa
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20221028080536-8a0b021ace32
-	k8s.io/kms => k8s.io/kms v0.0.0-20221028080743-a9ba1c11c0c6
+	k8s.io/api => ../api
+	k8s.io/apimachinery => ../apimachinery
+	k8s.io/apiserver => ../apiserver
+	k8s.io/client-go => ../client-go
+	k8s.io/component-base => ../component-base
+	k8s.io/kms => ../kms
 )
