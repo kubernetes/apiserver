@@ -44,7 +44,7 @@ require (
 	gopkg.in/square/go-jose.v2 v2.2.2
 	k8s.io/api v0.0.0-20221210153100-cfffb5f6be60
 	k8s.io/apimachinery v0.0.0-20221210152838-bc361eaf237e
-	k8s.io/client-go v0.0.0-20221210233413-58ff029093df
+	k8s.io/client-go v0.0.0-20221211080515-5a489e8d1066
 	k8s.io/component-base v0.0.0-20221211033533-af05f73e9353
 	k8s.io/klog/v2 v2.80.1
 	k8s.io/kms v0.0.0-20221211033745-e78daff16094
@@ -100,7 +100,7 @@ require (
 	github.com/soheilhy/cmux v0.1.5 // indirect
 	github.com/spf13/cobra v1.6.0 // indirect
 	github.com/stoewer/go-strcase v1.2.0 // indirect
-	github.com/tmc/grpc-websocket-proxy v0.0.0-20201229170055-e5319fda7802 // indirect
+	github.com/tmc/grpc-websocket-proxy v0.0.0-20220101234140-673ab2c3ae75 // indirect
 	github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2 // indirect
 	go.etcd.io/bbolt v1.3.6 // indirect
 	go.etcd.io/etcd/client/v2 v2.305.5 // indirect
@@ -124,7 +124,7 @@ require (
 replace (
 	k8s.io/api => k8s.io/api v0.0.0-20221210153100-cfffb5f6be60
 	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20221210152838-bc361eaf237e
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20221210233413-58ff029093df
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20221211080515-5a489e8d1066
 	k8s.io/component-base => k8s.io/component-base v0.0.0-20221211033533-af05f73e9353
 	k8s.io/kms => k8s.io/kms v0.0.0-20221211033745-e78daff16094
 )
