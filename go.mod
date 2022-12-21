@@ -33,8 +33,8 @@ require (
 	go.opentelemetry.io/otel/trace v1.10.0
 	go.uber.org/zap v1.19.0
 	golang.org/x/crypto v0.1.0
-	golang.org/x/net v0.3.1-0.20221206200815-1e63c2f08a10
-	golang.org/x/sync v0.0.0-20220722155255-886fb9371eb4
+	golang.org/x/net v0.4.0
+	golang.org/x/sync v0.1.0
 	golang.org/x/sys v0.3.0
 	golang.org/x/time v0.0.0-20220210224613-90d013bbcef8
 	google.golang.org/genproto v0.0.0-20220502173005-c8bf987b8c21
@@ -42,12 +42,12 @@ require (
 	google.golang.org/protobuf v1.28.1
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
-	k8s.io/api v0.0.0-20221219010528-ad1a499d6e1d
-	k8s.io/apimachinery v0.0.0-20221218214745-cc480d329650
-	k8s.io/client-go v0.0.0-20221219010852-089645a7c5f0
-	k8s.io/component-base v0.0.0-20221219012036-381d35dcfb56
+	k8s.io/api v0.0.0-20221223022320-5baaa16a968a
+	k8s.io/apimachinery v0.0.0-20221223015414-47a8bb64c845
+	k8s.io/client-go v0.0.0-20221223023906-b69cda3e4e09
+	k8s.io/component-base v0.0.0-20221223033131-522c0db97a9d
 	k8s.io/klog/v2 v2.80.1
-	k8s.io/kms v0.0.0-20221211033745-e78daff16094
+	k8s.io/kms v0.0.0-20221223035546-6bcec3321a14
 	k8s.io/kube-openapi v0.0.0-20221012153701-172d655c2280
 	k8s.io/utils v0.0.0-20221107191617-1a15be271d1d
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.0.33
@@ -122,9 +122,9 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20221219010528-ad1a499d6e1d
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20221218214745-cc480d329650
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20221219010852-089645a7c5f0
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20221219012036-381d35dcfb56
-	k8s.io/kms => k8s.io/kms v0.0.0-20221211033745-e78daff16094
+	k8s.io/api => k8s.io/api v0.0.0-20221223022320-5baaa16a968a
+	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20221223015414-47a8bb64c845
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20221223023906-b69cda3e4e09
+	k8s.io/component-base => k8s.io/component-base v0.0.0-20221223033131-522c0db97a9d
+	k8s.io/kms => k8s.io/kms v0.0.0-20221223035546-6bcec3321a14
 )
