@@ -644,9 +644,8 @@ golang.org/x/oauth2 v0.0.0-20210628180205-a41e5a781914/go.mod h1:KelEdhl1UZF7XfJ
 golang.org/x/oauth2 v0.0.0-20210805134026-6f1e6394065a/go.mod h1:KelEdhl1UZF7XfJ4dDtk6s++YSgaE7mD/BuKKDLBl4A=
 golang.org/x/oauth2 v0.0.0-20210819190943-2bc19b11175f/go.mod h1:KelEdhl1UZF7XfJ4dDtk6s++YSgaE7mD/BuKKDLBl4A=
 golang.org/x/oauth2 v0.0.0-20211104180415-d3ed0bb246c8/go.mod h1:KelEdhl1UZF7XfJ4dDtk6s++YSgaE7mD/BuKKDLBl4A=
+golang.org/x/oauth2 v0.0.0-20220223155221-ee480838109b h1:clP8eMhB30EHdc0bd2Twtq6kgU7yl5ub2cQLSdrv1Dg=
 golang.org/x/oauth2 v0.0.0-20220223155221-ee480838109b/go.mod h1:DAh4E804XQdzx2j+YRIaUnCqCV2RuMz24cGBJ5QYIrc=
-golang.org/x/oauth2 v0.3.0 h1:6l90koy8/LaBLmLu8jpHeHexzMwEita0zFfYlggy2F8=
-golang.org/x/oauth2 v0.3.0/go.mod h1:rQrIauxkUhJ6CuwEXwymO2/eh4xz2ZWF1nBkcxS+tGk=
 golang.org/x/sync v0.0.0-20180314180146-1d60e4601c6f/go.mod h1:RxMgew5VJxzue5/jJTE5uejpjVlOe/izrB70Jof72aM=
 golang.org/x/sync v0.0.0-20181108010431-42b317875d0f/go.mod h1:RxMgew5VJxzue5/jJTE5uejpjVlOe/izrB70Jof72aM=
 golang.org/x/sync v0.0.0-20181221193216-37e7f081c4d4/go.mod h1:RxMgew5VJxzue5/jJTE5uejpjVlOe/izrB70Jof72aM=
@@ -993,10 +992,10 @@ k8s.io/api v0.0.0-20221223233726-92fe7a3ca2f4 h1:xXF6vJObhLxxs90hdEZENpbta24zuE/
 k8s.io/api v0.0.0-20221223233726-92fe7a3ca2f4/go.mod h1:7VeiiNXwWDDV/gC/WTZA9plPSLqAQnOrZaAyXJsAudE=
 k8s.io/apimachinery v0.0.0-20230104022610-6c409361e35e h1:eJYyIfU4uOvJsSbI8fQkqQa+udeFbJDBUjw0I2F30k0=
 k8s.io/apimachinery v0.0.0-20230104022610-6c409361e35e/go.mod h1:E7c0pLSvNLZyzn9NBKnVO5+N8E8J25dNmB4m9TyuirA=
-k8s.io/client-go v0.0.0-20230107075050-26d70e3a1c44 h1:j8c+QC9AI1R848GN/iuInQi2QwbDQPRnskCrbouF9gM=
-k8s.io/client-go v0.0.0-20230107075050-26d70e3a1c44/go.mod h1:FPAddj5z9Nq1d/cmvFNxKyLe0lhges/aVqYdhqqO2cE=
-k8s.io/component-base v0.0.0-20230107080733-0f1149645a13 h1:/sjV3s4biTHJUplHHTzFlxFRN4Ao2wkIvh267zJxDQs=
-k8s.io/component-base v0.0.0-20230107080733-0f1149645a13/go.mod h1:NE7fzSx7OPNgwlKdT9HwZdh36BM2Wrio8ytwcHmEagM=
+k8s.io/client-go v0.0.0-20230107075056-dc46266e11fa h1:51frU9J10pc6B6x6BqRRkZXHL7pFz5zZHnujyaxtqzs=
+k8s.io/client-go v0.0.0-20230107075056-dc46266e11fa/go.mod h1:iSe0LIKVehUQP1b8pJpWe09GqhCop0pmKcdSxw6GhXg=
+k8s.io/component-base v0.0.0-20230107080735-3f7abee6711b h1:+9c6OqgE/RN47Bi97PV0uaHsWvno5H2lZagIU3XxFuQ=
+k8s.io/component-base v0.0.0-20230107080735-3f7abee6711b/go.mod h1:+pYn8+vEltuUXt84L0xLZJNxWS5ArWV+1OCMZbkznkA=
 k8s.io/klog/v2 v2.80.1 h1:atnLQ121W371wYYFawwYx1aEY2eUfs4l3J72wtgAwV4=
 k8s.io/klog/v2 v2.80.1/go.mod h1:y1WjHnz7Dj687irZUWR/WLkLc5N1YHtjLdmgWjndZn0=
 k8s.io/kms v0.0.0-20221223035546-6bcec3321a14 h1:BLaDgiUPi2P78tmi0RHv7buWRPokavOk5jBcuUWC3s4=
