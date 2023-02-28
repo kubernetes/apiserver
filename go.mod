@@ -26,7 +26,7 @@ require (
 	go.etcd.io/etcd/client/v3 v3.5.5
 	go.etcd.io/etcd/server/v3 v3.5.5
 	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.35.0
-	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.35.0
+	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.35.1
 	go.opentelemetry.io/otel v1.10.0
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc v1.10.0
 	go.opentelemetry.io/otel/sdk v1.10.0
@@ -45,7 +45,7 @@ require (
 	k8s.io/api v0.0.0-20230228090300-2ed8d24822d3
 	k8s.io/apimachinery v0.0.0-20230227225516-80f59387d3d1
 	k8s.io/client-go v0.0.0-20230228090623-8f4ee7119f1d
-	k8s.io/component-base v0.0.0-20230215215219-ae9be4dda9da
+	k8s.io/component-base v0.0.0-20230301013520-2acccc807c76
 	k8s.io/klog/v2 v2.80.1
 	k8s.io/kms v0.0.0-20230228010948-9674935696a9
 	k8s.io/kube-openapi v0.0.0-20230123231816-1cb3ae25d79a
@@ -127,6 +127,6 @@ replace (
 	k8s.io/api => k8s.io/api v0.0.0-20230228090300-2ed8d24822d3
 	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20230227225516-80f59387d3d1
 	k8s.io/client-go => k8s.io/client-go v0.0.0-20230228090623-8f4ee7119f1d
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20230215215219-ae9be4dda9da
+	k8s.io/component-base => k8s.io/component-base v0.0.0-20230301013520-2acccc807c76
 	k8s.io/kms => k8s.io/kms v0.0.0-20230228010948-9674935696a9
 )
