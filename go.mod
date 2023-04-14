@@ -7,7 +7,6 @@ go 1.20
 require (
 	github.com/coreos/go-oidc v2.1.0+incompatible
 	github.com/coreos/go-systemd/v22 v22.4.0
-	github.com/davecgh/go-spew v1.1.1
 	github.com/emicklei/go-restful/v3 v3.9.0
 	github.com/evanphx/json-patch v4.12.0+incompatible
 	github.com/fsnotify/fsnotify v1.6.0
@@ -43,8 +42,8 @@ require (
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.6.0
 	k8s.io/api v0.0.0-20230413214513-e2bb673563f3
-	k8s.io/apimachinery v0.0.0-20230413213732-71d667e55043
-	k8s.io/client-go v0.0.0-20230413215200-4e89310f6ea6
+	k8s.io/apimachinery v0.0.0-20230414053554-40ea93bb2f46
+	k8s.io/client-go v0.0.0-20230414055356-1dc92da6638c
 	k8s.io/component-base v0.0.0-20230413220226-c4f7b7e7a6ce
 	k8s.io/klog/v2 v2.90.1
 	k8s.io/kms v0.0.0-20230413003758-a38ec9832062
@@ -66,6 +65,7 @@ require (
 	github.com/cenkalti/backoff/v4 v4.1.3 // indirect
 	github.com/cespare/xxhash/v2 v2.1.2 // indirect
 	github.com/coreos/go-semver v0.3.0 // indirect
+	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/dustin/go-humanize v1.0.0 // indirect
 	github.com/felixge/httpsnoop v1.0.3 // indirect
 	github.com/go-logr/logr v1.2.3 // indirect
@@ -125,8 +125,8 @@ require (
 
 replace (
 	k8s.io/api => k8s.io/api v0.0.0-20230413214513-e2bb673563f3
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20230413213732-71d667e55043
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20230413215200-4e89310f6ea6
+	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20230414053554-40ea93bb2f46
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20230414055356-1dc92da6638c
 	k8s.io/component-base => k8s.io/component-base v0.0.0-20230413220226-c4f7b7e7a6ce
 	k8s.io/kms => k8s.io/kms v0.0.0-20230413003758-a38ec9832062
 )
