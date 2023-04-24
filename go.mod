@@ -41,12 +41,12 @@ require (
 	google.golang.org/protobuf v1.28.1
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.6.0
-	k8s.io/api v0.0.0-20230420094736-8360d82aecbc
-	k8s.io/apimachinery v0.0.0-20230420093948-61b874e0403b
-	k8s.io/client-go v0.0.0-20230421054430-bc930747ec5b
-	k8s.io/component-base v0.0.0-20230420101238-3233afb68d4f
+	k8s.io/api v0.0.0-20230424214209-9dec43fa7a26
+	k8s.io/apimachinery v0.0.0-20230424213653-150a158d04ab
+	k8s.io/client-go v0.0.0-20230424215815-e846cbee0dd6
+	k8s.io/component-base v0.0.0-20230424222117-cb3e5be831b8
 	k8s.io/klog/v2 v2.90.1
-	k8s.io/kms v0.0.0-20230420101509-0eb341e03f36
+	k8s.io/kms v0.0.0-20230424222535-bed3fdf2be1f
 	k8s.io/kube-openapi v0.0.0-20230308215209-15aac26d736a
 	k8s.io/utils v0.0.0-20230209194617-a36077c30491
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.1.2
@@ -68,7 +68,7 @@ require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/dustin/go-humanize v1.0.0 // indirect
 	github.com/felixge/httpsnoop v1.0.3 // indirect
-	github.com/go-logr/logr v1.2.3 // indirect
+	github.com/go-logr/logr v1.2.4 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/go-openapi/jsonpointer v0.19.6 // indirect
 	github.com/go-openapi/jsonreference v0.20.1 // indirect
@@ -124,9 +124,9 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20230420094736-8360d82aecbc
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20230420093948-61b874e0403b
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20230421054430-bc930747ec5b
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20230420101238-3233afb68d4f
-	k8s.io/kms => k8s.io/kms v0.0.0-20230420101509-0eb341e03f36
+	k8s.io/api => k8s.io/api v0.0.0-20230424214209-9dec43fa7a26
+	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20230424213653-150a158d04ab
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20230424215815-e846cbee0dd6
+	k8s.io/component-base => k8s.io/component-base v0.0.0-20230424222117-cb3e5be831b8
+	k8s.io/kms => k8s.io/kms v0.0.0-20230424222535-bed3fdf2be1f
 )
