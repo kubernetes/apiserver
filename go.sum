@@ -882,8 +882,8 @@ k8s.io/api v0.0.0-20230501174425-14796d1f9020 h1:S9xIIE+YN8m+OzIH+081ybssE8ez+7W
 k8s.io/api v0.0.0-20230501174425-14796d1f9020/go.mod h1:Q3mFvxQWcKDcMww6VOwmdhvjHt4L2TegJLa6Q12hjGg=
 k8s.io/apimachinery v0.0.0-20230501093353-d563c9729062 h1:YRVK1TsKqSFL/SP2un7buT9skEyoFpQwrtzkdnOv1io=
 k8s.io/apimachinery v0.0.0-20230501093353-d563c9729062/go.mod h1:8pvYyRbWovK8tOF+ubfyUBX6aGREZx9m61vDDA9aDTU=
-k8s.io/client-go v0.0.0-20230501175051-741627a2eb97 h1:o2MXEP6kktgZw6kd7HE57bUvN1ogj9Hrh4Y+MAWBnfw=
-k8s.io/client-go v0.0.0-20230501175051-741627a2eb97/go.mod h1:xRN3LOJ9qzghYDdmYUANZcyn5AtgC5iFwEn/CGIKiTk=
+k8s.io/client-go v0.0.0-20230501214133-757bbef10a58 h1:XC1njcCQIXWfVdng7+pOG7dJJ9+7k8J5sfDe6+3Ve0c=
+k8s.io/client-go v0.0.0-20230501214133-757bbef10a58/go.mod h1:xRN3LOJ9qzghYDdmYUANZcyn5AtgC5iFwEn/CGIKiTk=
 k8s.io/component-base v0.0.0-20230501180126-f6a4fd2ef059 h1:bfx0pd/KveIVnCJ2am0WyRX7zg1GExO8D6SOPrIzFng=
 k8s.io/component-base v0.0.0-20230501180126-f6a4fd2ef059/go.mod h1:gvrfbARZnC4fi4Z2qeJ/JpwN78gHUUnlLagLv95QDyY=
 k8s.io/klog/v2 v2.90.1 h1:m4bYOKall2MmOiRaR1J+We67Do7vm9KiQVlT96lnHUw=
