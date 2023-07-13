@@ -102,7 +102,7 @@ func (t *objectCountTracker) Set(groupResource string, count int64) {
 		// we will continue to work with the count that is in the cache
 		// up to a certain threshold defined by staleTolerationThreshold.
 		// in case this becomes a non transient error then the count for
-		// the given resource will will eventually be removed from
+		// the given resource will eventually be removed from
 		// the cache by the pruner.
 		return
 	}

@@ -243,7 +243,7 @@ func validateTLSConfig(tlsConfig *apiserver.TLSConfig, fldPath *field.Path) fiel
 		allErrs = append(allErrs, field.Invalid(
 			fldPath.Child("tlsConfig", "clientKey"),
 			"nil",
-			"Using TLS requires requires clientKey"))
+			"Using TLS requires clientKey"))
 	} else if exists, err := path.Exists(path.CheckFollowSymlink, tlsConfig.ClientKey); !exists || err != nil {
 		allErrs = append(allErrs, field.Invalid(
 			fldPath.Child("tlsConfig", "clientKey"),

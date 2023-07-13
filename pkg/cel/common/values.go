@@ -238,7 +238,7 @@ type unstructuredMapList struct {
 	unstructuredList
 	escapedKeyProps []string
 
-	sync.Once // for for lazy load of mapOfList since it is only needed if Equals is called
+	sync.Once // for lazy load of mapOfList since it is only needed if Equals is called
 	mapOfList map[interface{}]interface{}
 }
 
@@ -337,7 +337,7 @@ func (t *unstructuredMapList) Add(other ref.Val) ref.Val {
 }
 
 // escapeKeyProps returns identifiers with Escape applied to each.
-// Identifiers that cannot be escaped are left as-is. They are inaccessible to CEL programs but are
+// Identifiers that cannot be escaped are left as-is. They are inaccessible to CEL programs but
 // are still needed internally to perform equality checks.
 func escapeKeyProps(idents []string) []string {
 	result := make([]string, len(idents))
@@ -356,7 +356,7 @@ type unstructuredSetList struct {
 	unstructuredList
 	escapedKeyProps []string
 
-	sync.Once // for for lazy load of setOfList since it is only needed if Equals is called
+	sync.Once // for lazy load of setOfList since it is only needed if Equals is called
 	set       map[interface{}]struct{}
 }
 

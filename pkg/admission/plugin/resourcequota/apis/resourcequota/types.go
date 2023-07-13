@@ -53,7 +53,7 @@ type LimitedResource struct {
 	// quota system will ensure that there is a covering quota.  In the
 	// absence of a covering quota, the quota system will deny the request.
 	// For example, if an administrator wants to globally enforce that
-	// that a quota must exist to consume persistent volume claims associated
+	// a quota must exist to consume persistent volume claims associated
 	// with any storage class, the list would include
 	// ".storageclass.storage.k8s.io/requests.storage"
 	MatchContains []string
