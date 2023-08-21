@@ -43,7 +43,7 @@ require (
 	gopkg.in/square/go-jose.v2 v2.6.0
 	k8s.io/api v0.0.0-20230819043120-3dcdf4ede337
 	k8s.io/apimachinery v0.0.0-20230816163301-3e2600dc79fe
-	k8s.io/client-go v0.0.0-20230819035134-c1466acf62e0
+	k8s.io/client-go v0.0.0-20230821200706-3fe9aa44669d
 	k8s.io/component-base v0.0.0-20230816041302-b54afcf379c0
 	k8s.io/klog/v2 v2.100.1
 	k8s.io/kms v0.0.0-20230807211544-e54c40adc2b2
@@ -128,7 +128,7 @@ require (
 replace (
 	k8s.io/api => k8s.io/api v0.0.0-20230819043120-3dcdf4ede337
 	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20230816163301-3e2600dc79fe
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20230819035134-c1466acf62e0
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20230821200706-3fe9aa44669d
 	k8s.io/component-base => k8s.io/component-base v0.0.0-20230816041302-b54afcf379c0
 	k8s.io/kms => k8s.io/kms v0.0.0-20230807211544-e54c40adc2b2
 )
