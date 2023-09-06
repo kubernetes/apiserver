@@ -160,8 +160,8 @@ github.com/google/btree v0.0.0-20180813153112-4030bb1f1f0c/go.mod h1:lNA+9X1NB3Z
 github.com/google/btree v1.0.0/go.mod h1:lNA+9X1NB3Zf8V7Ke586lFgjr2dZNuvo3lPJSGZ5JPQ=
 github.com/google/btree v1.0.1 h1:gK4Kx5IaGY9CD5sPJ36FHiBJ6ZXl0kilRiiCj+jdYp4=
 github.com/google/btree v1.0.1/go.mod h1:xXMiIv4Fb/0kKde4SpL7qlzvu5cMJDRkFDxJfI9uaxA=
-github.com/google/cel-go v0.16.0 h1:DG9YQ8nFCFXAs/FDDwBxmL1tpKNrdlGUM9U3537bX/Y=
-github.com/google/cel-go v0.16.0/go.mod h1:HXZKzB0LXqer5lHHgfWAnlYwJaQBDKMjxjulNQzhwhY=
+github.com/google/cel-go v0.16.1 h1:3hZfSNiAU3KOiNtxuFXVp5WFy4hf/Ly3Sa4/7F8SXNo=
+github.com/google/cel-go v0.16.1/go.mod h1:HXZKzB0LXqer5lHHgfWAnlYwJaQBDKMjxjulNQzhwhY=
 github.com/google/gnostic-models v0.6.8 h1:yo/ABAfM5IMRsS1VnXjTBvUb61tFIHozhlYvRgGre9I=
 github.com/google/gnostic-models v0.6.8/go.mod h1:5n7qKqH0f5wFt+aWF8CW6pZLLNOfYuF5OpfBSENuI8U=
 github.com/google/go-cmp v0.2.0/go.mod h1:oXzfMopK8JAjlY9xF4vHSVASa0yLyX7SntLO5aqRK0M=
@@ -674,8 +674,8 @@ k8s.io/api v0.0.0-20230904104028-546e4253e738 h1:0PmEjeZX6g4bLgztHHEVVj0XrMQ+F8u
 k8s.io/api v0.0.0-20230904104028-546e4253e738/go.mod h1:4GpdFbUbYEFNj6e44T5yz6hE7p8yAn4+dYvmqTPVuOs=
 k8s.io/apimachinery v0.0.0-20230904102823-bc548d1d2406 h1:/YP5PLKVrV5WDzScq2agCBHPP0FCLVrU/4d9+j8uEFs=
 k8s.io/apimachinery v0.0.0-20230904102823-bc548d1d2406/go.mod h1:RdzF87y/ngqk9H4z3EL2Rppv5jj95vGS/HaFXrLDApU=
-k8s.io/client-go v0.0.0-20230904110526-29a840dbdf2a h1:Qgr4OBvwwsxyKonHVJCGGOJH4Zee2uMD1v2st+fVByY=
-k8s.io/client-go v0.0.0-20230904110526-29a840dbdf2a/go.mod h1:9oac6LWqvfKcphw6P69YH6Ns8xgf4S3ciKrBfqXxq3c=
+k8s.io/client-go v0.0.0-20230904110526-745513ad7b37 h1:+SF0CtBoQI6Eso+8poN4i55d4oUahClerZwALYSz6Tw=
+k8s.io/client-go v0.0.0-20230904110526-745513ad7b37/go.mod h1:9oac6LWqvfKcphw6P69YH6Ns8xgf4S3ciKrBfqXxq3c=
 k8s.io/component-base v0.0.0-20230904111932-ef6aa9891ad3 h1:6J1OGuJeD5K+0YHFN5lOfVIIEpg+Iw+0w4VEw+EipVE=
 k8s.io/component-base v0.0.0-20230904111932-ef6aa9891ad3/go.mod h1:idL61MaRYcyCDRF1/WNvCkmTbPkAeViaCwM8CA3jRRQ=
 k8s.io/klog/v2 v2.100.1 h1:7WCHKK6K8fNhTqfBhISHQ97KrnJNFZMcQvKp7gP/tmg=
