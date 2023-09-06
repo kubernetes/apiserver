@@ -41,17 +41,17 @@ require (
 	google.golang.org/protobuf v1.31.0
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
 	gopkg.in/square/go-jose.v2 v2.6.0
-	k8s.io/api v0.0.0-20230901043046-faec07c7cc89
-	k8s.io/apimachinery v0.0.0-20230905232051-3514784dbf48
-	k8s.io/client-go v0.0.0-20230906022041-f5a7a42bbcf8
-	k8s.io/component-base v0.0.0-20230906023044-062e9fa3831d
+	k8s.io/api v0.0.0-20230907022840-7f63b7b88cb6
+	k8s.io/apimachinery v0.0.0-20230907021858-82362bc34ae0
+	k8s.io/client-go v0.0.0-20230907024014-53c02afd1b4c
+	k8s.io/component-base v0.0.0-20230907030149-8deb88b04e9a
 	k8s.io/klog/v2 v2.100.1
-	k8s.io/kms v0.0.0-20230906023321-c69b168227f0
+	k8s.io/kms v0.0.0-20230907031232-abbc44379a34
 	k8s.io/kube-openapi v0.0.0-20230717233707-2695361300d9
 	k8s.io/utils v0.0.0-20230406110748-d93618cff8a2
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.1.2
 	sigs.k8s.io/json v0.0.0-20221116044647-bc3834ca7abd
-	sigs.k8s.io/structured-merge-diff/v4 v4.2.3
+	sigs.k8s.io/structured-merge-diff/v4 v4.3.0
 	sigs.k8s.io/yaml v1.3.0
 )
 
@@ -126,9 +126,9 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20230901043046-faec07c7cc89
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20230905232051-3514784dbf48
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20230906022041-f5a7a42bbcf8
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20230906023044-062e9fa3831d
-	k8s.io/kms => k8s.io/kms v0.0.0-20230906023321-c69b168227f0
+	k8s.io/api => k8s.io/api v0.0.0-20230907022840-7f63b7b88cb6
+	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20230907021858-82362bc34ae0
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20230907024014-53c02afd1b4c
+	k8s.io/component-base => k8s.io/component-base v0.0.0-20230907030149-8deb88b04e9a
+	k8s.io/kms => k8s.io/kms v0.0.0-20230907031232-abbc44379a34
 )
