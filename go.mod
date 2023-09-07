@@ -12,7 +12,7 @@ require (
 	github.com/evanphx/json-patch v4.12.0+incompatible
 	github.com/fsnotify/fsnotify v1.6.0
 	github.com/gogo/protobuf v1.3.2
-	github.com/google/cel-go v0.12.6
+	github.com/google/cel-go v0.12.7
 	github.com/google/gnostic v0.5.7-v3refs
 	github.com/google/go-cmp v0.5.9
 	github.com/google/gofuzz v1.1.0
@@ -42,9 +42,9 @@ require (
 	google.golang.org/protobuf v1.28.1
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
-	k8s.io/api v0.0.0-20230810162501-191d7513c990
+	k8s.io/api v0.0.0-20230828183613-44c5cc8efdcb
 	k8s.io/apimachinery v0.0.0-20230716202306-dd46389197a3
-	k8s.io/client-go v0.0.0-20230810163746-0d6350fa4e10
+	k8s.io/client-go v0.0.0-20230828115542-7eeeef0f1637
 	k8s.io/component-base v0.0.0-20230612180025-05b26fd95bb7
 	k8s.io/klog/v2 v2.80.1
 	k8s.io/kms v0.0.0-20230612180632-cff6428bab5b
@@ -122,9 +122,9 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20230810162501-191d7513c990
+	k8s.io/api => k8s.io/api v0.0.0-20230828183613-44c5cc8efdcb
 	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20230716202306-dd46389197a3
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20230810163746-0d6350fa4e10
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20230828115542-7eeeef0f1637
 	k8s.io/component-base => k8s.io/component-base v0.0.0-20230612180025-05b26fd95bb7
 	k8s.io/kms => k8s.io/kms v0.0.0-20230612180632-cff6428bab5b
 )
