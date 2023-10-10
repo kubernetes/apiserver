@@ -32,22 +32,22 @@ require (
 	go.opentelemetry.io/otel/sdk v1.10.0
 	go.opentelemetry.io/otel/trace v1.10.0
 	go.uber.org/zap v1.19.0
-	golang.org/x/crypto v0.1.0
-	golang.org/x/net v0.8.0
+	golang.org/x/crypto v0.14.0
+	golang.org/x/net v0.17.0
 	golang.org/x/sync v0.1.0
-	golang.org/x/sys v0.6.0
+	golang.org/x/sys v0.13.0
 	golang.org/x/time v0.0.0-20220210224613-90d013bbcef8
 	google.golang.org/genproto v0.0.0-20220502173005-c8bf987b8c21
 	google.golang.org/grpc v1.49.0
 	google.golang.org/protobuf v1.28.1
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.2.2
-	k8s.io/api v0.0.0-20230828183613-44c5cc8efdcb
-	k8s.io/apimachinery v0.0.0-20230716202306-dd46389197a3
-	k8s.io/client-go v0.0.0-20230828115542-7eeeef0f1637
-	k8s.io/component-base v0.0.0-20230907225858-e3c41d530bb1
+	k8s.io/api v0.0.0
+	k8s.io/apimachinery v0.0.0
+	k8s.io/client-go v0.0.0
+	k8s.io/component-base v0.0.0
 	k8s.io/klog/v2 v2.80.1
-	k8s.io/kms v0.0.0-20230612180632-cff6428bab5b
+	k8s.io/kms v0.0.0
 	k8s.io/kube-openapi v0.0.0-20221012153701-172d655c2280
 	k8s.io/utils v0.0.0-20221107191617-1a15be271d1d
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.0.37
@@ -113,8 +113,8 @@ require (
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
 	golang.org/x/oauth2 v0.0.0-20220223155221-ee480838109b // indirect
-	golang.org/x/term v0.6.0 // indirect
-	golang.org/x/text v0.8.0 // indirect
+	golang.org/x/term v0.13.0 // indirect
+	golang.org/x/text v0.13.0 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
@@ -122,9 +122,10 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20230828183613-44c5cc8efdcb
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20230716202306-dd46389197a3
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20230828115542-7eeeef0f1637
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20230907225858-e3c41d530bb1
-	k8s.io/kms => k8s.io/kms v0.0.0-20230612180632-cff6428bab5b
+	k8s.io/api => ../api
+	k8s.io/apimachinery => ../apimachinery
+	k8s.io/apiserver => ../apiserver
+	k8s.io/client-go => ../client-go
+	k8s.io/component-base => ../component-base
+	k8s.io/kms => ../kms
 )
