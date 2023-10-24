@@ -18,6 +18,7 @@ require (
 	github.com/google/uuid v1.3.0
 	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822
+	github.com/mxk/go-flowrate v0.0.0-20140419014527-cca7078d478f
 	github.com/spf13/pflag v1.0.5
 	github.com/stretchr/testify v1.8.3
 	go.etcd.io/etcd/api/v3 v3.5.9
@@ -42,8 +43,8 @@ require (
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
 	gopkg.in/square/go-jose.v2 v2.6.0
 	k8s.io/api v0.0.0-20231023194506-bfce70f1b5c8
-	k8s.io/apimachinery v0.0.0-20231024034334-1e138bd489ac
-	k8s.io/client-go v0.0.0-20231024035150-c92537416a96
+	k8s.io/apimachinery v0.0.0-20231024171030-c18d2bfed439
+	k8s.io/client-go v0.0.0-20231024171543-e2e59f3539ef
 	k8s.io/component-base v0.0.0-20231024040035-12d4256eb135
 	k8s.io/klog/v2 v2.100.1
 	k8s.io/kms v0.0.0-20231023195612-e039984be9c9
@@ -87,9 +88,9 @@ require (
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.4 // indirect
+	github.com/moby/spdystream v0.2.0 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
-	github.com/mxk/go-flowrate v0.0.0-20140419014527-cca7078d478f // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/pquerna/cachecontrol v0.1.0 // indirect
@@ -127,8 +128,8 @@ require (
 
 replace (
 	k8s.io/api => k8s.io/api v0.0.0-20231023194506-bfce70f1b5c8
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20231024034334-1e138bd489ac
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20231024035150-c92537416a96
+	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20231024171030-c18d2bfed439
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20231024171543-e2e59f3539ef
 	k8s.io/component-base => k8s.io/component-base v0.0.0-20231024040035-12d4256eb135
 	k8s.io/kms => k8s.io/kms v0.0.0-20231023195612-e039984be9c9
 )
