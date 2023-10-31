@@ -99,8 +99,8 @@ github.com/golang/protobuf v1.5.3 h1:KhyjKVUg7Usr/dYsdSqoFveMYd5ko72D+zANwlG1mmg
 github.com/golang/protobuf v1.5.3/go.mod h1:XVQd3VNwM+JqD3oG2Ue2ip4fOMUkwXdXDdiuN0vRsmY=
 github.com/google/btree v1.0.1 h1:gK4Kx5IaGY9CD5sPJ36FHiBJ6ZXl0kilRiiCj+jdYp4=
 github.com/google/btree v1.0.1/go.mod h1:xXMiIv4Fb/0kKde4SpL7qlzvu5cMJDRkFDxJfI9uaxA=
-github.com/google/cel-go v0.17.6 h1:QDvHTIJunIsbgN8yVukx0HGnsqVLSY6xGqo+17IjIyM=
-github.com/google/cel-go v0.17.6/go.mod h1:HXZKzB0LXqer5lHHgfWAnlYwJaQBDKMjxjulNQzhwhY=
+github.com/google/cel-go v0.17.7 h1:6ebJFzu1xO2n7TLtN+UBqShGBhlD85bhvglh5DpcfqQ=
+github.com/google/cel-go v0.17.7/go.mod h1:HXZKzB0LXqer5lHHgfWAnlYwJaQBDKMjxjulNQzhwhY=
 github.com/google/gnostic-models v0.6.8 h1:yo/ABAfM5IMRsS1VnXjTBvUb61tFIHozhlYvRgGre9I=
 github.com/google/gnostic-models v0.6.8/go.mod h1:5n7qKqH0f5wFt+aWF8CW6pZLLNOfYuF5OpfBSENuI8U=
 github.com/google/go-cmp v0.2.0/go.mod h1:oXzfMopK8JAjlY9xF4vHSVASa0yLyX7SntLO5aqRK0M=
@@ -400,8 +400,8 @@ honnef.co/go/tools v0.0.0-20190102054323-c2f93a96b099/go.mod h1:rf3lG4BRIbNafJWh
 honnef.co/go/tools v0.0.0-20190523083050-ea95bdfd59fc/go.mod h1:rf3lG4BRIbNafJWhAfAdb/ePZxsR/4RtNHQocxwk9r4=
 k8s.io/api v0.0.0-20231031013930-a9aa0dc09108 h1:RLNKzPwSr5qvAJElxookVqfE3NHl5/MYmRGqodr2268=
 k8s.io/api v0.0.0-20231031013930-a9aa0dc09108/go.mod h1:85jITVjKQiZ2494QUKUFq0g8dT584SMJydVlt8/fKwU=
-k8s.io/apimachinery v0.0.0-20231027171410-92fa50ee03b2 h1:IK+ucSMFzgZA5Obph+lJ5U64hB1SqywIJSojJg8eZZ8=
-k8s.io/apimachinery v0.0.0-20231027171410-92fa50ee03b2/go.mod h1:w0F2e93v67dkDnVXN80UeHkHMV8q0UIPd3JmttbIV2M=
+k8s.io/apimachinery v0.0.0-20231031211055-850727f9e38c h1:p1eyrSiR6d4nWobVvqdyXxk6Wm8bjhFXDTUcFYsAlL8=
+k8s.io/apimachinery v0.0.0-20231031211055-850727f9e38c/go.mod h1:w0F2e93v67dkDnVXN80UeHkHMV8q0UIPd3JmttbIV2M=
 k8s.io/client-go v0.0.0-20231031051614-477cb782cf02 h1:QZfMCRiabDlfm6Ny7G9u6ZLpP9lJlaXxF7HL4/LC9d8=
 k8s.io/client-go v0.0.0-20231031051614-477cb782cf02/go.mod h1:9IdUKOSyLL+70YH1Xrr2H9ACZxmEHhfSayjfsEeb2M4=
 k8s.io/component-base v0.0.0-20231027174419-7eefecff8918 h1:REROa5iZinlgOCnq1UxCSpcjE3sy2wqQ2WKcrKw/tBM=
