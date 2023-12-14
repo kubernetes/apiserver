@@ -31,7 +31,7 @@ require (
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc v1.19.0
 	go.opentelemetry.io/otel/sdk v1.19.0
 	go.opentelemetry.io/otel/trace v1.19.0
-	go.uber.org/zap v1.19.0
+	go.uber.org/zap v1.26.0
 	golang.org/x/crypto v0.14.0
 	golang.org/x/net v0.17.0
 	golang.org/x/sync v0.3.0
@@ -45,7 +45,7 @@ require (
 	k8s.io/api v0.0.0-20231214051658-d7980a488dca
 	k8s.io/apimachinery v0.0.0-20231214011457-e2f405af78de
 	k8s.io/client-go v0.0.0-20231214062645-12b0e099db07
-	k8s.io/component-base v0.0.0-20231214092946-c7854a92aea4
+	k8s.io/component-base v0.0.0-20231214212714-c18a0491da83
 	k8s.io/klog/v2 v2.110.1
 	k8s.io/kms v0.0.0-20231113172825-1bfdb22033cb
 	k8s.io/kube-openapi v0.0.0-20231113174909-778a5567bc1e
@@ -111,7 +111,6 @@ require (
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.19.0 // indirect
 	go.opentelemetry.io/otel/metric v1.19.0 // indirect
 	go.opentelemetry.io/proto/otlp v1.0.0 // indirect
-	go.uber.org/atomic v1.10.0 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
 	golang.org/x/exp v0.0.0-20220722155223-a9213eeb770e // indirect
 	golang.org/x/oauth2 v0.10.0 // indirect
@@ -129,6 +128,6 @@ replace (
 	k8s.io/api => k8s.io/api v0.0.0-20231214051658-d7980a488dca
 	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20231214011457-e2f405af78de
 	k8s.io/client-go => k8s.io/client-go v0.0.0-20231214062645-12b0e099db07
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20231214092946-c7854a92aea4
+	k8s.io/component-base => k8s.io/component-base v0.0.0-20231214212714-c18a0491da83
 	k8s.io/kms => k8s.io/kms v0.0.0-20231113172825-1bfdb22033cb
 )
