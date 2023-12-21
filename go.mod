@@ -32,22 +32,22 @@ require (
 	go.opentelemetry.io/otel/sdk v1.10.0
 	go.opentelemetry.io/otel/trace v1.10.0
 	go.uber.org/zap v1.19.0
-	golang.org/x/crypto v0.14.0
-	golang.org/x/net v0.17.0
-	golang.org/x/sync v0.3.0
-	golang.org/x/sys v0.13.0
+	golang.org/x/crypto v0.16.0
+	golang.org/x/net v0.19.0
+	golang.org/x/sync v0.5.0
+	golang.org/x/sys v0.15.0
 	golang.org/x/time v0.3.0
 	google.golang.org/genproto/googleapis/api v0.0.0-20230525234020-1aefcd67740a
 	google.golang.org/grpc v1.56.3
 	google.golang.org/protobuf v1.31.0
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/square/go-jose.v2 v2.6.0
-	k8s.io/api v0.0.0-20231218172644-61e3b8f66f95
-	k8s.io/apimachinery v0.0.0-20231101131425-467db0e39959
-	k8s.io/client-go v0.0.0-20231218173536-6e852562a5e3
-	k8s.io/component-base v0.0.0-20231218174708-68214f1bef46
+	k8s.io/api v0.0.0
+	k8s.io/apimachinery v0.0.0
+	k8s.io/client-go v0.0.0
+	k8s.io/component-base v0.0.0
 	k8s.io/klog/v2 v2.90.1
-	k8s.io/kms v0.0.0-20231101135256-b91162d4057f
+	k8s.io/kms v0.0.0
 	k8s.io/kube-openapi v0.0.0-20230501164219-8b0f38b5fd1f
 	k8s.io/utils v0.0.0-20230209194617-a36077c30491
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.1.2
@@ -114,8 +114,8 @@ require (
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
 	golang.org/x/oauth2 v0.7.0 // indirect
-	golang.org/x/term v0.13.0 // indirect
-	golang.org/x/text v0.13.0 // indirect
+	golang.org/x/term v0.15.0 // indirect
+	golang.org/x/text v0.14.0 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/genproto v0.0.0-20230525234025-438c736192d0 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20230525234030-28d5490b6b19 // indirect
@@ -125,9 +125,10 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20231218172644-61e3b8f66f95
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20231101131425-467db0e39959
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20231218173536-6e852562a5e3
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20231218174708-68214f1bef46
-	k8s.io/kms => k8s.io/kms v0.0.0-20231101135256-b91162d4057f
+	k8s.io/api => ../api
+	k8s.io/apimachinery => ../apimachinery
+	k8s.io/apiserver => ../apiserver
+	k8s.io/client-go => ../client-go
+	k8s.io/component-base => ../component-base
+	k8s.io/kms => ../kms
 )
