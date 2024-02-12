@@ -33,9 +33,7 @@ import (
 	"testing"
 	"text/template"
 	"time"
-
-	"gopkg.in/square/go-jose.v2"
-
+	"github.com/go-jose/go-jose"
 	"k8s.io/apiserver/pkg/apis/apiserver"
 	"k8s.io/apiserver/pkg/authentication/user"
 	"k8s.io/apiserver/pkg/features"
