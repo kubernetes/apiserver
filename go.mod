@@ -2,7 +2,7 @@
 
 module k8s.io/apiserver
 
-go 1.21
+go 1.22.0
 
 require (
 	github.com/coreos/go-oidc v2.2.1+incompatible
@@ -33,8 +33,8 @@ require (
 	go.opentelemetry.io/otel/trace v1.19.0
 	go.uber.org/zap v1.26.0
 	golang.org/x/crypto v0.19.0
-	golang.org/x/net v0.19.0
-	golang.org/x/sync v0.5.0
+	golang.org/x/net v0.21.0
+	golang.org/x/sync v0.6.0
 	golang.org/x/sys v0.17.0
 	golang.org/x/time v0.3.0
 	google.golang.org/genproto/googleapis/api v0.0.0-20230726155614-23370e0ffb3e
@@ -42,13 +42,13 @@ require (
 	google.golang.org/protobuf v1.31.0
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
 	gopkg.in/square/go-jose.v2 v2.6.0
-	k8s.io/api v0.0.0-20240301075851-e88057d7f696
-	k8s.io/apimachinery v0.0.0-20240229214048-6362b69e393e
-	k8s.io/client-go v0.0.0-20240229235935-1047f6396b27
-	k8s.io/component-base v0.0.0-20240227002902-6c2a49d37aa4
+	k8s.io/api v0.0.0-20240301204737-cd36300dc819
+	k8s.io/apimachinery v0.0.0-20240301204447-c9969982b5df
+	k8s.io/client-go v0.0.0-20240301205136-1bed3f14c117
+	k8s.io/component-base v0.0.0-20240301210028-15d726cdca18
 	k8s.io/klog/v2 v2.120.1
-	k8s.io/kms v0.0.0-20240221203502-15393f39a6fb
-	k8s.io/kube-openapi v0.0.0-20231113174909-778a5567bc1e
+	k8s.io/kms v0.0.0-20240301210546-4a4bf5f9988c
+	k8s.io/kube-openapi v0.0.0-20240228011516-70dd3763d340
 	k8s.io/utils v0.0.0-20230726121419-3b25d923346b
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.29.0
 	sigs.k8s.io/json v0.0.0-20221116044647-bc3834ca7abd
@@ -125,9 +125,9 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20240301075851-e88057d7f696
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20240229214048-6362b69e393e
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20240229235935-1047f6396b27
-	k8s.io/component-base => k8s.io/component-base v0.0.0-20240227002902-6c2a49d37aa4
-	k8s.io/kms => k8s.io/kms v0.0.0-20240221203502-15393f39a6fb
+	k8s.io/api => k8s.io/api v0.0.0-20240301204737-cd36300dc819
+	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20240301204447-c9969982b5df
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20240301205136-1bed3f14c117
+	k8s.io/component-base => k8s.io/component-base v0.0.0-20240301210028-15d726cdca18
+	k8s.io/kms => k8s.io/kms v0.0.0-20240301210546-4a4bf5f9988c
 )
