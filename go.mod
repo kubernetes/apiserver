@@ -16,6 +16,7 @@ require (
 	github.com/google/go-cmp v0.6.0
 	github.com/google/gofuzz v1.2.0
 	github.com/google/uuid v1.3.0
+	github.com/gorilla/websocket v1.5.0
 	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822
 	github.com/mxk/go-flowrate v0.0.0-20140419014527-cca7078d478f
@@ -42,9 +43,9 @@ require (
 	google.golang.org/protobuf v1.31.0
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
 	gopkg.in/square/go-jose.v2 v2.6.0
-	k8s.io/api v0.0.0-20240304084836-e4eca2b12f58
-	k8s.io/apimachinery v0.0.0-20240302004725-df38a01ea799
-	k8s.io/client-go v0.0.0-20240302085154-08128e0dfa59
+	k8s.io/api v0.0.0-20240305005446-44e99ab012f3
+	k8s.io/apimachinery v0.0.0-20240305011844-67cb3a878cd3
+	k8s.io/client-go v0.0.0-20240305045150-f323801a3474
 	k8s.io/component-base v0.0.0-20240301210028-15d726cdca18
 	k8s.io/klog/v2 v2.120.1
 	k8s.io/kms v0.0.0-20240301210546-4a4bf5f9988c
@@ -77,7 +78,6 @@ require (
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/google/btree v1.0.1 // indirect
-	github.com/gorilla/websocket v1.5.0 // indirect
 	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0 // indirect
 	github.com/grpc-ecosystem/grpc-gateway v1.16.0 // indirect
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.16.0 // indirect
@@ -125,9 +125,9 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.0.0-20240304084836-e4eca2b12f58
-	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20240302004725-df38a01ea799
-	k8s.io/client-go => k8s.io/client-go v0.0.0-20240302085154-08128e0dfa59
+	k8s.io/api => k8s.io/api v0.0.0-20240305005446-44e99ab012f3
+	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20240305011844-67cb3a878cd3
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20240305045150-f323801a3474
 	k8s.io/component-base => k8s.io/component-base v0.0.0-20240301210028-15d726cdca18
 	k8s.io/kms => k8s.io/kms v0.0.0-20240301210546-4a4bf5f9988c
 )
