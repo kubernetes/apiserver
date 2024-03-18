@@ -225,7 +225,7 @@ func resourceVersionNotOlderThan(sentinel string) func(string) error {
 			return err
 		}
 		if actualRV < expectedRV {
-			return fmt.Errorf("expected a resourceVersion no smaller than than %d, but got %d", expectedRV, actualRV)
+			return fmt.Errorf("expected a resourceVersion no smaller than %d, but got %d", expectedRV, actualRV)
 		}
 		return nil
 	}
