@@ -45,7 +45,7 @@ require (
 	gopkg.in/square/go-jose.v2 v2.6.0
 	k8s.io/api v0.0.0-20240418093414-76b6c7ce02a4
 	k8s.io/apimachinery v0.0.0-20240418133208-ea31e5150286
-	k8s.io/client-go v0.0.0-20240418093651-9990b0b122c9
+	k8s.io/client-go v0.0.0-20240418133635-3407442ff2e1
 	k8s.io/component-base v0.0.0-20240418094434-57ba0489bfa6
 	k8s.io/klog/v2 v2.120.1
 	k8s.io/kms v0.0.0-20240404040452-6ba2c57b192f
