@@ -5,6 +5,7 @@ module k8s.io/apiserver
 go 1.22.0
 
 require (
+	github.com/asaskevich/govalidator v0.0.0-20190424111038-f61b66f89f4a
 	github.com/coreos/go-oidc v2.2.1+incompatible
 	github.com/coreos/go-systemd/v22 v22.5.0
 	github.com/emicklei/go-restful/v3 v3.11.0
@@ -43,9 +44,9 @@ require (
 	google.golang.org/protobuf v1.33.0
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
 	gopkg.in/square/go-jose.v2 v2.6.0
-	k8s.io/api v0.0.0-20240423013409-039b247b85af
+	k8s.io/api v0.0.0-20240424013410-b75136d48620
 	k8s.io/apimachinery v0.0.0-20240423013216-bb8822152cab
-	k8s.io/client-go v0.0.0-20240423013650-47f558294cb9
+	k8s.io/client-go v0.0.0-20240424013642-943322657996
 	k8s.io/component-base v0.0.0-20240423014306-d7aa2276f5bb
 	k8s.io/klog/v2 v2.120.1
 	k8s.io/kms v0.0.0-20240423014509-0e3ce110305e
@@ -60,7 +61,6 @@ require (
 require (
 	github.com/NYTimes/gziphandler v1.1.1 // indirect
 	github.com/antlr4-go/antlr/v4 v4.13.0 // indirect
-	github.com/asaskevich/govalidator v0.0.0-20190424111038-f61b66f89f4a // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/blang/semver/v4 v4.0.0 // indirect
 	github.com/cenkalti/backoff/v4 v4.2.1 // indirect
