@@ -44,9 +44,9 @@ require (
 	google.golang.org/protobuf v1.33.0
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
 	gopkg.in/square/go-jose.v2 v2.6.0
-	k8s.io/api v0.0.0-20240430013428-7c9431b5bb76
-	k8s.io/apimachinery v0.0.0-20240429213236-d5c9711b77ee
-	k8s.io/client-go v0.0.0-20240429213655-049f23164924
+	k8s.io/api v0.0.0-20240506162732-aa3ed7cd8078
+	k8s.io/apimachinery v0.0.0-20240503202409-c9c3e94f52f0
+	k8s.io/client-go v0.0.0-20240506163139-d3682da14f72
 	k8s.io/component-base v0.0.0-20240429214345-5e40e2a98ae4
 	k8s.io/klog/v2 v2.120.1
 	k8s.io/kms v0.0.0-20240424174442-704f6c66761b
