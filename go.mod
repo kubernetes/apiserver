@@ -44,12 +44,12 @@ require (
 	google.golang.org/protobuf v1.33.0
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
 	gopkg.in/square/go-jose.v2 v2.6.0
-	k8s.io/api v0.0.0-20240513162741-b1dbea281df3
+	k8s.io/api v0.0.0-20240516203440-664bdd58a30d
 	k8s.io/apimachinery v0.0.0-20240510224318-1da46c3f5a5b
-	k8s.io/client-go v0.0.0-20240509043313-62f959700d55
+	k8s.io/client-go v0.0.0-20240520163845-86f83bc81899
 	k8s.io/component-base v0.0.0-20240509004100-482591e4108c
 	k8s.io/klog/v2 v2.120.1
-	k8s.io/kms v0.0.0-20240507203920-200fd0923998
+	k8s.io/kms v0.0.0-20240515043828-5c7c183dd3e9
 	k8s.io/kube-openapi v0.0.0-20240228011516-70dd3763d340
 	k8s.io/utils v0.0.0-20230726121419-3b25d923346b
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.29.0
