@@ -384,8 +384,8 @@ k8s.io/api v0.0.0-20240611003639-590e50434bf1 h1:oxDdCGF5j63Mpb6Des2N1CCsNubC8sc
 k8s.io/api v0.0.0-20240611003639-590e50434bf1/go.mod h1:5Cjw9MqZjRGElVN/sncIVEj4uQqmgd5uRSkUupucc3U=
 k8s.io/apimachinery v0.0.0-20240611003333-1a6a62ad18e9 h1:uEYcGyr07zLyUWoDL38erRxiSRNnusAK211luE2Lb/c=
 k8s.io/apimachinery v0.0.0-20240611003333-1a6a62ad18e9/go.mod h1:3nAExNh3CrzC6eKT9a32j/rv+uJ8Zod87oOmgUjZNAY=
-k8s.io/client-go v0.0.0-20240611082225-03443e7ede0e h1:4/fBa74JXsX4qdGyj9KuXNtQTbsy0iCQv0pP3fWLHxg=
-k8s.io/client-go v0.0.0-20240611082225-03443e7ede0e/go.mod h1:b+pw4KhbMeVhXpDIGvHd7EZRNwncNsJ2bdukPsB5dCc=
+k8s.io/client-go v0.0.0-20240612221048-39cc8deb076e h1:WHyqFoJDqenFMzheoBeFrBbkSh80nQrQnkY/u3ph4b8=
+k8s.io/client-go v0.0.0-20240612221048-39cc8deb076e/go.mod h1:b+pw4KhbMeVhXpDIGvHd7EZRNwncNsJ2bdukPsB5dCc=
 k8s.io/component-base v0.0.0-20240612123904-00e09447c2e9 h1:0XOHXSyKU3VNdkET2NjlHcA+v8YBnEZQce/zaNGoqcQ=
 k8s.io/component-base v0.0.0-20240612123904-00e09447c2e9/go.mod h1:fKg2MK8aKKD38jqgWLfrzo/yc0U1pRuEnlRY16kemVQ=
 k8s.io/klog/v2 v2.120.1 h1:QXU6cPEOIslTGvZaXvFWiP9VKyeet3sawzTOvdXb4Vw=
@@ -396,8 +396,8 @@ k8s.io/kube-openapi v0.0.0-20240228011516-70dd3763d340 h1:BZqlfIlq5YbRMFko6/PM7F
 k8s.io/kube-openapi v0.0.0-20240228011516-70dd3763d340/go.mod h1:yD4MZYeKMBwQKVht279WycxKyM84kkAx2DPrTXaeb98=
 k8s.io/utils v0.0.0-20230726121419-3b25d923346b h1:sgn3ZU783SCgtaSJjpcVVlRqd6GSnlTLKgpAAttJvpI=
 k8s.io/utils v0.0.0-20230726121419-3b25d923346b/go.mod h1:OLgZIPagt7ERELqWJFomSt595RzquPNLL48iOWgYOg0=
-sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.29.0 h1:/U5vjBbQn3RChhv7P11uhYvCSm5G2GaIi5AIGBS6r4c=
-sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.29.0/go.mod h1:z7+wmGM2dfIiLRfrC6jb5kV2Mq/sK1ZP303cxzkV5Y4=
+sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.30.3 h1:2770sDpzrjjsAtVhSeUFseziht227YAWYHLGNM8QPwY=
+sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.30.3/go.mod h1:Ve9uj1L+deCXFrPOk1LpFXqTg7LCFzFso6PA48q/XZw=
 sigs.k8s.io/json v0.0.0-20221116044647-bc3834ca7abd h1:EDPBXCAspyGV4jQlpZSudPeMmr1bNJefnuqLsRAsHZo=
 sigs.k8s.io/json v0.0.0-20221116044647-bc3834ca7abd/go.mod h1:B8JuhiUyNFVKdsE8h686QcCxMaH6HrOAZj4vswFpcB0=
 sigs.k8s.io/structured-merge-diff/v4 v4.4.1 h1:150L+0vs/8DA78h1u02ooW1/fFq/Lwr+sGiqlzvrtq4=
