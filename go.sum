@@ -381,8 +381,8 @@ k8s.io/component-base v0.0.0-20240906193739-83f63c39727c h1:Gdhz79FA3l8bKFBM1eYC
 k8s.io/component-base v0.0.0-20240906193739-83f63c39727c/go.mod h1:roKR20Tbxxh1HGxr9Fc1EzHkKJMH9Wfkau/U/EgjXys=
 k8s.io/klog/v2 v2.130.1 h1:n9Xl7H1Xvksem4KFG4PYbdQCQxqc/tTUyrgXaOhHSzk=
 k8s.io/klog/v2 v2.130.1/go.mod h1:3Jpz1GvMt720eyJH1ckRHK1EDfpxISzJ7I9OYgaDtPE=
-k8s.io/kms v0.0.0-20240827234606-4aa59ca2ab14 h1:Ds3NwJtIZQZRU1kSOl83F/KPh+RBH41NqPhnhNL34ck=
-k8s.io/kms v0.0.0-20240827234606-4aa59ca2ab14/go.mod h1:ySeb/iDDdPkL9xksNTkh5F8l7/YykHrMnozHdH+gD0k=
+k8s.io/kms v0.0.0-20240911031427-5781cdc762b1 h1:ei7efe802YLti9U57pZi3j7RvD5HRffTNDDWoEBAi90=
+k8s.io/kms v0.0.0-20240911031427-5781cdc762b1/go.mod h1:ySeb/iDDdPkL9xksNTkh5F8l7/YykHrMnozHdH+gD0k=
 k8s.io/kube-openapi v0.0.0-20240827152857-f7e401e7b4c2 h1:GKE9U8BH16uynoxQii0auTjmmmuZ3O0LFMN6S0lPPhI=
 k8s.io/kube-openapi v0.0.0-20240827152857-f7e401e7b4c2/go.mod h1:coRQXBK9NxO98XUv3ZD6AK3xzHCxV6+b7lrquKwaKzA=
 k8s.io/utils v0.0.0-20240711033017-18e509b52bc8 h1:pUdcCO1Lk/tbT5ztQWOBi5HBgbBP1J8+AsQnQCKsi8A=

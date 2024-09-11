@@ -6,6 +6,7 @@ go 1.22.0
 
 require (
 	github.com/asaskevich/govalidator v0.0.0-20190424111038-f61b66f89f4a
+	github.com/blang/semver/v4 v4.0.0
 	github.com/coreos/go-oidc v2.2.1+incompatible
 	github.com/coreos/go-systemd/v22 v22.5.0
 	github.com/emicklei/go-restful/v3 v3.11.0
@@ -51,7 +52,7 @@ require (
 	k8s.io/client-go v0.0.0-20240910233403-8d0bbdfdcc60
 	k8s.io/component-base v0.0.0-20240906193739-83f63c39727c
 	k8s.io/klog/v2 v2.130.1
-	k8s.io/kms v0.0.0-20240827234606-4aa59ca2ab14
+	k8s.io/kms v0.0.0-20240911031427-5781cdc762b1
 	k8s.io/kube-openapi v0.0.0-20240827152857-f7e401e7b4c2
 	k8s.io/utils v0.0.0-20240711033017-18e509b52bc8
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.30.3
@@ -64,7 +65,6 @@ require (
 	github.com/NYTimes/gziphandler v1.1.1 // indirect
 	github.com/antlr4-go/antlr/v4 v4.13.0 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
-	github.com/blang/semver/v4 v4.0.0 // indirect
 	github.com/cenkalti/backoff/v4 v4.3.0 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
 	github.com/coreos/go-semver v0.3.1 // indirect
