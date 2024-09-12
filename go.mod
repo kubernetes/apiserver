@@ -2,7 +2,9 @@
 
 module k8s.io/apiserver
 
-go 1.22.0
+go 1.23.0
+
+godebug default=go1.23
 
 require (
 	github.com/asaskevich/govalidator v0.0.0-20190424111038-f61b66f89f4a
@@ -47,12 +49,12 @@ require (
 	gopkg.in/evanphx/json-patch.v4 v4.12.0
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
 	gopkg.in/square/go-jose.v2 v2.6.0
-	k8s.io/api v0.0.0-20240904172100-421904605ee4
-	k8s.io/apimachinery v0.0.0-20240827232741-2465dc5239ab
-	k8s.io/client-go v0.0.0-20240910233403-8d0bbdfdcc60
-	k8s.io/component-base v0.0.0-20240906193739-83f63c39727c
+	k8s.io/api v0.0.0-20240912033524-9dc1a952bda9
+	k8s.io/apimachinery v0.0.0-20240912032824-4e174c5e3655
+	k8s.io/client-go v0.0.0-20240912034400-c5e16f8d68e8
+	k8s.io/component-base v0.0.0-20240912040419-b642e81b6901
 	k8s.io/klog/v2 v2.130.1
-	k8s.io/kms v0.0.0-20240911031427-5781cdc762b1
+	k8s.io/kms v0.0.0-20240912041232-273c893e4e51
 	k8s.io/kube-openapi v0.0.0-20240827152857-f7e401e7b4c2
 	k8s.io/utils v0.0.0-20240711033017-18e509b52bc8
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.30.3
