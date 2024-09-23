@@ -334,8 +334,8 @@ google.golang.org/genproto v0.0.0-20180817151627-c66870c02cf8/go.mod h1:JiN7NxoA
 google.golang.org/genproto v0.0.0-20190819201941-24fa4b261c55/go.mod h1:DMBHOl98Agz4BDEuKkezgsaosCRResVns1a3J2ZsMNc=
 google.golang.org/genproto v0.0.0-20200423170343-7949de9c1215/go.mod h1:55QSHmfGQM9UVYDPBsyGGes0y52j32PQ3BqQfXhyH3c=
 google.golang.org/genproto v0.0.0-20200513103714-09dca8ec2884/go.mod h1:55QSHmfGQM9UVYDPBsyGGes0y52j32PQ3BqQfXhyH3c=
-google.golang.org/genproto v0.0.0-20230822172742-b8732ec3820d h1:VBu5YqKPv6XiJ199exd8Br+Aetz+o08F+PLMnwJQHAY=
-google.golang.org/genproto v0.0.0-20230822172742-b8732ec3820d/go.mod h1:yZTlhN0tQnXo3h00fuXNCxJdLdIdnVFVBaRJ5LWBbw4=
+google.golang.org/genproto v0.0.0-20240123012728-ef4313101c80 h1:KAeGQVN3M9nD0/bQXnr/ClcEMJ968gUXJQ9pwfSynuQ=
+google.golang.org/genproto v0.0.0-20240123012728-ef4313101c80/go.mod h1:cc8bqMqtv9gMOr0zHg2Vzff5ULhhL2IXP4sbcn32Dro=
 google.golang.org/genproto/googleapis/api v0.0.0-20240528184218-531527333157 h1:7whR9kGa5LUwFtpLm2ArCEejtnxlGeLbAyjFY8sGNFw=
 google.golang.org/genproto/googleapis/api v0.0.0-20240528184218-531527333157/go.mod h1:99sLkeliLXfdj2J75X3Ho+rrVCaJze0uwN7zDDkjPVU=
 google.golang.org/genproto/googleapis/rpc v0.0.0-20240701130421-f6361c86f094 h1:BwIjyKYGsK9dMCBOorzRri8MQwmi7mT9rGHsCEinZkA=
@@ -377,8 +377,8 @@ k8s.io/apimachinery v0.0.0-20240920201701-c98a9e22228d h1:yDB+e3ReCJtthGtcZXMJAY
 k8s.io/apimachinery v0.0.0-20240920201701-c98a9e22228d/go.mod h1:5rKPDwwN9qm//xASFCZ83nyYEanHxxhc7pZ8AC4lukY=
 k8s.io/client-go v0.0.0-20240922202559-fcb1b6051673 h1:HbmVM5qrkQFSb+Isx8xOECazw5L6VDenjnUAgMPSmNQ=
 k8s.io/client-go v0.0.0-20240922202559-fcb1b6051673/go.mod h1:slPGP9kLjwKXgatD4iciMlNjnCmtXQ1ZHl7l/mS5Ux0=
-k8s.io/component-base v0.0.0-20240920203526-9395f8251321 h1:FqV1EeYjOHI3Uh5L4Frocl3hvmw1ISuhI9+ZruOTNKs=
-k8s.io/component-base v0.0.0-20240920203526-9395f8251321/go.mod h1:EXk9GtqbPz8BIrRlzT+JQ2ZW/D9pFv03Sk0ip/7j4ow=
+k8s.io/component-base v0.0.0-20240923042704-5e237c64b1be h1:FVbhqwC7jzmEJj2WO1uDz8p53hPawsv6qgCmraQA71Y=
+k8s.io/component-base v0.0.0-20240923042704-5e237c64b1be/go.mod h1:fkEjPUVhTSqc5k3wBHfdJuwzY+Z1OwFQpumwqYwc9Vw=
 k8s.io/klog/v2 v2.130.1 h1:n9Xl7H1Xvksem4KFG4PYbdQCQxqc/tTUyrgXaOhHSzk=
 k8s.io/klog/v2 v2.130.1/go.mod h1:3Jpz1GvMt720eyJH1ckRHK1EDfpxISzJ7I9OYgaDtPE=
 k8s.io/kms v0.0.0-20240912041232-273c893e4e51 h1:mbESnbnzpJyRVv9XDJ7eV+F33qap+hKv/kPEkzVPCoE=
