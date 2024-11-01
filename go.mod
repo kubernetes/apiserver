@@ -50,12 +50,12 @@ require (
 	gopkg.in/evanphx/json-patch.v4 v4.12.0
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
 	gopkg.in/square/go-jose.v2 v2.6.0
-	k8s.io/api v0.0.0
-	k8s.io/apimachinery v0.0.0
-	k8s.io/client-go v0.0.0
-	k8s.io/component-base v0.0.0
+	k8s.io/api v0.0.0-20241101190142-6e61ea04c537
+	k8s.io/apimachinery v0.0.0-20241101185853-f6d2366c3854
+	k8s.io/client-go v0.0.0-20241101190545-d680385f6162
+	k8s.io/component-base v0.0.0-20241101191638-2ab7d68338e3
 	k8s.io/klog/v2 v2.130.1
-	k8s.io/kms v0.0.0
+	k8s.io/kms v0.0.0-20241101191923-aa635f2d841b
 	k8s.io/kube-openapi v0.0.0-20240827152857-f7e401e7b4c2
 	k8s.io/utils v0.0.0-20240711033017-18e509b52bc8
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.31.0
@@ -123,12 +123,4 @@ require (
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
-)
-
-replace (
-	k8s.io/api => ../api
-	k8s.io/apimachinery => ../apimachinery
-	k8s.io/client-go => ../client-go
-	k8s.io/component-base => ../component-base
-	k8s.io/kms => ../kms
 )
