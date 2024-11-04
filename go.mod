@@ -50,14 +50,14 @@ require (
 	gopkg.in/evanphx/json-patch.v4 v4.12.0
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
 	gopkg.in/square/go-jose.v2 v2.6.0
-	k8s.io/api v0.0.0-20241101190142-6e61ea04c537
-	k8s.io/apimachinery v0.0.0-20241101185853-f6d2366c3854
-	k8s.io/client-go v0.0.0-20241101230540-67554141e090
-	k8s.io/component-base v0.0.0-20241101191638-2ab7d68338e3
+	k8s.io/api v0.0.0-20241104230202-a653b0a58983
+	k8s.io/apimachinery v0.0.0-20241104225908-9500acc2d964
+	k8s.io/client-go v0.0.0-20241104230604-2ff887486f17
+	k8s.io/component-base v0.0.0-20241104231613-899866896335
 	k8s.io/klog/v2 v2.130.1
 	k8s.io/kms v0.0.0-20241101191923-aa635f2d841b
 	k8s.io/kube-openapi v0.0.0-20240827152857-f7e401e7b4c2
-	k8s.io/utils v0.0.0-20240711033017-18e509b52bc8
+	k8s.io/utils v0.0.0-20241104100929-3ea5e8cea738
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.31.0
 	sigs.k8s.io/json v0.0.0-20241010143419-9aa6b5e7a4b3
 	sigs.k8s.io/structured-merge-diff/v4 v4.4.2
@@ -80,7 +80,6 @@ require (
 	github.com/go-openapi/jsonreference v0.20.2 // indirect
 	github.com/go-openapi/swag v0.23.0 // indirect
 	github.com/golang-jwt/jwt/v4 v4.5.0 // indirect
-	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
 	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0 // indirect
 	github.com/grpc-ecosystem/grpc-gateway v1.16.0 // indirect
