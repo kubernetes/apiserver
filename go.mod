@@ -54,12 +54,12 @@ require (
 	gopkg.in/evanphx/json-patch.v4 v4.12.0
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
 	gopkg.in/square/go-jose.v2 v2.6.0
-	k8s.io/api v0.0.0
-	k8s.io/apimachinery v0.0.0
-	k8s.io/client-go v0.0.0
-	k8s.io/component-base v0.0.0
+	k8s.io/api v0.0.0-20241205022319-ea815d578ce0
+	k8s.io/apimachinery v0.0.0-20241205021851-220d7c35f6db
+	k8s.io/client-go v0.0.0-20241205022958-9df509924771
+	k8s.io/component-base v0.0.0-20241205024250-af0d53b80315
 	k8s.io/klog/v2 v2.130.1
-	k8s.io/kms v0.0.0
+	k8s.io/kms v0.0.0-20241205024657-07861ef2bf4a
 	k8s.io/kube-openapi v0.0.0-20241105132330-32ad38e42d3f
 	k8s.io/utils v0.0.0-20241104100929-3ea5e8cea738
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.31.0
@@ -126,12 +126,4 @@ require (
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20240826202546-f6391c0de4c7 // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
-)
-
-replace (
-	k8s.io/api => ../api
-	k8s.io/apimachinery => ../apimachinery
-	k8s.io/client-go => ../client-go
-	k8s.io/component-base => ../component-base
-	k8s.io/kms => ../kms
 )
