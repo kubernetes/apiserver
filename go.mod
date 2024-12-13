@@ -53,14 +53,14 @@ require (
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
 	gopkg.in/square/go-jose.v2 v2.6.0
 	k8s.io/api v0.0.0-20241212094650-c137d05aad4e
-	k8s.io/apimachinery v0.0.0-20241212094400-146e532b5516
+	k8s.io/apimachinery v0.0.0-20241212174402-d2cfef5abdbd
 	k8s.io/client-go v0.0.0-20241212095039-1df7a02c723f
 	k8s.io/component-base v0.0.0-20241212095938-eed7cffe762b
 	k8s.io/klog/v2 v2.130.1
 	k8s.io/kms v0.0.0-20241212100200-cf5ec9691661
 	k8s.io/kube-openapi v0.0.0-20241105132330-32ad38e42d3f
 	k8s.io/utils v0.0.0-20241104100929-3ea5e8cea738
-	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.31.0
+	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.31.1
 	sigs.k8s.io/json v0.0.0-20241010143419-9aa6b5e7a4b3
 	sigs.k8s.io/structured-merge-diff/v4 v4.4.2
 	sigs.k8s.io/yaml v1.4.0
