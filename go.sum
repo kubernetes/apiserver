@@ -184,6 +184,8 @@ github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+
 github.com/stretchr/objx v0.1.1/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/objx v0.4.0/go.mod h1:YvHI0jy2hoMjB+UWwv71VJQ9isScKT/TqJzVSSt89Yw=
 github.com/stretchr/objx v0.5.0/go.mod h1:Yh+to48EsGEfYuaHDzXPcE3xhTkx73EhmCGUpEOglKo=
+github.com/stretchr/objx v0.5.2 h1:xuMeJ0Sdp5ZMRXx/aWO6RZxdr3beISkG5/G/aIRr3pY=
+github.com/stretchr/objx v0.5.2/go.mod h1:FRsXN1f5AsAjCGJKqEizvkpNtU+EGNCLh3NxZ/8L+MA=
 github.com/stretchr/testify v1.2.2/go.mod h1:a8OnRcib4nhh0OaRAV+Yts87kKdq0PP7pXfy6kDkUVs=
 github.com/stretchr/testify v1.3.0/go.mod h1:M5WIy9Dh21IEIfnGCwXGc5bZfKNJtfHm1UVUgZn+9EI=
 github.com/stretchr/testify v1.4.0/go.mod h1:j7eGeouHqKxXV5pUuKE4zz7dFj8WfuZ+81PSLYec5m4=
@@ -365,10 +367,10 @@ k8s.io/api v0.0.0-20250117201903-3bed2589d43a h1:U5ELuHIj+ewCrRs1t07FA4dqy6VOUAg
 k8s.io/api v0.0.0-20250117201903-3bed2589d43a/go.mod h1:YGB38orWxSXzMXdSPGWLOwrcumsaTbYPKy3dnT0HbRs=
 k8s.io/apimachinery v0.0.0-20250117041610-45d29dc4d66f h1:kdbiV3iKvyIwzB+22TrgOu/F7Tkl3xTFpburE5oKTHU=
 k8s.io/apimachinery v0.0.0-20250117041610-45d29dc4d66f/go.mod h1:h8DnJz4KNjkQsP8iFir+s3sSBEK3Iy43bfB2gFjSR+A=
-k8s.io/client-go v0.0.0-20250116202332-9897373fe634 h1:Lsd7xmPPz0SUGV+LqbqpXG9y+tlWLuIY64g5kftCwHg=
-k8s.io/client-go v0.0.0-20250116202332-9897373fe634/go.mod h1:m8baph6UVwiEzjPZpE8iaJeBpmXXcF0tE5hmxziVx5Y=
-k8s.io/component-base v0.0.0-20250115203345-3fc0045268f4 h1:SPLlKM4cULKD2vse+QVTA3CC/pBUKGQeoetFzeyo78g=
-k8s.io/component-base v0.0.0-20250115203345-3fc0045268f4/go.mod h1:WbCiRejbYRLGDbj9GaPRsHrz/6kLE5ya7gaRoto0LBg=
+k8s.io/client-go v0.0.0-20250122202702-3617101e66f4 h1:xEqcyaLRJMnWmMRy1yVsW4of/JrSxFROJMg9V66ZyWE=
+k8s.io/client-go v0.0.0-20250122202702-3617101e66f4/go.mod h1:G8sOEVwZqHVpyrVUYvWytjfcjz2Ws2OHUy4I2vxxU4Q=
+k8s.io/component-base v0.0.0-20250122204818-5979ae2bc737 h1:3W41AezQntipDoXKTRt2x8sh0gSSbtJF0jLHeCd+lNU=
+k8s.io/component-base v0.0.0-20250122204818-5979ae2bc737/go.mod h1:wy1tO9UVYy5c57t6LD0xpy8Fukb+vSZB0RvmhTgy+ZU=
 k8s.io/klog/v2 v2.130.1 h1:n9Xl7H1Xvksem4KFG4PYbdQCQxqc/tTUyrgXaOhHSzk=
 k8s.io/klog/v2 v2.130.1/go.mod h1:3Jpz1GvMt720eyJH1ckRHK1EDfpxISzJ7I9OYgaDtPE=
 k8s.io/kms v0.0.0-20250106203549-2ea9aec44ce9 h1:zKgELzNKHvefM+/kc2qkhJKFMhTbLY/1C+6GGCv2Db0=
