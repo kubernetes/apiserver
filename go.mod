@@ -11,7 +11,7 @@ require (
 	github.com/coreos/go-oidc v2.3.0+incompatible
 	github.com/coreos/go-systemd/v22 v22.5.0
 	github.com/emicklei/go-restful/v3 v3.11.0
-	github.com/fsnotify/fsnotify v1.7.0
+	github.com/fsnotify/fsnotify v1.9.0
 	github.com/go-logr/logr v1.4.2
 	github.com/gogo/protobuf v1.3.2
 	github.com/google/btree v1.1.3
@@ -48,7 +48,7 @@ require (
 	gopkg.in/evanphx/json-patch.v4 v4.12.0
 	gopkg.in/go-jose/go-jose.v2 v2.6.3
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
-	k8s.io/api v0.0.0-20250425021431-9aab596060e1
+	k8s.io/api v0.0.0-20250425132438-7421a41940e1
 	k8s.io/apimachinery v0.0.0-20250423231524-954960919938
 	k8s.io/client-go v0.0.0-20250424231738-17ad09eb27d1
 	k8s.io/component-base v0.0.0-20250424232716-364dc750ae6a
