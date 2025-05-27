@@ -29,13 +29,13 @@ require (
 	go.etcd.io/etcd/client/pkg/v3 v3.6.0
 	go.etcd.io/etcd/client/v3 v3.6.0
 	go.etcd.io/etcd/server/v3 v3.6.0
-	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.59.0
+	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.60.0
 	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.58.0
-	go.opentelemetry.io/otel v1.34.0
+	go.opentelemetry.io/otel v1.35.0
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc v1.34.0
-	go.opentelemetry.io/otel/metric v1.34.0
+	go.opentelemetry.io/otel/metric v1.35.0
 	go.opentelemetry.io/otel/sdk v1.34.0
-	go.opentelemetry.io/otel/trace v1.34.0
+	go.opentelemetry.io/otel/trace v1.35.0
 	go.uber.org/zap v1.27.0
 	golang.org/x/crypto v0.36.0
 	golang.org/x/net v0.38.0
@@ -51,9 +51,9 @@ require (
 	k8s.io/api v0.0.0-20250527173755-16b0005a085f
 	k8s.io/apimachinery v0.0.0-20250527161416-09ff13941cda
 	k8s.io/client-go v0.0.0-20250526134158-e75871c73119
-	k8s.io/component-base v0.0.0-20250524015836-6ea5fdfa0cf4
+	k8s.io/component-base v0.0.0-20250527174749-7c0fc2b55ca1
 	k8s.io/klog/v2 v2.130.1
-	k8s.io/kms v0.0.0-20250520155410-738cf8b6bc70
+	k8s.io/kms v0.0.0-20250527175117-e6cd4d7331a4
 	k8s.io/kube-openapi v0.0.0-20250318190949-c8a335a9a2ff
 	k8s.io/utils v0.0.0-20250502105355-0f33e8f1c979
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.31.2
