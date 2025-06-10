@@ -51,7 +51,7 @@ require (
 	k8s.io/api v0.0.0-20250610195658-be9d9f7dc6a8
 	k8s.io/apimachinery v0.0.0-20250606195423-d5745c2f38f8
 	k8s.io/client-go v0.0.0-20250609120107-9638111dc7f5
-	k8s.io/component-base v0.0.0-20250606201941-ea9d99bbcc9c
+	k8s.io/component-base v0.0.0-20250610200514-42a6c90f512f
 	k8s.io/klog/v2 v2.130.1
 	k8s.io/kms v0.0.0-20250527175117-e6cd4d7331a4
 	k8s.io/kube-openapi v0.0.0-20250318190949-c8a335a9a2ff
@@ -102,7 +102,7 @@ require (
 	github.com/prometheus/procfs v0.15.1 // indirect
 	github.com/sirupsen/logrus v1.9.3 // indirect
 	github.com/soheilhy/cmux v0.1.5 // indirect
-	github.com/spf13/cobra v1.8.1 // indirect
+	github.com/spf13/cobra v1.9.1 // indirect
 	github.com/stoewer/go-strcase v1.3.0 // indirect
 	github.com/tmc/grpc-websocket-proxy v0.0.0-20220101234140-673ab2c3ae75 // indirect
 	github.com/x448/float16 v0.8.4 // indirect
