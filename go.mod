@@ -48,12 +48,12 @@ require (
 	gopkg.in/evanphx/json-patch.v4 v4.12.0
 	gopkg.in/go-jose/go-jose.v2 v2.6.3
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
-	k8s.io/api v0.0.0-20250610195658-be9d9f7dc6a8
-	k8s.io/apimachinery v0.0.0-20250606195423-d5745c2f38f8
-	k8s.io/client-go v0.0.0-20250609120107-9638111dc7f5
-	k8s.io/component-base v0.0.0-20250606201941-ea9d99bbcc9c
+	k8s.io/api v0.0.0
+	k8s.io/apimachinery v0.0.0
+	k8s.io/client-go v0.0.0
+	k8s.io/component-base v0.0.0
 	k8s.io/klog/v2 v2.130.1
-	k8s.io/kms v0.0.0-20250527175117-e6cd4d7331a4
+	k8s.io/kms v0.0.0
 	k8s.io/kube-openapi v0.0.0-20250318190949-c8a335a9a2ff
 	k8s.io/utils v0.0.0-20250604170112-4c0f3b243397
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.31.2
@@ -102,7 +102,7 @@ require (
 	github.com/prometheus/procfs v0.15.1 // indirect
 	github.com/sirupsen/logrus v1.9.3 // indirect
 	github.com/soheilhy/cmux v0.1.5 // indirect
-	github.com/spf13/cobra v1.8.1 // indirect
+	github.com/spf13/cobra v1.9.1 // indirect
 	github.com/stoewer/go-strcase v1.3.0 // indirect
 	github.com/tmc/grpc-websocket-proxy v0.0.0-20220101234140-673ab2c3ae75 // indirect
 	github.com/x448/float16 v0.8.4 // indirect
@@ -121,4 +121,12 @@ require (
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20250303144028-a0af3efb3deb // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
+)
+
+replace (
+	k8s.io/api => ../api
+	k8s.io/apimachinery => ../apimachinery
+	k8s.io/client-go => ../client-go
+	k8s.io/component-base => ../component-base
+	k8s.io/kms => ../kms
 )
