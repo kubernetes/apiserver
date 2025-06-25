@@ -48,10 +48,10 @@ require (
 	gopkg.in/evanphx/json-patch.v4 v4.12.0
 	gopkg.in/go-jose/go-jose.v2 v2.6.3
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
-	k8s.io/api v0.0.0-20250625172518-2872eaf4bc66
-	k8s.io/apimachinery v0.0.0-20250625172235-f3d86859ab8a
-	k8s.io/client-go v0.0.0-20250625172909-cf3a9d7f2e18
-	k8s.io/component-base v0.0.0-20250625174137-670840c797fd
+	k8s.io/api v0.0.0-20250625172519-b820fad6b1cc
+	k8s.io/apimachinery v0.0.0-20250625172236-d6651abdfec8
+	k8s.io/client-go v0.0.0-20250625172911-958288110116
+	k8s.io/component-base v0.0.0-20250625174139-179392ef0450
 	k8s.io/klog/v2 v2.130.1
 	k8s.io/kms v0.0.0-20250527175117-e6cd4d7331a4
 	k8s.io/kube-openapi v0.0.0-20250610211856-8b98d1ed966a
@@ -60,7 +60,7 @@ require (
 	sigs.k8s.io/json v0.0.0-20241010143419-9aa6b5e7a4b3
 	sigs.k8s.io/randfill v1.0.0
 	sigs.k8s.io/structured-merge-diff/v4 v4.7.0
-	sigs.k8s.io/yaml v1.4.0
+	sigs.k8s.io/yaml v1.5.0
 )
 
 require (
@@ -114,6 +114,7 @@ require (
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.34.0 // indirect
 	go.opentelemetry.io/proto/otlp v1.5.0 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
+	go.yaml.in/yaml/v2 v2.4.2 // indirect
 	golang.org/x/exp v0.0.0-20240719175910-8a7402abbf56 // indirect
 	golang.org/x/oauth2 v0.27.0 // indirect
 	golang.org/x/term v0.30.0 // indirect
