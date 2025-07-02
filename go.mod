@@ -124,3 +124,5 @@ require (
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+replace k8s.io/client-go => k8s.io/client-go v0.0.0-20250702155524-6980728f27f4
