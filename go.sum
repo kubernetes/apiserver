@@ -29,8 +29,8 @@ github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/dustin/go-humanize v1.0.1 h1:GzkhY7T5VNhEkwH0PVJgjz+fX1rhBrR7pRT3mDkpeCY=
 github.com/dustin/go-humanize v1.0.1/go.mod h1:Mu1zIs6XwVuF/gI1OepvI0qD18qycQx+mFykh5fBlto=
-github.com/emicklei/go-restful/v3 v3.11.0 h1:rAQeMHw1c7zTmncogyy8VvRZwtkmkZ4FxERmMY4rD+g=
-github.com/emicklei/go-restful/v3 v3.11.0/go.mod h1:6n3XBCmQQb25CM2LCACGz8ukIrRry+4bhvbpWn3mrbc=
+github.com/emicklei/go-restful/v3 v3.12.2 h1:DhwDP0vY3k8ZzE0RunuJy8GhNpPL6zqLkDf9B/a0/xU=
+github.com/emicklei/go-restful/v3 v3.12.2/go.mod h1:6n3XBCmQQb25CM2LCACGz8ukIrRry+4bhvbpWn3mrbc=
 github.com/felixge/httpsnoop v1.0.4 h1:NFTV2Zj1bL4mc9sqWACXbQFVBBg2W3GPvqp8/ESS2Wg=
 github.com/felixge/httpsnoop v1.0.4/go.mod h1:m8KPJKqk1gH5J9DgRY2ASl2lWCfGKXixSwevea8zH2U=
 github.com/fsnotify/fsnotify v1.9.0 h1:2Ml+OJNzbYCTzsxtv8vKSFD9PbJjmhYF14k/jKC7S9k=
@@ -301,10 +301,10 @@ k8s.io/api v0.0.0-20250702170451-bfa25161ab14 h1:ru1qVDjtx6BP62PQjJ+Wl9raUn0a8nj
 k8s.io/api v0.0.0-20250702170451-bfa25161ab14/go.mod h1:K0G717YoOyRoxuW09o2hgVeUK6NK3vcAzQBtcQRnL9o=
 k8s.io/apimachinery v0.0.0-20250702170156-7548d4da2f38 h1:8O5idX0pTbbeSayup4l3BUsPhHYxITx/6XFc149kAJw=
 k8s.io/apimachinery v0.0.0-20250702170156-7548d4da2f38/go.mod h1:RkaUIZxsmnceX2hEfn44FGiTXiv/8cUWaqjCh1kDzZg=
-k8s.io/client-go v0.0.0-20250702155524-6980728f27f4 h1:YvA2fLi5nrfeeQdq9A0Cp8bTUqXU8ltCTjKNHgNTwDQ=
-k8s.io/client-go v0.0.0-20250702155524-6980728f27f4/go.mod h1:jmp8BGXr3fP6+ho7p/Bf+Of4YND9LrF1B1a+zlgpS0k=
-k8s.io/component-base v0.0.0-20250702172159-a7fbca963794 h1:cLqIWi8ntbwsZPPskQ7OpluDkZFQkFdeKrkiv4HSuwk=
-k8s.io/component-base v0.0.0-20250702172159-a7fbca963794/go.mod h1:pQj4ARJ2y3YY/TinuQWxpU0A7bWNZxKbMusfiSHV3mA=
+k8s.io/client-go v0.0.0-20250702210839-783cf83ee3e2 h1:XbQJknKstWSFZcMLue0825rHWwAoo7riImPGctZ9vVA=
+k8s.io/client-go v0.0.0-20250702210839-783cf83ee3e2/go.mod h1:uXRScHT++tkug2xcKCzM5BsIa1Jv0sDB+4xxMnnGMCU=
+k8s.io/component-base v0.0.0-20250702211828-4643692dd643 h1:wDcTpKWamTUcU5I6lkmGXgtcz7pmzLAVJTHTcIX2WJs=
+k8s.io/component-base v0.0.0-20250702211828-4643692dd643/go.mod h1:eGOA++J6516z4L/uX1IoXoM8eFI3I/NqDuJOfq3KYmU=
 k8s.io/klog/v2 v2.130.1 h1:n9Xl7H1Xvksem4KFG4PYbdQCQxqc/tTUyrgXaOhHSzk=
 k8s.io/klog/v2 v2.130.1/go.mod h1:3Jpz1GvMt720eyJH1ckRHK1EDfpxISzJ7I9OYgaDtPE=
 k8s.io/kms v0.0.0-20250701212550-c0cb85aa532f h1:IiE5Db+Ha45v4GSmZtR4OLdkk8j7Nk/76SP1gvVAjnM=

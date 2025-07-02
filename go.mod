@@ -10,7 +10,7 @@ require (
 	github.com/blang/semver/v4 v4.0.0
 	github.com/coreos/go-oidc v2.3.0+incompatible
 	github.com/coreos/go-systemd/v22 v22.5.0
-	github.com/emicklei/go-restful/v3 v3.11.0
+	github.com/emicklei/go-restful/v3 v3.12.2
 	github.com/fsnotify/fsnotify v1.9.0
 	github.com/go-logr/logr v1.4.2
 	github.com/gogo/protobuf v1.3.2
@@ -50,8 +50,8 @@ require (
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
 	k8s.io/api v0.0.0-20250702170451-bfa25161ab14
 	k8s.io/apimachinery v0.0.0-20250702170156-7548d4da2f38
-	k8s.io/client-go v0.0.0-20250702170847-0746d1b7322b
-	k8s.io/component-base v0.0.0-20250702172159-a7fbca963794
+	k8s.io/client-go v0.0.0-20250702210839-783cf83ee3e2
+	k8s.io/component-base v0.0.0-20250702211828-4643692dd643
 	k8s.io/klog/v2 v2.130.1
 	k8s.io/kms v0.0.0-20250701212550-c0cb85aa532f
 	k8s.io/kube-openapi v0.0.0-20250628140032-d90c4fd18f59
@@ -124,5 +124,3 @@ require (
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
-
-replace k8s.io/client-go => k8s.io/client-go v0.0.0-20250702155524-6980728f27f4
