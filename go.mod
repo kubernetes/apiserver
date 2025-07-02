@@ -48,16 +48,16 @@ require (
 	gopkg.in/evanphx/json-patch.v4 v4.12.0
 	gopkg.in/go-jose/go-jose.v2 v2.6.3
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
-	k8s.io/api v0.0.0-20250702170451-bfa25161ab14
-	k8s.io/apimachinery v0.0.0-20250702170156-7548d4da2f38
-	k8s.io/client-go v0.0.0-20250702210839-783cf83ee3e2
-	k8s.io/component-base v0.0.0-20250702211828-4643692dd643
+	k8s.io/api v0.0.0-20250703010437-9ca4bf8538e0
+	k8s.io/apimachinery v0.0.0-20250703010150-b86b632271cf
+	k8s.io/client-go v0.0.0-20250703010829-2cfeed63b269
+	k8s.io/component-base v0.0.0-20250703012258-22a26817cb48
 	k8s.io/klog/v2 v2.130.1
 	k8s.io/kms v0.0.0-20250701212550-c0cb85aa532f
 	k8s.io/kube-openapi v0.0.0-20250628140032-d90c4fd18f59
 	k8s.io/utils v0.0.0-20250604170112-4c0f3b243397
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.31.2
-	sigs.k8s.io/json v0.0.0-20241010143419-9aa6b5e7a4b3
+	sigs.k8s.io/json v0.0.0-20241014173422-cfa47c3a1cc8
 	sigs.k8s.io/randfill v1.0.0
 	sigs.k8s.io/structured-merge-diff/v4 v4.7.0
 	sigs.k8s.io/yaml v1.5.0
