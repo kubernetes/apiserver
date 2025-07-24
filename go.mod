@@ -48,10 +48,10 @@ require (
 	gopkg.in/evanphx/json-patch.v4 v4.12.0
 	gopkg.in/go-jose/go-jose.v2 v2.6.3
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
-	k8s.io/api v0.0.0-20250724104226-1560b8c850a7
-	k8s.io/apimachinery v0.0.0-20250723005633-58c4eb072ebf
-	k8s.io/client-go v0.0.0-20250724144911-764374b3242b
-	k8s.io/component-base v0.0.0-20250724065244-07ee182722a1
+	k8s.io/api v0.0.0-20250724224534-f2279712f874
+	k8s.io/apimachinery v0.0.0-20250724224258-50e39b11cd32
+	k8s.io/client-go v0.0.0-20250724224906-d4f2d5b8ccf7
+	k8s.io/component-base v0.0.0-20250724225857-f959b0363667
 	k8s.io/klog/v2 v2.130.1
 	k8s.io/kms v0.0.0-20250716213631-bbefe5cb7a2e
 	k8s.io/kube-openapi v0.0.0-20250710124328-f3f2b991d03b
@@ -74,7 +74,7 @@ require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/dustin/go-humanize v1.0.1 // indirect
 	github.com/felixge/httpsnoop v1.0.4 // indirect
-	github.com/fxamacker/cbor/v2 v2.8.0 // indirect
+	github.com/fxamacker/cbor/v2 v2.9.0 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/go-openapi/jsonpointer v0.21.0 // indirect
 	github.com/go-openapi/jsonreference v0.20.2 // indirect
