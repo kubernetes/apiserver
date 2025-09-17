@@ -2,9 +2,9 @@
 
 module k8s.io/apiserver
 
-go 1.24.0
+go 1.25.0
 
-godebug default=go1.24
+godebug default=go1.25
 
 require (
 	github.com/blang/semver/v4 v4.0.0
@@ -49,12 +49,12 @@ require (
 	gopkg.in/evanphx/json-patch.v4 v4.13.0
 	gopkg.in/go-jose/go-jose.v2 v2.6.3
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
-	k8s.io/api v0.0.0-20250918002154-48e06b5d473b
-	k8s.io/apimachinery v0.0.0-20250916034007-79d1b678e5a3
-	k8s.io/client-go v0.0.0-20250912115231-8decd4f5c045
-	k8s.io/component-base v0.0.0-20250911200454-bc57539132eb
+	k8s.io/api v0.0.0-20250918002156-8eb059a37ea8
+	k8s.io/apimachinery v0.0.0-20250918001908-c4785d7dc9ff
+	k8s.io/client-go v0.0.0-20250918002625-329b0909fd97
+	k8s.io/component-base v0.0.0-20250918003954-157fadfa68b3
 	k8s.io/klog/v2 v2.130.1
-	k8s.io/kms v0.0.0-20250910161039-1e806949f907
+	k8s.io/kms v0.0.0-20250918004306-2fba1b2102ee
 	k8s.io/kube-openapi v0.0.0-20250910181357-589584f1c912
 	k8s.io/utils v0.0.0-20250604170112-4c0f3b243397
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.31.2
