@@ -49,7 +49,7 @@ require (
 	gopkg.in/evanphx/json-patch.v4 v4.13.0
 	gopkg.in/go-jose/go-jose.v2 v2.6.3
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
-	k8s.io/api v0.0.0-20250919032300-f0adbf4eb780
+	k8s.io/api v0.0.0-20250922192300-863819f1e8a7
 	k8s.io/apimachinery v0.0.0-20250919032000-da5b06e2fb66
 	k8s.io/client-go v0.0.0-20250919032728-7b6fbf8e600b
 	k8s.io/component-base v0.0.0-20250919034137-4453c3be72a8
