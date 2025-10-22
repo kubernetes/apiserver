@@ -24,10 +24,10 @@ require (
 	github.com/mxk/go-flowrate v0.0.0-20140419014527-cca7078d478f
 	github.com/spf13/pflag v1.0.9
 	github.com/stretchr/testify v1.11.1
-	go.etcd.io/etcd/api/v3 v3.6.4
-	go.etcd.io/etcd/client/pkg/v3 v3.6.4
-	go.etcd.io/etcd/client/v3 v3.6.4
-	go.etcd.io/etcd/server/v3 v3.6.4
+	go.etcd.io/etcd/api/v3 v3.6.5
+	go.etcd.io/etcd/client/pkg/v3 v3.6.5
+	go.etcd.io/etcd/client/v3 v3.6.5
+	go.etcd.io/etcd/server/v3 v3.6.5
 	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.60.0
 	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.61.0
 	go.opentelemetry.io/otel v1.36.0
@@ -48,10 +48,10 @@ require (
 	gopkg.in/evanphx/json-patch.v4 v4.13.0
 	gopkg.in/go-jose/go-jose.v2 v2.6.3
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
-	k8s.io/api v0.0.0-20251021232007-e04c29a37b2e
-	k8s.io/apimachinery v0.0.0-20251021201638-02b0a610061c
-	k8s.io/client-go v0.0.0-20251021232429-a5b1b112d916
-	k8s.io/component-base v0.0.0-20251013235701-797fe69345a1
+	k8s.io/api v0.0.0-20251022232024-e681e9f64143
+	k8s.io/apimachinery v0.0.0-20251022231703-e79daceaa31b
+	k8s.io/client-go v0.0.0-20251022232504-715199a180dc
+	k8s.io/component-base v0.0.0-20251022233647-8a780af60b48
 	k8s.io/klog/v2 v2.130.1
 	k8s.io/kms v0.0.0-20250918004306-2fba1b2102ee
 	k8s.io/kube-openapi v0.0.0-20250910181357-589584f1c912
@@ -107,8 +107,8 @@ require (
 	github.com/tmc/grpc-websocket-proxy v0.0.0-20220101234140-673ab2c3ae75 // indirect
 	github.com/x448/float16 v0.8.4 // indirect
 	github.com/xiang90/probing v0.0.0-20221125231312-a49e3df8f510 // indirect
-	go.etcd.io/bbolt v1.4.2 // indirect
-	go.etcd.io/etcd/pkg/v3 v3.6.4 // indirect
+	go.etcd.io/bbolt v1.4.3 // indirect
+	go.etcd.io/etcd/pkg/v3 v3.6.5 // indirect
 	go.etcd.io/raft/v3 v3.6.0 // indirect
 	go.opentelemetry.io/auto/sdk v1.1.0 // indirect
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.34.0 // indirect
