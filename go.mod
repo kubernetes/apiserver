@@ -53,7 +53,7 @@ require (
 	k8s.io/client-go v0.0.0-20251126204431-46360b527ebc
 	k8s.io/component-base v0.0.0-20251126205700-dffb9dfaf9c7
 	k8s.io/klog/v2 v2.130.1
-	k8s.io/kms v0.0.0-20251126210012-3215d77feb60
+	k8s.io/kms v0.0.0-20251203145945-db26c430546c
 	k8s.io/kube-openapi v0.0.0-20250910181357-589584f1c912
 	k8s.io/utils v0.0.0-20251002143259-bc988d571ff4
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.31.2
