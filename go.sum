@@ -82,8 +82,6 @@ github.com/grpc-ecosystem/go-grpc-middleware/providers/prometheus v1.0.1 h1:qnpS
 github.com/grpc-ecosystem/go-grpc-middleware/providers/prometheus v1.0.1/go.mod h1:lXGCsh6c22WGtjr+qGHj1otzZpV/1kwTMAqkwZsnWRU=
 github.com/grpc-ecosystem/go-grpc-middleware/v2 v2.3.0 h1:FbSCl+KggFl+Ocym490i/EyXF4lPgLoUtcSWquBM0Rs=
 github.com/grpc-ecosystem/go-grpc-middleware/v2 v2.3.0/go.mod h1:qOchhhIlmRcqk/O9uCo/puJlyo07YINaIqdZfZG3Jkc=
-github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0 h1:Ovs26xHkKqVztRpIrF/92BcuyuQ/YW4NSIpoGtfXNho=
-github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0/go.mod h1:8NvIoxWQoOIhqOTXgfV/d3M/q6VIi02HzZEHgUlZvzk=
 github.com/grpc-ecosystem/grpc-gateway/v2 v2.26.3 h1:5ZPtiqj0JL5oKWmcsq4VMaAW5ukBEgSGXEN89zeH1Jo=
 github.com/grpc-ecosystem/grpc-gateway/v2 v2.26.3/go.mod h1:ndYquD05frm2vACXE1nsccT4oJzjhw2arTS2cpUD1PI=
 github.com/inconshreveable/mousetrap v1.1.0 h1:wN+x4NVGpMsO7ErUn/mUI3vEoE6Jt13X2s0bqwp9tc8=
@@ -304,8 +302,8 @@ k8s.io/apimachinery v0.0.0-20251218062153-94056eccfb12 h1:EcHv2BCdOt2p8EIoLqsEFb
 k8s.io/apimachinery v0.0.0-20251218062153-94056eccfb12/go.mod h1:jQCgFZFR1F4Ik7hvr2g84RTJSZegBc8yHgFWKn//hns=
 k8s.io/client-go v0.0.0-20251218063306-1aef261f0ad5 h1:edGMs/zH+JmmId6j7QM6eWxHUGMwOHmSBbW+lFhmdE4=
 k8s.io/client-go v0.0.0-20251218063306-1aef261f0ad5/go.mod h1:XW/tTjAxjkB5EpWTvlrxaiy1AdZiTO6waddhIvbEe4U=
-k8s.io/component-base v0.0.0-20251204225730-8cb15f10375f h1:+E5vv24SeZdDzNIzmNpkWe85rE7nR3pVu+n5mrKSkW4=
-k8s.io/component-base v0.0.0-20251204225730-8cb15f10375f/go.mod h1:8Ohmd7Q46U1rnT5I8SNvql3xi+S81vMldMPHMNV+e+I=
+k8s.io/component-base v0.0.0-20251218143937-776ef6f15e6f h1:KLEF5AsUwoAgX5fjcyoyMm1IxJAawFL0FubRcKOmcD0=
+k8s.io/component-base v0.0.0-20251218143937-776ef6f15e6f/go.mod h1:3v/6ZbIOazMm4a3ZjKq15b84sm4a6aysXJb5Klxqgl0=
 k8s.io/klog/v2 v2.130.1 h1:n9Xl7H1Xvksem4KFG4PYbdQCQxqc/tTUyrgXaOhHSzk=
 k8s.io/klog/v2 v2.130.1/go.mod h1:3Jpz1GvMt720eyJH1ckRHK1EDfpxISzJ7I9OYgaDtPE=
 k8s.io/kms v0.0.0-20251204230241-5c729e7c0a92 h1:id9A3Q/DvGBBsX8ewmGwyMm8w6oni3Jqc3z6TV335/Y=

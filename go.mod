@@ -19,7 +19,7 @@ require (
 	github.com/google/go-cmp v0.7.0
 	github.com/google/uuid v1.6.0
 	github.com/gorilla/websocket v1.5.4-0.20250319132907-e064f32e3674
-	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0
+	github.com/grpc-ecosystem/go-grpc-middleware/providers/prometheus v1.0.1
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822
 	github.com/mxk/go-flowrate v0.0.0-20140419014527-cca7078d478f
 	github.com/spf13/pflag v1.0.9
@@ -51,7 +51,7 @@ require (
 	k8s.io/api v0.0.0-20251218062648-50474f4a1619
 	k8s.io/apimachinery v0.0.0-20251218062153-94056eccfb12
 	k8s.io/client-go v0.0.0-20251218063306-1aef261f0ad5
-	k8s.io/component-base v0.0.0-20251204225730-8cb15f10375f
+	k8s.io/component-base v0.0.0-20251218143937-776ef6f15e6f
 	k8s.io/klog/v2 v2.130.1
 	k8s.io/kms v0.0.0-20251204230241-5c729e7c0a92
 	k8s.io/kube-openapi v0.0.0-20250910181357-589584f1c912
@@ -82,7 +82,6 @@ require (
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang-jwt/jwt/v5 v5.2.2 // indirect
 	github.com/golang/protobuf v1.5.4 // indirect
-	github.com/grpc-ecosystem/go-grpc-middleware/providers/prometheus v1.0.1 // indirect
 	github.com/grpc-ecosystem/go-grpc-middleware/v2 v2.3.0 // indirect
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.26.3 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
