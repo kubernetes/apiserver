@@ -299,10 +299,10 @@ gopkg.in/natefinch/lumberjack.v2 v2.2.1/go.mod h1:YD8tP3GAjkrDg1eZH7EGmyESg/lsYs
 gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c/go.mod h1:K4uyk7z7BCEPqu6E+C64Yfv1cQ7kz7rIZviUmN+EgEM=
 gopkg.in/yaml.v3 v3.0.1 h1:fxVm/GzAzEWqLHuvctI91KS9hhNmmWOoWu0XTYJS7CA=
 gopkg.in/yaml.v3 v3.0.1/go.mod h1:K4uyk7z7BCEPqu6E+C64Yfv1cQ7kz7rIZviUmN+EgEM=
-k8s.io/api v0.0.0-20251218062647-56ee7b10ed3f h1:N4fGyAbqjSiHraQokHH8xRlIjp/0coRsXYNKPNXo4Qc=
-k8s.io/api v0.0.0-20251218062647-56ee7b10ed3f/go.mod h1:oM7eVrx5llqFChHq1g9VJGls8yBZAjmDBwTWVsN9tr4=
-k8s.io/apimachinery v0.0.0-20251218062152-a9de6f8b12f4 h1:6qzElS1kwIIk7oKF6tlSLLh7bQLDZ60+J406vLzB2Wg=
-k8s.io/apimachinery v0.0.0-20251218062152-a9de6f8b12f4/go.mod h1:jQCgFZFR1F4Ik7hvr2g84RTJSZegBc8yHgFWKn//hns=
+k8s.io/api v0.0.0-20251218062648-50474f4a1619 h1:uqLi4NaZ8GcjLm5jQaPyxzeVXqTGKyzUiUo8DXD/8eQ=
+k8s.io/api v0.0.0-20251218062648-50474f4a1619/go.mod h1:BF6wJ9t7NKHa7KSQlnAZ2/iI3e9YLY3YRFaMfEzOeec=
+k8s.io/apimachinery v0.0.0-20251218062153-94056eccfb12 h1:EcHv2BCdOt2p8EIoLqsEFb2lTgBE7gy07YerdzjNCGY=
+k8s.io/apimachinery v0.0.0-20251218062153-94056eccfb12/go.mod h1:jQCgFZFR1F4Ik7hvr2g84RTJSZegBc8yHgFWKn//hns=
 k8s.io/client-go v0.0.0-20251218063304-ca2dee6d058e h1:fMpw2wQZTIyxFtfPuZm78+hp0KfIDe7tXapk2RFHYUQ=
 k8s.io/client-go v0.0.0-20251218063304-ca2dee6d058e/go.mod h1:WTdvyU9tnTRKfliZ+oJ1EQtrWLR3vSHIWzXVlmvz3hw=
 k8s.io/component-base v0.0.0-20251204225730-8cb15f10375f h1:+E5vv24SeZdDzNIzmNpkWe85rE7nR3pVu+n5mrKSkW4=
