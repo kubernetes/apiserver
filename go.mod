@@ -50,8 +50,8 @@ require (
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
 	k8s.io/api v0.0.0-20251223142543-49b7fdb8413e
 	k8s.io/apimachinery v0.0.0-20251223142228-10257273d7e7
-	k8s.io/client-go v0.0.0-20251223143015-d9d16a9e173d
-	k8s.io/component-base v0.0.0-20251223144127-af45865c7961
+	k8s.io/client-go v0.0.0-20260106152908-c9ded7e60b02
+	k8s.io/component-base v0.0.0-20251226184832-b8fb4e3d1155
 	k8s.io/klog/v2 v2.130.1
 	k8s.io/kms v0.0.0-20251221024303-5998f2f5333b
 	k8s.io/kube-openapi v0.0.0-20250910181357-589584f1c912
