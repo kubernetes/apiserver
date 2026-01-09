@@ -122,3 +122,5 @@ require (
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+replace k8s.io/api => k8s.io/api v0.0.0-20260108214143-82d2200b6363
