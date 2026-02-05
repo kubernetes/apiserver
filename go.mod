@@ -13,7 +13,6 @@ require (
 	github.com/emicklei/go-restful/v3 v3.13.0
 	github.com/fsnotify/fsnotify v1.9.0
 	github.com/go-logr/logr v1.4.3
-	github.com/google/btree v1.1.3
 	github.com/google/cel-go v0.26.0
 	github.com/google/gnostic-models v0.7.0
 	github.com/google/go-cmp v0.7.0
@@ -48,14 +47,14 @@ require (
 	gopkg.in/evanphx/json-patch.v4 v4.13.0
 	gopkg.in/go-jose/go-jose.v2 v2.6.3
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
-	k8s.io/api v0.0.0-20260203182827-ab936f91c790
-	k8s.io/apimachinery v0.0.0-20260128173627-f88bdbffa260
-	k8s.io/client-go v0.0.0-20260204034225-65608ffa8ed0
-	k8s.io/component-base v0.0.0-20260204154858-724d314f2a3e
+	k8s.io/api v0.0.0-20260205113801-e9022605bb35
+	k8s.io/apimachinery v0.0.0-20260205113442-4c7488a521c8
+	k8s.io/client-go v0.0.0-20260205114233-c148db951165
+	k8s.io/component-base v0.0.0-20260205115319-11b8e8de7093
 	k8s.io/klog/v2 v2.130.1
 	k8s.io/kms v0.0.0-20260121215807-b98a3981434c
 	k8s.io/kube-openapi v0.0.0-20260127142750-a19766b6e2d4
-	k8s.io/utils v0.0.0-20251219084037-98d557b7f1e7
+	k8s.io/utils v0.0.0-20260108192941-914a6e750570
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.34.0
 	sigs.k8s.io/json v0.0.0-20250730193827-2d320260d730
 	sigs.k8s.io/randfill v1.0.0
@@ -82,6 +81,7 @@ require (
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang-jwt/jwt/v5 v5.3.0 // indirect
 	github.com/golang/protobuf v1.5.4 // indirect
+	github.com/google/btree v1.1.3 // indirect
 	github.com/grpc-ecosystem/go-grpc-middleware/v2 v2.3.3 // indirect
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.27.4 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
