@@ -48,10 +48,10 @@ require (
 	gopkg.in/evanphx/json-patch.v4 v4.13.0
 	gopkg.in/go-jose/go-jose.v2 v2.6.3
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
-	k8s.io/api v0.0.0-20260210155457-e2102f267c95
-	k8s.io/apimachinery v0.0.0-20260205233455-f12546b4989d
-	k8s.io/client-go v0.0.0-20260210000021-c6e2e47b317b
-	k8s.io/component-base v0.0.0-20260210120503-2b42aeb1067f
+	k8s.io/api v0.0.0-20260210200506-f5f249b4abf6
+	k8s.io/apimachinery v0.0.0-20260210195147-ac0aa3101e5c
+	k8s.io/client-go v0.0.0-20260210202119-8fcd3c218f43
+	k8s.io/component-base v0.0.0-20260210205601-7ce8a3ac6d79
 	k8s.io/klog/v2 v2.130.1
 	k8s.io/kms v0.0.0-20260210040831-7da2140e3dcb
 	k8s.io/kube-openapi v0.0.0-20260127142750-a19766b6e2d4
@@ -59,7 +59,7 @@ require (
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.34.0
 	sigs.k8s.io/json v0.0.0-20250730193827-2d320260d730
 	sigs.k8s.io/randfill v1.0.0
-	sigs.k8s.io/structured-merge-diff/v6 v6.3.1
+	sigs.k8s.io/structured-merge-diff/v6 v6.3.2
 	sigs.k8s.io/yaml v1.6.0
 )
 
