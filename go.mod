@@ -13,6 +13,7 @@ require (
 	github.com/emicklei/go-restful/v3 v3.13.0
 	github.com/fsnotify/fsnotify v1.9.0
 	github.com/go-logr/logr v1.4.3
+	github.com/go-openapi/jsonreference v0.20.2
 	github.com/google/cel-go v0.26.0
 	github.com/google/gnostic-models v0.7.0
 	github.com/google/go-cmp v0.7.0
@@ -47,10 +48,10 @@ require (
 	gopkg.in/evanphx/json-patch.v4 v4.13.0
 	gopkg.in/go-jose/go-jose.v2 v2.6.3
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
-	k8s.io/api v0.0.0-20260206114330-2024a969c4aa
+	k8s.io/api v0.0.0-20260210155457-e2102f267c95
 	k8s.io/apimachinery v0.0.0-20260205233455-f12546b4989d
 	k8s.io/client-go v0.0.0-20260210000021-c6e2e47b317b
-	k8s.io/component-base v0.0.0-20260210040513-1d9c480db265
+	k8s.io/component-base v0.0.0-20260210120503-2b42aeb1067f
 	k8s.io/klog/v2 v2.130.1
 	k8s.io/kms v0.0.0-20260210040831-7da2140e3dcb
 	k8s.io/kube-openapi v0.0.0-20260127142750-a19766b6e2d4
@@ -76,7 +77,6 @@ require (
 	github.com/fxamacker/cbor/v2 v2.9.0 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/go-openapi/jsonpointer v0.21.0 // indirect
-	github.com/go-openapi/jsonreference v0.20.2 // indirect
 	github.com/go-openapi/swag v0.23.0 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang-jwt/jwt/v5 v5.3.0 // indirect
