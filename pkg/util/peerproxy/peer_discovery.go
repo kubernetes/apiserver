@@ -196,7 +196,7 @@ func (h *peerProxyHandler) aggregateDiscovery(ctx context.Context, path string, 
 	req.Header.Add("Accept", discovery.AcceptV2NoPeer+","+discovery.AcceptV2+","+discovery.AcceptV1)
 
 	writer := responsewriterutil.NewInMemoryResponseWriter()
-	h.proxyRequestToDestinationAPIServer(req, writer, hostport)
+	h.proxyRequestToDestinationAPIServer(req, writer, hostport, schema.GroupVersionResource{})
 	if writer.RespCode() != http.StatusOK {
 		return nil, fmt.Errorf("discovery request failed with status: %d", writer.RespCode())
 	}

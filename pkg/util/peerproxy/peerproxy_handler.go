@@ -197,7 +197,7 @@ func (h *peerProxyHandler) WrapHandler(handler http.Handler) http.Handler {
 
 		endpointIndex := rand.Intn(len(peerEndpoints))
 		peerEndpoint := peerEndpoints[endpointIndex]
-		h.proxyRequestToDestinationAPIServer(r, w, peerEndpoint)
+		h.proxyRequestToDestinationAPIServer(r, w, peerEndpoint, gvr)
 	})
 }
 
@@ -238,7 +238,7 @@ func (h *peerProxyHandler) hostportInfo(apiserverKey string) (string, error) {
 	return hostPort, nil
 }
 
-func (h *peerProxyHandler) proxyRequestToDestinationAPIServer(req *http.Request, rw http.ResponseWriter, host string) {
+func (h *peerProxyHandler) proxyRequestToDestinationAPIServer(req *http.Request, rw http.ResponseWriter, host string, gvr schema.GroupVersionResource) {
 	// write a new location based on the existing request pointed at the target service
 	location := &url.URL{}
 	location.Scheme = "https"
@@ -261,7 +261,7 @@ func (h *peerProxyHandler) proxyRequestToDestinationAPIServer(req *http.Request,
 	handler := proxy.NewUpgradeAwareHandler(location, proxyRoundTripper, true, false, &responder{w: w, ctx: req.Context()})
 	klog.Infof("Proxying request for %s from %s to %s", req.URL.Path, req.Host, location.Host)
 	handler.ServeHTTP(w, newReq)
-	metrics.IncPeerProxiedRequest(req.Context(), strconv.Itoa(delegate.Status()))
+	metrics.IncPeerProxiedRequest(req.Context(), strconv.Itoa(delegate.Status()), gvr.Group, gvr.Version, gvr.Resource)
 }
 
 func (h *peerProxyHandler) buildProxyRoundtripper(req *http.Request) (http.RoundTripper, error) {
