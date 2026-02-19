@@ -17,7 +17,6 @@ limitations under the License.
 package handlers
 
 import (
-	"context"
 	"fmt"
 	"io"
 	"net/http"
@@ -329,6 +328,9 @@ func (s *WatchServer) HandleHTTP(w http.ResponseWriter, req *http.Request) {
 
 // HandleWS serves a series of encoded events over a websocket connection.
 func (s *WatchServer) HandleWS(ws *websocket.Conn) {
+	ctx := ws.Request().Context()
+	logger := klog.FromContext(ctx)
+
 	defer func() {
 		if s.MemoryAllocator != nil {
 			runtime.AllocatorPool.Put(s.MemoryAllocator)
@@ -342,10 +344,10 @@ func (s *WatchServer) HandleWS(ws *websocket.Conn) {
 	defer cleanup()
 
 	go func() {
-		defer utilruntime.HandleCrash()
+		defer utilruntime.HandleCrashWithContext(ctx)
 		// This blocks until the connection is closed.
 		// Client should not send anything.
-		wsstream.IgnoreReceives(ws, 0)
+		wsstream.IgnoreReceivesWithLogger(logger, ws, 0)
 		// Once the client closes, we should also close
 		close(done)
 	}()
@@ -353,7 +355,7 @@ func (s *WatchServer) HandleWS(ws *websocket.Conn) {
 	framer := newWebsocketFramer(ws, s.UseTextFraming)
 
 	gvr := s.Scope.Resource
-	watchEncoder := newWatchEncoder(context.TODO(), gvr, s.EmbeddedEncoder, s.Encoder, framer)
+	watchEncoder := newWatchEncoder(ctx, gvr, s.EmbeddedEncoder, s.Encoder, framer)
 	ch := s.Watching.ResultChan()
 
 	for {
