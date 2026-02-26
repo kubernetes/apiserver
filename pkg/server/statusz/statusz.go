@@ -172,10 +172,10 @@ func handleStatusz(componentName string, reg statuszRegistry, serializer runtime
 		var deprecated bool
 		defer func() {
 			metrics.MonitorRequest(r, "GET", group, version,
-				"",                 // resource
-				DefaultStatuszPath, // subresource
-				"",                 // scope
-				"",                 // component
+				"statusz",     // resource
+				"",            // subresource
+				"",            // scope
+				componentName, // component
 				deprecated,
 				"", // removedRelease
 				delegate.Status(), delegate.ContentLength(), time.Since(requestReceivedTimestamp))

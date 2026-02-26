@@ -148,10 +148,10 @@ func handleFlagz(componentName string, reg *registry, serializer runtime.Negotia
 		var deprecated bool
 		defer func() {
 			metrics.MonitorRequest(r, "GET", group, version,
-				"",               // resource
-				DefaultFlagzPath, // subresource
-				"",               // scope
-				"",               // component
+				"flagz",       // resource
+				"",            // subresource
+				"",            // scope
+				componentName, // component
 				deprecated,
 				"", // removedRelease
 				delegate.Status(), delegate.ContentLength(), time.Since(requestReceivedTimestamp))
