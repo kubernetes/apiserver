@@ -19,11 +19,13 @@ package etcd3
 import (
 	"context"
 	"crypto/rand"
+	"errors"
 	"fmt"
 	"io"
 	"os"
 	"reflect"
 	"strings"
+	"sync/atomic"
 	"testing"
 	"time"
 
@@ -158,6 +160,72 @@ func TestValidateDeletionWithOnlySuggestionValid(t *testing.T) {
 func TestDeleteWithConflict(t *testing.T) {
 	ctx, store, _ := testSetup(t)
 	storagetesting.RunTestDeleteWithConflict(ctx, t, store)
+}
+
+type testTransformer struct {
+	value.Transformer
+	fail atomic.Bool
+}
+
+func (tt *testTransformer) setFailing(c bool) {
+	tt.fail.Store(c)
+}
+
+func (tt *testTransformer) TransformFromStorage(ctx context.Context, data []byte, dataCtx value.Context) (out []byte, stale bool, err error) {
+	if tt.fail.Load() {
+		return nil, false, errors.New("synthetic error")
+	}
+	return tt.Transformer.TransformFromStorage(ctx, data, dataCtx)
+}
+
+type testCodec struct {
+	runtime.Codec
+	fail atomic.Bool
+}
+
+func (tc *testCodec) setFailing(c bool) {
+	tc.fail.Store(c)
+}
+
+func (tc *testCodec) Decode(data []byte, defaults *schema.GroupVersionKind, into runtime.Object) (runtime.Object, *schema.GroupVersionKind, error) {
+	if tc.fail.Load() {
+		return nil, nil, errors.New("synthetic error")
+	}
+	return tc.Codec.Decode(data, defaults, into)
+}
+
+func TestDeleteWithConflictAndMissingExpectedTransformOrDecodeError(t *testing.T) {
+	featuregatetesting.SetFeatureGateDuringTest(t, utilfeature.DefaultFeatureGate, features.AllowUnsafeMalformedObjectDeletion, true)
+
+	codec := &testCodec{Codec: apitesting.TestCodec(codecs, examplev1.SchemeGroupVersion)}
+	ctx, s, _ := testSetup(t, withCodec(codec))
+
+	storagetesting.RunTestDeleteWithConflictAndMissingExpectedTransformOrDecodeError(ctx, t, s, codec.setFailing)
+}
+
+func TestDeleteWithConflictAndExpectedTransformError(t *testing.T) {
+	featuregatetesting.SetFeatureGateDuringTest(t, utilfeature.DefaultFeatureGate, features.AllowUnsafeMalformedObjectDeletion, true)
+
+	transformer := &testTransformer{Transformer: newTestTransformer()}
+	ctx, s, _ := testSetup(t, withTransformer(transformer))
+
+	storagetesting.RunTestDeleteExpectedTransformOrDecodeError(ctx, t, s, transformer.setFailing)
+}
+
+func TestDeleteWithConflictAndExpectedDecodeError(t *testing.T) {
+	featuregatetesting.SetFeatureGateDuringTest(t, utilfeature.DefaultFeatureGate, features.AllowUnsafeMalformedObjectDeletion, true)
+
+	codec := &testCodec{Codec: apitesting.TestCodec(codecs, examplev1.SchemeGroupVersion)}
+	ctx, s, _ := testSetup(t, withCodec(codec))
+
+	storagetesting.RunTestDeleteExpectedTransformOrDecodeError(ctx, t, s, codec.setFailing)
+}
+
+func TestDeleteWithSuggestionAndMissingExpectedTransformOrDecodeFailure(t *testing.T) {
+	featuregatetesting.SetFeatureGateDuringTest(t, utilfeature.DefaultFeatureGate, features.AllowUnsafeMalformedObjectDeletion, true)
+
+	ctx, store, _ := testSetup(t)
+	storagetesting.RunTestDeleteWithSuggestionAndMissingExpectedTransformOrDecodeError(ctx, t, store)
 }
 
 func TestPreconditionalDeleteWithSuggestion(t *testing.T) {
@@ -609,6 +677,18 @@ func withResourcePrefix(prefix string) setupOption {
 func withLeaseConfig(leaseConfig LeaseManagerConfig) setupOption {
 	return func(options *setupOptions) {
 		options.leaseConfig = leaseConfig
+	}
+}
+
+func withTransformer(transformer value.Transformer) setupOption {
+	return func(options *setupOptions) {
+		options.transformer = transformer
+	}
+}
+
+func withCodec(codec runtime.Codec) setupOption {
+	return func(options *setupOptions) {
+		options.codec = codec
 	}
 }
 

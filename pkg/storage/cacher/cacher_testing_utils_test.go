@@ -41,6 +41,7 @@ import (
 	etcd3testing "k8s.io/apiserver/pkg/storage/etcd3/testing"
 	"k8s.io/apiserver/pkg/storage/etcd3/testserver"
 	storagetesting "k8s.io/apiserver/pkg/storage/testing"
+	"k8s.io/apiserver/pkg/storage/value"
 	"k8s.io/apiserver/pkg/storage/value/encrypt/identity"
 	"k8s.io/utils/clock"
 )
@@ -77,6 +78,10 @@ func newEtcdTestStorage(t testing.TB, prefix string) (*etcd3testing.EtcdTestServ
 }
 
 func newEtcdTestStorageWithCodec(t testing.TB, prefix string, codec runtime.Codec) (*etcd3testing.EtcdTestServer, storage.Interface) {
+	return newEtcdTestStorageWithOptions(t, prefix, codec, identity.NewEncryptCheckTransformer())
+}
+
+func newEtcdTestStorageWithOptions(t testing.TB, prefix string, codec runtime.Codec, transformer value.Transformer) (*etcd3testing.EtcdTestServer, storage.Interface) {
 	server, _ := etcd3testing.NewUnsecuredEtcd3TestClientServer(t)
 	versioner := storage.APIObjectVersioner{}
 	compactor := etcd3.NewCompactor(server.V3Client.Client, 0, clock.RealClock{}, nil)
@@ -90,7 +95,7 @@ func newEtcdTestStorageWithCodec(t testing.TB, prefix string, codec runtime.Code
 		prefix,
 		"/pods/",
 		schema.GroupResource{Resource: "pods"},
-		identity.NewEncryptCheckTransformer(),
+		transformer,
 		etcd3.NewDefaultLeaseManagerConfig(),
 		etcd3.NewDefaultDecoder(codec, versioner),
 		versioner)
