@@ -95,3 +95,62 @@ func TestValidateStaticManifestsDir(t *testing.T) {
 		})
 	}
 }
+
+func TestValidateManifestName(t *testing.T) {
+	tests := []struct {
+		name        string
+		objName     string
+		filePath    string
+		seenNames   map[string]string
+		wantErr     bool
+		errContains string
+	}{
+		{
+			name:      "valid name",
+			objName:   "test.static.k8s.io",
+			filePath:  "test.yaml",
+			seenNames: map[string]string{},
+		},
+		{
+			name:        "empty name",
+			objName:     "",
+			filePath:    "test.yaml",
+			seenNames:   map[string]string{},
+			wantErr:     true,
+			errContains: "must have a name",
+		},
+		{
+			name:        "missing suffix",
+			objName:     "no-suffix",
+			filePath:    "test.yaml",
+			seenNames:   map[string]string{},
+			wantErr:     true,
+			errContains: "must have a name ending with",
+		},
+		{
+			name:        "duplicate name",
+			objName:     "dup.static.k8s.io",
+			filePath:    "second.yaml",
+			seenNames:   map[string]string{"dup.static.k8s.io": "first.yaml"},
+			wantErr:     true,
+			errContains: "duplicate",
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			err := ValidateManifestName(tt.objName, tt.filePath, tt.seenNames)
+			if tt.wantErr {
+				if err == nil {
+					t.Fatal("expected error, got nil")
+				}
+				if !strings.Contains(err.Error(), tt.errContains) {
+					t.Errorf("error %q does not contain %q", err.Error(), tt.errContains)
+				}
+				return
+			}
+			if err != nil {
+				t.Fatalf("unexpected error: %v", err)
+			}
+		})
+	}
+}
