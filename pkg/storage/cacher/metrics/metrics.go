@@ -112,7 +112,7 @@ var (
 			Namespace:      namespace,
 			Subsystem:      subsystem,
 			Name:           "resource_version",
-			Help:           "Current resource version of watch cache broken by resource type.",
+			Help:           "Current resource version of watch cache broken by resource type. This is truncated to the 15 least significant digits.",
 			StabilityLevel: compbasemetrics.ALPHA,
 		},
 		[]string{"group", "resource"},
@@ -219,8 +219,10 @@ func RecordListCacheMetrics(groupResource schema.GroupResource, indexName string
 }
 
 // RecordResourceVersion sets the current resource version for a given resource type.
+// The resource version is truncated to the 15 least significant digits to prevent
+// the metric from growing indefinitely and losing precision when it exceeds 2^53-1.
 func RecordResourceVersion(groupResource schema.GroupResource, resourceVersion uint64) {
-	watchCacheResourceVersion.WithLabelValues(groupResource.Group, groupResource.Resource).Set(float64(resourceVersion))
+	watchCacheResourceVersion.WithLabelValues(groupResource.Group, groupResource.Resource).Set(float64(resourceVersion % 1000000000000000))
 }
 
 // RecordsWatchCacheCapacityChange record watchCache capacity resize(increase or decrease) operations.
