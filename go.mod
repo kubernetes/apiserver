@@ -51,7 +51,7 @@ require (
 	k8s.io/api v0.0.0-20260311003419-7e7aaba0f94c
 	k8s.io/apimachinery v0.0.0-20260310203029-151736c55e2f
 	k8s.io/client-go v0.0.0-20260311003929-97ac09639d31
-	k8s.io/component-base v0.0.0-20260311005134-50898d29d130
+	k8s.io/component-base v0.0.0-20260311132547-3d250a3e11dc
 	k8s.io/klog/v2 v2.140.0
 	k8s.io/kms v0.0.0-20260306083908-2d26e8225029
 	k8s.io/kube-openapi v0.0.0-20260304202019-5b3e3fdb0acf
