@@ -53,6 +53,8 @@ import (
 	flowcontrolrequest "k8s.io/apiserver/pkg/util/flowcontrol/request"
 	"k8s.io/client-go/tools/cache"
 
+	_ "k8s.io/apiserver/pkg/sharding" // registers CEL-based shard selector parser
+
 	"k8s.io/klog/v2"
 )
 
@@ -393,6 +395,9 @@ func (e *Store) ListPredicate(ctx context.Context, p storage.SelectionPredicate,
 	}
 	p.Limit = options.Limit
 	p.Continue = options.Continue
+	if utilfeature.DefaultFeatureGate.Enabled(features.ShardedListAndWatch) {
+		p.ShardSelector = options.ShardSelector
+	}
 	list := e.NewListFunc()
 	qualifiedResource := e.qualifiedResourceFromContext(ctx)
 	storageOpts := storage.ListOptions{
@@ -1429,13 +1434,21 @@ func (e *Store) Watch(ctx context.Context, options *metainternalversion.ListOpti
 	if options != nil {
 		resourceVersion = options.ResourceVersion
 		predicate.AllowWatchBookmarks = options.AllowWatchBookmarks
+		if utilfeature.DefaultFeatureGate.Enabled(features.ShardedListAndWatch) {
+			predicate.ShardSelector = options.ShardSelector
+		}
 	}
 	return e.WatchPredicate(ctx, predicate, resourceVersion, options.SendInitialEvents)
 }
 
 // WatchPredicate starts a watch for the items that matches.
 func (e *Store) WatchPredicate(ctx context.Context, p storage.SelectionPredicate, resourceVersion string, sendInitialEvents *bool) (watch.Interface, error) {
-	storageOpts := storage.ListOptions{ResourceVersion: resourceVersion, Predicate: p, Recursive: true, SendInitialEvents: sendInitialEvents}
+	storageOpts := storage.ListOptions{
+		ResourceVersion:   resourceVersion,
+		Predicate:         p,
+		Recursive:         true,
+		SendInitialEvents: sendInitialEvents,
+	}
 
 	// if we're not already namespace-scoped, see if the field selector narrows the scope of the watch
 	if requestNamespace, _ := genericapirequest.NamespaceFrom(ctx); len(requestNamespace) == 0 {

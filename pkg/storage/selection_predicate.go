@@ -20,9 +20,11 @@ import (
 	"context"
 
 	"k8s.io/apimachinery/pkg/api/meta"
+	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/fields"
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/apimachinery/pkg/runtime"
+	"k8s.io/apimachinery/pkg/sharding"
 	"k8s.io/apiserver/pkg/endpoints/request"
 )
 
@@ -82,12 +84,17 @@ type SelectionPredicate struct {
 	Limit               int64
 	Continue            string
 	AllowWatchBookmarks bool
+	// ShardSelector is the parsed shard selector for filtering objects by hash range.
+	ShardSelector sharding.Selector
 }
 
 // Matches returns true if the given object's labels and fields (as
 // returned by s.GetAttrs) match s.Label and s.Field. An error is
 // returned if s.GetAttrs fails.
 func (s *SelectionPredicate) Matches(obj runtime.Object) (bool, error) {
+	if matched, err := s.MatchesSharding(obj); err != nil || !matched {
+		return matched, err
+	}
 	if s.Empty() {
 		return true, nil
 	}
@@ -166,6 +173,24 @@ func (s *SelectionPredicate) MatcherIndex(ctx context.Context) []MatchValue {
 		}
 	}
 	return result
+}
+
+// MatchesSharding returns true if the given object matches the sharding configuration.
+// If ShardSelector is set and non-empty, it delegates to ShardSelector.Matches().
+func (s *SelectionPredicate) MatchesSharding(obj runtime.Object) (bool, error) {
+	if s.ShardSelector != nil && !s.ShardSelector.Empty() {
+		return s.ShardSelector.Matches(obj)
+	}
+	return true, nil
+}
+
+// SetShardInfoOnList sets shard metadata on the list response if sharding is active.
+func (s *SelectionPredicate) SetShardInfoOnList(listObj runtime.Object) {
+	if s.ShardSelector != nil && !s.ShardSelector.Empty() {
+		if setter, ok := listObj.(metav1.ShardedListInterface); ok {
+			setter.SetShardInfo(&metav1.ShardInfo{Selector: s.ShardSelector.String()})
+		}
+	}
 }
 
 func isNamespaceScopedRequest(ctx context.Context) (string, bool) {
