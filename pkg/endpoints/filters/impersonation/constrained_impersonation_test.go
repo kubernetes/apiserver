@@ -25,6 +25,7 @@ import (
 	"net/http/httptest"
 	"strconv"
 	"strings"
+	"sync"
 	"testing"
 	"time"
 
@@ -56,6 +57,9 @@ type constrainedImpersonationTest struct {
 	attemptMode          string
 	attemptDecision      string
 	authorizationMetrics map[string]int // "mode/decision" -> count
+
+	// only used for parallelHandler
+	lock sync.Mutex
 }
 
 func (c *constrainedImpersonationTest) ProcessEvents(evs ...*auditinternal.Event) bool {
@@ -66,7 +70,9 @@ func (c *constrainedImpersonationTest) ProcessEvents(evs ...*auditinternal.Event
 }
 
 func (c *constrainedImpersonationTest) Authorize(ctx context.Context, a authorizer.Attributes) (authorizer.Decision, string, error) {
+	c.lock.Lock()
 	c.checkedAttrs = append(c.checkedAttrs, a)
+	c.lock.Unlock()
 
 	u := a.GetUser()
 
@@ -113,7 +119,9 @@ func (c *constrainedImpersonationTest) Authorize(ctx context.Context, a authoriz
 
 func (c *constrainedImpersonationTest) echoUserInfoHandler() http.HandlerFunc {
 	return func(w http.ResponseWriter, req *http.Request) {
+		c.lock.Lock()
 		c.echoCalled = true
+		c.lock.Unlock()
 
 		u, ok := request.UserFrom(req.Context())
 		if !ok {
@@ -211,6 +219,20 @@ func (c *constrainedImpersonationTest) handler() http.Handler {
 	})
 	addAuditInit := filters.WithAuditInit(addReceivedTimestamp)
 	return addAuditInit
+}
+
+func (c *constrainedImpersonationTest) parallelHandler() http.Handler {
+	s := runtime.NewScheme()
+	metav1.AddToGroupVersion(s, metav1.SchemeGroupVersion)
+	addImpersonation := WithConstrainedImpersonation(c.echoUserInfoHandler(), c, serializer.NewCodecFactory(s))
+	c.constrainedImpersonationHandler = addImpersonation.(*constrainedImpersonationHandler)
+
+	c.constrainedImpersonationHandler.recordAttempt = func(ctx context.Context, mode, decision string, _ time.Duration) {}
+	c.constrainedImpersonationHandler.metricsAuthorizer.recordAuthorizationCall = func(mode, decision string, _ time.Duration) {}
+
+	addAuthentication := c.authenticationHandler(addImpersonation)
+	addRequestInfo := c.requestInfoHandler(addAuthentication)
+	return addRequestInfo
 }
 
 type testRoundTripper struct {
@@ -1295,6 +1317,289 @@ func TestConstrainedImpersonationFilter(t *testing.T) {
 				test.assertCache(r)
 				test.assertMetrics(r)
 				test.assertAuditEvents(r)
+			}
+		})
+	}
+}
+
+func TestConstrainedImpersonationParallel(t *testing.T) {
+	// This test verifies goroutine safety by sending concurrent requests.
+	// Each test case defines multiple requests that are sent in parallel,
+	// ensuring no data races or request interference occurs.
+
+	// Common request infos
+	getPods := &request.RequestInfo{IsResourceRequest: true, Verb: "get", APIVersion: "v1", Resource: "pods"}
+	listServices := &request.RequestInfo{IsResourceRequest: true, Verb: "list", APIVersion: "v1", Resource: "services"}
+	createConfigMaps := &request.RequestInfo{IsResourceRequest: true, Verb: "create", APIVersion: "v1", Resource: "configmaps"}
+	createSecrets := &request.RequestInfo{IsResourceRequest: true, Verb: "create", APIVersion: "v1", Resource: "secrets"}
+
+	type parallelRequest struct {
+		requestor                *user.DefaultInfo
+		impersonatedUser         string
+		requestInfo              *request.RequestInfo
+		expectedStatusCode       int
+		expectedImpersonatedUser *user.DefaultInfo
+	}
+
+	testCases := []struct {
+		name     string
+		requests []parallelRequest
+	}{
+		{
+			name: "different-users-same-target",
+			requests: []parallelRequest{
+				{
+					requestor:          &user.DefaultInfo{Name: "sa-impersonater"},
+					impersonatedUser:   "system:serviceaccount:default:my-sa",
+					requestInfo:        getPods,
+					expectedStatusCode: http.StatusOK,
+					expectedImpersonatedUser: &user.DefaultInfo{
+						Name:   "system:serviceaccount:default:my-sa",
+						Groups: []string{"system:serviceaccounts", "system:serviceaccounts:default", "system:authenticated"},
+					},
+				},
+				{
+					requestor:          &user.DefaultInfo{Name: "node-impersonater"},
+					impersonatedUser:   "system:serviceaccount:default:my-sa",
+					requestInfo:        getPods,
+					expectedStatusCode: http.StatusForbidden,
+				},
+				{
+					requestor:          &user.DefaultInfo{Name: "user-impersonater"},
+					impersonatedUser:   "system:serviceaccount:default:my-sa",
+					requestInfo:        getPods,
+					expectedStatusCode: http.StatusForbidden,
+				},
+			},
+		},
+		{
+			name: "same-user-same-targets",
+			requests: []parallelRequest{
+				{
+					requestor:          &user.DefaultInfo{Name: "sa-impersonater"},
+					impersonatedUser:   "system:serviceaccount:default:my-sa",
+					requestInfo:        getPods,
+					expectedStatusCode: http.StatusOK,
+					expectedImpersonatedUser: &user.DefaultInfo{
+						Name:   "system:serviceaccount:default:my-sa",
+						Groups: []string{"system:serviceaccounts", "system:serviceaccounts:default", "system:authenticated"},
+					},
+				},
+				{
+					requestor:          &user.DefaultInfo{Name: "sa-impersonater"},
+					impersonatedUser:   "system:serviceaccount:default:my-sa",
+					requestInfo:        getPods,
+					expectedStatusCode: http.StatusOK,
+					expectedImpersonatedUser: &user.DefaultInfo{
+						Name:   "system:serviceaccount:default:my-sa",
+						Groups: []string{"system:serviceaccounts", "system:serviceaccounts:default", "system:authenticated"},
+					},
+				},
+			},
+		},
+		{
+			name: "same-user-different-targets",
+			requests: []parallelRequest{
+				{
+					requestor:          &user.DefaultInfo{Name: "sa-impersonater"},
+					impersonatedUser:   "system:serviceaccount:default:sa1",
+					requestInfo:        getPods,
+					expectedStatusCode: http.StatusOK,
+					expectedImpersonatedUser: &user.DefaultInfo{
+						Name:   "system:serviceaccount:default:sa1",
+						Groups: []string{"system:serviceaccounts", "system:serviceaccounts:default", "system:authenticated"},
+					},
+				},
+				{
+					requestor:          &user.DefaultInfo{Name: "sa-impersonater"},
+					impersonatedUser:   "system:serviceaccount:kube-system:sa2",
+					requestInfo:        getPods,
+					expectedStatusCode: http.StatusOK,
+					expectedImpersonatedUser: &user.DefaultInfo{
+						Name:   "system:serviceaccount:kube-system:sa2",
+						Groups: []string{"system:serviceaccounts", "system:serviceaccounts:kube-system", "system:authenticated"},
+						Extra:  map[string][]string{},
+					},
+				},
+				{
+					requestor:          &user.DefaultInfo{Name: "sa-impersonater"},
+					impersonatedUser:   "system:node:node-1",
+					requestInfo:        getPods,
+					expectedStatusCode: http.StatusForbidden,
+				},
+			},
+		},
+		{
+			name: "same-user-same-target-different-operations",
+			requests: []parallelRequest{
+				{
+					requestor:          &user.DefaultInfo{Name: "sa-impersonater"},
+					impersonatedUser:   "system:serviceaccount:default:my-sa",
+					requestInfo:        getPods,
+					expectedStatusCode: http.StatusOK,
+					expectedImpersonatedUser: &user.DefaultInfo{
+						Name:   "system:serviceaccount:default:my-sa",
+						Groups: []string{"system:serviceaccounts", "system:serviceaccounts:default", "system:authenticated"},
+					},
+				},
+				{
+					requestor:          &user.DefaultInfo{Name: "sa-impersonater"},
+					impersonatedUser:   "system:serviceaccount:default:my-sa",
+					requestInfo:        listServices,
+					expectedStatusCode: http.StatusOK,
+					expectedImpersonatedUser: &user.DefaultInfo{
+						Name:   "system:serviceaccount:default:my-sa",
+						Groups: []string{"system:serviceaccounts", "system:serviceaccounts:default", "system:authenticated"},
+					},
+				},
+				{
+					requestor:          &user.DefaultInfo{Name: "sa-impersonater"},
+					impersonatedUser:   "system:serviceaccount:default:my-sa",
+					requestInfo:        createConfigMaps,
+					expectedStatusCode: http.StatusForbidden,
+				},
+				{
+					requestor:          &user.DefaultInfo{Name: "sa-impersonater"},
+					impersonatedUser:   "system:serviceaccount:default:my-sa",
+					requestInfo:        createSecrets,
+					expectedStatusCode: http.StatusForbidden,
+				},
+			},
+		},
+		{
+			name: "mixed-scenarios",
+			requests: []parallelRequest{
+				{
+					requestor:          &user.DefaultInfo{Name: "sa-impersonater"},
+					impersonatedUser:   "system:serviceaccount:default:sa1",
+					requestInfo:        getPods,
+					expectedStatusCode: http.StatusOK,
+					expectedImpersonatedUser: &user.DefaultInfo{
+						Name:   "system:serviceaccount:default:sa1",
+						Groups: []string{"system:serviceaccounts", "system:serviceaccounts:default", "system:authenticated"},
+					},
+				},
+				{
+					requestor:          &user.DefaultInfo{Name: "node-impersonater"},
+					impersonatedUser:   "system:node:node-1",
+					requestInfo:        listServices,
+					expectedStatusCode: http.StatusOK,
+					expectedImpersonatedUser: &user.DefaultInfo{
+						Name:   "system:node:node-1",
+						Groups: []string{"system:nodes", "system:authenticated"},
+						Extra:  map[string][]string{},
+					},
+				},
+				{
+					requestor:          &user.DefaultInfo{Name: "user-impersonater"},
+					impersonatedUser:   "alice",
+					requestInfo:        createConfigMaps,
+					expectedStatusCode: http.StatusForbidden,
+				},
+				{
+					requestor:          &user.DefaultInfo{Name: "unauthorized-user"},
+					impersonatedUser:   "bob",
+					requestInfo:        getPods,
+					expectedStatusCode: http.StatusForbidden,
+				},
+			},
+		},
+	}
+
+	type resultType struct {
+		requestIdx int
+		statusCode int
+		body       []byte
+		err        error
+	}
+
+	for _, tc := range testCases {
+		t.Run(tc.name, func(t *testing.T) {
+			test := &constrainedImpersonationTest{t: t}
+			server := httptest.NewServer(test.parallelHandler())
+			defer server.Close()
+
+			var wg sync.WaitGroup
+			results := make(chan resultType, len(tc.requests))
+
+			// Send all requests concurrently
+			for idx, req := range tc.requests {
+				wg.Go(func() {
+					rt := &testRoundTripper{
+						user:        req.requestor,
+						requestInfo: req.requestInfo,
+						delegate:    http.DefaultTransport,
+					}
+					client := &http.Client{Transport: rt}
+
+					httpReq, err := http.NewRequest(http.MethodGet, server.URL, nil)
+					if err != nil {
+						results <- resultType{requestIdx: idx, err: err}
+						return
+					}
+
+					if len(req.impersonatedUser) > 0 {
+						httpReq.Header.Add(authenticationv1.ImpersonateUserHeader, req.impersonatedUser)
+					}
+
+					resp, err := client.Do(httpReq)
+					if err != nil {
+						results <- resultType{requestIdx: idx, err: err}
+						return
+					}
+					defer func() {
+						err := resp.Body.Close()
+						if err != nil {
+							results <- resultType{requestIdx: idx, err: err}
+						}
+					}()
+
+					body, err := io.ReadAll(resp.Body)
+					if err != nil {
+						results <- resultType{requestIdx: idx, err: err}
+						return
+					}
+
+					results <- resultType{
+						requestIdx: idx,
+						statusCode: resp.StatusCode,
+						body:       body,
+					}
+				})
+			}
+
+			// Wait for all requests to complete
+			wg.Wait()
+			close(results)
+
+			// Collect results
+			resultMap := make(map[int]resultType)
+			for res := range results {
+				require.NoError(t, res.err, "request %d: unexpected error", res.requestIdx)
+				_, ok := resultMap[res.requestIdx]
+				require.False(t, ok, "request %d: should not duplicate in the result", res.requestIdx)
+				resultMap[res.requestIdx] = res
+			}
+
+			// Verify each request's result
+			for idx, req := range tc.requests {
+				res, ok := resultMap[idx]
+				require.True(t, ok, "request %d: missing result", idx)
+
+				require.Equal(t, req.expectedStatusCode, res.statusCode,
+					"request %d: status code mismatch (requestor: %s, target: %s, verb: %s, resource: %s)",
+					idx, req.requestor.Name, req.impersonatedUser, req.requestInfo.Verb, req.requestInfo.Resource)
+
+				if req.expectedImpersonatedUser != nil {
+					// Success case - verify impersonated user
+					var actualUser user.DefaultInfo
+					err := json.Unmarshal(res.body, &actualUser)
+					require.NoError(t, err, "request %d: failed to unmarshal user", idx)
+					require.Equal(t, req.expectedImpersonatedUser.Name, actualUser.Name,
+						"request %d: user name mismatch", idx)
+					require.ElementsMatch(t, req.expectedImpersonatedUser.Groups, actualUser.Groups,
+						"request %d: groups mismatch", idx)
+				}
 			}
 		})
 	}
