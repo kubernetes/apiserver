@@ -21,6 +21,7 @@ import (
 	"crypto/sha256"
 	"encoding/json"
 	"fmt"
+	"hash/fnv"
 	"io"
 	"net/http"
 	"net/http/httptest"
@@ -468,6 +469,13 @@ func (c *constrainedImpersonationTest) assertCache(r testRequest) {
 func usernameHash(username string) string {
 	hash := fnvSum128a([]byte(username))
 	return fmt.Sprintf("%x", hash)
+}
+
+func fnvSum128a(data []byte) []byte {
+	h := fnv.New128a()
+	h.Write(data)
+	var sum [16]byte
+	return h.Sum(sum[:0])
 }
 
 func (c *constrainedImpersonationTest) checkCacheEntry(cache *impersonationCache, wantedUser *user.DefaultInfo, attributes authorizer.Attributes, rawKey string, expectedUser *user.DefaultInfo, expectedVerb string) {
