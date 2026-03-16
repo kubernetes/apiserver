@@ -677,8 +677,7 @@ func (c *Cacher) Watch(ctx context.Context, key string, opts storage.ListOptions
 		return newImmediateCloseWatcher(), nil
 	}
 
-	isSharded := pred.ShardSelector != nil && !pred.ShardSelector.Empty()
-	if isSharded {
+	if utilfeature.DefaultFeatureGate.Enabled(features.ShardedListAndWatch) && pred.ShardSelector != nil && !pred.ShardSelector.Empty() {
 		metrics.RecordShardedWatchStarted(c.groupResource)
 		originalForget := watcher.forget
 		watcher.forget = func(drainWatcher bool) {
@@ -805,9 +804,13 @@ func (c *Cacher) GetList(ctx context.Context, key string, opts storage.ListOptio
 		if !ok {
 			return fmt.Errorf("non *store.Element returned from storage: %v", obj)
 		}
-		shardMatch, err := opts.Predicate.MatchesSharding(elem.Object)
-		if err != nil {
-			return fmt.Errorf("shard matching failed: %w", err)
+		shardMatch := true
+		if utilfeature.DefaultFeatureGate.Enabled(features.ShardedListAndWatch) {
+			var err error
+			shardMatch, err = opts.Predicate.MatchesSharding(elem.Object)
+			if err != nil {
+				return fmt.Errorf("shard matching failed: %w", err)
+			}
 		}
 		if shardMatch && opts.Predicate.MatchesObjectAttributes(elem.Labels, elem.Fields) {
 			selectedObjects = append(selectedObjects, elem.Object)
@@ -840,7 +843,9 @@ func (c *Cacher) GetList(ctx context.Context, key string, opts storage.ListOptio
 			return err
 		}
 	}
-	opts.Predicate.SetShardInfoOnList(listObj)
+	if utilfeature.DefaultFeatureGate.Enabled(features.ShardedListAndWatch) {
+		opts.Predicate.SetShardInfoOnList(listObj)
+	}
 	metrics.RecordListCacheMetrics(c.groupResource, indexUsed, len(resp.Items), listVal.Len())
 	return nil
 }
@@ -1220,21 +1225,21 @@ func forgetWatcher(c *Cacher, w *cacheWatcher, index int, scope namespacedName, 
 }
 
 func filterWithAttrsAndPrefixFunction(key string, p storage.SelectionPredicate, groupResource schema.GroupResource) filterWithAttrsFunc {
-	isSharded := p.ShardSelector != nil && !p.ShardSelector.Empty()
+	isSharded := utilfeature.DefaultFeatureGate.Enabled(features.ShardedListAndWatch) && p.ShardSelector != nil && !p.ShardSelector.Empty()
 	filterFunc := func(objKey string, label labels.Set, field fields.Set, obj runtime.Object) bool {
 		if !hasPathPrefix(objKey, key) {
 			return false
 		}
-		matches, err := p.MatchesSharding(obj)
-		if err != nil {
-			utilruntime.HandleError(fmt.Errorf("shard matching failed for %v: %w", groupResource, err))
-			return false
-		}
-		if !matches {
-			if isSharded {
-				metrics.RecordWatchFilteredEvent(groupResource)
+		if isSharded {
+			matches, err := p.MatchesSharding(obj)
+			if err != nil {
+				utilruntime.HandleError(fmt.Errorf("shard matching failed for %v: %w", groupResource, err))
+				return false
 			}
-			return false
+			if !matches {
+				metrics.RecordWatchFilteredEvent(groupResource)
+				return false
+			}
 		}
 		return p.MatchesObjectAttributes(label, field)
 	}

@@ -142,10 +142,8 @@ func parseShardRangeCall(call ast.CallExpr) (apisharding.ShardRangeRequirement, 
 		return apisharding.ShardRangeRequirement{}, err
 	}
 
-	// Validate start < end. Hex values are canonical (16 or 17 digits).
-	// A 17-digit value (only 0x10000000000000000) is always greater than a 16-digit value,
-	// so compare lengths first, then lexicographically within the same length.
-	if len(hexStart) > len(hexEnd) || (len(hexStart) == len(hexEnd) && hexStart >= hexEnd) {
+	// Validate start < end using the canonical hex comparison.
+	if !apisharding.HexLess(hexStart, hexEnd) {
 		return apisharding.ShardRangeRequirement{}, fmt.Errorf("shard range start %s must be less than end %s", hexStart, hexEnd)
 	}
 

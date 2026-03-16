@@ -3411,6 +3411,7 @@ func makeExamplePod(name, namespace, uid string, podLabels map[string]string) *e
 }
 
 func TestFilterWithAttrsAndPrefixFunction_ShardMatchAndLabels(t *testing.T) {
+	featuregatetesting.SetFeatureGateDuringTest(t, utilfeature.DefaultFeatureGate, features.ShardedListAndWatch, true)
 	uid := "test-uid-1"
 	pod := makeExamplePod("pod1", "default", uid, map[string]string{"app": "web"})
 	gr := schema.GroupResource{Resource: "pods"}
@@ -3429,6 +3430,7 @@ func TestFilterWithAttrsAndPrefixFunction_ShardMatchAndLabels(t *testing.T) {
 }
 
 func TestFilterWithAttrsAndPrefixFunction_ShardMatchButLabelMismatch(t *testing.T) {
+	featuregatetesting.SetFeatureGateDuringTest(t, utilfeature.DefaultFeatureGate, features.ShardedListAndWatch, true)
 	uid := "test-uid-2"
 	pod := makeExamplePod("pod2", "default", uid, map[string]string{"app": "api"})
 	gr := schema.GroupResource{Resource: "pods"}
@@ -3447,6 +3449,7 @@ func TestFilterWithAttrsAndPrefixFunction_ShardMatchButLabelMismatch(t *testing.
 }
 
 func TestFilterWithAttrsAndPrefixFunction_ShardMismatch(t *testing.T) {
+	featuregatetesting.SetFeatureGateDuringTest(t, utilfeature.DefaultFeatureGate, features.ShardedListAndWatch, true)
 	uid := "test-uid-3"
 	pod := makeExamplePod("pod3", "default", uid, map[string]string{"app": "web"})
 	gr := schema.GroupResource{Resource: "pods"}
@@ -3465,6 +3468,7 @@ func TestFilterWithAttrsAndPrefixFunction_ShardMismatch(t *testing.T) {
 }
 
 func TestFilterWithAttrsAndPrefixFunction_NilShardSelector(t *testing.T) {
+	featuregatetesting.SetFeatureGateDuringTest(t, utilfeature.DefaultFeatureGate, features.ShardedListAndWatch, true)
 	pod := makeExamplePod("pod4", "default", "uid-4", map[string]string{"app": "web"})
 	gr := schema.GroupResource{Resource: "pods"}
 
@@ -3516,6 +3520,7 @@ func TestFilterWithAttrsAndPrefixFunction_WrongPrefix(t *testing.T) {
 }
 
 func TestFilterWithAttrsAndPrefixFunction_ShardErrorDropsEvent(t *testing.T) {
+	featuregatetesting.SetFeatureGateDuringTest(t, utilfeature.DefaultFeatureGate, features.ShardedListAndWatch, true)
 	obj := &runtime.Unknown{}
 	gr := schema.GroupResource{Resource: "pods"}
 
@@ -3537,6 +3542,7 @@ func TestFilterWithAttrsAndPrefixFunction_ShardErrorDropsEvent(t *testing.T) {
 }
 
 func TestFilterWithAttrsAndPrefixFunction_NamespaceSharding(t *testing.T) {
+	featuregatetesting.SetFeatureGateDuringTest(t, utilfeature.DefaultFeatureGate, features.ShardedListAndWatch, true)
 	ns := "my-namespace"
 	pod := makeExamplePod("pod-ns", ns, "some-uid", nil)
 
@@ -3562,6 +3568,7 @@ func TestFilterWithAttrsAndPrefixFunction_NamespaceSharding(t *testing.T) {
 }
 
 func TestFilterWithAttrsAndPrefixFunction_NamespaceShardingMismatch(t *testing.T) {
+	featuregatetesting.SetFeatureGateDuringTest(t, utilfeature.DefaultFeatureGate, features.ShardedListAndWatch, true)
 	ns := "other-namespace"
 	pod := makeExamplePod("pod-ns2", ns, "some-uid-2", nil)
 

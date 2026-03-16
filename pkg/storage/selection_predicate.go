@@ -26,6 +26,8 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/sharding"
 	"k8s.io/apiserver/pkg/endpoints/request"
+	"k8s.io/apiserver/pkg/features"
+	utilfeature "k8s.io/apiserver/pkg/util/feature"
 )
 
 // AttrFunc returns label and field sets and the uninitialized flag for List or Watch to match.
@@ -178,6 +180,9 @@ func (s *SelectionPredicate) MatcherIndex(ctx context.Context) []MatchValue {
 // MatchesSharding returns true if the given object matches the sharding configuration.
 // If ShardSelector is set and non-empty, it delegates to ShardSelector.Matches().
 func (s *SelectionPredicate) MatchesSharding(obj runtime.Object) (bool, error) {
+	if !utilfeature.DefaultFeatureGate.Enabled(features.ShardedListAndWatch) {
+		return true, nil
+	}
 	if s.ShardSelector != nil && !s.ShardSelector.Empty() {
 		return s.ShardSelector.Matches(obj)
 	}
@@ -186,6 +191,9 @@ func (s *SelectionPredicate) MatchesSharding(obj runtime.Object) (bool, error) {
 
 // SetShardInfoOnList sets shard metadata on the list response if sharding is active.
 func (s *SelectionPredicate) SetShardInfoOnList(listObj runtime.Object) {
+	if !utilfeature.DefaultFeatureGate.Enabled(features.ShardedListAndWatch) {
+		return
+	}
 	if s.ShardSelector != nil && !s.ShardSelector.Empty() {
 		if setter, ok := listObj.(metav1.ShardedListInterface); ok {
 			setter.SetShardInfo(&metav1.ShardInfo{Selector: s.ShardSelector.String()})

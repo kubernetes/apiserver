@@ -898,7 +898,9 @@ func (s *store) GetList(ctx context.Context, key string, opts storage.ListOption
 	if err := s.versioner.UpdateList(listObj, uint64(withRev), continueValue, remainingItemCount); err != nil {
 		return err
 	}
-	opts.Predicate.SetShardInfoOnList(listObj)
+	if utilfeature.DefaultFeatureGate.Enabled(features.ShardedListAndWatch) {
+		opts.Predicate.SetShardInfoOnList(listObj)
+	}
 	return nil
 }
 

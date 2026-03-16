@@ -45,6 +45,7 @@ import (
 	"k8s.io/apiserver/pkg/features"
 	"k8s.io/apiserver/pkg/registry/generic"
 	"k8s.io/apiserver/pkg/registry/rest"
+	"k8s.io/apiserver/pkg/sharding"
 	"k8s.io/apiserver/pkg/storage"
 	storeerr "k8s.io/apiserver/pkg/storage/errors"
 	"k8s.io/apiserver/pkg/storage/etcd3/metrics"
@@ -52,8 +53,6 @@ import (
 	utilfeature "k8s.io/apiserver/pkg/util/feature"
 	flowcontrolrequest "k8s.io/apiserver/pkg/util/flowcontrol/request"
 	"k8s.io/client-go/tools/cache"
-
-	_ "k8s.io/apiserver/pkg/sharding" // registers CEL-based shard selector parser
 
 	"k8s.io/klog/v2"
 )
@@ -395,8 +394,12 @@ func (e *Store) ListPredicate(ctx context.Context, p storage.SelectionPredicate,
 	}
 	p.Limit = options.Limit
 	p.Continue = options.Continue
-	if utilfeature.DefaultFeatureGate.Enabled(features.ShardedListAndWatch) {
-		p.ShardSelector = options.ShardSelector
+	if utilfeature.DefaultFeatureGate.Enabled(features.ShardedListAndWatch) && options.ShardSelector != "" {
+		sel, err := sharding.Parse(options.ShardSelector)
+		if err != nil {
+			return nil, fmt.Errorf("invalid shard selector: %w", err)
+		}
+		p.ShardSelector = sel
 	}
 	list := e.NewListFunc()
 	qualifiedResource := e.qualifiedResourceFromContext(ctx)
@@ -1434,8 +1437,12 @@ func (e *Store) Watch(ctx context.Context, options *metainternalversion.ListOpti
 	if options != nil {
 		resourceVersion = options.ResourceVersion
 		predicate.AllowWatchBookmarks = options.AllowWatchBookmarks
-		if utilfeature.DefaultFeatureGate.Enabled(features.ShardedListAndWatch) {
-			predicate.ShardSelector = options.ShardSelector
+		if utilfeature.DefaultFeatureGate.Enabled(features.ShardedListAndWatch) && options.ShardSelector != "" {
+			sel, err := sharding.Parse(options.ShardSelector)
+			if err != nil {
+				return nil, fmt.Errorf("invalid shard selector: %w", err)
+			}
+			predicate.ShardSelector = sel
 		}
 	}
 	return e.WatchPredicate(ctx, predicate, resourceVersion, options.SendInitialEvents)
