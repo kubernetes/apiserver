@@ -48,7 +48,7 @@ import (
 )
 
 type constrainedImpersonationTest struct {
-	t *testing.T
+	t testing.TB
 
 	constrainedImpersonationHandler *constrainedImpersonationHandler
 	authzChecks                     []authzCheck
@@ -755,7 +755,12 @@ func associatedNodeTestCase() []testRequest {
 	}
 }
 
-func TestConstrainedImpersonationFilter(t *testing.T) {
+type impersonationTestCase struct {
+	name     string
+	requests []testRequest
+}
+
+func constrainedImpersonationTestCases() []impersonationTestCase {
 	getPodRequest := &request.RequestInfo{
 		IsResourceRequest: true,
 		Verb:              "get",
@@ -809,10 +814,7 @@ func TestConstrainedImpersonationFilter(t *testing.T) {
 	saImpersonator := &user.DefaultInfo{Name: "sa-impersonater"}
 	nodeImpersonator := &user.DefaultInfo{Name: "node-impersonater"}
 
-	testCases := []struct {
-		name     string
-		requests []testRequest
-	}{
+	testCases := []impersonationTestCase{
 		{
 			name: "impersonating-error",
 			requests: []testRequest{
@@ -1893,7 +1895,69 @@ func TestConstrainedImpersonationFilter(t *testing.T) {
 				},
 			},
 		},
+		{
+			name: "legacy-fallback",
+			requests: []testRequest{
+				{
+					request:          getPodRequest,
+					requestor:        &user.DefaultInfo{Name: "legacy-impersonater"},
+					impersonatedUser: anyone,
+					expectedImpersonatedUser: &user.DefaultInfo{
+						Name:   "anyone",
+						Groups: []string{"system:authenticated"},
+					},
+					expectedAuthzChecks: []authzCheck{
+						expectAllow(withImpersonateOnAttributes(getPodRequest, "user-info")),
+						expectDeny(withConstrainedImpersonationAttributes(authorizer.AttributesRecord{Resource: "users", Name: "anyone"}, "user-info")),
+						expectAllow(withLegacyImpersonateAttributes(authorizer.AttributesRecord{Resource: "users", Name: "anyone"})),
+					},
+					expectedCache: &expectedCache{
+						modeIdx: map[string]string{
+							"legacy-impersonater": "impersonate",
+						},
+						modes: nil, // legacy impersonation does not cache
+					},
+					expectedCode:            http.StatusOK,
+					expectedAttemptMode:     "legacy",
+					expectedAttemptDecision: "allowed",
+					expectedAuthorizationMetrics: map[string]int{
+						"user-info/allowed": 1, // impersonate-on:user-info:get
+						"user-info/denied":  1, // impersonate:user-info users
+						"legacy/allowed":    1, // impersonate users
+					},
+				},
+				{
+					request:          getDeploymentRequest,
+					requestor:        &user.DefaultInfo{Name: "legacy-impersonater"},
+					impersonatedUser: anyone,
+					expectedImpersonatedUser: &user.DefaultInfo{
+						Name:   "anyone",
+						Groups: []string{"system:authenticated"},
+					},
+					expectedAuthzChecks: []authzCheck{
+						expectAllow(withLegacyImpersonateAttributes(authorizer.AttributesRecord{Resource: "users", Name: "anyone"})),
+					},
+					expectedCache: &expectedCache{
+						modeIdx: map[string]string{
+							"legacy-impersonater": "impersonate",
+						},
+						modes: nil, // legacy impersonation does not cache
+					},
+					expectedCode:            http.StatusOK,
+					expectedAttemptMode:     "legacy",
+					expectedAttemptDecision: "allowed",
+					expectedAuthorizationMetrics: map[string]int{
+						"legacy/allowed": 1, // impersonate users (mode index cache hit skips constrained checks)
+					},
+				},
+			},
+		},
 	}
+	return testCases
+}
+
+func TestConstrainedImpersonationFilter(t *testing.T) {
+	testCases := constrainedImpersonationTestCases()
 
 	var mux http.ServeMux
 	tests := make([]*constrainedImpersonationTest, len(testCases))
@@ -1916,28 +1980,7 @@ func TestConstrainedImpersonationFilter(t *testing.T) {
 			handlers[i] = test.handler()
 
 			for _, r := range tc.requests {
-				client := &http.Client{
-					Transport: &testRoundTripper{
-						user:        r.requestor,
-						requestInfo: r.request,
-						delegate: transport.NewImpersonatingRoundTripper(
-							transport.ImpersonationConfig{
-								UserName: r.impersonatedUser.Name,
-								UID:      r.impersonatedUser.UID,
-								Groups:   r.impersonatedUser.Groups,
-								Extra:    r.impersonatedUser.Extra,
-							},
-							http.DefaultTransport,
-						),
-					},
-				}
-
-				req, err := http.NewRequestWithContext(t.Context(), http.MethodGet, server.URL+"/"+strconv.Itoa(i), nil)
-				require.NoError(t, err)
-
-				resp, err := client.Do(req)
-				require.NoError(t, err)
-				require.Equal(t, r.expectedCode, resp.StatusCode)
+				resp := doImpersonationRequest(t, http.DefaultTransport, server.URL+"/"+strconv.Itoa(i), r, r.expectedCode)
 
 				body, err := io.ReadAll(resp.Body)
 				require.NoError(t, err)
@@ -2254,4 +2297,102 @@ func TestConstrainedImpersonationParallel(t *testing.T) {
 			}
 		})
 	}
+}
+
+func (c *constrainedImpersonationTest) benchmarkHandler(withImpersonation func(http.Handler, authorizer.Authorizer, runtime.NegotiatedSerializer) http.Handler) http.Handler {
+	s := runtime.NewScheme()
+	metav1.AddToGroupVersion(s, metav1.SchemeGroupVersion)
+	addImpersonation := withImpersonation(http.HandlerFunc(func(w http.ResponseWriter, req *http.Request) {}), c, serializer.NewCodecFactory(s))
+	h := addImpersonation.(*constrainedImpersonationHandler)
+	h.recordAttempt = func(ctx context.Context, mode, decision string, _ time.Duration) {}
+	h.metricsAuthorizer.recordAuthorizationCall = func(mode, decision string, _ time.Duration) {}
+	addAuthentication := c.authenticationHandler(addImpersonation)
+	addRequestInfo := c.requestInfoHandler(addAuthentication)
+	return addRequestInfo
+}
+
+func BenchmarkImpersonation(b *testing.B) {
+	testCases := constrainedImpersonationTestCases()
+
+	type impersonationHandler struct {
+		name     string
+		fn       func(http.Handler, authorizer.Authorizer, runtime.NegotiatedSerializer) http.Handler
+		isLegacy bool
+	}
+
+	impersonators := []impersonationHandler{
+		{
+			name: "constrained",
+			fn:   WithConstrainedImpersonation,
+		},
+		{
+			name:     "legacy",
+			fn:       WithImpersonation,
+			isLegacy: true,
+		},
+	}
+
+	for _, imp := range impersonators {
+		b.Run(imp.name, func(b *testing.B) {
+			for _, tc := range testCases {
+				b.Run(tc.name, func(b *testing.B) {
+					test := &constrainedImpersonationTest{t: b}
+					handler := test.benchmarkHandler(imp.fn)
+
+					server := httptest.NewServer(handler)
+					defer server.Close()
+
+					baseTransport := &http.Transport{
+						DisableKeepAlives: true,
+					}
+
+					b.ResetTimer()
+					for b.Loop() {
+						for _, r := range tc.requests {
+							resp := doImpersonationRequest(b, baseTransport, server.URL, r, benchmarkExpectedCode(r, imp.isLegacy))
+							_ = resp.Body.Close()
+						}
+					}
+					b.StopTimer()
+				})
+			}
+		})
+	}
+}
+
+func benchmarkExpectedCode(r testRequest, isLegacy bool) int {
+	if isLegacy && r.expectedCode == http.StatusOK && r.requestor.Name != "legacy-impersonater" {
+		// legacy WithImpersonation denies any requestor that only has constrained impersonation verbs
+		return http.StatusForbidden
+	}
+	return r.expectedCode
+}
+
+func doImpersonationRequest(tb testing.TB, baseTransport http.RoundTripper, url string, r testRequest, expectedCode int) *http.Response {
+	tb.Helper()
+
+	client := &http.Client{
+		Transport: &testRoundTripper{
+			user:        r.requestor,
+			requestInfo: r.request,
+			delegate: transport.NewImpersonatingRoundTripper(
+				transport.ImpersonationConfig{
+					UserName: r.impersonatedUser.Name,
+					UID:      r.impersonatedUser.UID,
+					Groups:   r.impersonatedUser.Groups,
+					Extra:    r.impersonatedUser.Extra,
+				},
+				baseTransport,
+			),
+		},
+	}
+
+	req, err := http.NewRequest(http.MethodGet, url, nil)
+	require.NoError(tb, err)
+
+	resp, err := client.Do(req)
+	require.NoError(tb, err)
+	require.Equal(tb, expectedCode, resp.StatusCode)
+
+	return resp
 }
