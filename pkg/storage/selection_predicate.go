@@ -94,8 +94,10 @@ type SelectionPredicate struct {
 // returned by s.GetAttrs) match s.Label and s.Field. An error is
 // returned if s.GetAttrs fails.
 func (s *SelectionPredicate) Matches(obj runtime.Object) (bool, error) {
-	if matched, err := s.MatchesSharding(obj); err != nil || !matched {
-		return matched, err
+	if utilfeature.DefaultFeatureGate.Enabled(features.ShardedListAndWatch) {
+		if matched, err := s.MatchesSharding(obj); err != nil || !matched {
+			return matched, err
+		}
 	}
 	if s.Empty() {
 		return true, nil
