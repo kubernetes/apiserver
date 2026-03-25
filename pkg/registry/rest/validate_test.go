@@ -243,6 +243,7 @@ func TestGatherDeclarativeValidationMismatches(t *testing.T) {
 		expectMismatches        bool
 		expectDetailsContaining []string
 		normalizedRules         []field.NormalizationRule
+		shortCircuitMismatch    bool
 	}{
 		{
 			name:              "No errors - no mismatch",
@@ -345,11 +346,32 @@ func TestGatherDeclarativeValidationMismatches(t *testing.T) {
 			declarativeErrors: field.ErrorList{},
 			expectMismatches:  false,
 		},
+		{
+			name: "Short-circuit match: DV parent covers HV parent and child",
+			imperativeErrors: field.ErrorList{
+				field.Invalid(pathStandard, "val", "immutable").MarkCoveredByDeclarative().WithOrigin("immutable"),
+				field.Required(pathStandard.Child("kind"), "val").MarkCoveredByDeclarative().WithOrigin("min"),
+			},
+			declarativeErrors: field.ErrorList{
+				func() *field.Error {
+					e := field.Invalid(pathStandard, "val", "immutable").WithOrigin("immutable")
+					e.ShortCircuit = true
+					return e
+				}(),
+			},
+			expectMismatches:     false,
+			shortCircuitMismatch: true,
+		},
 	}
 
 	for _, tc := range testCases {
 		t.Run(tc.name, func(t *testing.T) {
-			details := gatherDeclarativeValidationMismatches(tc.imperativeErrors, tc.declarativeErrors, tc.enforced, tc.normalizedRules)
+			details := gatherDeclarativeValidationMismatches(tc.imperativeErrors, tc.declarativeErrors, tc.enforced, ValidationConfigOption{
+				DeclarativeValidationConfig: DeclarativeValidationConfig{
+					NormalizationRules:   tc.normalizedRules,
+					ShortCircuitMismatch: tc.shortCircuitMismatch,
+				},
+			})
 			// Check if mismatches were found if expected
 			if tc.expectMismatches && len(details) == 0 {
 				t.Errorf("Expected mismatches but got none")
@@ -416,7 +438,7 @@ func TestCompareDeclarativeErrorsAndEmitMismatches(t *testing.T) {
 			defer klog.LogToStderr(true)
 			ctx := context.Background()
 
-			compareDeclarativeErrorsAndEmitMismatches(ctx, tc.imperativeErrs, tc.declarativeErrs, tc.enforced, "test_validationIdentifier", nil)
+			compareDeclarativeErrorsAndEmitMismatches(ctx, tc.imperativeErrs, tc.declarativeErrs, "test_validationIdentifier", tc.enforced, ValidationConfigOption{})
 
 			klog.Flush()
 			logOutput := buf.String()

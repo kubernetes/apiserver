@@ -97,6 +97,10 @@ type DeclarativeValidationConfig struct {
 	// SubresourceGVKMapper maps a subresource request to the GVK of the
 	// subresource type for polymorphic subresources like /scale.
 	SubresourceGVKMapper GroupVersionKindProvider
+
+	// ShortCircuitMismatch allows a short-circuit declarative validation error for a field
+	// to match with any handwritten validation error on its subfields.
+	ShortCircuitMismatch bool
 }
 
 type allDeclarativeEnforcedKeyType struct{}
@@ -190,9 +194,9 @@ func parseSubresourcePath(subresourcePath string) ([]string, error) {
 
 // compareDeclarativeErrorsAndEmitMismatches checks for mismatches between imperative and declarative validation
 // and logs + emits metrics when inconsistencies are found
-func compareDeclarativeErrorsAndEmitMismatches(ctx context.Context, imperativeErrs, declarativeErrs field.ErrorList, enforced bool, validationIdentifier string, normalizationRules []field.NormalizationRule) {
+func compareDeclarativeErrorsAndEmitMismatches(ctx context.Context, imperativeErrs, declarativeErrs field.ErrorList, validationIdentifier string, enforced bool, opts ValidationConfigOption) {
 	logger := klog.FromContext(ctx)
-	mismatchDetails := gatherDeclarativeValidationMismatches(imperativeErrs, declarativeErrs, enforced, normalizationRules)
+	mismatchDetails := gatherDeclarativeValidationMismatches(imperativeErrs, declarativeErrs, enforced, opts)
 	for _, detail := range mismatchDetails {
 		// Log information about the mismatch using contextual logger
 		logger.Error(nil, detail)
@@ -204,7 +208,7 @@ func compareDeclarativeErrorsAndEmitMismatches(ctx context.Context, imperativeEr
 
 // gatherDeclarativeValidationMismatches compares imperative and declarative validation errors
 // and returns detailed information about any mismatches found. Errors are compared via type, field, and origin
-func gatherDeclarativeValidationMismatches(imperativeErrs, declarativeErrs field.ErrorList, enforced bool, normalizationRules []field.NormalizationRule) []string {
+func gatherDeclarativeValidationMismatches(imperativeErrs, declarativeErrs field.ErrorList, enforced bool, opts ValidationConfigOption) []string {
 	var mismatchDetails []string
 	// short circuit here to minimize allocs for usual case of 0 validation errors
 	if len(imperativeErrs) == 0 && len(declarativeErrs) == 0 {
@@ -221,7 +225,8 @@ func gatherDeclarativeValidationMismatches(imperativeErrs, declarativeErrs field
 		defaultRecommendation = disableBetaMsg
 	}
 
-	fuzzyMatcher := field.ErrorMatcher{}.ByType().ByOrigin().RequireOriginWhenInvalid().ByFieldNormalized(normalizationRules)
+	fuzzyMatcher := field.ErrorMatcher{}.ByType().ByOrigin().RequireOriginWhenInvalid().ByFieldNormalized(opts.NormalizationRules)
+	fuzzyMatcherWithShortCircuit := fuzzyMatcher.MatchAncestorShortCircuit()
 
 	// Dedupe imperative errors using the fuzzy matcher (type, field, and origin) as they are
 	// not intended and come from (buggy) duplicate validation calls.
@@ -242,16 +247,13 @@ func gatherDeclarativeValidationMismatches(imperativeErrs, declarativeErrs field
 	}
 	imperativeErrs = dedupedImperativeErrs
 
-	// Create a copy of declarative errors to track remaining ones
-	remaining := make(field.ErrorList, len(declarativeErrs))
-	copy(remaining, declarativeErrs)
+	matchedDeclarative := make([]bool, len(declarativeErrs))
 
 	// Match each "covered" imperative error to declarative errors.
 	// We use a fuzzy matching approach to find corresponding declarative errors
 	// for each imperative error marked as CoveredByDeclarative.
-	// As matches are found, they're removed from the 'remaining' list.
-	// They are removed from `remaining` with a "1:many" mapping: for a given
-	// imperative error we mark as matched all matching declarative errors
+	// They are matched with a "many:many" mapping: an imperative error can match multiple
+	// declarative errors, and a declarative error can match multiple imperative errors.
 	// This allows us to:
 	// 1. Detect imperative errors that should have matching declarative errors but don't
 	// 2. Identify extra declarative errors with no imperative counterpart
@@ -261,14 +263,21 @@ func gatherDeclarativeValidationMismatches(imperativeErrs, declarativeErrs field
 			continue
 		}
 
-		tmp := make(field.ErrorList, 0, len(remaining))
 		matchCount := 0
 
-		for _, dErr := range remaining {
+		for dIdx, dErr := range declarativeErrs {
 			if fuzzyMatcher.Matches(iErr, dErr) {
 				matchCount++
-			} else {
-				tmp = append(tmp, dErr)
+				matchedDeclarative[dIdx] = true
+			}
+		}
+		// see if the error matches with a short circuited DV error.
+		if opts.ShortCircuitMismatch && matchCount == 0 {
+			for _, dErr := range declarativeErrs {
+				if fuzzyMatcherWithShortCircuit.Matches(iErr, dErr) {
+					matchCount++
+					break
+				}
 			}
 		}
 
@@ -278,7 +287,6 @@ func gatherDeclarativeValidationMismatches(imperativeErrs, declarativeErrs field
 			if iErr.IsAlpha() {
 				rec = authoritativeMsg
 			}
-
 			mismatchDetails = append(mismatchDetails,
 				fmt.Sprintf(
 					"Unexpected difference between hand written validation and declarative validation error results, unmatched error(s) found %s. "+
@@ -288,12 +296,13 @@ func gatherDeclarativeValidationMismatches(imperativeErrs, declarativeErrs field
 				),
 			)
 		}
-
-		remaining = tmp
 	}
 
 	// Any remaining unmatched declarative errors are considered "extra"
-	for _, dErr := range remaining {
+	for dIdx, dErr := range declarativeErrs {
+		if matchedDeclarative[dIdx] {
+			continue
+		}
 		rec := defaultRecommendation
 		// If the declarative error is Alpha, it is never enforced (shadowed), so HV is authoritative.
 		if dErr.IsAlpha() {
@@ -440,7 +449,7 @@ func ValidateDeclarativelyWithMigrationChecks(ctx context.Context, scheme *runti
 		}
 
 		// We pass betaEnabled (and enforcement) as the takeover flag to avoid changing logic elsewhere for now.
-		compareDeclarativeErrorsAndEmitMismatches(ctx, errs, mismatchCandidateErrs, cfg.DeclarativeEnforcement && betaEnabled, validationIdentifier, cfg.NormalizationRules)
+		compareDeclarativeErrorsAndEmitMismatches(ctx, errs, mismatchCandidateErrs, validationIdentifier, cfg.DeclarativeEnforcement && betaEnabled, *cfg)
 	}
 
 	if !cfg.DeclarativeEnforcement && !allDeclarativeEnforced {
