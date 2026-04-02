@@ -23,7 +23,6 @@ import (
 	"fmt"
 	"path"
 	"reflect"
-	"strconv"
 	"strings"
 	"sync"
 	"time"
@@ -38,8 +37,6 @@ import (
 	"k8s.io/apimachinery/pkg/api/meta"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/conversion"
-	"k8s.io/apimachinery/pkg/fields"
-	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/watch"
@@ -702,34 +699,22 @@ func (s *store) ReadinessCheck() error {
 }
 
 func (s *store) GetCurrentResourceVersion(ctx context.Context) (uint64, error) {
-	emptyList := s.newListFunc()
-	pred := storage.SelectionPredicate{
-		Label: labels.Everything(),
-		Field: fields.Everything(),
-		Limit: 1, // just in case we actually hit something
-	}
-
-	err := s.GetList(ctx, s.resourcePrefix, storage.ListOptions{Predicate: pred}, emptyList)
-	if err != nil {
-		return 0, err
-	}
-	emptyListAccessor, err := meta.ListAccessor(emptyList)
-	if err != nil {
-		return 0, err
-	}
-	if emptyListAccessor == nil {
-		return 0, fmt.Errorf("unable to extract a list accessor from %T", emptyList)
-	}
-
-	currentResourceVersion, err := strconv.Atoi(emptyListAccessor.GetResourceVersion())
+	preparedKey, err := s.prepareKey(s.resourcePrefix, false)
 	if err != nil {
 		return 0, err
 	}
 
-	if currentResourceVersion == 0 {
+	startTime := time.Now()
+	getResp, err := s.client.Kubernetes.Get(ctx, preparedKey, kubernetes.GetOptions{})
+	metrics.RecordEtcdRequest("get", s.groupResource, err, startTime)
+	if err != nil {
+		return 0, err
+	}
+
+	if getResp.Revision == 0 {
 		return 0, fmt.Errorf("the current resource version must be greater than 0")
 	}
-	return uint64(currentResourceVersion), nil
+	return uint64(getResp.Revision), nil
 }
 
 // GetList implements storage.Interface.
@@ -772,10 +757,12 @@ func (s *store) GetList(ctx context.Context, key string, opts storage.ListOption
 	var numFetched int
 	var numEvald int
 	// Because these metrics are for understanding the costs of handling LIST requests,
-	// get them recorded even in error cases.
+	// get them recorded even in error cases, but only for recursive list operations.
 	defer func() {
-		numReturn := v.Len()
-		metrics.RecordStorageListMetrics(s.groupResource, numFetched, numEvald, numReturn)
+		if opts.Recursive {
+			numReturn := v.Len()
+			metrics.RecordStorageListMetrics(s.groupResource, numFetched, numEvald, numReturn)
+		}
 	}()
 
 	aggregator := s.listErrAggrFactory()
