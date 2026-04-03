@@ -706,7 +706,7 @@ func (s *store) GetCurrentResourceVersion(ctx context.Context) (uint64, error) {
 
 	startTime := time.Now()
 	getResp, err := s.client.Kubernetes.Get(ctx, preparedKey, kubernetes.GetOptions{})
-	metrics.RecordEtcdRequest("get", s.groupResource, err, startTime)
+	metrics.RecordEtcdRequest("getCurrentResourceVersion", s.groupResource, err, startTime)
 	if err != nil {
 		return 0, err
 	}
@@ -757,12 +757,10 @@ func (s *store) GetList(ctx context.Context, key string, opts storage.ListOption
 	var numFetched int
 	var numEvald int
 	// Because these metrics are for understanding the costs of handling LIST requests,
-	// get them recorded even in error cases, but only for recursive list operations.
+	// get them recorded even in error cases.
 	defer func() {
-		if opts.Recursive {
-			numReturn := v.Len()
-			metrics.RecordStorageListMetrics(s.groupResource, numFetched, numEvald, numReturn)
-		}
+		numReturn := v.Len()
+		metrics.RecordStorageListMetrics(s.groupResource, numFetched, numEvald, numReturn)
 	}()
 
 	aggregator := s.listErrAggrFactory()
