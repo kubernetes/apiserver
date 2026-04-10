@@ -62,6 +62,9 @@ type DeclarativeValidation struct {
 }
 
 func (d DeclarativeValidation) ValidateDeclaratively(ctx context.Context, obj, oldObj runtime.Object, validationErrs field.ErrorList, opType operation.Type, config DeclarativeValidationConfig) field.ErrorList {
+	if d.Scheme == nil {
+		return validationErrs
+	}
 	return ValidateDeclarativelyWithMigrationChecks(ctx, d.Scheme, obj, oldObj, validationErrs, opType, config)
 }
 
