@@ -22,6 +22,7 @@ import (
 
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/api/meta"
+	"k8s.io/apimachinery/pkg/api/operation"
 	genericvalidation "k8s.io/apimachinery/pkg/api/validation"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
@@ -151,6 +152,9 @@ func BeforeUpdate(strategy RESTUpdateStrategy, ctx context.Context, obj, old run
 	}
 
 	errs = append(errs, strategy.ValidateUpdate(ctx, obj, old)...)
+	if dv, ok := strategy.(DeclarativeValidationStrategy); ok {
+		errs = dv.ValidateDeclaratively(ctx, obj, old, errs, operation.Update, declarativeValidationUpdateOptions(ctx, strategy, obj, old))
+	}
 	if len(errs) > 0 {
 		RecordDuplicateValidationErrors(ctx, kind.GroupKind(), errs)
 		return errors.NewInvalid(kind.GroupKind(), objectMeta.GetName(), errs)
@@ -163,6 +167,14 @@ func BeforeUpdate(strategy RESTUpdateStrategy, ctx context.Context, obj, old run
 	strategy.Canonicalize(obj)
 
 	return nil
+}
+
+func declarativeValidationUpdateOptions(ctx context.Context, strategy RESTUpdateStrategy, obj, old runtime.Object) DeclarativeValidationConfig {
+	var config DeclarativeValidationConfig
+	if vc, ok := strategy.(DeclarativeValidationConfigurer); ok {
+		config = vc.DeclarativeValidationConfig(ctx, obj, old)
+	}
+	return config
 }
 
 // TransformFunc is a function to transform and return newObj
