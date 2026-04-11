@@ -285,8 +285,8 @@ gopkg.in/natefinch/lumberjack.v2 v2.2.1/go.mod h1:YD8tP3GAjkrDg1eZH7EGmyESg/lsYs
 gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c/go.mod h1:K4uyk7z7BCEPqu6E+C64Yfv1cQ7kz7rIZviUmN+EgEM=
 gopkg.in/yaml.v3 v3.0.1 h1:fxVm/GzAzEWqLHuvctI91KS9hhNmmWOoWu0XTYJS7CA=
 gopkg.in/yaml.v3 v3.0.1/go.mod h1:K4uyk7z7BCEPqu6E+C64Yfv1cQ7kz7rIZviUmN+EgEM=
-k8s.io/api v0.0.0-20260324094416-91061ea648b7 h1:CjC1wUoRaO79Ijr2EdUYsr9xfnTYiDwiLrIe6Zn33bw=
-k8s.io/api v0.0.0-20260324094416-91061ea648b7/go.mod h1:fj3AOwVJRH4zYT3LWoIZ4uKCWetMAIfelAD1pZFtdcw=
+k8s.io/api v0.0.0-20260409183452-aef6eb692229 h1:0nbifCLVSb/pqcAUXVLIrMzElocz9nR8AxriKOd7SPI=
+k8s.io/api v0.0.0-20260409183452-aef6eb692229/go.mod h1:UdI4mYcnkmA7bonjPXumLWjw9tiCG9p4J8vvzaNg3qI=
 k8s.io/apimachinery v0.0.0-20260409182412-79b363268543 h1:RvCzEK6Vy4ybi5sk1g8VUueHKL+L1tetaEkCgHJSHSM=
 k8s.io/apimachinery v0.0.0-20260409182412-79b363268543/go.mod h1:ScprwqlqUC4Ay7RkjkcWeQDj18u0xGIgqwGtnD8ZjPo=
 k8s.io/client-go v0.0.0-20260409185007-7e44ffcaa961 h1:XLYoaHMEC9gtgo9VYu+X6zqlgpYIyfF/u8ZNzClM2mY=
