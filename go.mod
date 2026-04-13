@@ -30,11 +30,11 @@ require (
 	go.etcd.io/etcd/server/v3 v3.6.8
 	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.65.0
 	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.65.0
-	go.opentelemetry.io/otel v1.40.0
+	go.opentelemetry.io/otel v1.41.0
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc v1.40.0
-	go.opentelemetry.io/otel/metric v1.40.0
+	go.opentelemetry.io/otel/metric v1.41.0
 	go.opentelemetry.io/otel/sdk v1.40.0
-	go.opentelemetry.io/otel/trace v1.40.0
+	go.opentelemetry.io/otel/trace v1.41.0
 	go.uber.org/zap v1.27.1
 	golang.org/x/crypto v0.47.0
 	golang.org/x/net v0.49.0
@@ -51,9 +51,9 @@ require (
 	k8s.io/api v0.0.0-20260414141716-ddad8a9beb39
 	k8s.io/apimachinery v0.0.0-20260414135623-72791e98891a
 	k8s.io/client-go v0.0.0-20260414143851-3c8a6967ba6d
-	k8s.io/component-base v0.0.0-20260414155922-078ba39ba6db
+	k8s.io/component-base v0.0.0-20260414155923-12f6271c1572
 	k8s.io/klog/v2 v2.140.0
-	k8s.io/kms v0.0.0-20260319225323-e2a2ea96558a
+	k8s.io/kms v0.0.0-20260414162220-e9f5d74f1e24
 	k8s.io/kube-openapi v0.0.0-20260317180543-43fb72c5454a
 	k8s.io/streaming v0.0.0-20260414135238-73dee8925737
 	k8s.io/utils v0.0.0-20260210185600-b8788abfbbc2
