@@ -48,10 +48,10 @@ require (
 	gopkg.in/evanphx/json-patch.v4 v4.12.0
 	gopkg.in/go-jose/go-jose.v2 v2.6.3
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
-	k8s.io/api v0.0.0-20260414142438-f7287d9bb272
-	k8s.io/apimachinery v0.0.0-20260414140421-e44e4509559d
-	k8s.io/client-go v0.0.0-20260414150837-e7de3f265b9e
-	k8s.io/component-base v0.0.0-20260414160357-b3aee3c5a7ed
+	k8s.io/api v0.0.0-20260414142439-ad42a1f6281f
+	k8s.io/apimachinery v0.0.0-20260414140422-454f531d3fb5
+	k8s.io/client-go v0.0.0-20260414150839-e4156f317ef4
+	k8s.io/component-base v0.0.0-20260414160359-90136e701ab9
 	k8s.io/klog/v2 v2.130.1
 	k8s.io/kms v0.0.0-20260414162502-2f89df57a5ea
 	k8s.io/kube-openapi v0.0.0-20250710124328-f3f2b991d03b
@@ -90,7 +90,7 @@ require (
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/kylelemons/godebug v1.1.0 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
-	github.com/moby/spdystream v0.5.0 // indirect
+	github.com/moby/spdystream v0.5.1 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.3-0.20250322232337-35a7c28c31ee // indirect
 	github.com/pkg/errors v0.9.1 // indirect
