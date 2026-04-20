@@ -129,7 +129,7 @@ func BeforeCreate(strategy RESTCreateStrategy, ctx context.Context, obj runtime.
 
 	errs := strategy.Validate(ctx, obj)
 	if dv, ok := strategy.(DeclarativeValidationStrategy); ok {
-		errs = dv.ValidateDeclaratively(ctx, obj, nil, errs, operation.Create, declarativeValidationOptions(ctx, strategy, obj))
+		errs = dv.ValidateDeclaratively(ctx, obj, nil, errs, operation.Create, dv.DeclarativeValidationConfig(ctx, obj, nil))
 	}
 	if len(errs) > 0 {
 		return errors.NewInvalid(kind.GroupKind(), objectMeta.GetName(), errs)
@@ -149,14 +149,6 @@ func BeforeCreate(strategy RESTCreateStrategy, ctx context.Context, obj runtime.
 	strategy.Canonicalize(obj)
 
 	return nil
-}
-
-func declarativeValidationOptions(ctx context.Context, strategy RESTCreateStrategy, obj runtime.Object) DeclarativeValidationConfig {
-	var config DeclarativeValidationConfig
-	if vc, ok := strategy.(DeclarativeValidationConfigurer); ok {
-		config = vc.DeclarativeValidationConfig(ctx, obj, nil)
-	}
-	return config
 }
 
 // CheckGeneratedNameError checks whether an error that occurred creating a resource is due

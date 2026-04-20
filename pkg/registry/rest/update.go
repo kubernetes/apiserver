@@ -153,7 +153,7 @@ func BeforeUpdate(strategy RESTUpdateStrategy, ctx context.Context, obj, old run
 
 	errs = append(errs, strategy.ValidateUpdate(ctx, obj, old)...)
 	if dv, ok := strategy.(DeclarativeValidationStrategy); ok {
-		errs = dv.ValidateDeclaratively(ctx, obj, old, errs, operation.Update, declarativeValidationUpdateOptions(ctx, strategy, obj, old))
+		errs = dv.ValidateDeclaratively(ctx, obj, old, errs, operation.Update, dv.DeclarativeValidationConfig(ctx, obj, old))
 	}
 	if len(errs) > 0 {
 		RecordDuplicateValidationErrors(ctx, kind.GroupKind(), errs)
@@ -167,14 +167,6 @@ func BeforeUpdate(strategy RESTUpdateStrategy, ctx context.Context, obj, old run
 	strategy.Canonicalize(obj)
 
 	return nil
-}
-
-func declarativeValidationUpdateOptions(ctx context.Context, strategy RESTUpdateStrategy, obj, old runtime.Object) DeclarativeValidationConfig {
-	var config DeclarativeValidationConfig
-	if vc, ok := strategy.(DeclarativeValidationConfigurer); ok {
-		config = vc.DeclarativeValidationConfig(ctx, obj, old)
-	}
-	return config
 }
 
 // TransformFunc is a function to transform and return newObj

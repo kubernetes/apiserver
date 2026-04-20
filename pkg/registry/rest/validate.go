@@ -43,6 +43,9 @@ type DeclarativeValidationStrategy interface {
 	// validationErrs returned from the strategy's Validate / ValidateUpdate functions (which implement hand-written validation)
 	// and performs migration checks.
 	ValidateDeclaratively(ctx context.Context, obj, oldObj runtime.Object, validationErrs field.ErrorList, opType operation.Type, config DeclarativeValidationConfig) field.ErrorList
+
+	// DeclarativeValidationConfig configures declarative validation for a single request.
+	DeclarativeValidationConfig(ctx context.Context, obj, oldObj runtime.Object) DeclarativeValidationConfig
 }
 
 // DeclarativeValidation is an implementation of DeclarativeValidationStrategy that
@@ -69,10 +72,9 @@ func (d DeclarativeValidation) ValidateDeclaratively(ctx context.Context, obj, o
 	return ValidateDeclarativelyWithMigrationChecks(ctx, d.Scheme, obj, oldObj, validationErrs, opType, config)
 }
 
-// DeclarativeValidationConfigurer defines how a strategy may opt-in to configuration of declarative validation.
-type DeclarativeValidationConfigurer interface {
-	// DeclarativeValidationConfig configures declarative validation for a single request.
-	DeclarativeValidationConfig(ctx context.Context, obj, oldObj runtime.Object) DeclarativeValidationConfig
+func (d DeclarativeValidation) DeclarativeValidationConfig(ctx context.Context, obj, oldObj runtime.Object) DeclarativeValidationConfig {
+	// The zero value of DeclarativeValidationConfig is the default.
+	return DeclarativeValidationConfig{}
 }
 
 // DeclarativeValidationConfig holds configuration for declarative validation.
@@ -335,7 +337,6 @@ func createDeclarativeValidationPanicHandler(ctx context.Context, errs *field.Er
 // panicSafeValidateFunc wraps an validation function with panic recovery logic.
 // The returned function will execute the wrapped function and handle any panics by
 // incrementing the panic metric, and logging an error message
-// if shouldFail=false, and adding a validation error if shouldFail=true.
 func panicSafeValidateFunc(
 	validateFunc func(ctx context.Context, scheme *runtime.Scheme, obj, oldObj runtime.Object, o *ValidationConfigOption) field.ErrorList,
 ) func(ctx context.Context, scheme *runtime.Scheme, obj, oldObj runtime.Object, o *ValidationConfigOption) field.ErrorList {

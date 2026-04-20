@@ -175,7 +175,6 @@ func TestValidateDeclaratively(t *testing.T) {
 			} else {
 				cfg.OpType = operation.Update
 			}
-			// takeover is not used here, passing false for shouldFail
 			results := panicSafeValidateFunc(validateDeclaratively)(ctx, scheme, tc.object, tc.oldObject, cfg)
 			matcher := field.ErrorMatcher{}.ByType().ByField().ByOrigin()
 			matcher.Test(t, tc.expected, results)
@@ -502,7 +501,6 @@ func TestWithRecover(t *testing.T) {
 			klog.LogToStderr(false)
 			defer klog.LogToStderr(true)
 
-			// Pass the enforcement flag to panicSafeValidateFunc
 			wrapped := panicSafeValidateFunc(tc.validateFn)
 			gotErrs := wrapped(ctx, scheme, obj, nil, &ValidationConfigOption{ValidationIdentifier: "test_validationIdentifier", OpType: operation.Create, DeclarativeValidationConfig: DeclarativeValidationConfig{Options: options, DeclarativeEnforcement: tc.enforcementEnabled}})
 
