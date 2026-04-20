@@ -176,7 +176,7 @@ func TestValidateDeclaratively(t *testing.T) {
 				cfg.OpType = operation.Update
 			}
 			// takeover is not used here, passing false for shouldFail
-			results := panicSafeValidateFunc(validateDeclaratively, false, cfg.ValidationIdentifier)(ctx, scheme, tc.object, tc.oldObject, cfg)
+			results := panicSafeValidateFunc(validateDeclaratively)(ctx, scheme, tc.object, tc.oldObject, cfg)
 			matcher := field.ErrorMatcher{}.ByType().ByField().ByOrigin()
 			matcher.Test(t, tc.expected, results)
 		})
@@ -503,8 +503,8 @@ func TestWithRecover(t *testing.T) {
 			defer klog.LogToStderr(true)
 
 			// Pass the enforcement flag to panicSafeValidateFunc
-			wrapped := panicSafeValidateFunc(tc.validateFn, tc.enforcementEnabled, "test_validationIdentifier")
-			gotErrs := wrapped(ctx, scheme, obj, nil, &ValidationConfigOption{OpType: operation.Create, DeclarativeValidationConfig: DeclarativeValidationConfig{Options: options}})
+			wrapped := panicSafeValidateFunc(tc.validateFn)
+			gotErrs := wrapped(ctx, scheme, obj, nil, &ValidationConfigOption{ValidationIdentifier: "test_validationIdentifier", OpType: operation.Create, DeclarativeValidationConfig: DeclarativeValidationConfig{Options: options, DeclarativeEnforcement: tc.enforcementEnabled}})
 
 			klog.Flush()
 			logOutput := buf.String()
@@ -597,8 +597,8 @@ func TestWithRecoverUpdate(t *testing.T) {
 			defer klog.LogToStderr(true)
 
 			// Pass the enforcement flag to panicSafeValidateUpdateFunc
-			wrapped := panicSafeValidateFunc(tc.validateFn, tc.enforcementEnabled, "test_validationIdentifier")
-			gotErrs := wrapped(ctx, scheme, obj, oldObj, &ValidationConfigOption{OpType: operation.Update, DeclarativeValidationConfig: DeclarativeValidationConfig{Options: options}})
+			wrapped := panicSafeValidateFunc(tc.validateFn)
+			gotErrs := wrapped(ctx, scheme, obj, oldObj, &ValidationConfigOption{ValidationIdentifier: "test_validationIdentifier", OpType: operation.Update, DeclarativeValidationConfig: DeclarativeValidationConfig{Options: options, DeclarativeEnforcement: tc.enforcementEnabled}})
 
 			klog.Flush()
 			logOutput := buf.String()

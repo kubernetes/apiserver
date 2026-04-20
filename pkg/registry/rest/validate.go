@@ -63,6 +63,7 @@ type DeclarativeValidation struct {
 
 func (d DeclarativeValidation) ValidateDeclaratively(ctx context.Context, obj, oldObj runtime.Object, validationErrs field.ErrorList, opType operation.Type, config DeclarativeValidationConfig) field.ErrorList {
 	if d.Scheme == nil {
+		validationErrs = append(validationErrs, field.InternalError(nil, fmt.Errorf("cannot validate declaratively without a scheme")))
 		return validationErrs
 	}
 	return ValidateDeclarativelyWithMigrationChecks(ctx, d.Scheme, obj, oldObj, validationErrs, opType, config)
@@ -337,11 +338,9 @@ func createDeclarativeValidationPanicHandler(ctx context.Context, errs *field.Er
 // if shouldFail=false, and adding a validation error if shouldFail=true.
 func panicSafeValidateFunc(
 	validateFunc func(ctx context.Context, scheme *runtime.Scheme, obj, oldObj runtime.Object, o *ValidationConfigOption) field.ErrorList,
-	shouldFail bool, validationIdentifier string,
 ) func(ctx context.Context, scheme *runtime.Scheme, obj, oldObj runtime.Object, o *ValidationConfigOption) field.ErrorList {
 	return func(ctx context.Context, scheme *runtime.Scheme, obj, oldObj runtime.Object, o *ValidationConfigOption) (errs field.ErrorList) {
-		defer createDeclarativeValidationPanicHandler(ctx, &errs, shouldFail, validationIdentifier)()
-
+		defer createDeclarativeValidationPanicHandler(ctx, &errs, o.DeclarativeEnforcement, o.ValidationIdentifier)()
 		return validateFunc(ctx, scheme, obj, oldObj, o)
 	}
 }
@@ -422,7 +421,7 @@ func ValidateDeclarativelyWithMigrationChecks(ctx context.Context, scheme *runti
 
 	// Call the panic-safe wrapper with the real validation function.
 	// We should fail if validation is enforced.
-	declarativeErrs := panicSafeValidateFunc(validateDeclaratively, cfg.DeclarativeEnforcement, cfg.ValidationIdentifier)(ctx, scheme, obj, oldObj, cfg)
+	declarativeErrs := panicSafeValidateFunc(validateDeclaratively)(ctx, scheme, obj, oldObj, cfg)
 
 	if declarativeValidationEnabled {
 		// Log mismatches.
