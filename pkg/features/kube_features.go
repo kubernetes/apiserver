@@ -262,12 +262,6 @@ const (
 	// owner: @aramase, @enj, @nabokihms
 	// kep: https://kep.k8s.io/3331
 	//
-	// Enables Structured Authentication Configuration
-	StructuredAuthenticationConfiguration featuregate.Feature = "StructuredAuthenticationConfiguration"
-
-	// owner: @aramase, @enj, @nabokihms
-	// kep: https://kep.k8s.io/3331
-	//
 	// Enables Egress Selector in Structured Authentication Configuration
 	StructuredAuthenticationConfigurationEgressSelector featuregate.Feature = "StructuredAuthenticationConfigurationEgressSelector"
 
@@ -498,12 +492,6 @@ var defaultVersionedKubernetesFeatureGates = map[featuregate.Feature]featuregate
 	StreamingCollectionEncodingToProtobuf: {
 		{Version: version.MustParse("1.33"), Default: true, PreRelease: featuregate.Beta},
 		{Version: version.MustParse("1.34"), Default: true, PreRelease: featuregate.GA, LockToDefault: true},
-	},
-
-	StructuredAuthenticationConfiguration: {
-		{Version: version.MustParse("1.29"), Default: false, PreRelease: featuregate.Alpha},
-		{Version: version.MustParse("1.30"), Default: true, PreRelease: featuregate.Beta},
-		{Version: version.MustParse("1.34"), Default: true, PreRelease: featuregate.GA, LockToDefault: true}, // GA and LockToDefault in 1.34, remove in 1.37
 	},
 
 	StructuredAuthenticationConfigurationEgressSelector: {
