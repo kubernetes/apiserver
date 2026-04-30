@@ -373,11 +373,13 @@ func TestConsistentReadFallback(t *testing.T) {
 	tcs := []struct {
 		name                   string
 		consistentReadsEnabled bool
+		skipStorageFallback    bool
 		watchCacheRV           string
 		storageRV              string
 		fallbackError          bool
 
 		expectError             bool
+		expectTooManyRequests   bool
 		expectRV                string
 		expectBlock             bool
 		expectRequestsToStorage int
@@ -426,6 +428,22 @@ apiserver_watch_cache_consistent_read_total{fallback="true", group="", resource=
 `,
 		},
 		{
+			name:                    "Skip Storage Fallback",
+			consistentReadsEnabled:  true,
+			skipStorageFallback:     true,
+			watchCacheRV:            "2",
+			storageRV:               "42",
+			expectError:             true,
+			expectTooManyRequests:   true,
+			expectBlock:             true,
+			expectRequestsToStorage: 1,
+			expectMetric: `
+# HELP apiserver_watch_cache_consistent_read_total [ALPHA] Counter for consistent reads from cache.
+# TYPE apiserver_watch_cache_consistent_read_total counter
+apiserver_watch_cache_consistent_read_total{fallback="skipped", group="", resource="pods", success="false"} 1
+`,
+		},
+		{
 			name:                    "Disabled",
 			watchCacheRV:            "2",
 			storageRV:               "42",
@@ -441,6 +459,9 @@ apiserver_watch_cache_consistent_read_total{fallback="true", group="", resource=
 			} else {
 				featuregatetesting.SetFeatureGateEmulationVersionDuringTest(t, utilfeature.DefaultFeatureGate, version.MustParse("1.33"))
 				featuregatetesting.SetFeatureGateDuringTest(t, utilfeature.DefaultFeatureGate, features.ConsistentListFromCache, false)
+			}
+			if tc.skipStorageFallback {
+				featuregatetesting.SetFeatureGateDuringTest(t, utilfeature.DefaultFeatureGate, features.ConsistentListFromCacheSkipTimeoutFallback, true)
 			}
 
 			registry := k8smetrics.NewKubeRegistry()
@@ -517,6 +538,9 @@ apiserver_watch_cache_consistent_read_total{fallback="true", group="", resource=
 			duration := cacher.clock.Since(start)
 			if (err != nil) != tc.expectError {
 				t.Fatalf("Unexpected error err: %v", err)
+			}
+			if tc.expectTooManyRequests && !apierrors.IsTooManyRequests(err) {
+				t.Fatalf("Unexpected error, got: %v, want TooManyRequests", err)
 			}
 			if result.ResourceVersion != tc.expectRV {
 				t.Fatalf("Unexpected List response RV, got: %q, want: %q", result.ResourceVersion, tc.expectRV)

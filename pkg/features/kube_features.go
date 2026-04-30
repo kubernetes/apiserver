@@ -105,10 +105,10 @@ const (
 
 	// owner: @yedou37
 	//
-	// Skip falling back to storage when a consistent LIST from cache cannot be served,
+	// Skip the timeout fallback to storage when a consistent LIST from cache cannot be served,
 	// and return a retryable response instead.
 	// See https://github.com/kubernetes/kubernetes/issues/138494.
-	ConsistentListFromCacheSkipStorageFallback featuregate.Feature = "ConsistentListFromCacheSkipStorageFallback"
+	ConsistentListFromCacheSkipTimeoutFallback featuregate.Feature = "ConsistentListFromCacheSkipTimeoutFallback"
 
 	// owner: @enj @qiujian16
 	// kep: https://kep.k8s.io/5284
@@ -386,7 +386,7 @@ var defaultVersionedKubernetesFeatureGates = map[featuregate.Feature]featuregate
 		{Version: version.MustParse("1.34"), Default: true, PreRelease: featuregate.GA, LockToDefault: true},
 	},
 
-	ConsistentListFromCacheSkipStorageFallback: {
+	ConsistentListFromCacheSkipTimeoutFallback: {
 		{Version: version.MustParse("1.37"), Default: false, PreRelease: featuregate.Alpha},
 	},
 
