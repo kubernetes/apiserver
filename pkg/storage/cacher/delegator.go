@@ -217,10 +217,17 @@ func (c *CacheDelegator) GetList(ctx context.Context, key string, opts storage.L
 		}
 		if result.ConsistentRead {
 			// IsTooLargeResourceVersion occurs when the requested RV is higher than cache's current RV
-			// and cache hasn't caught up within the timeout period. Fall back to etcd.
+			// and cache hasn't caught up within the timeout period. By default we fall back
+			// to etcd, but the ConsistentListFromCacheSkipStorageFallback feature gate turns
+			// this path into a retryable 429 to avoid amplifying storage load in degraded
+			// scenarios. See https://github.com/kubernetes/kubernetes/issues/138494.
 			if storage.IsTooLargeResourceVersion(err) {
-				fallback = "true"
-				err = c.storage.GetList(ctx, key, opts, listObj)
+				if utilfeature.DefaultFeatureGate.Enabled(features.ConsistentListFromCacheSkipStorageFallback) {
+					err = errors.NewTooManyRequests(err.Error(), resourceVersionTooHighRetrySeconds)
+				} else {
+					fallback = "true"
+					err = c.storage.GetList(ctx, key, opts, listObj)
+				}
 			}
 			if err != nil {
 				success = "false"
