@@ -217,10 +217,15 @@ func (c *CacheDelegator) GetList(ctx context.Context, key string, opts storage.L
 		}
 		if result.ConsistentRead {
 			// IsTooLargeResourceVersion occurs when the requested RV is higher than cache's current RV
-			// and cache hasn't caught up within the timeout period. Fall back to etcd.
+			// and cache hasn't caught up within the timeout period.
 			if storage.IsTooLargeResourceVersion(err) {
-				fallback = "true"
-				err = c.storage.GetList(ctx, key, opts, listObj)
+				if utilfeature.DefaultFeatureGate.Enabled(features.ConsistentListFromCacheSkipTimeoutFallback) {
+					fallback = "skipped"
+					err = errors.NewTooManyRequests(err.Error(), resourceVersionTooHighRetrySeconds)
+				} else {
+					fallback = "true"
+					err = c.storage.GetList(ctx, key, opts, listObj)
+				}
 			}
 			if err != nil {
 				success = "false"
