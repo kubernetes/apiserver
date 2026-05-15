@@ -2265,6 +2265,87 @@ func ExpectContinueMatches(t *testing.T, expect, got string) {
 	t.Errorf("expected continue token: %s, got: %s", expectDecoded, gotDecoded)
 }
 
+// RunTestDeleteWithConflictAndMissingExpectedTransformOrDecodeError verifies that, when
+// ExpectTransformOrDecodeError is true, the delete will fail if a concurrent write makes it
+// possible to decode the object.
+func RunTestDeleteWithConflictAndMissingExpectedTransformOrDecodeError(ctx context.Context, t testing.TB, store storage.Interface, setFailing func(bool)) {
+	obj := &example.Pod{ObjectMeta: metav1.ObjectMeta{Name: "foo", Namespace: "test-ns"}}
+	key := computePodKey(obj)
+	out := &example.Pod{}
+	if err := store.Create(ctx, key, obj, out, 0); err != nil {
+		t.Fatalf("Create: %v", err)
+	}
+
+	// During validation (immediately before executing the optimistic delete transaction),
+	// simulate a concurrent update that both increases the current revision and allows the next
+	// TransformFromStorage/Decode to succeed.
+	validateCount := 0
+	injectUpdate := func(_ context.Context, _ runtime.Object) error {
+		validateCount++
+		if validateCount > 1 {
+			return nil
+		}
+
+		setFailing(false)
+
+		return store.GuaranteedUpdate(ctx, key, &example.Pod{}, false, nil,
+			storage.SimpleUpdate(func(obj runtime.Object) (runtime.Object, error) {
+				pod := obj.(*example.Pod)
+				pod.Labels = map[string]string{"updated": "true"}
+				return pod, nil
+			}), nil)
+	}
+
+	// Initially, TransformFromStorage or Decode should fail.
+	setFailing(true)
+
+	err := store.Delete(ctx, key, &example.Pod{}, nil, injectUpdate, nil,
+		storage.DeleteOptions{ExpectTransformOrDecodeError: true})
+	if !storage.IsInvalidObj(err) {
+		t.Fatalf("Expected Delete to return an 'Invalid Object' error: %v", err)
+	}
+}
+
+// RunTestDeleteExpectedTransformOrDecodeError tests that an object that cannot be transformed or
+// decoded from storage can be deleted using the ExpectTransformOrDecodeError option.
+func RunTestDeleteExpectedTransformOrDecodeError(ctx context.Context, t testing.TB, store storage.Interface, setFailing func(bool)) {
+	obj := &example.Pod{ObjectMeta: metav1.ObjectMeta{Name: "foo", Namespace: "test-ns"}}
+	key := computePodKey(obj)
+	out := &example.Pod{}
+	if err := store.Create(ctx, key, obj, out, 0); err != nil {
+		t.Fatalf("Create: %v", err)
+	}
+
+	setFailing(true)
+	err := store.Delete(ctx, key, &example.Pod{}, nil, storage.ValidateAllObjectFunc, nil,
+		storage.DeleteOptions{ExpectTransformOrDecodeError: true})
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	if err := store.Get(ctx, key, storage.GetOptions{}, &example.Pod{}); !storage.IsNotFound(err) {
+		t.Errorf("Unexpected error on reading object: %v", err)
+	}
+}
+
+// RunTestDeleteWithSuggestionAndMissingExpectedTransformOrDecodeError verifies that, when
+// ExpectTransformOrDecodeError is true, passing a suggested object does not bypass transformation
+// or decoding of the serialized object in storage.
+func RunTestDeleteWithSuggestionAndMissingExpectedTransformOrDecodeError(ctx context.Context, t testing.TB, store storage.Interface) {
+	obj := &example.Pod{ObjectMeta: metav1.ObjectMeta{Name: "foo", Namespace: "test-ns"}}
+	key := computePodKey(obj)
+	out := &example.Pod{}
+	if err := store.Create(ctx, key, obj, out, 0); err != nil {
+		t.Fatalf("Create: %v", err)
+	}
+
+	err := store.Delete(ctx, key, &example.Pod{}, nil, storage.ValidateAllObjectFunc, out,
+		storage.DeleteOptions{ExpectTransformOrDecodeError: true})
+	if !storage.IsInvalidObj(err) {
+		t.Fatalf("Expected Delete to return an 'Invalid Object' error: %v", err)
+	}
+}
+
 func RunTestConsistentList(ctx context.Context, t *testing.T, store storage.Interface, increaseRV IncreaseRVFunc, cacheEnabled, consistentReadsSupported, listFromCacheSnapshot bool) {
 	outPod := &example.Pod{}
 	inPod := &example.Pod{ObjectMeta: metav1.ObjectMeta{Namespace: "default", Name: "foo"}}
