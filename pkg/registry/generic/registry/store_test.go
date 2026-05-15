@@ -145,6 +145,190 @@ func NewTestGenericStoreRegistry(t *testing.T) (factory.DestroyFunc, *Store) {
 	return newTestGenericStoreRegistry(t, scheme, false)
 }
 
+func TestCompleteWithOptionsDefaultsStoreKeyFuncs(t *testing.T) {
+	testCases := []struct {
+		name          string
+		namespaced    bool
+		ctx           context.Context
+		expectRootKey string
+		expectKey     string
+	}{
+		{
+			name:          "namespaced",
+			namespaced:    true,
+			ctx:           genericapirequest.WithNamespace(genericapirequest.NewContext(), "ns1"),
+			expectRootKey: "/pods/ns1",
+			expectKey:     "/pods/ns1/pod1",
+		},
+		{
+			name:          "cluster scoped",
+			namespaced:    false,
+			ctx:           genericapirequest.NewContext(),
+			expectRootKey: "/pods",
+			expectKey:     "/pods/pod1",
+		},
+	}
+
+	for _, tc := range testCases {
+		t.Run(tc.name, func(t *testing.T) {
+			destroyFunc, store := NewTestGenericStoreRegistry(t)
+			defer destroyFunc()
+
+			strategy := &testRESTStrategy{scheme, names.SimpleNameGenerator, tc.namespaced, false, true}
+			store.CreateStrategy = strategy
+			store.UpdateStrategy = strategy
+			store.DeleteStrategy = strategy
+			store.KeyRootFunc = nil
+			store.KeyFunc = nil
+			store.TableConvertor = rest.NewDefaultTableConvertor(store.DefaultQualifiedResource)
+
+			if err := store.CompleteWithOptions(&generic.StoreOptions{
+				RESTOptions: generic.RESTOptions{ResourcePrefix: "pods"},
+			}); err != nil {
+				t.Fatalf("CompleteWithOptions failed: %v", err)
+			}
+
+			if store.KeyRootFunc == nil {
+				t.Fatal("KeyRootFunc was not defaulted")
+			}
+			if got := store.KeyRootFunc(tc.ctx); got != tc.expectRootKey {
+				t.Fatalf("KeyRootFunc returned %q, expect %q", got, tc.expectRootKey)
+			}
+
+			if store.KeyFunc == nil {
+				t.Fatal("KeyFunc was not defaulted")
+			}
+			got, err := store.KeyFunc(tc.ctx, "pod1")
+			if err != nil {
+				t.Fatalf("KeyFunc failed: %v", err)
+			}
+			if got != tc.expectKey {
+				t.Fatalf("KeyFunc returned %q, expect %q", got, tc.expectKey)
+			}
+		})
+	}
+}
+
+func TestDefaultStoreKeyFuncs(t *testing.T) {
+	testCases := []struct {
+		name              string
+		namespaced        bool
+		ctx               context.Context
+		obj               runtime.Object
+		keyName           string
+		expectRootKey     string
+		expectKey         string
+		expectKeyErr      bool
+		expectCacheKey    string
+		expectCacheKeyErr bool
+	}{
+		{
+			name:           "namespaced",
+			namespaced:     true,
+			ctx:            genericapirequest.WithNamespace(genericapirequest.NewContext(), "ns1"),
+			obj:            &example.Pod{ObjectMeta: metav1.ObjectMeta{Namespace: "ns1", Name: "pod1"}},
+			keyName:        "pod1",
+			expectRootKey:  "/pods/ns1",
+			expectKey:      "/pods/ns1/pod1",
+			expectCacheKey: "/pods/ns1/pod1",
+		},
+		{
+			name:              "namespaced no namespace",
+			namespaced:        true,
+			ctx:               genericapirequest.NewContext(),
+			obj:               &example.Pod{ObjectMeta: metav1.ObjectMeta{Name: "pod1"}},
+			keyName:           "pod1",
+			expectRootKey:     "/pods",
+			expectKeyErr:      true,
+			expectCacheKeyErr: true,
+		},
+		{
+			name:              "namespaced empty name",
+			namespaced:        true,
+			ctx:               genericapirequest.WithNamespace(genericapirequest.NewContext(), "ns1"),
+			obj:               &example.Pod{ObjectMeta: metav1.ObjectMeta{Namespace: "ns1"}},
+			expectRootKey:     "/pods/ns1",
+			expectKeyErr:      true,
+			expectCacheKeyErr: true,
+		},
+		{
+			name:              "namespaced name containing slash",
+			namespaced:        true,
+			ctx:               genericapirequest.WithNamespace(genericapirequest.NewContext(), "ns1"),
+			obj:               &example.Pod{ObjectMeta: metav1.ObjectMeta{Namespace: "ns1", Name: "pod/1"}},
+			keyName:           "pod/1",
+			expectRootKey:     "/pods/ns1",
+			expectKeyErr:      true,
+			expectCacheKeyErr: true,
+		},
+		{
+			name:           "cluster scoped",
+			namespaced:     false,
+			ctx:            genericapirequest.NewContext(),
+			obj:            &example.Pod{ObjectMeta: metav1.ObjectMeta{Name: "pod1"}},
+			keyName:        "pod1",
+			expectRootKey:  "/pods",
+			expectKey:      "/pods/pod1",
+			expectCacheKey: "/pods/pod1",
+		},
+		{
+			name:           "cluster scoped ignores unexpected namespace",
+			namespaced:     false,
+			ctx:            genericapirequest.WithNamespace(genericapirequest.NewContext(), "ns1"),
+			obj:            &example.Pod{ObjectMeta: metav1.ObjectMeta{Namespace: "ns1", Name: "pod1"}},
+			keyName:        "pod1",
+			expectRootKey:  "/pods",
+			expectKey:      "/pods/pod1",
+			expectCacheKey: "/pods/pod1",
+		},
+		{
+			name:              "cluster scoped empty name",
+			namespaced:        false,
+			ctx:               genericapirequest.NewContext(),
+			obj:               &example.Pod{},
+			expectRootKey:     "/pods",
+			expectKeyErr:      true,
+			expectCacheKeyErr: true,
+		},
+		{
+			name:              "cluster scoped name containing slash",
+			namespaced:        false,
+			ctx:               genericapirequest.NewContext(),
+			obj:               &example.Pod{ObjectMeta: metav1.ObjectMeta{Name: "pod/1"}},
+			keyName:           "pod/1",
+			expectRootKey:     "/pods",
+			expectKeyErr:      true,
+			expectCacheKeyErr: true,
+		},
+	}
+
+	for _, tc := range testCases {
+		t.Run(tc.name, func(t *testing.T) {
+			keyFuncs := defaultStoreKeyFuncs("/pods", tc.namespaced)
+
+			if got := keyFuncs.storageRootKeyFunc(tc.ctx); got != tc.expectRootKey {
+				t.Fatalf("storageRootKeyFunc returned %q, expect %q", got, tc.expectRootKey)
+			}
+
+			gotKey, err := keyFuncs.storageKeyFunc(tc.ctx, tc.keyName)
+			if (err != nil) != tc.expectKeyErr {
+				t.Fatalf("storageKeyFunc error = %v, expectErr %t", err, tc.expectKeyErr)
+			}
+			if err == nil && gotKey != tc.expectKey {
+				t.Fatalf("storageKeyFunc returned %q, expect %q", gotKey, tc.expectKey)
+			}
+
+			gotCacheKey, err := keyFuncs.cacheKeyFunc(tc.obj)
+			if (err != nil) != tc.expectCacheKeyErr {
+				t.Fatalf("cacheKeyFunc error = %v, expectErr %t", err, tc.expectCacheKeyErr)
+			}
+			if err == nil && gotCacheKey != tc.expectCacheKey {
+				t.Fatalf("cacheKeyFunc returned %q, expect %q", gotCacheKey, tc.expectCacheKey)
+			}
+		})
+	}
+}
+
 func getPodAttrs(obj runtime.Object) (labels.Set, fields.Set, error) {
 	pod := obj.(*example.Pod)
 	return labels.Set{"name": pod.ObjectMeta.Name}, nil, nil
