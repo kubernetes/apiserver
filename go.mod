@@ -29,7 +29,7 @@ require (
 	go.etcd.io/etcd/client/v3 v3.7.0-rc.0
 	go.etcd.io/etcd/server/v3 v3.7.0-rc.0
 	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.68.0
-	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.68.0
+	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.69.0
 	go.opentelemetry.io/otel v1.44.0
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc v1.44.0
 	go.opentelemetry.io/otel/metric v1.44.0
@@ -51,7 +51,7 @@ require (
 	k8s.io/api v0.0.0-20260617152812-7c2751cb05dc
 	k8s.io/apimachinery v0.0.0-20260612190757-f27849d49709
 	k8s.io/client-go v0.0.0-20260618010404-c18a3de8a3b7
-	k8s.io/component-base v0.0.0-20260610002438-960aa7581630
+	k8s.io/component-base v0.0.0-20260618171108-72ab644cb496
 	k8s.io/klog/v2 v2.140.0
 	k8s.io/kms v0.0.0-20260602195529-94f963d92521
 	k8s.io/kube-openapi v0.0.0-20260519202549-bbf5c5577288
