@@ -14,7 +14,7 @@ require (
 	github.com/fsnotify/fsnotify v1.9.0
 	github.com/go-logr/logr v1.4.3
 	github.com/go-openapi/jsonreference v1.0.0
-	github.com/google/cel-go v0.27.0
+	github.com/google/cel-go v0.29.2
 	github.com/google/gnostic-models v0.7.0
 	github.com/google/go-cmp v0.7.0
 	github.com/google/uuid v1.6.0
@@ -48,14 +48,14 @@ require (
 	gopkg.in/evanphx/json-patch.v4 v4.13.0
 	gopkg.in/go-jose/go-jose.v2 v2.6.3
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
-	k8s.io/api v0.0.0-20260722092330-3c5ab05e97c3
-	k8s.io/apimachinery v0.0.0-20260721185639-d7ad413f224b
-	k8s.io/client-go v0.0.0-20260722092911-09b6218fc790
-	k8s.io/component-base v0.0.0-20260721193929-349fbe06359c
+	k8s.io/api v0.0.0
+	k8s.io/apimachinery v0.0.0
+	k8s.io/client-go v0.0.0
+	k8s.io/component-base v0.0.0
 	k8s.io/klog/v2 v2.140.0
-	k8s.io/kms v0.0.0-20260720194111-6b1b4ad7c08c
+	k8s.io/kms v0.0.0
 	k8s.io/kube-openapi v0.0.0-20260721132016-d427ff9ee9ad
-	k8s.io/streaming v0.0.0-20260710095143-d1a4397cb62c
+	k8s.io/streaming v0.0.0
 	k8s.io/utils v0.0.0-20260626114624-be93311217bd
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.36.0
 	sigs.k8s.io/json v0.0.0-20250730193827-2d320260d730
@@ -128,4 +128,13 @@ require (
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20260526163538-3dc84a4a5aaa // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
+)
+
+replace (
+	k8s.io/api => ../api
+	k8s.io/apimachinery => ../apimachinery
+	k8s.io/client-go => ../client-go
+	k8s.io/component-base => ../component-base
+	k8s.io/kms => ../kms
+	k8s.io/streaming => ../streaming
 )
