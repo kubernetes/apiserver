@@ -39,7 +39,7 @@ require (
 	golang.org/x/crypto v0.52.0
 	golang.org/x/net v0.55.1-0.20260602153038-42abb857022c
 	golang.org/x/sync v0.20.0
-	golang.org/x/sys v0.45.0
+	golang.org/x/sys v0.46.0
 	golang.org/x/text v0.37.0
 	golang.org/x/time v0.15.0
 	google.golang.org/genproto/googleapis/api v0.0.0-20260526163538-3dc84a4a5aaa
@@ -50,10 +50,10 @@ require (
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
 	k8s.io/api v0.0.0-20260709100004-a0e64618a579
 	k8s.io/apimachinery v0.0.0-20260708230628-806395eee25d
-	k8s.io/client-go v0.0.0-20260708220807-22afa080ccda
-	k8s.io/component-base v0.0.0-20260708022243-9dc6cf0c75fe
+	k8s.io/client-go v0.0.0-20260709100650-93099c504278
+	k8s.io/component-base v0.0.0-20260709102311-c3a72c34d529
 	k8s.io/klog/v2 v2.140.0
-	k8s.io/kms v0.0.0-20260625171900-d21a9c303827
+	k8s.io/kms v0.0.0-20260709102800-50d503462f59
 	k8s.io/kube-openapi v0.0.0-20260618221249-bc653b64f974
 	k8s.io/streaming v0.0.0-20260626172358-68009e8e6aa5
 	k8s.io/utils v0.0.0-20260626114624-be93311217bd
