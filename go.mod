@@ -36,11 +36,11 @@ require (
 	go.opentelemetry.io/otel/sdk v1.44.0
 	go.opentelemetry.io/otel/trace v1.44.0
 	go.uber.org/zap v1.27.1
-	golang.org/x/crypto v0.52.0
-	golang.org/x/net v0.55.1-0.20260602153038-42abb857022c
-	golang.org/x/sync v0.20.0
-	golang.org/x/sys v0.46.0
-	golang.org/x/text v0.37.0
+	golang.org/x/crypto v0.54.0
+	golang.org/x/net v0.57.0
+	golang.org/x/sync v0.22.0
+	golang.org/x/sys v0.47.0
+	golang.org/x/text v0.40.0
 	golang.org/x/time v0.15.0
 	google.golang.org/genproto/googleapis/api v0.0.0-20260526163538-3dc84a4a5aaa
 	google.golang.org/grpc v1.81.1
@@ -48,14 +48,14 @@ require (
 	gopkg.in/evanphx/json-patch.v4 v4.13.0
 	gopkg.in/go-jose/go-jose.v2 v2.6.3
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
-	k8s.io/api v0.0.0-20260709180021-d7c767faa2bc
-	k8s.io/apimachinery v0.0.0-20260709052827-65dcc7382324
-	k8s.io/client-go v0.0.0-20260709100650-93099c504278
-	k8s.io/component-base v0.0.0-20260709102311-c3a72c34d529
+	k8s.io/api v0.0.0
+	k8s.io/apimachinery v0.0.0
+	k8s.io/client-go v0.0.0
+	k8s.io/component-base v0.0.0
 	k8s.io/klog/v2 v2.140.0
-	k8s.io/kms v0.0.0-20260709102800-50d503462f59
+	k8s.io/kms v0.0.0
 	k8s.io/kube-openapi v0.0.0-20260618221249-bc653b64f974
-	k8s.io/streaming v0.0.0-20260626172358-68009e8e6aa5
+	k8s.io/streaming v0.0.0
 	k8s.io/utils v0.0.0-20260626114624-be93311217bd
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.36.0
 	sigs.k8s.io/json v0.0.0-20250730193827-2d320260d730
@@ -124,8 +124,17 @@ require (
 	go.yaml.in/yaml/v3 v3.0.4 // indirect
 	golang.org/x/exp v0.0.0-20260410095643-746e56fc9e2f // indirect
 	golang.org/x/oauth2 v0.36.0 // indirect
-	golang.org/x/term v0.43.0 // indirect
+	golang.org/x/term v0.45.0 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20260526163538-3dc84a4a5aaa // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
+)
+
+replace (
+	k8s.io/api => ../api
+	k8s.io/apimachinery => ../apimachinery
+	k8s.io/client-go => ../client-go
+	k8s.io/component-base => ../component-base
+	k8s.io/kms => ../kms
+	k8s.io/streaming => ../streaming
 )
