@@ -49,7 +49,7 @@ require (
 	gopkg.in/go-jose/go-jose.v2 v2.6.3
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
 	k8s.io/api v0.0.0-20260827165428-4ec81822ffec
-	k8s.io/apimachinery v0.0.0-20260828045038-e99b5e7f80a1
+	k8s.io/apimachinery v0.0.0-20260828205043-9ae342c2b167
 	k8s.io/client-go v0.0.0-20260827125930-ff4057d4927d
 	k8s.io/component-base v0.0.0-20260827130658-e23c07ad04b9
 	k8s.io/klog/v2 v2.140.0
