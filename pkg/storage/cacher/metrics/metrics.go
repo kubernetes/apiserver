@@ -43,6 +43,8 @@ const (
 	PointStorageDecoded DispatchPoint = iota
 	// PointCacheReceived: the event was first processed by the cacher's reflector loop.
 	PointCacheReceived
+	// PointDispatchStarted: the event was dequeued from cacher.incoming and dispatching began.
+	PointDispatchStarted
 	// PointEventBuilt: the outgoing watch.Event was built (filter + convert).
 	PointEventBuilt
 	// PointSentToClient: the watch.Event was written to the watcher's result channel.
@@ -74,6 +76,7 @@ var dispatchStages = []struct {
 	from, to DispatchPoint
 }{
 	{"storage_to_cache", PointStorageDecoded, PointCacheReceived},
+	{"cacher_queue_latency", PointCacheReceived, PointDispatchStarted},
 	{"watcher_to_client_handler", PointEventBuilt, PointSentToClient},
 	{"total", PointStorageDecoded, PointSentToClient},
 }
