@@ -546,12 +546,13 @@ func (c *cacheWatcher) process(ctx context.Context, resourceVersion uint64) {
 			if !ok {
 				return
 			}
+			dequeuedAt := c.clock.Now()
 			// only send events newer than resourceVersion
 			// or a bookmark event with an RV equal to resourceVersion
 			// if we haven't sent one to the client
 			if event.ResourceVersion > resourceVersion || (event.Type == watch.Bookmark && event.ResourceVersion == resourceVersion && !c.wasBookmarkAfterRvSent()) {
 				builtAt, sentAt := c.sendWatchCacheEvent(event)
-				c.observeDispatchMetrics(event, builtAt, sentAt)
+				c.observeDispatchMetrics(event, dequeuedAt, builtAt, sentAt)
 			}
 		case <-ctx.Done():
 			return
@@ -559,13 +560,14 @@ func (c *cacheWatcher) process(ctx context.Context, resourceVersion uint64) {
 	}
 }
 
-func (c *cacheWatcher) observeDispatchMetrics(event *watchCacheEvent, builtAt, sentAt time.Time) {
+func (c *cacheWatcher) observeDispatchMetrics(event *watchCacheEvent, dequeuedAt, builtAt, sentAt time.Time) {
 	if event.Type == watch.Bookmark || sentAt.IsZero() {
 		return
 	}
 	// The pre-fanout points are marked in processEvent; complete the per-watcher
 	// tail here then emit all stages.
 	tl := event.timeline
+	tl.MarkAt(metrics.PointWatcherDequeued, dequeuedAt)
 	tl.MarkAt(metrics.PointEventBuilt, builtAt)
 	tl.MarkAt(metrics.PointSentToClient, sentAt)
 	c.watcherMetrics.ObserveTimeline(&tl)

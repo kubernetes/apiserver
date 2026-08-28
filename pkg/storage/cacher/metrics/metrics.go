@@ -45,6 +45,10 @@ const (
 	PointCacheReceived
 	// PointDispatchStarted: the event was dequeued from cacher.incoming and dispatching began.
 	PointDispatchStarted
+	// PointWatcherEnqueued: the event was enqueued to the watcher's input channel.
+	PointWatcherEnqueued
+	// PointWatcherDequeued: the event was dequeued from the watcher's input channel.
+	PointWatcherDequeued
 	// PointEventBuilt: the outgoing watch.Event was built (filter + convert).
 	PointEventBuilt
 	// PointSentToClient: the watch.Event was written to the watcher's result channel.
@@ -77,6 +81,7 @@ var dispatchStages = []struct {
 }{
 	{"storage_to_cache", PointStorageDecoded, PointCacheReceived},
 	{"cacher_queue_latency", PointCacheReceived, PointDispatchStarted},
+	{"watcher_queue_latency", PointWatcherEnqueued, PointWatcherDequeued},
 	{"watcher_to_client_handler", PointEventBuilt, PointSentToClient},
 	{"total", PointStorageDecoded, PointSentToClient},
 }

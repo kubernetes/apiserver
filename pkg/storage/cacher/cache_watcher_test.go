@@ -581,6 +581,7 @@ func TestCacheWatcherDrainingNoBookmarkAfterResourceVersionSent(t *testing.T) {
 			metrics.PointStorageDecoded:  fakeClock.Now().Add(-2 * time.Second),
 			metrics.PointCacheReceived:   fakeClock.Now().Add(-1 * time.Second),
 			metrics.PointDispatchStarted: fakeClock.Now().Add(-500 * time.Millisecond),
+			metrics.PointWatcherEnqueued: fakeClock.Now().Add(-500 * time.Millisecond),
 		},
 	}, time.NewTimer(1*time.Second)) {
 		t.Fatal("failed adding an even to the watcher")
@@ -596,6 +597,7 @@ func TestCacheWatcherDrainingNoBookmarkAfterResourceVersionSent(t *testing.T) {
 			metrics.PointStorageDecoded:  fakeClock.Now().Add(-2 * time.Second),
 			metrics.PointCacheReceived:   fakeClock.Now().Add(-1 * time.Second),
 			metrics.PointDispatchStarted: fakeClock.Now().Add(-500 * time.Millisecond),
+			metrics.PointWatcherEnqueued: fakeClock.Now().Add(-500 * time.Millisecond),
 		},
 	}, time.NewTimer(1*time.Second)) {
 		t.Fatal("failed adding an even to the watcher")
@@ -647,6 +649,9 @@ apiserver_watch_events_dispatch_duration_seconds_count{group="",resource="pods",
 apiserver_watch_events_dispatch_duration_seconds_bucket{group="",resource="pods",stage="total",le="+Inf"} 2
 apiserver_watch_events_dispatch_duration_seconds_sum{group="",resource="pods",stage="total"} 4
 apiserver_watch_events_dispatch_duration_seconds_count{group="",resource="pods",stage="total"} 2
+apiserver_watch_events_dispatch_duration_seconds_bucket{group="",resource="pods",stage="watcher_queue_latency",le="+Inf"} 2
+apiserver_watch_events_dispatch_duration_seconds_sum{group="",resource="pods",stage="watcher_queue_latency"} 1
+apiserver_watch_events_dispatch_duration_seconds_count{group="",resource="pods",stage="watcher_queue_latency"} 2
 apiserver_watch_events_dispatch_duration_seconds_bucket{group="",resource="pods",stage="watcher_to_client_handler",le="+Inf"} 2
 apiserver_watch_events_dispatch_duration_seconds_sum{group="",resource="pods",stage="watcher_to_client_handler"} 0
 apiserver_watch_events_dispatch_duration_seconds_count{group="",resource="pods",stage="watcher_to_client_handler"} 2
