@@ -145,7 +145,11 @@ func (o orderedListSnapshot) OrderedListPrefix(prefix, continueKey string) ([]in
 	return o.Items, nil
 }
 
-func (o orderedListSnapshot) RangePrefix(prefix, continueKey string) iter.Seq2[*Element, error] {
+func (o orderedListSnapshot) RangePrefix(prefix, continueKey string) Range {
+	return prefixRange{o, prefix, continueKey}
+}
+
+func (o orderedListSnapshot) rangePrefix(prefix, continueKey string) iter.Seq2[*Element, error] {
 	return func(yield func(*Element, error) bool) {
 		for _, item := range o.Items {
 			elem, ok := item.(*Element)
@@ -160,7 +164,7 @@ func (o orderedListSnapshot) RangePrefix(prefix, continueKey string) iter.Seq2[*
 	}
 }
 
-func (o orderedListSnapshot) Count(prefix, continueKey string) int {
+func (o orderedListSnapshot) countPrefix(prefix, continueKey string) int {
 	return len(o.Items)
 }
 
@@ -200,7 +204,12 @@ func (l listSnapshot) OrderedListPrefix(prefix string, continueKey string) ([]in
 	return result, nil
 }
 
-func (l listSnapshot) RangePrefix(prefix, continueKey string) iter.Seq2[*Element, error] {
+func (l listSnapshot) RangePrefix(prefix, continueKey string) Range {
+	// TODO: filter and sort once here instead of on every All and Count.
+	return prefixRange{l, prefix, continueKey}
+}
+
+func (l listSnapshot) rangePrefix(prefix, continueKey string) iter.Seq2[*Element, error] {
 	return func(yield func(*Element, error) bool) {
 		items, err := l.OrderedListPrefix(prefix, continueKey)
 		if err != nil {
@@ -216,9 +225,7 @@ func (l listSnapshot) RangePrefix(prefix, continueKey string) iter.Seq2[*Element
 	}
 }
 
-// Count returns the number of items RangePrefix(prefix, continueKey) would
-// yield, by applying its filter without allocating or sorting.
-func (l listSnapshot) Count(prefix, continueKey string) int {
+func (l listSnapshot) countPrefix(prefix, continueKey string) int {
 	count := 0
 	for _, item := range l.Items {
 		elem, ok := item.(*Element)

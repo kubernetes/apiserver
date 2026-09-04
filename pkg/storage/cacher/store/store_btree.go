@@ -44,12 +44,6 @@ type threadedStoreIndexer struct {
 	indexer indexer
 }
 
-func (si *threadedStoreIndexer) Count(prefix, continueKey string) (count int) {
-	si.lock.RLock()
-	defer si.lock.RUnlock()
-	return si.store.Count(prefix, continueKey)
-}
-
 func (si *threadedStoreIndexer) Clone() Snapshot {
 	// Clone should not be called concurrently.
 	si.lock.Lock()
@@ -270,7 +264,11 @@ func (s *btreeStore) OrderedListPrefix(prefix, continueKey string) ([]interface{
 	return result, nil
 }
 
-func (s *btreeStore) RangePrefix(prefix, continueKey string) iter.Seq2[*Element, error] {
+func (s *btreeStore) RangePrefix(prefix, continueKey string) Range {
+	return prefixRange{s, prefix, continueKey}
+}
+
+func (s *btreeStore) rangePrefix(prefix, continueKey string) iter.Seq2[*Element, error] {
 	if continueKey == "" {
 		continueKey = prefix
 	}
@@ -284,7 +282,7 @@ func (s *btreeStore) RangePrefix(prefix, continueKey string) iter.Seq2[*Element,
 	}
 }
 
-func (s *btreeStore) Count(prefix, continueKey string) (count int) {
+func (s *btreeStore) countPrefix(prefix, continueKey string) (count int) {
 	if continueKey == "" {
 		continueKey = prefix
 	}
