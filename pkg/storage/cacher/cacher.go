@@ -940,6 +940,7 @@ func (c *Cacher) dispatchEvents() {
 			// of a bookmark event or regular Add/Update/Delete operation by
 			// checking if resourceVersion here has changed.
 			if event.Type != watch.Bookmark {
+				event.timeline.MarkAt(metrics.PointDispatchStarted, c.clock.Now())
 				c.dispatchEvent(&event)
 				metrics.EventsCounter.WithLabelValues(c.groupResource.Group, c.groupResource.Resource).Inc()
 			}
