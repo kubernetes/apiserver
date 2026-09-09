@@ -1022,6 +1022,7 @@ func (c *Cacher) dispatchEvent(event *watchCacheEvent) {
 		// Make a shallow copy to allow overwriting Object and PrevObject.
 		wcEvent := *event
 		setCachingObjects(&wcEvent, c.versioner)
+		wcEvent.timeline.MarkAt(metrics.PointWatcherEnqueued, c.clock.Now())
 		event = &wcEvent
 
 		c.blockedWatchers = c.blockedWatchers[:0]
