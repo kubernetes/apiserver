@@ -43,17 +43,17 @@ require (
 	golang.org/x/text v0.41.0
 	golang.org/x/time v0.15.0
 	google.golang.org/genproto/googleapis/api v0.0.0-20260526163538-3dc84a4a5aaa
-	google.golang.org/grpc v1.82.1
+	google.golang.org/grpc v1.82.2
 	google.golang.org/protobuf v1.36.12
 	gopkg.in/evanphx/json-patch.v4 v4.13.0
 	gopkg.in/go-jose/go-jose.v2 v2.6.3
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
-	k8s.io/api v0.0.0-20260910074134-ba65e05bfb3c
-	k8s.io/apimachinery v0.0.0-20260910012034-a34869e33a20
-	k8s.io/client-go v0.0.0-20260909155859-e00b95407b94
-	k8s.io/component-base v0.0.0-20260908221437-960dbf2ec1f4
+	k8s.io/api v0.0.0-20260910221315-1dc86240dd84
+	k8s.io/apimachinery v0.0.0-20260910220915-6c11c83c4505
+	k8s.io/client-go v0.0.0-20260910221834-f02d4420aca6
+	k8s.io/component-base v0.0.0-20260911142345-c58055e8ea54
 	k8s.io/klog/v2 v2.140.0
-	k8s.io/kms v0.0.0-20260908181845-11c77799c62e
+	k8s.io/kms v0.0.0-20260911142736-6cba54f24502
 	k8s.io/kube-openapi v0.0.0-20260908163437-c4db2bdfbfe6
 	k8s.io/streaming v0.0.0-20260904174501-68d535607555
 	k8s.io/utils v0.0.0-20260626114624-be93311217bd
