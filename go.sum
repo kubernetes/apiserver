@@ -256,12 +256,12 @@ gopkg.in/natefinch/lumberjack.v2 v2.2.1/go.mod h1:YD8tP3GAjkrDg1eZH7EGmyESg/lsYs
 gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c/go.mod h1:K4uyk7z7BCEPqu6E+C64Yfv1cQ7kz7rIZviUmN+EgEM=
 gopkg.in/yaml.v3 v3.0.1 h1:fxVm/GzAzEWqLHuvctI91KS9hhNmmWOoWu0XTYJS7CA=
 gopkg.in/yaml.v3 v3.0.1/go.mod h1:K4uyk7z7BCEPqu6E+C64Yfv1cQ7kz7rIZviUmN+EgEM=
-k8s.io/api v0.0.0-20260912062049-c880951023d0 h1:BdiTqgn+4YIRaFD5ELB/UfCmC1Qow7qECjHjuhP1RpQ=
-k8s.io/api v0.0.0-20260912062049-c880951023d0/go.mod h1:BfIz+yElRBmWXr5xjpauM9CcqY3/qRI+94NhqwJE3fY=
+k8s.io/api v0.0.0-20260914181324-b8e8d31d9f6b h1:WA0Cycav3dUBGME0EXyL6maTAQbGwIeS/mhrMI2x6UM=
+k8s.io/api v0.0.0-20260914181324-b8e8d31d9f6b/go.mod h1:Kgrh17tOhQE/pBD2Iv3glHqEKHoyhMnfEHksx9QZfo4=
 k8s.io/apimachinery v0.0.0-20260912220903-93e88e8ed40d h1:IilhghnlA/3zq7DnK34h0QKnHyt/OtW0VEkd29mHcOY=
 k8s.io/apimachinery v0.0.0-20260912220903-93e88e8ed40d/go.mod h1:KKSe3YvEoG7VAsAN8m/Pkko3k83u+6kLcjSa+5j1oOk=
-k8s.io/client-go v0.0.0-20260912063332-7810176397c6 h1:tkE73xjyWaXF35bsT3ezfio+j7F3flIiTVXZc7jIMyM=
-k8s.io/client-go v0.0.0-20260912063332-7810176397c6/go.mod h1:JJlco99dtGHZeUea9e5LR7A22B2GQ3NJh72UdhVj64g=
+k8s.io/client-go v0.0.0-20260914141832-30803019f93f h1:ahfCbDtHYsyY7ytt9KqFRg+tzOoDaZVEsWDX0/xoams=
+k8s.io/client-go v0.0.0-20260914141832-30803019f93f/go.mod h1:ROvHwGP/aqMrDOhW9FdFMaco09fhxwMV4LmWUcsKLYs=
 k8s.io/component-base v0.0.0-20260911142345-c58055e8ea54 h1:XT4vF4VZIpY8ePepQkuJQkKVVVmIrE5a6YWixClbPKk=
 k8s.io/component-base v0.0.0-20260911142345-c58055e8ea54/go.mod h1:84Dq18LJkdfWkluD0IQ6hAL1xXZLeSs2Zwe5u4UBzbU=
 k8s.io/klog/v2 v2.140.0 h1:Tf+J3AH7xnUzZyVVXhTgGhEKnFqye14aadWv7bzXdzc=
@@ -270,8 +270,8 @@ k8s.io/kms v0.0.0-20260911142736-6cba54f24502 h1:iibFNTTPpKIlpAZ33p8j6T6K2WS+e3w
 k8s.io/kms v0.0.0-20260911142736-6cba54f24502/go.mod h1:xGYyye1wuUORf/FjtmECrgXyA2xAg9+HM+VplAyJOJU=
 k8s.io/kube-openapi v0.0.0-20260908163437-c4db2bdfbfe6 h1:V+PvDIOGInpdzdyOIlPU3NhLWHOKPXE8DDIfCVWIgiw=
 k8s.io/kube-openapi v0.0.0-20260908163437-c4db2bdfbfe6/go.mod h1:iD9rD6UUoLGygkqzeIo19ZleoLH3bY+C9310g7HHeZM=
-k8s.io/streaming v0.0.0-20260904174501-68d535607555 h1:jKDT4ObsGXS7VYXX5Zow0je5T3HgRd1UQk5KujHXe2U=
-k8s.io/streaming v0.0.0-20260904174501-68d535607555/go.mod h1:7Qj4k0HYqdbtrpeZgkaR3P9q2XcoCzxlqOVr7NyBVt8=
+k8s.io/streaming v0.0.0-20260914154742-f99df5dfe25e h1:s+DJSqwWXeq3CaeF/P+ZYf6U4OqpNy4rE3ffAxaq+pQ=
+k8s.io/streaming v0.0.0-20260914154742-f99df5dfe25e/go.mod h1:7Qj4k0HYqdbtrpeZgkaR3P9q2XcoCzxlqOVr7NyBVt8=
 k8s.io/utils v0.0.0-20260626114624-be93311217bd h1:Ea7fgQ5we8Y9T0OX5o0dAHzQOBRI07D/dEYRaB9ZZEs=
 k8s.io/utils v0.0.0-20260626114624-be93311217bd/go.mod h1:xDxuJ0whA3d0I4mf/C4ppKHxXynQ+fxnkmQH0vTHnuk=
 sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.36.0 h1:/YpDJ4vReG7ZmzSpBGxduXgywWkJU9zHubgJG03MT+Y=
