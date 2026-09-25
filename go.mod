@@ -37,25 +37,25 @@ require (
 	go.opentelemetry.io/otel/sdk v1.44.0
 	go.opentelemetry.io/otel/trace v1.44.0
 	go.uber.org/zap v1.27.1
-	golang.org/x/crypto v0.56.0
-	golang.org/x/net v0.57.0
-	golang.org/x/sync v0.22.0
-	golang.org/x/sys v0.47.0
-	golang.org/x/text v0.41.0
-	golang.org/x/time v0.15.0
+	golang.org/x/crypto v0.57.0
+	golang.org/x/net v0.59.0
+	golang.org/x/sync v0.23.0
+	golang.org/x/sys v0.48.0
+	golang.org/x/text v0.42.0
+	golang.org/x/time v0.16.0
 	google.golang.org/genproto/googleapis/api v0.0.0-20260526163538-3dc84a4a5aaa
 	google.golang.org/grpc v1.82.2
 	google.golang.org/protobuf v1.36.12
 	gopkg.in/evanphx/json-patch.v4 v4.13.0
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
-	k8s.io/api v0.0.0-20260925015706-fa72471efa5d
-	k8s.io/apimachinery v0.0.0-20260925095303-6316d4366082
-	k8s.io/client-go v0.0.0-20260925020251-2ef5b4b8a292
-	k8s.io/component-base v0.0.0-20260918232136-b2dc1799955c
+	k8s.io/api v0.0.0-20260925175811-97b4aac46fbf
+	k8s.io/apimachinery v0.0.0-20260925175343-be1093d69c39
+	k8s.io/client-go v0.0.0-20260925180432-0b3e140561dc
+	k8s.io/component-base v0.0.0-20260925181949-33d458fff1ed
 	k8s.io/klog/v2 v2.140.0
-	k8s.io/kms v0.0.0-20260922194354-17977cba15b6
+	k8s.io/kms v0.0.0-20260925182419-271a229a69ff
 	k8s.io/kube-openapi v0.0.0-20260908163437-c4db2bdfbfe6
-	k8s.io/streaming v0.0.0-20260914154742-f99df5dfe25e
+	k8s.io/streaming v0.0.0-20260925174948-82cc75b1f3b1
 	k8s.io/utils v0.0.0-20260626114624-be93311217bd
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.36.0
 	sigs.k8s.io/json v0.0.0-20250730193827-2d320260d730
@@ -118,9 +118,9 @@ require (
 	go.uber.org/multierr v1.11.0 // indirect
 	go.yaml.in/yaml/v2 v2.4.4 // indirect
 	go.yaml.in/yaml/v3 v3.0.5 // indirect
-	golang.org/x/exp v0.0.0-20260410095643-746e56fc9e2f // indirect
-	golang.org/x/oauth2 v0.36.0 // indirect
-	golang.org/x/term v0.45.0 // indirect
+	golang.org/x/exp v0.0.0-20260908205506-85c1c2202aba // indirect
+	golang.org/x/oauth2 v0.37.0 // indirect
+	golang.org/x/term v0.46.0 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20260526163538-3dc84a4a5aaa // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
 )
