@@ -49,15 +49,15 @@ require (
 	gopkg.in/evanphx/json-patch.v4 v4.13.0
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
 	k8s.io/api v0.0.0-20260925175813-1ae1ab50d0cd
-	k8s.io/apimachinery v0.0.0-20260925175345-fdc546200a6d
+	k8s.io/apimachinery v0.0.0-20260925215313-7ec3fc242346
 	k8s.io/client-go v0.0.0-20260925180436-4849f5561335
-	k8s.io/component-base v0.0.0-20260925181953-c3f88dae1f3b
+	k8s.io/component-base v0.0.0-20260925221805-1f0dc2d55938
 	k8s.io/klog/v2 v2.140.0
 	k8s.io/kms v0.0.0-20260925182419-271a229a69ff
 	k8s.io/kube-openapi v0.0.0-20260908163437-c4db2bdfbfe6
 	k8s.io/streaming v0.0.0-20260925174948-82cc75b1f3b1
 	k8s.io/utils v0.0.0-20260626114624-be93311217bd
-	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.36.0
+	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.37.0
 	sigs.k8s.io/json v0.0.0-20250730193827-2d320260d730
 	sigs.k8s.io/randfill v1.0.0
 	sigs.k8s.io/structured-merge-diff/v7 v7.0.0
