@@ -48,8 +48,8 @@ require (
 	google.golang.org/protobuf v1.36.12
 	gopkg.in/evanphx/json-patch.v4 v4.13.0
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
-	k8s.io/api v0.0.0-20261002175901-78e1b11f26b4
-	k8s.io/apimachinery v0.0.0-20261006055411-1719d96f36df
+	k8s.io/api v0.0.0-20261007055927-03400c2ca464
+	k8s.io/apimachinery v0.0.0-20261007055414-9a5746f65d9a
 	k8s.io/client-go v0.0.0-20261003180603-c135e6d02b9b
 	k8s.io/component-base v0.0.0-20261001141250-ab8d14283e93
 	k8s.io/klog/v2 v2.140.0
