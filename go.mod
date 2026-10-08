@@ -29,13 +29,13 @@ require (
 	go.etcd.io/etcd/client/pkg/v3 v3.7.2
 	go.etcd.io/etcd/client/v3 v3.7.2
 	go.etcd.io/etcd/server/v3 v3.7.2
-	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.71.0
-	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.71.0
-	go.opentelemetry.io/otel v1.46.0
+	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.72.0
+	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.72.0
+	go.opentelemetry.io/otel v1.47.0
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc v1.45.0
-	go.opentelemetry.io/otel/metric v1.46.0
-	go.opentelemetry.io/otel/sdk v1.46.0
-	go.opentelemetry.io/otel/trace v1.46.0
+	go.opentelemetry.io/otel/metric v1.47.0
+	go.opentelemetry.io/otel/sdk v1.47.0
+	go.opentelemetry.io/otel/trace v1.47.0
 	go.uber.org/zap v1.27.1
 	golang.org/x/crypto v0.57.0
 	golang.org/x/net v0.59.0
@@ -51,9 +51,9 @@ require (
 	k8s.io/api v0.0.0-20261008183037-6ba00634ddc6
 	k8s.io/apimachinery v0.0.0-20261008180943-4bf141d8652d
 	k8s.io/client-go v0.0.0-20261008185430-4e3fcd1ac226
-	k8s.io/component-base v0.0.0-20261008194719-682b4b0c7a2d
+	k8s.io/component-base v0.0.0-20261008194721-2105d667ae4f
 	k8s.io/klog/v2 v2.140.0
-	k8s.io/kms v0.0.0-20260925222223-6a71a14a6188
+	k8s.io/kms v0.0.0-20261008201208-65f9c598a08f
 	k8s.io/kube-openapi v0.0.0-20261001230523-97fa35140926
 	k8s.io/streaming v0.0.0-20260925214949-a5093f4e9dc5
 	k8s.io/utils v0.0.0-20260626114624-be93311217bd
@@ -105,7 +105,8 @@ require (
 	go.etcd.io/etcd/pkg/v3 v3.7.2 // indirect
 	go.etcd.io/raft/v3 v3.7.0 // indirect
 	go.opentelemetry.io/auto/sdk v1.2.1 // indirect
-	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.46.0 // indirect
+	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.47.0 // indirect
+	go.opentelemetry.io/otel/log v1.47.0 // indirect
 	go.opentelemetry.io/proto/otlp v1.11.0 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
 	go.yaml.in/yaml/v2 v2.4.4 // indirect
@@ -113,6 +114,6 @@ require (
 	golang.org/x/exp v0.0.0-20260908205506-85c1c2202aba // indirect
 	golang.org/x/oauth2 v0.37.0 // indirect
 	golang.org/x/term v0.46.0 // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20260825221802-da73d73af1c5 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20260928230214-8a89bd6388cc // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
 )
