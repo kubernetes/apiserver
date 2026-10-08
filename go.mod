@@ -48,14 +48,14 @@ require (
 	google.golang.org/protobuf v1.36.12
 	gopkg.in/evanphx/json-patch.v4 v4.13.0
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
-	k8s.io/api v0.0.0-20261007111845-f26436349b43
-	k8s.io/apimachinery v0.0.0-20261007055414-9a5746f65d9a
-	k8s.io/client-go v0.0.0-20261007181652-ee7b31bdddc8
-	k8s.io/component-base v0.0.0-20261007182650-6a7d093d8573
+	k8s.io/api v0.38.0-alpha.2
+	k8s.io/apimachinery v0.38.0-alpha.2
+	k8s.io/client-go v0.38.0-alpha.2
+	k8s.io/component-base v0.38.0-alpha.2
 	k8s.io/klog/v2 v2.140.0
-	k8s.io/kms v0.0.0-20260925222223-6a71a14a6188
+	k8s.io/kms v0.38.0-alpha.2
 	k8s.io/kube-openapi v0.0.0-20260929181212-2cfbdf149b9a
-	k8s.io/streaming v0.0.0-20260925214949-a5093f4e9dc5
+	k8s.io/streaming v0.38.0-alpha.2
 	k8s.io/utils v0.0.0-20260626114624-be93311217bd
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.37.0
 	sigs.k8s.io/json v0.0.0-20250730193827-2d320260d730
