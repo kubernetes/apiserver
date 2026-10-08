@@ -16,7 +16,7 @@ require (
 	github.com/go-logr/logr v1.4.4
 	github.com/go-openapi/jsonreference v1.0.2
 	github.com/google/cel-go v0.29.2
-	github.com/google/gnostic-models v0.7.0
+	github.com/google/gnostic-models v0.7.1
 	github.com/google/go-cmp v0.7.0
 	github.com/google/uuid v1.6.0
 	github.com/gorilla/websocket v1.5.4-0.20250319132907-e064f32e3674
@@ -48,14 +48,14 @@ require (
 	google.golang.org/protobuf v1.36.12
 	gopkg.in/evanphx/json-patch.v4 v4.13.0
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
-	k8s.io/api v0.0.0-20261007111845-f26436349b43
-	k8s.io/apimachinery v0.0.0-20261007233157-ad53ee535406
-	k8s.io/client-go v0.0.0-20261007181652-ee7b31bdddc8
-	k8s.io/component-base v0.0.0-20261007182652-80f189e2c132
+	k8s.io/api v0.0.0
+	k8s.io/apimachinery v0.0.0
+	k8s.io/client-go v0.0.0
+	k8s.io/component-base v0.0.0
 	k8s.io/klog/v2 v2.140.0
-	k8s.io/kms v0.0.0-20260925222223-6a71a14a6188
-	k8s.io/kube-openapi v0.0.0-20260929181212-2cfbdf149b9a
-	k8s.io/streaming v0.0.0-20260925214949-a5093f4e9dc5
+	k8s.io/kms v0.0.0
+	k8s.io/kube-openapi v0.0.0-20261001230523-97fa35140926
+	k8s.io/streaming v0.0.0
 	k8s.io/utils v0.0.0-20260626114624-be93311217bd
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.37.0
 	sigs.k8s.io/json v0.0.0-20250730193827-2d320260d730
@@ -115,4 +115,14 @@ require (
 	golang.org/x/term v0.46.0 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20260825221802-da73d73af1c5 // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
+)
+
+replace (
+	k8s.io/api => ../api
+	k8s.io/apimachinery => ../apimachinery
+	k8s.io/client-go => ../client-go
+	k8s.io/component-base => ../component-base
+	k8s.io/kms => ../kms
+	k8s.io/ktesting => ../ktesting
+	k8s.io/streaming => ../streaming
 )
