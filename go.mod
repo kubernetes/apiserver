@@ -48,8 +48,8 @@ require (
 	google.golang.org/protobuf v1.36.12
 	gopkg.in/evanphx/json-patch.v4 v4.13.0
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
-	k8s.io/api v0.0.0-20261010062234-e93463ddce2d
-	k8s.io/apimachinery v0.0.0-20261009061800-d40e9d24499c
+	k8s.io/api v0.0.0-20261013182226-ee51868a2fab
+	k8s.io/apimachinery v0.0.0-20261013175632-1ddb7c92fa97
 	k8s.io/client-go v0.0.0-20261010142842-2a3406111e64
 	k8s.io/component-base v0.0.0-20261013143737-b76c9a378bf4
 	k8s.io/klog/v2 v2.140.0
@@ -115,4 +115,5 @@ require (
 	golang.org/x/term v0.46.0 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20260928230214-8a89bd6388cc // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
+	k8s.io/ktesting v0.0.0-20261013144007-8ca5020b688b // indirect
 )
