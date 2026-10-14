@@ -49,8 +49,8 @@ require (
 	gopkg.in/evanphx/json-patch.v4 v4.13.0
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
 	k8s.io/api v0.0.0-20261014062226-4da9bd412d97
-	k8s.io/apimachinery v0.0.0-20261014181830-9236ccf23048
-	k8s.io/client-go v0.0.0-20261014062828-a84f1cff5430
+	k8s.io/apimachinery v0.0.0-20261014221814-8e7d46635e0a
+	k8s.io/client-go v0.0.0-20261014222919-7f418b8917f9
 	k8s.io/component-base v0.0.0-20261014064326-eb2e9d857afe
 	k8s.io/klog/v2 v2.140.0
 	k8s.io/kms v0.0.0-20261008201208-65f9c598a08f
