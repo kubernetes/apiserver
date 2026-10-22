@@ -48,19 +48,19 @@ require (
 	google.golang.org/protobuf v1.36.12
 	gopkg.in/evanphx/json-patch.v4 v4.13.0
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
-	k8s.io/api v0.0.0-20261022213900-2173a23c7d3e
-	k8s.io/apimachinery v0.0.0-20261023013340-369e047bbe32
-	k8s.io/client-go v0.0.0-20261022214613-453fafce518e
-	k8s.io/component-base v0.0.0-20261018214756-cd2c1afd246a
+	k8s.io/api v0.0.0
+	k8s.io/apimachinery v0.0.0
+	k8s.io/client-go v0.0.0
+	k8s.io/component-base v0.0.0
 	k8s.io/klog/v2 v2.140.0
-	k8s.io/kms v0.0.0-20261014224844-b0d7c0014859
+	k8s.io/kms v0.0.0
 	k8s.io/kube-openapi v0.0.0-20261014044854-ca3452a79603
-	k8s.io/streaming v0.0.0-20260925214949-a5093f4e9dc5
+	k8s.io/streaming v0.0.0
 	k8s.io/utils v0.0.0-20260626114624-be93311217bd
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.37.0
 	sigs.k8s.io/json v0.0.0-20250730193827-2d320260d730
 	sigs.k8s.io/randfill v1.0.0
-	sigs.k8s.io/structured-merge-diff/v7 v7.0.0
+	sigs.k8s.io/structured-merge-diff/v7 v7.0.1
 	sigs.k8s.io/yaml v1.6.0
 )
 
@@ -115,4 +115,14 @@ require (
 	golang.org/x/term v0.46.0 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20260928230214-8a89bd6388cc // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
+)
+
+replace (
+	k8s.io/api => ../api
+	k8s.io/apimachinery => ../apimachinery
+	k8s.io/client-go => ../client-go
+	k8s.io/component-base => ../component-base
+	k8s.io/kms => ../kms
+	k8s.io/ktesting => ../ktesting
+	k8s.io/streaming => ../streaming
 )
