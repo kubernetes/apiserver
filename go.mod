@@ -55,7 +55,7 @@ require (
 	k8s.io/klog/v2 v2.140.0
 	k8s.io/kms v0.0.0-20260808044209-18eabfc7b550
 	k8s.io/kube-openapi v0.0.0-20260317180543-43fb72c5454a
-	k8s.io/streaming v0.0.0-20260808033532-25f24fa10406
+	k8s.io/streaming v0.0.0-20261029140917-cae873aec282
 	k8s.io/utils v0.0.0-20260210185600-b8788abfbbc2
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.34.0
 	sigs.k8s.io/json v0.0.0-20250730193827-2d320260d730
