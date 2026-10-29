@@ -286,8 +286,8 @@ k8s.io/kms v0.0.0-20260809043315-1eb0a0009126 h1:Fe0OBmYFoxUbFeuD5s2WANkXbFYl3Nh
 k8s.io/kms v0.0.0-20260809043315-1eb0a0009126/go.mod h1:OMmJH9Y4JZnougxjWkLzQsol2GpnURHQP8cwgQX+Jlc=
 k8s.io/kube-openapi v0.0.0-20260721132016-d427ff9ee9ad h1:oXImqH8mQNk7PmvzKhmN3ddJoY6OnyM225MXwGHPm0A=
 k8s.io/kube-openapi v0.0.0-20260721132016-d427ff9ee9ad/go.mod h1:0/mqHCVhlumdJ3BhCfnjSZQE037nAhNodh1/hK0T8/I=
-k8s.io/streaming v0.0.0-20260809033646-cdd8da28b407 h1:mu6CZVCWSltT5asJhzUsSZsZINiLymgJsUoTyoO75cY=
-k8s.io/streaming v0.0.0-20260809033646-cdd8da28b407/go.mod h1:APlJR26ZWRcVy5bIEj0QRrKUXROtBHPcxl2NT7EAzPU=
+k8s.io/streaming v0.0.0-20261029140917-199128eed9ae h1:hozNdoJq4AMcVn9Dt0utOOgBU2KRDRycgMgMjfbtxbk=
+k8s.io/streaming v0.0.0-20261029140917-199128eed9ae/go.mod h1:APlJR26ZWRcVy5bIEj0QRrKUXROtBHPcxl2NT7EAzPU=
 k8s.io/utils v0.0.0-20260626114624-be93311217bd h1:Ea7fgQ5we8Y9T0OX5o0dAHzQOBRI07D/dEYRaB9ZZEs=
 k8s.io/utils v0.0.0-20260626114624-be93311217bd/go.mod h1:xDxuJ0whA3d0I4mf/C4ppKHxXynQ+fxnkmQH0vTHnuk=
 sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.36.0 h1:/YpDJ4vReG7ZmzSpBGxduXgywWkJU9zHubgJG03MT+Y=
