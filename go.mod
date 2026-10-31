@@ -7,13 +7,13 @@ go 1.27.0
 godebug default=go1.27
 
 require (
-	cel.dev/cel-go v0.33.2
+	cel.dev/cel-go v0.33.1
 	github.com/blang/semver/v4 v4.0.0
 	github.com/coreos/go-oidc/v3 v3.21.0
 	github.com/coreos/go-systemd/v22 v22.7.0
 	github.com/emicklei/go-restful/v3 v3.14.0
 	github.com/fsnotify/fsnotify v1.9.0
-	github.com/go-jose/go-jose/v4 v4.1.5
+	github.com/go-jose/go-jose/v4 v4.1.7
 	github.com/go-logr/logr v1.4.4
 	github.com/go-openapi/jsonreference v1.0.2
 	github.com/google/gnostic-models v0.7.1
@@ -36,10 +36,9 @@ require (
 	go.opentelemetry.io/otel/metric v1.47.0
 	go.opentelemetry.io/otel/sdk v1.47.0
 	go.opentelemetry.io/otel/trace v1.47.0
-	go.uber.org/goleak v1.3.0
 	go.uber.org/zap v1.27.1
 	golang.org/x/crypto v0.58.0
-	golang.org/x/net v0.62.0
+	golang.org/x/net v0.61.0
 	golang.org/x/sync v0.24.0
 	golang.org/x/sys v0.49.0
 	golang.org/x/text v0.43.0
@@ -49,14 +48,14 @@ require (
 	google.golang.org/protobuf v1.36.12
 	gopkg.in/evanphx/json-patch.v4 v4.13.0
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
-	k8s.io/api v0.0.0-20261105044833-c96aa7872647
-	k8s.io/apimachinery v0.0.0-20261105084402-d9763c1acf1a
-	k8s.io/client-go v0.0.0-20261105125350-dcf34ae628e3
-	k8s.io/component-base v0.0.0-20261103211149-06422decc836
+	k8s.io/api v0.0.0
+	k8s.io/apimachinery v0.0.0
+	k8s.io/client-go v0.0.0
+	k8s.io/component-base v0.0.0
 	k8s.io/klog/v2 v2.140.0
-	k8s.io/kms v0.0.0-20261102171144-7573cf0aa7fa
+	k8s.io/kms v0.0.0
 	k8s.io/kube-openapi v0.0.0-20261014044854-ca3452a79603
-	k8s.io/streaming v0.0.0-20261102164054-f3c80b94db5e
+	k8s.io/streaming v0.0.0
 	k8s.io/utils v0.0.0-20260626114624-be93311217bd
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.37.0
 	sigs.k8s.io/json v0.0.0-20250730193827-2d320260d730
@@ -90,11 +89,10 @@ require (
 	github.com/jonboulle/clockwork v0.5.0 // indirect
 	github.com/kylelemons/godebug v1.1.0 // indirect
 	github.com/moby/spdystream v0.5.1 // indirect
-	github.com/pandatix/go-abnf v0.5.5 // indirect
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	github.com/prometheus/client_golang v1.25.0 // indirect
 	github.com/prometheus/client_model v0.6.3 // indirect
-	github.com/prometheus/common v0.73.1 // indirect
+	github.com/prometheus/common v0.72.0 // indirect
 	github.com/prometheus/procfs v0.22.0 // indirect
 	github.com/sirupsen/logrus v1.10.2 // indirect
 	github.com/soheilhy/cmux v0.1.5 // indirect
@@ -117,4 +115,14 @@ require (
 	golang.org/x/term v0.47.0 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20260928230214-8a89bd6388cc // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
+)
+
+replace (
+	k8s.io/api => ../api
+	k8s.io/apimachinery => ../apimachinery
+	k8s.io/client-go => ../client-go
+	k8s.io/component-base => ../component-base
+	k8s.io/kms => ../kms
+	k8s.io/ktesting => ../ktesting
+	k8s.io/streaming => ../streaming
 )
