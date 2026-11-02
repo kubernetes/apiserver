@@ -39,7 +39,7 @@ require (
 	go.uber.org/goleak v1.3.0
 	go.uber.org/zap v1.27.1
 	golang.org/x/crypto v0.58.0
-	golang.org/x/net v0.61.0
+	golang.org/x/net v0.62.0
 	golang.org/x/sync v0.24.0
 	golang.org/x/sys v0.49.0
 	golang.org/x/text v0.43.0
@@ -49,14 +49,14 @@ require (
 	google.golang.org/protobuf v1.36.12
 	gopkg.in/evanphx/json-patch.v4 v4.13.0
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
-	k8s.io/api v0.0.0-20261030204837-f4451c0ccd1b
-	k8s.io/apimachinery v0.0.0-20261031004447-b26d01364f13
-	k8s.io/client-go v0.0.0-20261031125245-b51563e839b7
-	k8s.io/component-base v0.0.0-20261029151141-3e1d13907f62
+	k8s.io/api v0.0.0-20261102164818-232f8158c4af
+	k8s.io/apimachinery v0.0.0-20261102164403-9b85b23ad678
+	k8s.io/client-go v0.0.0-20261102165358-264b41154a0d
+	k8s.io/component-base v0.0.0-20261102170743-0dbefe7fa314
 	k8s.io/klog/v2 v2.140.0
-	k8s.io/kms v0.0.0-20261027154108-0e2cbc606fdf
+	k8s.io/kms v0.0.0-20261102171144-7573cf0aa7fa
 	k8s.io/kube-openapi v0.0.0-20261014044854-ca3452a79603
-	k8s.io/streaming v0.0.0-20261023231301-c83a32ac951b
+	k8s.io/streaming v0.0.0-20261102164054-f3c80b94db5e
 	k8s.io/utils v0.0.0-20260626114624-be93311217bd
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.37.0
 	sigs.k8s.io/json v0.0.0-20250730193827-2d320260d730
