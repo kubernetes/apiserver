@@ -52,7 +52,7 @@ require (
 	k8s.io/api v0.0.0-20261103004912-473839cffaa3
 	k8s.io/apimachinery v0.0.0-20261102164403-9b85b23ad678
 	k8s.io/client-go v0.0.0-20261103005455-2f8d58824f79
-	k8s.io/component-base v0.0.0-20261102170743-0dbefe7fa314
+	k8s.io/component-base v0.0.0-20261103211149-06422decc836
 	k8s.io/klog/v2 v2.140.0
 	k8s.io/kms v0.0.0-20261102171144-7573cf0aa7fa
 	k8s.io/kube-openapi v0.0.0-20261014044854-ca3452a79603
@@ -90,10 +90,11 @@ require (
 	github.com/jonboulle/clockwork v0.5.0 // indirect
 	github.com/kylelemons/godebug v1.1.0 // indirect
 	github.com/moby/spdystream v0.5.1 // indirect
+	github.com/pandatix/go-abnf v0.5.5 // indirect
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	github.com/prometheus/client_golang v1.25.0 // indirect
 	github.com/prometheus/client_model v0.6.3 // indirect
-	github.com/prometheus/common v0.72.0 // indirect
+	github.com/prometheus/common v0.73.1 // indirect
 	github.com/prometheus/procfs v0.22.0 // indirect
 	github.com/sirupsen/logrus v1.10.2 // indirect
 	github.com/soheilhy/cmux v0.1.5 // indirect
