@@ -13,7 +13,7 @@ require (
 	github.com/coreos/go-systemd/v22 v22.7.0
 	github.com/emicklei/go-restful/v3 v3.14.0
 	github.com/fsnotify/fsnotify v1.9.0
-	github.com/go-jose/go-jose/v4 v4.1.7
+	github.com/go-jose/go-jose/v4 v4.1.9
 	github.com/go-logr/logr v1.4.4
 	github.com/go-openapi/jsonreference v1.0.2
 	github.com/google/gnostic-models v0.7.1
@@ -49,7 +49,7 @@ require (
 	google.golang.org/protobuf v1.36.12
 	gopkg.in/evanphx/json-patch.v4 v4.13.0
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
-	k8s.io/api v0.0.0-20261105204841-4b3e899d3bc7
+	k8s.io/api v0.0.0-20261106004837-762792253b54
 	k8s.io/apimachinery v0.0.0-20261105204426-d601cf6edf0d
 	k8s.io/client-go v0.0.0-20261105205418-a51bfd311e7e
 	k8s.io/component-base v0.0.0-20261103211149-06422decc836
