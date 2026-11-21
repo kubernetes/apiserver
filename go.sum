@@ -240,12 +240,12 @@ gopkg.in/natefinch/lumberjack.v2 v2.2.1/go.mod h1:YD8tP3GAjkrDg1eZH7EGmyESg/lsYs
 gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c/go.mod h1:K4uyk7z7BCEPqu6E+C64Yfv1cQ7kz7rIZviUmN+EgEM=
 gopkg.in/yaml.v3 v3.0.1 h1:fxVm/GzAzEWqLHuvctI91KS9hhNmmWOoWu0XTYJS7CA=
 gopkg.in/yaml.v3 v3.0.1/go.mod h1:K4uyk7z7BCEPqu6E+C64Yfv1cQ7kz7rIZviUmN+EgEM=
-k8s.io/api v0.0.0-20261119210214-a2c84304d35f h1:5LElx2QZG+sgZwgbY6+7uJ1WEhfephMiyDhecIXzQ2I=
-k8s.io/api v0.0.0-20261119210214-a2c84304d35f/go.mod h1:qEjlBQJlfKgyOLGVKt4Mq5dHIYjm/URetF+CBazDQsM=
+k8s.io/api v0.0.0-20261121003734-ebb493a65591 h1:KI/t2OVF1SwAfLbaor5FyJx/Xsoh4mhuVNj699+dV40=
+k8s.io/api v0.0.0-20261121003734-ebb493a65591/go.mod h1:qEjlBQJlfKgyOLGVKt4Mq5dHIYjm/URetF+CBazDQsM=
 k8s.io/apimachinery v0.0.0-20261113044458-398326f9ce6a h1:SEMXp2J8T1K/hDz/Izc643l3lR6ujojk/FtnLIaqvgc=
 k8s.io/apimachinery v0.0.0-20261113044458-398326f9ce6a/go.mod h1:fumZOYi531DykC6G7RoWuQawSLT/WlAJN5LZ24SToMg=
-k8s.io/client-go v0.0.0-20261120002205-e26923da3eca h1:QOj7a+B7wnM6Wx607gB7uMNRQBuDWNC1MMD0L4uc26c=
-k8s.io/client-go v0.0.0-20261120002205-e26923da3eca/go.mod h1:bYjR2Fb+UZnEwkFn1JTk0Wc3yAde0ikdSfBgS7Bvdro=
+k8s.io/client-go v0.0.0-20261121004326-96596e7a999d h1:dQrxBgeA+uIqkFranrtd1fIH4e9q9UMu3Z7IjvZzleE=
+k8s.io/client-go v0.0.0-20261121004326-96596e7a999d/go.mod h1:+7Aqg8VEa37snGS7VzM4Xp3CM9bV92eacXtzFCdYM8o=
 k8s.io/component-base v0.0.0-20261113210150-fd8dd3143f25 h1:gr+kbm3KHgpHHl0FpueRlQipqPcK+vk4VpRQ8BlPtwM=
 k8s.io/component-base v0.0.0-20261113210150-fd8dd3143f25/go.mod h1:fvIudjq0W1ynN7iw0n5YPih2AI5flzcxabB/2HdAlVY=
 k8s.io/klog/v2 v2.140.0 h1:Tf+J3AH7xnUzZyVVXhTgGhEKnFqye14aadWv7bzXdzc=
